@@ -154,7 +154,7 @@ template {
 body {
   position: relative;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 2;
   color: #555;
   background: #f5f7f9;
@@ -166,7 +166,7 @@ body {
 }
 @media (min-width: 1200px) {
   body {
-    font-size: 16px;
+    font-size: 22px;
   }
 }
 h1,
@@ -182,84 +182,84 @@ h6 {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 h1 {
-  font-size: 22px;
+  font-size: 46px;
 }
 h1 code {
   font-size: 1em;
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 18px;
+    font-size: 42px;
   }
   h1 code {
     font-size: 1em;
   }
 }
 h2 {
-  font-size: 20px;
+  font-size: 44px;
 }
 h2 code {
   font-size: 1em;
 }
 @media (max-width: 767px) {
   h2 {
-    font-size: 16px;
+    font-size: 40px;
   }
   h2 code {
     font-size: 1em;
   }
 }
 h3 {
-  font-size: 18px;
+  font-size: 42px;
 }
 h3 code {
   font-size: 1em;
 }
 @media (max-width: 767px) {
   h3 {
-    font-size: 14px;
+    font-size: 38px;
   }
   h3 code {
     font-size: 1em;
   }
 }
 h4 {
-  font-size: 16px;
+  font-size: 40px;
 }
 h4 code {
   font-size: 1em;
 }
 @media (max-width: 767px) {
   h4 {
-    font-size: 12px;
+    font-size: 36px;
   }
   h4 code {
     font-size: 1em;
   }
 }
 h5 {
-  font-size: 14px;
+  font-size: 38px;
 }
 h5 code {
   font-size: 1em;
 }
 @media (max-width: 767px) {
   h5 {
-    font-size: 10px;
+    font-size: 34px;
   }
   h5 code {
     font-size: 1em;
   }
 }
 h6 {
-  font-size: 12px;
+  font-size: 36px;
 }
 h6 code {
   font-size: 1em;
 }
 @media (max-width: 767px) {
   h6 {
-    font-size: 8px;
+    font-size: 32px;
   }
   h6 code {
     font-size: 1em;
@@ -1215,73 +1215,6 @@ pre .javascript .function {
 .use-motion .menu-item {
   opacity: 0;
 }
-.github-corner :hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out;
-}
-.github-corner > svg {
-  fill: #222;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  border: 0;
-  right: 0;
-}
-@media (max-width: 991px) {
-  .github-corner > svg {
-    fill: #fff;
-    color: #222;
-  }
-  .github-corner .github-corner:hover .octo-arm {
-    animation: none;
-  }
-  .github-corner .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
-  }
-}
-@-moz-keyframes octocat-wave {
-  0%, 100% {
-    transform: rotate(0);
-  }
-  20%, 60% {
-    transform: rotate(-25deg);
-  }
-  40%, 80% {
-    transform: rotate(10deg);
-  }
-}
-@-webkit-keyframes octocat-wave {
-  0%, 100% {
-    transform: rotate(0);
-  }
-  20%, 60% {
-    transform: rotate(-25deg);
-  }
-  40%, 80% {
-    transform: rotate(10deg);
-  }
-}
-@-o-keyframes octocat-wave {
-  0%, 100% {
-    transform: rotate(0);
-  }
-  20%, 60% {
-    transform: rotate(-25deg);
-  }
-  40%, 80% {
-    transform: rotate(10deg);
-  }
-}
-@keyframes octocat-wave {
-  0%, 100% {
-    transform: rotate(0);
-  }
-  20%, 60% {
-    transform: rotate(-25deg);
-  }
-  40%, 80% {
-    transform: rotate(10deg);
-  }
-}
 .post-body {
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -1301,7 +1234,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: -20px auto 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1808,6 +1741,15 @@ pre .javascript .function {
   border: 1px solid #eee;
   opacity: 1;
 }
+.site-author-image {
+  border-radius: 100%;
+}
+.site-author-image {
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
+}
 .site-author-name {
   margin: 0;
   text-align: center;
@@ -1841,7 +1783,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a4ff37;
+  background: #ff7ff4;
 }
 .feed-link,
 .chat {
@@ -2409,7 +2351,7 @@ ul.breadcrumb {
   margin: 1em 0;
   padding: 0 2em;
   text-align: center;
-  font-size: 12px;
+  font-size: 18px;
 }
 ul.breadcrumb li {
   display: inline;
