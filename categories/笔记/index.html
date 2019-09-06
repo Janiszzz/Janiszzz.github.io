@@ -358,7 +358,7 @@
         
           <a class="post-title-link" href="/post/20190826/5a026a6.html" itemprop="url">
             
-              <span itemprop="name">《GAINAX动画讲义》学习笔记.md</span>
+              <span itemprop="name">《GAINAX动画讲义》学习笔记</span>
             
           </a>
         
@@ -763,6 +763,32 @@
   
 
   
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
 
   
 

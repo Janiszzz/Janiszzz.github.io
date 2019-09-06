@@ -942,6 +942,12 @@ pre .javascript .function {
 .post-body .tabs .tab-content .tab-pane.active {
   display: block;
 }
+.pdfobject-container {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  height: 500px;
+}
 .btn {
   display: inline-block;
   padding: 0 20px;
@@ -1783,7 +1789,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffafff;
+  background: #ffc746;
 }
 .feed-link,
 .chat {
