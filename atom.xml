@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://janiszzz.tk/"/>
-  <updated>2020-02-18T03:39:03.437Z</updated>
+  <updated>2020-04-01T13:56:18.478Z</updated>
   <id>https://janiszzz.tk/</id>
   
   <author>
@@ -17,11 +17,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>宏经笔记-国民经济流量循环</title>
+    <link href="https://janiszzz.tk/post/20200330/d7538525.html"/>
+    <id>https://janiszzz.tk/post/20200330/d7538525.html</id>
+    <published>2020-03-30T12:27:39.000Z</published>
+    <updated>2020-04-01T13:56:18.478Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;介绍古典模型的国民收入流量循环。&lt;/p&gt;
+&lt;p&gt;古典模型中的经济主体是如何收支平衡，整个经济系统中的价值如何循环往复。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://janiszzz.tk/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="宏观经济学笔记" scheme="https://janiszzz.tk/categories/%E7%AC%94%E8%AE%B0/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>宏经笔记-宏观经济数据核算</title>
+    <link href="https://janiszzz.tk/post/20200330/1a463694.html"/>
+    <id>https://janiszzz.tk/post/20200330/1a463694.html</id>
+    <published>2020-03-30T12:27:24.000Z</published>
+    <updated>2020-04-01T14:06:18.020Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;宏观经济学专栏计划：此计划旨在撰写宏观经济学学习笔记，阐述全部讲授的知识，其文章要达到非本专业人士也能看懂的地步（迫真小黄鸭调试法）。欢迎批评指正。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://janiszzz.tk/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="宏观经济学笔记" scheme="https://janiszzz.tk/categories/%E7%AC%94%E8%AE%B0/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>《动物化的后现代》读书笔记</title>
     <link href="https://janiszzz.tk/post/20200216/e74d453e.html"/>
     <id>https://janiszzz.tk/post/20200216/e74d453e.html</id>
     <published>2020-02-16T10:02:21.000Z</published>
-    <updated>2020-02-18T03:39:03.437Z</updated>
+    <updated>2020-03-30T12:33:09.042Z</updated>
     
     <summary type="html">
     
@@ -29,6 +72,8 @@
     
     </summary>
     
+    
+      <category term="笔记" scheme="https://janiszzz.tk/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>
