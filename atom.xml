@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Janiszzz&#39;s Blog</title>
-  
+  <icon>https://janiszzz.tk/icon.png</icon>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://janiszzz.tk/"/>
-  <updated>2020-04-01T13:56:18.478Z</updated>
+  <updated>2020-04-17T06:46:36.045Z</updated>
   <id>https://janiszzz.tk/</id>
   
   <author>
@@ -14,14 +14,105 @@
     
   </author>
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>宏经笔记-解释凯恩斯理论的IS-LM模型</title>
+    <link href="https://janiszzz.tk/post/20200404/38b7b9f6.html"/>
+    <id>https://janiszzz.tk/post/20200404/38b7b9f6.html</id>
+    <published>2020-04-04T06:50:01.000Z</published>
+    <updated>2020-04-17T06:46:36.045Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;IS-LM模型是凯恩斯模型的一种解释。&lt;br&gt;
+古典观点认为，实体经济的运行和货币无关（古典二分法）。凯恩斯理论则认为两者有关，产品市场和货币市场会相互影响。IS-LM模型基于一般均衡理论，通过产品市场和货币市场各自的均衡相交所达成的一般均衡描述宏观经济。&lt;br&gt;
+IS-LM模型可以解释短期经济。短期内价格假设是刚性、不可变的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://janiszzz.tk/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="宏观经济学笔记" scheme="https://janiszzz.tk/categories/%E7%AC%94%E8%AE%B0/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>宏经笔记-古典宏观模型与货币</title>
+    <link href="https://janiszzz.tk/post/20200403/7cb7d97.html"/>
+    <id>https://janiszzz.tk/post/20200403/7cb7d97.html</id>
+    <published>2020-04-03T14:34:09.000Z</published>
+    <updated>2020-04-17T02:31:39.513Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;古典观点如何看待货币与实体经济的关系。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://janiszzz.tk/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="宏观经济学笔记" scheme="https://janiszzz.tk/categories/%E7%AC%94%E8%AE%B0/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>宏经笔记-古典宏观模型中国民收入的生产、分配与配置</title>
+    <link href="https://janiszzz.tk/post/20200403/33ff53fd.html"/>
+    <id>https://janiszzz.tk/post/20200403/33ff53fd.html</id>
+    <published>2020-04-03T09:16:39.000Z</published>
+    <updated>2020-04-17T04:04:22.073Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基本的古典模型分析有关GDP来源和去向的四组问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;什么决定了经济的总产出？&lt;/li&gt;
+&lt;li&gt;国民收入是如何分配的？&lt;/li&gt;
+&lt;li&gt;什么决定产品和服务的需求？&lt;/li&gt;
+&lt;li&gt;产品和服务市场的均衡是如何达到的？&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://janiszzz.tk/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="宏观经济学笔记" scheme="https://janiszzz.tk/categories/%E7%AC%94%E8%AE%B0/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>转载-日本动画制作流程揭秘</title>
+    <link href="https://janiszzz.tk/post/20200403/893ccdc6.html"/>
+    <id>https://janiszzz.tk/post/20200403/893ccdc6.html</id>
+    <published>2020-04-03T06:55:02.148Z</published>
+    <updated>2020-04-17T07:07:19.362Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;出自AIC官网的动画小常识栏目。虽然很久远（2002年的文章），动画工业的制作流程却几乎没有变化。网站已经消失，但可以在&lt;a href=&quot;https://web.archive.org/web/2018*/http://www.aicasia.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Wayback Machine&lt;/a&gt; 查到&lt;br&gt;
+对原文简体化后做了少许修改以提升可读性，注释删除了全部日文名词解释和部分英文名词解释。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="宅研究" scheme="https://janiszzz.tk/categories/%E5%AE%85%E7%A0%94%E7%A9%B6/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>宏经笔记-国民经济流量循环</title>
     <link href="https://janiszzz.tk/post/20200330/d7538525.html"/>
     <id>https://janiszzz.tk/post/20200330/d7538525.html</id>
     <published>2020-03-30T12:27:39.000Z</published>
-    <updated>2020-04-01T13:56:18.478Z</updated>
+    <updated>2020-04-17T03:48:52.312Z</updated>
     
     <summary type="html">
     
@@ -43,7 +134,7 @@
     <link href="https://janiszzz.tk/post/20200330/1a463694.html"/>
     <id>https://janiszzz.tk/post/20200330/1a463694.html</id>
     <published>2020-03-30T12:27:24.000Z</published>
-    <updated>2020-04-01T14:06:18.020Z</updated>
+    <updated>2020-04-17T02:02:54.600Z</updated>
     
     <summary type="html">
     
@@ -68,7 +159,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;Xmind真好用.jpg&lt;br&gt;本书涉及以宅文化为例的次文化研究/后现代主义&lt;/p&gt;
+      &lt;p&gt;Xmind真好用.jpg&lt;br&gt;
+本书涉及以宅文化为例的次文化研究/后现代主义&lt;/p&gt;
     
     </summary>
     
@@ -176,7 +268,7 @@
     <link href="https://janiszzz.tk/post/20200107/8d29bba5.html"/>
     <id>https://janiszzz.tk/post/20200107/8d29bba5.html</id>
     <published>2020-01-07T09:51:36.000Z</published>
-    <updated>2020-02-28T12:23:46.194Z</updated>
+    <updated>2020-04-16T18:18:38.895Z</updated>
     
     <summary type="html">
     
@@ -218,7 +310,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;2018新国辩哲理辩-周玄毅vs黄执中&lt;br&gt;仅作记录&lt;/p&gt;
+      &lt;p&gt;2018新国辩哲理辩-周玄毅vs黄执中&lt;br&gt;
+仅作记录&lt;/p&gt;
     
     </summary>
     
@@ -273,7 +366,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;俞炜华，赵媛.社会问题经济学，西安：西安交通大学出版社，2002. &lt;/p&gt;
+      &lt;p&gt;俞炜华，赵媛.社会问题经济学，西安：西安交通大学出版社，2002.&lt;/p&gt;
     
     </summary>
     
@@ -292,7 +385,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;处理伦理问题中没有帮助的几种方法、解决伦理问题的方法。&lt;br&gt;整理自《优雅的辩论》【美】布鲁斯·N·沃勒
+      &lt;p&gt;处理伦理问题中没有帮助的几种方法、解决伦理问题的方法。&lt;br&gt;
+整理自《优雅的辩论》【美】布鲁斯·N·沃勒
     
     </summary>
     
@@ -315,48 +409,6 @@
     
     
       <category term="生活" scheme="https://janiszzz.tk/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>一辩稿：个性化推荐不利于消费者的消费选择</title>
-    <link href="https://janiszzz.tk/post/20190622/f82eeeea.html"/>
-    <id>https://janiszzz.tk/post/20190622/f82eeeea.html</id>
-    <published>2019-06-22T05:48:59.000Z</published>
-    <updated>2019-09-04T13:04:34.361Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;谢谢主席，大家好。开宗明义，所谓个性化推荐，是指当前电商购物平台存在的一种通过对所收集的用户数据进行分析，得出用户可能的喜好并按照此对商品进行推荐的技术。
-    
-    </summary>
-    
-    
-      <category term="辩论" scheme="https://janiszzz.tk/categories/%E8%BE%A9%E8%AE%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello,World!</title>
-    <link href="https://janiszzz.tk/post/20190621/db8976d7.html"/>
-    <id>https://janiszzz.tk/post/20190621/db8976d7.html</id>
-    <published>2019-06-21T12:48:31.000Z</published>
-    <updated>2019-08-26T07:24:49.429Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
     
     
   </entry>

@@ -1,92 +1,21 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
-<link rel="stylesheet" href="/css/main.css?v=7.1.2">
-
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
-
-
-
-
-
-
-
-
-
-<script id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"janiszzz.tk","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta name="description" content="感谢贴吧大神未知的深蓝色制作的中文翻译。">
 <meta property="og:type" content="article">
@@ -100,21 +29,16 @@
 <meta name="twitter:title" content="《GAINAX动画讲义》学习笔记">
 <meta name="twitter:description" content="感谢贴吧大神未知的深蓝色制作的中文翻译。">
 
+<link rel="canonical" href="https://janiszzz.tk/post/20190826/5a026a6.html">
 
 
-  <link rel="alternate" href="/atom.xml" title="Janiszzz's Blog" type="application/atom+xml">
-
-
-
-  
-  
-  <link rel="canonical" href="https://janiszzz.tk/post/20190826/5a026a6">
-
-
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -126,15 +50,8 @@
 
 
 
-
-
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -143,9 +60,8 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -157,317 +73,186 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="Janiszzz's Blog" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Janiszzz's Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Janiszzz's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
+
 
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-about">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-categories">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
-
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
 </nav>
 
 
 
-  
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
 
-
+    </div>
+  </div>
 
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
+
+          <div class="content post posts-expand">
             
 
-          
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
     
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://janiszzz.tk/post/20190826/5a026a6.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Janiszzz">
       <meta itemprop="description" content="Janiszzz 的个人博客,欢迎你来XD">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Janiszzz's Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">《GAINAX动画讲义》学习笔记
-
-              
-            
-          </h2>
-        
+        <h1 class="post-title" itemprop="name headline">
+          《GAINAX动画讲义》学习笔记
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-08-26 15:24:49" itemprop="dateCreated datePublished" datetime="2019-08-26T15:24:49+08:00">2019-08-26</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2020-01-10 21:24:43" itemprop="dateModified" datetime="2020-01-10T21:24:43+08:00">2020-01-10</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
                 </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/post/20190826/5a026a6.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/post/20190826/5a026a6.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-            <i class="fa fa-eye"></i>
-             阅读次数： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
-          
 
           
-
-          
+            <span id="/post/20190826/5a026a6.html" class="post-meta-item leancloud_visitors" data-flag-title="《GAINAX动画讲义》学习笔记" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/post/20190826/5a026a6.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/20190826/5a026a6.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -475,469 +260,303 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
         <p>感谢贴吧大神<a href="http://blog.sina.com.cn/aoimishi" title="未知的深蓝色_新浪博客" target="_blank" rel="noopener">未知的深蓝色</a>制作的中文翻译。</p>
 <a id="more"></a>
-<h3 id="分镜"><a href="#分镜" class="headerlink" title="分镜"></a>分镜</h3><h4 id="分镜最基本的规则：上手和下手，想定线原则"><a href="#分镜最基本的规则：上手和下手，想定线原则" class="headerlink" title="分镜最基本的规则：上手和下手，想定线原则"></a>分镜最基本的规则：上手和下手，想定线原则</h4><p>上手：画面的右端，表演的人从该侧进入舞台。前进的方向，动作的方向。<br>下手：画面的左端，从该侧退场。<br>想定线：想定线就是俯瞰两个对象的时候，连接着这两个对象的线。摄像机就在两人之间的想定线的前方进行拍摄。</p>
+<h3 id="分镜"><a class="markdownIt-Anchor" href="#分镜"></a> 分镜</h3>
+<h4 id="分镜最基本的规则上手和下手想定线原则"><a class="markdownIt-Anchor" href="#分镜最基本的规则上手和下手想定线原则"></a> 分镜最基本的规则：上手和下手，想定线原则</h4>
+<p>上手：画面的右端，表演的人从该侧进入舞台。前进的方向，动作的方向。<br>
+下手：画面的左端，从该侧退场。<br>
+想定线：想定线就是俯瞰两个对象的时候，连接着这两个对象的线。摄像机就在两人之间的想定线的前方进行拍摄。</p>
 <p>想定线的规则就是：摄像机绝不能越过想定线。这样镜头移动比较自然，也不会引起迷惑。如果要进行AなめB的构图，则将A 画在画面右前方，B画在左后方（摄像机就没有越过想定线）如果要在下个镜头中靠近B 的正面，只需要朝着画面右侧（B方向）放大看过去就可以了，镜头连接会比较自然。</p>
 <p>如果摄像头始终在同一侧，则两个对象的空间关系将保持一致，便于辨识。说白了，就是左右相对位置的不变。又比如，如果一辆车从画面右侧离开，如果变动侧，下一个镜头车从右侧进入，就会产生迷失感。</p>
 <p>AなめB：从前方拍摄两个对象，外面是A，里面是B，称为AなめB。</p>
-<h3 id="成为场景（scene）的镜头发展"><a href="#成为场景（scene）的镜头发展" class="headerlink" title="成为场景（scene）的镜头发展"></a>成为场景（scene）的镜头发展</h3><h4 id="不应看一个个单独的镜头，而应该看镜头的发展。"><a href="#不应看一个个单独的镜头，而应该看镜头的发展。" class="headerlink" title="不应看一个个单独的镜头，而应该看镜头的发展。"></a>不应看一个个单独的镜头，而应该看镜头的发展。</h4><p>动画的分镜是在每个镜头用草图、文字给予作图指示。写实剧则直接在剧本上写指示，称为文字分镜。<br>写实剧中：结合监督的指令，摄像师决定如何拍摄画面。出于慎重，写实剧会从不同的角度拍摄或者拍摄不必要的镜头，在编集作业中完成scene的制作（改变镜头顺序、把特写时说的台词变为off台词等）。<br>而在动画制作中，以上工作在分镜制作时一同完成。因此，控制镜头的发展成为scene，是分镜的一个重要作用。</p>
+<h3 id="成为场景scene的镜头发展"><a class="markdownIt-Anchor" href="#成为场景scene的镜头发展"></a> 成为场景（scene）的镜头发展</h3>
+<h4 id="不应看一个个单独的镜头而应该看镜头的发展"><a class="markdownIt-Anchor" href="#不应看一个个单独的镜头而应该看镜头的发展"></a> 不应看一个个单独的镜头，而应该看镜头的发展。</h4>
+<p>动画的分镜是在每个镜头用草图、文字给予作图指示。写实剧则直接在剧本上写指示，称为文字分镜。<br>
+写实剧中：结合监督的指令，摄像师决定如何拍摄画面。出于慎重，写实剧会从不同的角度拍摄或者拍摄不必要的镜头，在编集作业中完成scene的制作（改变镜头顺序、把特写时说的台词变为off台词等）。<br>
+而在动画制作中，以上工作在分镜制作时一同完成。因此，控制镜头的发展成为scene，是分镜的一个重要作用。</p>
 <p>这种镜头的发展，体现为镜头切换之间的流畅和自然、便于理解。可以采用声音（台词、效果音、音乐）作为指针，因为声音是随着时间流动变化的，从声音出发去想象发展会很有效。</p>
 <blockquote>
 <p>庵野秀明：“很少有演出家能进行scene的演出”。</p>
 </blockquote>
-<h4 id="scene中什么东西比较重要"><a href="#scene中什么东西比较重要" class="headerlink" title="scene中什么东西比较重要"></a>scene中什么东西比较重要</h4><p>为了到达高潮、最想让观众看到的一部分的点，这种发展的过程是最重要的。若果每个镜头都画的太认真，会破坏、拖延了发展。为了表现出最后激烈的碰撞，敢于将前面的内容有所保留，进行不显眼的演出，是有必要的。这样可以避免观众的腻烦，也可以凸显出高潮部分。</p>
-<h3 id="信息的控制-前篇"><a href="#信息的控制-前篇" class="headerlink" title="信息的控制 前篇"></a>信息的控制 前篇</h3><h4 id="想给观众看的东西就要让观众看清楚。没必要给观众看的东西就不要给观众看。"><a href="#想给观众看的东西就要让观众看清楚。没必要给观众看的东西就不要给观众看。" class="headerlink" title="想给观众看的东西就要让观众看清楚。没必要给观众看的东西就不要给观众看。"></a>想给观众看的东西就要让观众看清楚。没必要给观众看的东西就不要给观众看。</h4><p>在偶像照片中，摄影师常常通过调节光圈，使背景模糊，这是因为相对于偶像，背景的街道树木是不重要的。<br>动画制作也是如此，如果人物和背景都画的过于详细，就会造成信息过剩，使观众失去焦点。例如，在一开始的远摄中表现好了角色所在的位置和时态，在接下来的半身镜头说话就不再需要背景信息。</p>
+<h4 id="scene中什么东西比较重要"><a class="markdownIt-Anchor" href="#scene中什么东西比较重要"></a> scene中什么东西比较重要</h4>
+<p>为了到达高潮、最想让观众看到的一部分的点，这种发展的过程是最重要的。若果每个镜头都画的太认真，会破坏、拖延了发展。为了表现出最后激烈的碰撞，敢于将前面的内容有所保留，进行不显眼的演出，是有必要的。这样可以避免观众的腻烦，也可以凸显出高潮部分。</p>
+<h3 id="信息的控制-前篇"><a class="markdownIt-Anchor" href="#信息的控制-前篇"></a> 信息的控制 前篇</h3>
+<h4 id="想给观众看的东西就要让观众看清楚-没必要给观众看的东西就不要给观众看"><a class="markdownIt-Anchor" href="#想给观众看的东西就要让观众看清楚-没必要给观众看的东西就不要给观众看"></a> 想给观众看的东西就要让观众看清楚。没必要给观众看的东西就不要给观众看。</h4>
+<p>在偶像照片中，摄影师常常通过调节光圈，使背景模糊，这是因为相对于偶像，背景的街道树木是不重要的。<br>
+动画制作也是如此，如果人物和背景都画的过于详细，就会造成信息过剩，使观众失去焦点。例如，在一开始的远摄中表现好了角色所在的位置和时态，在接下来的半身镜头说话就不再需要背景信息。</p>
 <p>另外，也要重视重要信息的表述。比如要描绘地点的氛围和真实感，有数个BGonly，就要细致的、参考照片画出背景。演出时有需要的特殊背景等（有特殊意义的云朵，…），也要细致地画出来。</p>
-<h3 id="信息的控制-后篇"><a href="#信息的控制-后篇" class="headerlink" title="信息的控制 后篇"></a>信息的控制 后篇</h3><p>减少信息的输出。如果只是一味地加入信息是无法制作出高质量的作品的。</p>
-<p>不让观众直接看到表情，但是可以让人想象表情：蜡笔小新的笑、EVA中司令的笑。不想因为极端的表情破坏人物形象或是结合起有内涵的台词引人遐想。<br>“人物打开门进来，穿过房间，坐到了里面的椅子上”，并不需要把每个动作都画出来。打开门、坐上椅子，就能表现出人物已经进入房间了。或者，门被打开之后拍摄椅子，随着脚步声，人物渐渐进入画面，坐下去。用脚步声表现人物穿过房间的动作、用up状态的画面没有画出人物表情，减少了作画负担。将一个镜头拆分成几个镜头，减少了时间。<br>当然，一昧减少信息也不是好事。进入房间，人物神态的变化有时不得不用描写或者感情来表现，有时候也必须要表现人物隐藏的感情。因此要对信息做出取舍。<br>在成本上，信息量的增加，会引起总镜头数的增加、作画负担的增加：突破作画张数限制，破坏日程表；增加原画师、增加作画监督的工作。</p>
-<h3 id="分镜集"><a href="#分镜集" class="headerlink" title="分镜集"></a>分镜集</h3><h4 id="处理演出"><a href="#处理演出" class="headerlink" title="处理演出"></a>处理演出</h4><p>演出分为分镜和处理演出。分镜给出画面的大致构图设计，而处理演出则进一步将其转换为影像。</p>
+<h3 id="信息的控制-后篇"><a class="markdownIt-Anchor" href="#信息的控制-后篇"></a> 信息的控制 后篇</h3>
+<p>减少信息的输出。如果只是一味地加入信息是无法制作出高质量的作品的。</p>
+<p>不让观众直接看到表情，但是可以让人想象表情：蜡笔小新的笑、EVA中司令的笑。不想因为极端的表情破坏人物形象或是结合起有内涵的台词引人遐想。<br>
+“人物打开门进来，穿过房间，坐到了里面的椅子上”，并不需要把每个动作都画出来。打开门、坐上椅子，就能表现出人物已经进入房间了。或者，门被打开之后拍摄椅子，随着脚步声，人物渐渐进入画面，坐下去。用脚步声表现人物穿过房间的动作、用up状态的画面没有画出人物表情，减少了作画负担。将一个镜头拆分成几个镜头，减少了时间。<br>
+当然，一昧减少信息也不是好事。进入房间，人物神态的变化有时不得不用描写或者感情来表现，有时候也必须要表现人物隐藏的感情。因此要对信息做出取舍。<br>
+在成本上，信息量的增加，会引起总镜头数的增加、作画负担的增加：突破作画张数限制，破坏日程表；增加原画师、增加作画监督的工作。</p>
+<h3 id="分镜集"><a class="markdownIt-Anchor" href="#分镜集"></a> 分镜集</h3>
+<h4 id="处理演出"><a class="markdownIt-Anchor" href="#处理演出"></a> 处理演出</h4>
+<p>演出分为分镜和处理演出。分镜给出画面的大致构图设计，而处理演出则进一步将其转换为影像。</p>
 <p>并非会作画就可以绘制分镜。首先制作出layout、情节或台词时机的是原画师。应该在进行了大量的原画练习之后再自然地考虑如何画分镜。</p>
 <p>编集：按照分镜指示将OKtake排序，增减镜头前后的帧使画面流畅，调整时间长度，或者配合演出意图调整（制造闪回等等）。镜头连接之后会有不同的效果，所以务必理解了连接感觉之后再来画分镜。</p>
 <p>DB：dubbing，配合完成的影像，加入台词、效果音、bgm等的工作。声音的辅助可以表现出状况、动作、感情，减少花在画面的精力。同时，声音需要时间的帮助。如果使用声音表现壮观的爆炸、沉重的动作等等，就不得不用更多的时间和帧。一个炫目的爆炸镜头可能用了多达12帧来表现，可是0.5秒对于声音来说太短了。因此有的时候要为了声音多准备镜头和时间。</p>
-<h4 id="用分镜来表达"><a href="#用分镜来表达" class="headerlink" title="用分镜来表达"></a>用分镜来表达</h4><p>分镜包括简单的画面和文字指示。（当然也有画得十分精细如宫崎骏，他的分镜稿甚至是部分上色的）</p>
+<h4 id="用分镜来表达"><a class="markdownIt-Anchor" href="#用分镜来表达"></a> 用分镜来表达</h4>
+<p>分镜包括简单的画面和文字指示。（当然也有画得十分精细如宫崎骏，他的分镜稿甚至是部分上色的）</p>
 <p>分镜不仅要包括剧本上的内容，还要有变化，对弱场和高潮场面能有所控制。因此要能想象这个scene，根据想象画分镜。</p>
 <p>在文字指示中要包含一切，如人物表情、动作或是台词，颜色、影子、状况音等等。有不常见的声音内容，或者想要特别着重的部分，都要在文字指示中表达出来。</p>
 <p>想方设法把自己的想象和感受表达在分镜里，是很重要的。</p>
-<h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a>layout</h3><h4 id="关于layout"><a href="#关于layout" class="headerlink" title="关于layout"></a>关于layout</h4><p>如何画layout？</p>
-<p>观察：平时要对各种场景仔细观察，在脑中留下场景来培养想象力。即便分镜的设定不完整，也可以靠想象补全。<br>layout的气氛和空间：</p>
+<h3 id="layout"><a class="markdownIt-Anchor" href="#layout"></a> layout</h3>
+<h4 id="关于layout"><a class="markdownIt-Anchor" href="#关于layout"></a> 关于layout</h4>
+<p>如何画layout？</p>
+<p>观察：平时要对各种场景仔细观察，在脑中留下场景来培养想象力。即便分镜的设定不完整，也可以靠想象补全。<br>
+layout的气氛和空间：</p>
 <ul>
 <li>“把人和背景弄乱”</li>
 <li>“边画边破坏掉一个一个的小物体的平衡再进行整理”</li>
 </ul>
 <p>现实生活中的物品不是整齐摆放的，要把握好整齐和偏离的平衡。</p>
 <p>一边让角色在想象的空间里走动，一边无意识地看着设定画，空间就会不自觉地扩大，变得清晰。要将所有物品都放在想象中一并考虑，尽管这个镜头中可能没有。</p>
-<h4 id="在layout作业之前应该考虑的事"><a href="#在layout作业之前应该考虑的事" class="headerlink" title="在layout作业之前应该考虑的事"></a>在layout作业之前应该考虑的事</h4><p>根据美术设定和人物设定配置背景和人物，设置光源位置，配置影子的附着。</p>
+<h4 id="在layout作业之前应该考虑的事"><a class="markdownIt-Anchor" href="#在layout作业之前应该考虑的事"></a> 在layout作业之前应该考虑的事</h4>
+<p>根据美术设定和人物设定配置背景和人物，设置光源位置，配置影子的附着。</p>
 <p>考虑登场人物的心理、动作，画出符合气氛的layout。画面内的物体的放置方法，视野角度，观察人物和物体的方式都因此得到稍微的改变。</p>
 <p>根据实际的情况，可以适当的改变分镜的镜头远近、角度等等。layout不是一味地再现分镜的画面，而是要对分镜进行整理，考虑是什么样的表演，并在商讨中完成。听从演出的命令。</p>
-<h4 id="layout的正解是？"><a href="#layout的正解是？" class="headerlink" title="layout的正解是？"></a>layout的正解是？</h4><blockquote>
+<h4 id="layout的正解是"><a class="markdownIt-Anchor" href="#layout的正解是"></a> layout的正解是？</h4>
+<blockquote>
 <p>Q:我是想知道正解才来的，我想问一下平松先生的话会按照分镜画出怎样的layout 呢？</p>
 </blockquote>
-<p>A:每个动画人的画法都不一样，所以不存在正解。或者说正解是演出所想要的画。<br>“我在成为动画人以前和在做动画师的时候反复看的一本书是大塚康生先生的《作画汗まみれ》。”</p>
-<h4 id="必须画进layout的东西"><a href="#必须画进layout的东西" class="headerlink" title="必须画进layout的东西"></a>必须画进layout的东西</h4><p>要优先画出layout中显眼的地方，把观众的感受画进画里。（实际有但是省略掉这样的操作也是有的。）</p>
+<p>A:每个动画人的画法都不一样，所以不存在正解。或者说正解是演出所想要的画。<br>
+“我在成为动画人以前和在做动画师的时候反复看的一本书是大塚康生先生的《作画汗まみれ》。”</p>
+<h4 id="必须画进layout的东西"><a class="markdownIt-Anchor" href="#必须画进layout的东西"></a> 必须画进layout的东西</h4>
+<p>要优先画出layout中显眼的地方，把观众的感受画进画里。（实际有但是省略掉这样的操作也是有的。）</p>
 <p>如果只是按照动画的设定，画出来的东西没有现实的味道。平时就要开始画素描，脑中有积累的话动画的构思就会变得容易。</p>
 <ul>
 <li>画走路的画的话，如果没有思考，那画出来的就是单纯的走路。根据不同的情况，走路的动作应该有所不同：“走路时心中所想的什么”、“是没目的地的乱逛吗”、“是被谁叫去的吗。比如走得很急的某人，可能是压住了肩上的挎包不让它乱动。结合了生活观察为基础的动作信息，画出的状态很真实。</li>
 </ul>
 <p>至于省略的环节，要试着画出来进行判断。画进去能够成立的话就画进去。要考虑作为画它能不能让人看懂，作为layout 它能不能让人看懂。</p>
 <p>要把平时看到的东西在脑中进行旋转，从不同的角度尝试想象。</p>
-<h4 id="如何增加自己的积累"><a href="#如何增加自己的积累" class="headerlink" title="如何增加自己的积累"></a>如何增加自己的积累</h4><blockquote>
+<h4 id="如何增加自己的积累"><a class="markdownIt-Anchor" href="#如何增加自己的积累"></a> 如何增加自己的积累</h4>
+<blockquote>
 <p>Q：如何增加自己的积累？</p>
 </blockquote>
 <p>A:不断练习。一开始带着素描本在街上走，边走边画。熟练之后就可以记住图景，回到工作室再画出来。不断坚持就能记忆住。</p>
-<h4 id="动画的消失点和透视线的必要性"><a href="#动画的消失点和透视线的必要性" class="headerlink" title="动画的消失点和透视线的必要性"></a>动画的消失点和透视线的必要性</h4><p>完整的画透视线，最后交汇于的一点，就是消失点。但是日动(日本动画公司,前身为瑞鹰）的人不同，“明明是一点透视的时候他们却画两个消失点或一个都不画”。</p>
-<p>有明确的消失点：视角方向明显，镜头感强，深度感强。画面可能会比较狭窄或者死板。<br>没有明确消失点：远处好像在一个平面上，进深被稍微压缩。视线高度相同，但俯瞰感减小了。</p>
+<h4 id="动画的消失点和透视线的必要性"><a class="markdownIt-Anchor" href="#动画的消失点和透视线的必要性"></a> 动画的消失点和透视线的必要性</h4>
+<p>完整的画透视线，最后交汇于的一点，就是消失点。但是日动(日本动画公司,前身为瑞鹰）的人不同，“明明是一点透视的时候他们却画两个消失点或一个都不画”。</p>
+<p>有明确的消失点：视角方向明显，镜头感强，深度感强。画面可能会比较狭窄或者死板。<br>
+没有明确消失点：远处好像在一个平面上，进深被稍微压缩。视线高度相同，但俯瞰感减小了。</p>
 <p>透视线规范或者不规范，要看layout的具体要求。先决定画什么，再决定怎么画。</p>
-<h4 id="画面精细的重要性"><a href="#画面精细的重要性" class="headerlink" title="画面精细的重要性"></a>画面精细的重要性</h4><p><em>指layout画面的精细程度</em></p>
+<h4 id="画面精细的重要性"><a class="markdownIt-Anchor" href="#画面精细的重要性"></a> 画面精细的重要性</h4>
+<p><em>指layout画面的精细程度</em></p>
 <p>时间安排和制作状况是影响因素的一部分。作画密度高的话，演出或制作、原画师就要按照镜头的重要程度对应安排精细程度了。</p>
 <blockquote>
 <p>要不要把layout画成第一原画的感觉？</p>
 </blockquote>
 <p>其实没必要这么做。layout的功能到把动作的关键点或重要的地方传达给演出就可以为止了。如果画的太精细，会拖延日程。如果是很简单的情节的镜头，甚至只要画上原图和角色，动作用箭头指示就行了。</p>
-<h4 id="layout-的平衡"><a href="#layout-的平衡" class="headerlink" title="layout 的平衡"></a>layout 的平衡</h4><p>layout并不只是单纯地把分镜的画面再现，而是必须理解演出家所要求的内容。</p>
+<h4 id="layout-的平衡"><a class="markdownIt-Anchor" href="#layout-的平衡"></a> layout 的平衡</h4>
+<p>layout并不只是单纯地把分镜的画面再现，而是必须理解演出家所要求的内容。</p>
 <p>评价的标准：人物谐调和物体配置的平衡、原画中人物动作能否表现出来。</p>
 <p>人物的谐调：例如标准尺寸下，要画腰部以上的人物时，头部要稍微画到画面外才比较自然。在远景尺寸下，人物的头上方要空出来才自然。如果采用和标准尺寸一样的画法，人物会把画面一分为二，很奇怪。</p>
 <p>关键就是能否在分镜草图中看出完成画面。必须思考为什么是用这种尺寸，为什么从这个角度来画，理解演出的意图并把它画出来。你的画是否浅显易懂，对分镜演出了解多少，用怎样的心情画画，就是演出要看的东西。从各种各样的信息中分辨出必要和没必要的信息再来画。</p>
 
-      
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-      <div>
         
 
-
-
-
-  
-
-
-
+<div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>Janiszzz</li>
+    <strong>本文作者： </strong>Janiszzz
+  </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    
     <a href="https://janiszzz.tk/post/20190826/5a026a6.html" title="《GAINAX动画讲义》学习笔记">https://janiszzz.tk/post/20190826/5a026a6.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
+</div>
 
-      </div>
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/20190803/fbe948e8.html" rel="prev" title="《社会问题经济学》读书笔记">
+      <i class="fa fa-chevron-left"></i> 《社会问题经济学》读书笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/post/20190904/ad3122ea.html" rel="next" title="《乌合之众》思维导图">
+      《乌合之众》思维导图 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
     
-
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/post/20190803/fbe948e8.html" rel="next" title="《社会问题经济学》读书笔记">
-                <i class="fa fa-chevron-left"></i> 《社会问题经济学》读书笔记
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/post/20190904/ad3122ea.html" rel="prev" title="《乌合之众》思维导图">
-                《乌合之众》思维导图 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-
-  </div>
 
 
           </div>
           
-
-  
-    <div class="comments" id="comments">
-    </div>
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Janiszzz">
-            
-              <p class="site-author-name" itemprop="name">Janiszzz</p>
-              <div class="site-description motion-element" itemprop="description">Janiszzz 的个人博客,欢迎你来XD</div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">18</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">5</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/janiszzz" title="GitHub &rarr; https://github.com/janiszzz" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="/janiszzz@qq.com" title="E-Mail &rarr; janiszzz@qq.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-            </div>
-          
-
-          
-             <div class="cc-license motion-element" itemprop="license">
-              
-              
-                
-              
-              
-              
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
-             </div>
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://muzhou233.github.io" title="https://muzhou233.github.io" rel="noopener" target="_blank">MuZhou</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://blog.gyx.moe" title="https://blog.gyx.moe" rel="noopener" target="_blank">Tabing</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://hoohan.cn" title="http://hoohan.cn" rel="noopener" target="_blank">Hoohan</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/coolkid_cwm/" title="https://blog.csdn.net/coolkid_cwm/" rel="noopener" target="_blank">Coolkid</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/qq_34004420" title="https://blog.csdn.net/qq_34004420" rel="noopener" target="_blank">zzx</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/c_lyr/" title="https://blog.csdn.net/c_lyr/" rel="noopener" target="_blank">cl</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
-          
-            
-          
-          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1375725396&auto=0&height=66"></iframe>
-        </div>
-      </div>
-
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#分镜"><span class="nav-number">1.</span> <span class="nav-text">分镜</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分镜最基本的规则：上手和下手，想定线原则"><span class="nav-number">1.1.</span> <span class="nav-text">分镜最基本的规则：上手和下手，想定线原则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成为场景（scene）的镜头发展"><span class="nav-number">2.</span> <span class="nav-text">成为场景（scene）的镜头发展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#不应看一个个单独的镜头，而应该看镜头的发展。"><span class="nav-number">2.1.</span> <span class="nav-text">不应看一个个单独的镜头，而应该看镜头的发展。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#scene中什么东西比较重要"><span class="nav-number">2.2.</span> <span class="nav-text">scene中什么东西比较重要</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息的控制-前篇"><span class="nav-number">3.</span> <span class="nav-text">信息的控制 前篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#想给观众看的东西就要让观众看清楚。没必要给观众看的东西就不要给观众看。"><span class="nav-number">3.1.</span> <span class="nav-text">想给观众看的东西就要让观众看清楚。没必要给观众看的东西就不要给观众看。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息的控制-后篇"><span class="nav-number">4.</span> <span class="nav-text">信息的控制 后篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分镜集"><span class="nav-number">5.</span> <span class="nav-text">分镜集</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#处理演出"><span class="nav-number">5.1.</span> <span class="nav-text">处理演出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用分镜来表达"><span class="nav-number">5.2.</span> <span class="nav-text">用分镜来表达</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#layout"><span class="nav-number">6.</span> <span class="nav-text">layout</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于layout"><span class="nav-number">6.1.</span> <span class="nav-text">关于layout</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在layout作业之前应该考虑的事"><span class="nav-number">6.2.</span> <span class="nav-text">在layout作业之前应该考虑的事</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout的正解是？"><span class="nav-number">6.3.</span> <span class="nav-text">layout的正解是？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#必须画进layout的东西"><span class="nav-number">6.4.</span> <span class="nav-text">必须画进layout的东西</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何增加自己的积累"><span class="nav-number">6.5.</span> <span class="nav-text">如何增加自己的积累</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动画的消失点和透视线的必要性"><span class="nav-number">6.6.</span> <span class="nav-text">动画的消失点和透视线的必要性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#画面精细的重要性"><span class="nav-number">6.7.</span> <span class="nav-text">画面精细的重要性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout-的平衡"><span class="nav-number">6.8.</span> <span class="nav-text">layout 的平衡</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-  
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Janiszzz</span>
-
-  
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
-
-
-
-  <div class="footer-custom">Hosted by <a href="https://pages.github.com" class="theme-link" rel="noopener" target="_blank">Github Pages</a></div>
-
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-user"></i>
-    </span>
-    <span class="site-uv" title="总访客量">
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="post-meta-divider">|</span>
-  
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-eye"></i>
-    </span>
-    <span class="site-pv" title="总访问量">
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
-  </div>
-
-  
+    <div class="comments" id="valine-comments"></div>
 
 <script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#分镜"><span class="nav-number">1.</span> <span class="nav-text"> 分镜</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分镜最基本的规则上手和下手想定线原则"><span class="nav-number">1.1.</span> <span class="nav-text"> 分镜最基本的规则：上手和下手，想定线原则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成为场景scene的镜头发展"><span class="nav-number">2.</span> <span class="nav-text"> 成为场景（scene）的镜头发展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#不应看一个个单独的镜头而应该看镜头的发展"><span class="nav-number">2.1.</span> <span class="nav-text"> 不应看一个个单独的镜头，而应该看镜头的发展。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#scene中什么东西比较重要"><span class="nav-number">2.2.</span> <span class="nav-text"> scene中什么东西比较重要</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息的控制-前篇"><span class="nav-number">3.</span> <span class="nav-text"> 信息的控制 前篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#想给观众看的东西就要让观众看清楚-没必要给观众看的东西就不要给观众看"><span class="nav-number">3.1.</span> <span class="nav-text"> 想给观众看的东西就要让观众看清楚。没必要给观众看的东西就不要给观众看。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息的控制-后篇"><span class="nav-number">4.</span> <span class="nav-text"> 信息的控制 后篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分镜集"><span class="nav-number">5.</span> <span class="nav-text"> 分镜集</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#处理演出"><span class="nav-number">5.1.</span> <span class="nav-text"> 处理演出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用分镜来表达"><span class="nav-number">5.2.</span> <span class="nav-text"> 用分镜来表达</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#layout"><span class="nav-number">6.</span> <span class="nav-text"> layout</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于layout"><span class="nav-number">6.1.</span> <span class="nav-text"> 关于layout</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在layout作业之前应该考虑的事"><span class="nav-number">6.2.</span> <span class="nav-text"> 在layout作业之前应该考虑的事</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout的正解是"><span class="nav-number">6.3.</span> <span class="nav-text"> layout的正解是？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#必须画进layout的东西"><span class="nav-number">6.4.</span> <span class="nav-text"> 必须画进layout的东西</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何增加自己的积累"><span class="nav-number">6.5.</span> <span class="nav-text"> 如何增加自己的积累</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动画的消失点和透视线的必要性"><span class="nav-number">6.6.</span> <span class="nav-text"> 动画的消失点和透视线的必要性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#画面精细的重要性"><span class="nav-number">6.7.</span> <span class="nav-text"> 画面精细的重要性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout-的平衡"><span class="nav-number">6.8.</span> <span class="nav-text"> layout 的平衡</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Janiszzz"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Janiszzz</p>
+  <div class="site-description" itemprop="description">Janiszzz 的个人博客,欢迎你来XD</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/janiszzz" title="GitHub → https://github.com/janiszzz" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/janiszzz@qq.com" title="E-Mail → janiszzz@qq.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://janiszzz.github.io/atom.xml" title="RSS → https://janiszzz.github.io/atom.xml" rel="noopener" target="_blank"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://muzhou233.github.io" title="https://muzhou233.github.io" rel="noopener" target="_blank">MuZhou</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.gyx.moe" title="https://blog.gyx.moe" rel="noopener" target="_blank">Tabing</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://hoohan.cn" title="http://hoohan.cn" rel="noopener" target="_blank">Hoohan</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.csdn.net/coolkid_cwm/" title="https://blog.csdn.net/coolkid_cwm/" rel="noopener" target="_blank">Coolkid</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.csdn.net/qq_34004420" title="https://blog.csdn.net/qq_34004420" rel="noopener" target="_blank">zzx</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.csdn.net/c_lyr/" title="https://blog.csdn.net/c_lyr/" rel="noopener" target="_blank">cl</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://rushtob.github.io" title="https://rushtob.github.io" rel="noopener" target="_blank">xiaoyao</a>
+        </li>
+    </ul>
+  </div>
+
+        <!--网易云音乐-->
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1426087898&auto=0&height=66"></iframe>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Janiszzz</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
 
 
 
@@ -946,499 +565,104 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </div>
+    </footer>
+  </div>
 
   
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
 
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.1.2"></script>
-
-  <script src="/js/motion.js?v=7.1.2"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.1.2"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
-
-
-
-  
-  <script src="/js/scrollspy.js?v=7.1.2"></script>
-<script src="/js/post-details.js?v=7.1.2"></script>
-
-
-
-  
-
-
-  <script src="/js/next-boot.js?v=7.1.2"></script>
-
-
-  
-
-  
-
-  
-
-  
-  
-
-<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
-
-
-
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-
-<script>
-  var GUEST = ['nick', 'mail', 'link'];
-  var guest = 'nick,mail';
-  guest = guest.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
-  });
-  new Valine({
-    el: '#comments',
-    verify: true,
-    notify: true,
-    appId: 'DaKcnStFGarsvJAsMBAmadQW-MdYXbMMI',
-    appKey: 'vFa4Tb26KJ6RADFFeEnEPyOR',
-    placeholder: '请输入评论',
-    avatar: 'identicon',
-    meta: guest,
-    pageSize: '5' || 10,
-    visitor: false,
-    lang: 'zh-cn' || 'zh-cn'
-  });
-</script>
-
-
-
-
-  
 
 
   
   <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-        // ref: https://github.com/ForbesLindesay/unescape-html
-        var unescapeHtml = function(html) {
-          return String(html)
-            .replace(/&quot;/g, '"')
-            .replace(/&#39;/g, '\'')
-            .replace(/&#x3A;/g, ':')
-            // replace all the other &#x; chars
-            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
-            .replace(/&lt;/g, '<')
-            .replace(/&gt;/g, '>')
-            .replace(/&amp;/g, '&');
-        };
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                content = unescapeHtml(content);
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
   </script>
 
 
 
 
+  <script src="/js/local-search.js"></script>
 
-  
 
-  
 
-  
 
-  
+
+
+
+
 <script>
-if ($('body').find('div.pdf').length) {
-  $.ajax({
-    type: 'GET',
-    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
-    dataType: 'script',
-    cache: true,
-    success: function() {
-      $('body').find('div.pdf').each(function(i, o) {
-        PDFObject.embed($(o).attr('target'), $(o), {
-          pdfOpenParams: {
-            navpanes: 0,
-            toolbar: 0,
-            statusbar: 0,
-            pagemode: 'thumbs',
-            view: 'FitH'
-          },
-          PDFJS_URL: '/lib/pdf/web/viewer.html',
-          height: $(o).attr('height') || '900px'
-        });
-      });
-    },
-  });
-}
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
 </script>
 
 
-  
+
 
   
 
   
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
 
   
 
-  
 
-  
-
-  
-
-  
-
-  
-
-  
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : 'DaKcnStFGarsvJAsMBAmadQW-MdYXbMMI',
+      appKey     : 'vFa4Tb26KJ6RADFFeEnEPyOR',
+      placeholder: "请输入评论",
+      avatar     : 'identicon',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
