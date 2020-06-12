@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"janiszzz.tk","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="介绍通货膨胀率和失业率之间的反向关系，在短期内权衡。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="宏经笔记-总供给与通货膨胀和失业之间的短期权衡">
+<meta property="og:url" content="https://janiszzz.tk/post/20200422/5db28e22.html">
+<meta property="og:site_name" content="Janiszzz&#39;s Blog">
+<meta property="og:description" content="介绍通货膨胀率和失业率之间的反向关系，在短期内权衡。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://janiszzz.tk/image/hgjjx/%E7%BB%93%E6%9E%84%E6%80%A7%E5%A4%B1%E4%B8%9A.png">
+<meta property="og:updated_time" content="2020-06-12T15:50:50.782Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="宏经笔记-总供给与通货膨胀和失业之间的短期权衡">
+<meta name="twitter:description" content="介绍通货膨胀率和失业率之间的反向关系，在短期内权衡。">
+<meta name="twitter:image" content="https://janiszzz.tk/image/hgjjx/%E7%BB%93%E6%9E%84%E6%80%A7%E5%A4%B1%E4%B8%9A.png">
+
+<link rel="canonical" href="https://janiszzz.tk/post/20200422/5db28e22.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>宏经笔记-总供给与通货膨胀和失业之间的短期权衡 | Janiszzz's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Janiszzz's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Janiszzz's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://janiszzz.tk/post/20200422/5db28e22.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Janiszzz">
+      <meta itemprop="description" content="Janiszzz 的个人博客,欢迎你来XD">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Janiszzz's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          宏经笔记-总供给与通货膨胀和失业之间的短期权衡
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-22 14:12:07" itemprop="dateCreated datePublished" datetime="2020-04-22T14:12:07+08:00">2020-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-12 23:50:50" itemprop="dateModified" datetime="2020-06-12T23:50:50+08:00">2020-06-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/宏观经济学笔记/" itemprop="url" rel="index"><span itemprop="name">宏观经济学笔记</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/post/20200422/5db28e22.html" class="post-meta-item leancloud_visitors" data-flag-title="宏经笔记-总供给与通货膨胀和失业之间的短期权衡" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/post/20200422/5db28e22.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/20200422/5db28e22.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>介绍通货膨胀率和失业率之间的反向关系，在短期内权衡。</p>
+<a id="more"></a>
+<h1 id="失业"><a class="markdownIt-Anchor" href="#失业"></a> 失业</h1>
+<p>##什么是失业</p>
+<p>让我们先给出一些符号：</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>=</mo><mi>U</mi><mo>+</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">L=U+E
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span></span></p>
+<p>E:就业总人数 U:失业人口 L：劳动力总人口<br>
+用这些符号表示出来的失业率为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mi>U</mi><mi>L</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{U}{L}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">L</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">U</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+<p><strong>失业的界定</strong>：在一定年龄范围内、愿意工作而没有工作、正在寻找工作的状态。</p>
+<p><strong>条件</strong>：</p>
+<ul>
+<li>有劳动能力</li>
+<li>愿意就业</li>
+<li>没有工作</li>
+</ul>
+<p><strong>失业的度量</strong>：</p>
+<ul>
+<li>劳动力参与率：成年人口中属于劳动力人数的百分比<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">劳</mi><mi mathvariant="normal">动</mi><mi mathvariant="normal">力</mi><mi mathvariant="normal">参</mi><mi mathvariant="normal">与</mi><mi mathvariant="normal">率</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">劳</mi><mi mathvariant="normal">动</mi><mi mathvariant="normal">力</mi></mrow><mrow><mi mathvariant="normal">成</mi><mi mathvariant="normal">年</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">口</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">劳动力参与率=\frac{劳动力}{成年人口}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mord cjk_fallback">劳</span><span class="mord cjk_fallback">动</span><span class="mord cjk_fallback">力</span><span class="mord cjk_fallback">参</span><span class="mord cjk_fallback">与</span><span class="mord cjk_fallback">率</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.739em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.394em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">成</span><span class="mord cjk_fallback mtight">年</span><span class="mord cjk_fallback mtight">人</span><span class="mord cjk_fallback mtight">口</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">劳</span><span class="mord cjk_fallback mtight">动</span><span class="mord cjk_fallback mtight">力</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li>失业率：失业人口占劳动力人口的比重<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">失</mi><mi mathvariant="normal">业</mi><mi mathvariant="normal">率</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">失</mi><mi mathvariant="normal">业</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">口</mi></mrow><mrow><mi mathvariant="normal">劳</mi><mi mathvariant="normal">动</mi><mi mathvariant="normal">力</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">口</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">失业率=\frac{失业人口}{劳动力人口}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mord cjk_fallback">失</span><span class="mord cjk_fallback">业</span><span class="mord cjk_fallback">率</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.739em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.394em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">劳</span><span class="mord cjk_fallback mtight">动</span><span class="mord cjk_fallback mtight">力</span><span class="mord cjk_fallback mtight">人</span><span class="mord cjk_fallback mtight">口</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">失</span><span class="mord cjk_fallback mtight">业</span><span class="mord cjk_fallback mtight">人</span><span class="mord cjk_fallback mtight">口</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li>离职率s：每个月失去工作的人数占就业人数的百分比</li>
+<li>入职率f：每个月新就业人数占失业人数的百分比</li>
+</ul>
+<h2 id="自然失业"><a class="markdownIt-Anchor" href="#自然失业"></a> 自然失业</h2>
+<h3 id="含义"><a class="markdownIt-Anchor" href="#含义"></a> 含义</h3>
+<p>劳动力市场处于稳定状态时的失业率，此时的失业称自然失业，自然失业是不可回避的。<br>
+自然失业是经济实现充分就业时的失业率。</p>
+<p>劳动力市场稳定状态的条件是：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>E</mi><mo>=</mo><mi>f</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">sE=fU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span></span></span></span>，离职人数等于就业人数。<br>
+s:离职率 f:入职率<br>
+E:就业总人数 U:失业人口 L：劳动力总人口</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mi>U</mi><mo>=</mo><mi>s</mi><mi>E</mi><mspace linebreak="newline"></mspace><mi>f</mi><mi>U</mi><mo>=</mo><mi>s</mi><mo stretchy="false">(</mo><mi>L</mi><mo>−</mo><mi>U</mi><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mi>f</mi><mfrac><mi>U</mi><mi>L</mi></mfrac><mo>=</mo><mi>s</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mfrac><mi>U</mi><mi>L</mi></mfrac><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mfrac><mi>U</mi><mi>L</mi></mfrac><mo>=</mo><mfrac><mi>s</mi><mrow><mi>s</mi><mo>+</mo><mi>f</mi></mrow></mfrac><mspace linebreak="newline"></mspace><mfrac><mi>U</mi><mi>L</mi></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mi>f</mi><mi>s</mi></mfrac></mrow></mfrac><mspace linebreak="newline"></mspace></mrow><annotation encoding="application/x-tex">fU=sE\\
+fU=s(L-U)\\
+f\frac{U}{L}=s(1-\frac{U}{L})\\
+\frac{U}{L}=\frac{s}{s+f}\\
+\frac{U}{L}=\frac{1}{1+\frac{f}{s}}\\
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">L</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">L</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">L</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">L</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.9880000000000002em;vertical-align:-0.8804400000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804400000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">L</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.4886559999999998em;vertical-align:-1.1672159999999998em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.177784em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9322159999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10764em;">f</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.1672159999999998em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span></span></span></span></p>
+<p>进一步推导得知，如果要想降低自然失业率<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mi>U</mi><mi>L</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{U}{L}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">L</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">U</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>，要么降低<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">s</span></span></span></span>，要么提高<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span>。</p>
+<p>##原因</p>
+<p>自然失业来源于信息不完全和市场的不完善。</p>
+<h3 id="摩擦性失业"><a class="markdownIt-Anchor" href="#摩擦性失业"></a> 摩擦性失业</h3>
+<p>原因：<br>
+由于人们在不同的地区、不同的职业、生命周期的不同阶段不停变换工作引起的失业。包括：</p>
+<ul>
+<li>不满意现有工作，离职寻找更理想工作引起的失业。</li>
+<li>新进入劳动力队伍，暂时没有找到工作造成的失业</li>
+<li>由于产业结构的变化引起劳动力需求在不同行业或地区之间的<strong>部门转移</strong>，如某城市油价上升导致汽车需求量减少，汽车厂家对于劳动力的需求随之减少，解雇工人。（产业转型对劳动力的需求变化，劳动力供给跟不上转换就会引起失业，例如自动化带来的失业）</li>
+</ul>
+<p>因此，即便在有足够的工作岗位和工资有弹性的情况下，依旧存在摩擦失业。</p>
+<p>公共政策与摩擦性失业：</p>
+<p>许多公共政策追求通过减少摩擦性失业来降低自然失业率：</p>
+<ul>
+<li>政府就业机构公布工作信息。</li>
+<li>公共筹资的再培训计划。</li>
+</ul>
+<p>失业保障无意中增加了失业率。失业补助金降低了寻找新工作的压力；可能会使失业者放弃没有吸引力的工作（因为不紧迫）；降低了找工作的必要性，从而降低了就业率f，提高了失业率s。</p>
+<blockquote>
+<p>失业保障提高了自然失业率并不一定意味着这项政策是一个坏主意。这个项目的好处是减少了工人对自己收人的不确定性。而且，使工人拒绝没有吸引力的工作机会也可能使工人和工作之间更加匹配。</p>
+</blockquote>
+<h3 id="结构性失业"><a class="markdownIt-Anchor" href="#结构性失业"></a> 结构性失业</h3>
+<p>工资刚性：工资不能调整到劳动力市场中供求相等的水平。工资具有向下刚性-即不能下调。<br>
+引起工资刚性的原因：最低工资法（法律规定了工资的最低限度）、工会的议价（工资不由供求关系决定， 而是由工会领导人和企业管理层的谈判决定的）</p>
+<p>结构性失业：工资刚性与工作配给引起的失业，即在现行工资水平下劳动力市场中劳动力供给量超过需求量而导致。（最低工资高于均衡工资，从而供需无法平衡，劳动力供给始终大于需求造成一部分人失业）</p>
+<p><img src="/image/hgjjx/%E7%BB%93%E6%9E%84%E6%80%A7%E5%A4%B1%E4%B8%9A.png" alt="结构性失业"></p>
+<p>支持高工资的理论：效率工资</p>
+<ul>
+<li>高工资使得工人饮食状况改善，更为健康、身体素质更好，因此工作效率增高</li>
+<li>高工资使得工人离职的机会成本增大，降低了工人的流动性，也减少了培训新工人的时间和金钱成本</li>
+<li>高工资可以吸引高素质的工人，避免能力强的工人跳槽去待遇更好的企业</li>
+<li>提高工人积极性；高工资提高了被解雇的成本，工人从而不敢“磨洋工”</li>
+</ul>
+<p>这四种效率工资理论的共同点是都认为高工资带来更有效的运行，因此企业可能会发现：保持高于均衡水准的工资是有利可图的。</p>
+<h2 id="周期性失业"><a class="markdownIt-Anchor" href="#周期性失业"></a> 周期性失业</h2>
+<p>又称凯恩斯失业，当经济周期进入衰退阶段，由于社会总需求不足引起的失业。经济衰退，产能萎缩，处于非充分就业状态，引起了自然失业以外的失业。</p>
+<h2 id="劳动力市场的经验"><a class="markdownIt-Anchor" href="#劳动力市场的经验"></a> 劳动力市场的经验</h2>
+<ul>
+<li>失业的持续时间
+<ul>
+<li>大多数失业是短期的，往往是摩擦性失业。</li>
+<li>大多数失业时间来自于少数长期失业者，属于结构性失业</li>
+</ul>
+</li>
+<li>不同人口群体的差别
+<ul>
+<li>年轻人、少数族裔的高失业率（美国，2014）</li>
+</ul>
+</li>
+<li>进入与退出劳动力的转换：除了劳动人口内部就业和失业的相互转变，还有劳动力和非劳动力之间转换。个体进入和离开劳动力使失业统计量更难解释。
+<ul>
+<li>一些自称失业的人可能并不认真地找工作，也许应该最好不把这些人算在劳动力之内。他们的“失业”可能并不代表一个社会问题。并不认真找工作的人，应放在劳动力人群之外。</li>
+<li>一些人可能想工作，但在搜寻不成功后放弃了找工作。这些丧失信心的工人(discouraged workers)被算在劳动力之外，并不反映在失业统计量上。丧失信心的工人应算在劳动力人群之内</li>
+</ul>
+</li>
+<li>失业率的国别差异
+<ul>
+<li>欧洲失业率高于美国的原因
+<ul>
+<li>长期、慷慨的失业补贴（这些靠救济金生活的人已经实际上退出了劳动力，但仍被统计。）</li>
+<li>技术推动的、对于不熟练工需求的相对下降（在美国，表现为不熟练工工资的下降；但在欧洲，福利制度向不熟练工人提供了一个替代低工资工作的选择。）</li>
+</ul>
+</li>
+<li>工作模式的差别
+<ul>
+<li>税收系统导致工作不努力与地下经济</li>
+<li>工会的作用</li>
+<li>地域不同偏好不同的可能性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="通货膨胀"><a class="markdownIt-Anchor" href="#通货膨胀"></a> 通货膨胀</h1>
+<p><strong>界定</strong>：一般物价水平普遍、持续、大规模上升的现象</p>
+<p><strong>衡量</strong>：<br>
+通货膨胀率:</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">当</mi><mi mathvariant="normal">期</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">通</mi><mi mathvariant="normal">货</mi><mi mathvariant="normal">膨</mi><mi mathvariant="normal">胀</mi><mi mathvariant="normal">率</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">当</mi><mi mathvariant="normal">期</mi><mi mathvariant="normal">价</mi><mi mathvariant="normal">格</mi><mi mathvariant="normal">水</mi><mi mathvariant="normal">平</mi><mo>−</mo><mi mathvariant="normal">上</mi><mi mathvariant="normal">期</mi><mi mathvariant="normal">价</mi><mi mathvariant="normal">格</mi><mi mathvariant="normal">水</mi><mi mathvariant="normal">平</mi></mrow><mrow><mi mathvariant="normal">当</mi><mi mathvariant="normal">期</mi><mi mathvariant="normal">价</mi><mi mathvariant="normal">格</mi><mi mathvariant="normal">水</mi><mi mathvariant="normal">平</mi></mrow></mfrac><mspace linebreak="newline"></mspace><msub><mi>π</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mfrac><mrow><msub><mi>P</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>P</mi><mi>t</mi></msub></mrow><msub><mi>P</mi><mi>t</mi></msub></mfrac><mspace linebreak="newline"></mspace><msub><mi>π</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mfrac><mrow><mi mathvariant="normal">Δ</mi><msub><mi>P</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><msub><mi>P</mi><mi>t</mi></msub></mfrac><mspace linebreak="newline"></mspace></mrow><annotation encoding="application/x-tex">当期的通货膨胀率=\frac{当期价格水平-上期价格水平}{当期价格水平}\\
+\pi_{t+1}=\frac{P_{t+1}-P_{t}}{P_t}\\
+\pi_{t+1}=\frac{\Delta{P_{t+1}}}{P_t}\\
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mord cjk_fallback">当</span><span class="mord cjk_fallback">期</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">通</span><span class="mord cjk_fallback">货</span><span class="mord cjk_fallback">膨</span><span class="mord cjk_fallback">胀</span><span class="mord cjk_fallback">率</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.9463300000000001em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2603300000000002em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">当</span><span class="mord cjk_fallback">期</span><span class="mord cjk_fallback">价</span><span class="mord cjk_fallback">格</span><span class="mord cjk_fallback">水</span><span class="mord cjk_fallback">平</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">当</span><span class="mord cjk_fallback">期</span><span class="mord cjk_fallback">价</span><span class="mord cjk_fallback">格</span><span class="mord cjk_fallback">水</span><span class="mord cjk_fallback">平</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord cjk_fallback">上</span><span class="mord cjk_fallback">期</span><span class="mord cjk_fallback">价</span><span class="mord cjk_fallback">格</span><span class="mord cjk_fallback">水</span><span class="mord cjk_fallback">平</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.638891em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.638891em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">Δ</span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span></span></span></span></p>
+<p>物价指数：</p>
+<ul>
+<li>消费物价指数CPI（城市家庭和个人各时期消费价格平均变化程度）</li>
+<li>批发物价指数WPI（各时期批发市场商品价格平均变化程度）</li>
+<li>GDP折算指数IPD（一国经济在不同时期生产的最终产品价格总水平变化程度）</li>
+</ul>
+<h3 id="分类"><a class="markdownIt-Anchor" href="#分类"></a> 分类</h3>
+<h1 id="通货膨胀-2"><a class="markdownIt-Anchor" href="#通货膨胀-2"></a> 通货膨胀</h1>
+<h2 id="作为货币现象的通货膨胀"><a class="markdownIt-Anchor" href="#作为货币现象的通货膨胀"></a> 作为货币现象的通货膨胀</h2>
+<p>单从<strong>古典</strong>的货币数量论出发（依据费雪方程）：</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mi>V</mi><mo>=</mo><mi>P</mi><mi>Y</mi><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><mi>π</mi><mo>=</mo><mi>m</mi><mo>−</mo><mi>y</mi><mo>+</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">MV=PY\implies\pi=m-y+v
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.70733em;vertical-align:-0.024em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span></span></p>
+<p>M-货币供给 V-货币流通速度 P-价格水平 Y-实际收入<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span></span>-通货膨胀率 m-货币增长率（货币供给量的变动率-由央行控制）<br>
+v-货币流通速度变化率 y-产量增长率</p>
+<p>两个变量乘积的百分比变动近似等于每一个变量的百分比变动之和，将费雪方程中的相乘关系转变为右边的比率相加减关系。</p>
+<p>结论：如果货币流通速度不变，则货币供给的增加若超过经济增长的要求，就会引发通货膨胀（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mo>&gt;</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">m&gt;y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>则<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>π</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\pi&gt;0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>）；通货膨胀归根结底是个货币现象，央行只要控制货币供给就能控制通货膨胀</p>
+<h2 id="货币铸造税从发行货币得到的收益"><a class="markdownIt-Anchor" href="#货币铸造税从发行货币得到的收益"></a> 货币铸造税：从发行货币得到的收益</h2>
+<p>政府融资的方法：</p>
+<ul>
+<li>税收</li>
+<li>发行政府债券</li>
+<li>发行货币</li>
+</ul>
+<p>货币铸造税：政府利用印刷货币的垄断权，通过印发货币取得的收益。（政府印制一张纸币的成本小于纸币的法定面值，其中的差值就是货币铸造税）<br>
+通货膨胀税：政府发行货币导致通货膨胀，通货膨胀导致的纸币贬值就像是对社会持有的货币征税一样。政府从中也能取得收益。</p>
+<p>增发货币并不一定导致通货膨胀。当产量增加时，自然而然需要对应地增发货币，并不会导致通货膨胀。如果增发的幅度大于经济增长的幅度才会引起通货膨胀。</p>
+<p>政府融资方法的比较：</p>
+<ul>
+<li>税收。在经济衰弱时提税是不容易实现的，且增税的程序复杂。</li>
+<li>发行政府债券。发行债券意味着政府财政紧缺，民众因此对政府偿债能力产生怀疑，不愿意购买债券，故不一定能顺利融资。</li>
+<li>发行货币。无论何时都有效但伤害巨大。</li>
+</ul>
+<h2 id="通货膨胀与利率"><a class="markdownIt-Anchor" href="#通货膨胀与利率"></a> 通货膨胀与利率</h2>
+<h3 id="名义利率与实际利率"><a class="markdownIt-Anchor" href="#名义利率与实际利率"></a> 名义利率与实际利率</h3>
+<p>名义利率：银行支付的利率（票面面值度量的）<br>
+实际利率：剔除了通货膨胀因素的利率，对购买力产生实质影响。</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">实</mi><mi mathvariant="normal">际</mi><mi mathvariant="normal">利</mi><mi mathvariant="normal">率</mi><mo>=</mo><mi mathvariant="normal">名</mi><mi mathvariant="normal">义</mi><mi mathvariant="normal">利</mi><mi mathvariant="normal">率</mi><mo>−</mo><mi mathvariant="normal">通</mi><mi mathvariant="normal">货</mi><mi mathvariant="normal">膨</mi><mi mathvariant="normal">胀</mi><mi mathvariant="normal">率</mi></mrow><annotation encoding="application/x-tex">实际利率=名义利率-通货膨胀率
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">际</span><span class="mord cjk_fallback">利</span><span class="mord cjk_fallback">率</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">义</span><span class="mord cjk_fallback">利</span><span class="mord cjk_fallback">率</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">通</span><span class="mord cjk_fallback">货</span><span class="mord cjk_fallback">膨</span><span class="mord cjk_fallback">胀</span><span class="mord cjk_fallback">率</span></span></span></span></span></p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>=</mo><mi>i</mi><mo>−</mo><mi>π</mi></mrow><annotation encoding="application/x-tex">r=i-\pi
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span></span></span></p>
+<p>费雪效应：通货膨胀率和名义利率之间的对应关系<br>
+费雪效应方程：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>=</mo><mi>r</mi><mo>+</mo><mi>π</mi></mrow><annotation encoding="application/x-tex">i=r+\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span></span></p>
+<blockquote>
+<p>区别于货币数量论的费雪方程</p>
+</blockquote>
+<h3 id="事前的实际利率与事后的实际利率"><a class="markdownIt-Anchor" href="#事前的实际利率与事后的实际利率"></a> 事前的实际利率与事后的实际利率</h3>
+<p>费雪效应方程剔除了时间因素的影响。实际上投资有时差，需要区别事前事后的实际利率</p>
+<p>事前实际利率：债权人和债务人预期的实际利率<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>−</mo><mi>E</mi><mi>π</mi></mrow><annotation encoding="application/x-tex">i-E\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span></span><br>
+事后实际利率：事实上实现的实际利率<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>−</mo><mi>π</mi></mrow><annotation encoding="application/x-tex">i-\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span></span></p>
+<p>对费雪效应方程的修正：</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>=</mo><mi>r</mi><mo>+</mo><mi>E</mi><mi>π</mi></mrow><annotation encoding="application/x-tex">i=r+E\pi
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span></span></span></p>
+<p>用当期的通货膨胀率是无法反映下一期的，因此应该加上预期通货膨胀率而不是当期通货膨胀率。</p>
+<h3 id="货币市场均衡"><a class="markdownIt-Anchor" href="#货币市场均衡"></a> 货币市场均衡</h3>
+<p>将古典的货币需求用凯恩斯的货币需求函数表示，并用费雪效应方程表示出实际利率，则在货币市场均衡中：</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mfrac><mi>M</mi><mi>P</mi></mfrac><msup><mo stretchy="false">)</mo><mi>d</mi></msup><mo>=</mo><mi>L</mi><mo stretchy="false">(</mo><mi>i</mi><mo separator="true">,</mo><mi>Y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>L</mi><mo stretchy="false">(</mo><mi>r</mi><mo>+</mo><mi>E</mi><mi>π</mi><mo separator="true">,</mo><mi>Y</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mi>M</mi><mi>P</mi></mfrac></mrow><annotation encoding="application/x-tex">(\frac{M}{P})^d=L(i,Y)=L(r+E\pi,Y)=\frac{M}{P}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">d</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>货币数量论部分成立：在假定<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span></span>既定不变的前提下，货币供给<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span>与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span></span>呈正比例变动。</p>
+<h3 id="未来货币供给的变化与现期价格水平"><a class="markdownIt-Anchor" href="#未来货币供给的变化与现期价格水平"></a> 未来货币供给的变化与现期价格水平</h3>
+<p>研究E<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span></span>的变化带来的影响。<br>
+短期内，当人们获取新的信息时，E<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span></span>可能会变化。实际利率<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span>取决于社会普遍的投资收益率，是相对稳定的。</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mi>M</mi><mi>P</mi></mfrac><mo>=</mo><mi>L</mi><mo stretchy="false">(</mo><mi>r</mi><mo>+</mo><mi>E</mi><mi>π</mi><mo separator="true">,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\frac{M}{P}=L(r+E\pi,Y)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mclose">)</span></span></span></span></span></p>
+<p>当<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span>给定时，</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mi>π</mi><mo>↑</mo><mo>→</mo><mi>i</mi><mo>↑</mo><mo>→</mo><mo stretchy="false">(</mo><mfrac><mi>M</mi><mi>P</mi></mfrac><msup><mo stretchy="false">)</mo><mi>d</mi></msup><mo>↓</mo><mo>→</mo><mi>P</mi><mo>↑</mo></mrow><annotation encoding="application/x-tex">E\pi \uparrow \to i \uparrow \to (\frac{M}{P})^d  \downarrow \to P \uparrow
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">↑</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">↑</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">d</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">↓</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">↑</span></span></span></span></span></p>
+<blockquote>
+<p>导致<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mi>π</mi></mrow><annotation encoding="application/x-tex">E\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span></span>增加的原因：未来货币供给增加的预期，如央行宣布增发货币。</p>
+</blockquote>
+<p>因此，较高的未来货币增长的预期，引起了现期较高的价格水平。当期的通货膨胀不仅取决于当期货币的增加，还取决于对未来货币增长的预期。解决通货膨胀不仅要减少现行货币，也要消除民众的通胀预期。</p>
+<h2 id="通货膨胀的社会成本"><a class="markdownIt-Anchor" href="#通货膨胀的社会成本"></a> 通货膨胀的社会成本</h2>
+<h3 id="预期的通货膨胀的成本"><a class="markdownIt-Anchor" href="#预期的通货膨胀的成本"></a> 预期的通货膨胀的成本</h3>
+<p>鞋底成本：由于货币贬值，人们把货币转换成其他保值的资产。当发生交易时又要用货币结算，需要不停跑银行。这之中付出了路费和时间的成本。</p>
+<p>菜单成本：印刷产品目录更新价格带来的成本。</p>
+<p>相对价格扭曲：如果厂商顾虑于菜单成本或其他原因不改变定价，那么生产的产品的价格和市场上普遍价格水平的偏离将加大。导致不同时段对产品的需求不同，厂商无法平均有效地配置资源，带来配置效率的损失</p>
+<p>不公平的税收待遇：大多数税收系统中，征税的时间和向政府纳税的时间之间有一段间隔。由于货币价值在这段时间内大幅变化，税收所得变得不稳定，往往会大幅度减少</p>
+<p>带来人们生活的不方便：货币体系的失效</p>
+<h3 id="未预期的通货膨胀的成本"><a class="markdownIt-Anchor" href="#未预期的通货膨胀的成本"></a> 未预期的通货膨胀的成本</h3>
+<p>社会财富的再分配效应：如果实际的通货膨胀率与预期不符合，会使得一方受益而另一方受损。<br>
+债权人和债务人：未预期到的通货膨胀将使债权人利益受损：收回的收益没有预定的高。相反，债务人因此而受益。<br>
+靠固定养老金生活的人：养老金数值不变，实际价值贬值。发放养老金者受益。</p>
+<p>增加不确定性：使厌恶风险的人们的境况变坏。</p>
+<h3 id="通货膨胀的好处"><a class="markdownIt-Anchor" href="#通货膨胀的好处"></a> 通货膨胀的好处</h3>
+<ul>
+<li>名义工资的向下刚性导致不能下调工资，通货膨胀使实际工资得以下降而不必降低名义工资。温和的通货膨胀有助于工资弹性，改善劳动力市场。</li>
+<li>在一个零通货膨胀的世界里下调2%工资，和在通货膨胀率5%的世界里上浮3%工资是一样的。但是工人们并不同意名义工资的下调。</li>
+<li>没有通货膨胀，实际工资将会停留在均衡水平之上（甚至只能越来越高），从而导致更多的失业。</li>
+</ul>
+<h3 id="恶性通货膨胀"><a class="markdownIt-Anchor" href="#恶性通货膨胀"></a> 恶性通货膨胀</h3>
+<p>定义：每月超过50％或每天超过1％的通货膨胀。<br>
+成本：</p>
+<ul>
+<li>前述通货膨胀的成本加剧</li>
+<li>恶性通货膨胀下，货币的价值储存功能丧失，其他功能也会减弱(计价单位、交易媒介)，人们可能会采取物物交换或选择更稳定的国外货币。</li>
+</ul>
+<p>成因：货币供给过度增长。</p>
+<blockquote>
+<p>政府无法提高税收或发行债券时，就会更依赖铸币税。</p>
+</blockquote>
+<p>结束：停止印刷货币。严格的财政紧缩。</p>
+<blockquote>
+<p>恶性通货膨胀的结束往往是与财政改革并行的。</p>
+</blockquote>
+<h1 id="总供给的基本理论"><a class="markdownIt-Anchor" href="#总供给的基本理论"></a> 总供给的基本理论</h1>
+<p>我们先给出结论——短期总供给（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">AS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span></span></span></span>）方程：</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi><mo>=</mo><mover accent="true"><mi>Y</mi><mo>ˉ</mo></mover><mo>+</mo><mi>α</mi><mo stretchy="false">(</mo><mi>P</mi><mo>−</mo><mi>E</mi><mi>P</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Y=\bar{Y}+\alpha(P-EP)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.9034399999999999em;vertical-align:-0.08333em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mclose">)</span></span></span></span></span></p>
+<p>它说明，现实世界的短期内价格只具有部分黏性，实际价格水平偏离预期的价格水平时，产出会偏离自然水平。</p>
+<p>接下来，我们用两种不同的模型导出这个方程。</p>
+<h2 id="黏性价格模型"><a class="markdownIt-Anchor" href="#黏性价格模型"></a> 黏性价格模型</h2>
+<h3 id="价格黏性的含义与原因"><a class="markdownIt-Anchor" href="#价格黏性的含义与原因"></a> 价格黏性的含义与原因</h3>
+<p>含义：当市场发生变化，不处于出清状态（供需不等），厂商却无法迅速地做出反应调整价格，价格的变动滞后于市场供求关系的变动，称作价格具有黏性。该模型强调了企业不能迅速地根据需求变动调整它们索取的价格。</p>
+<blockquote>
+<p>黏性价格隐含着一个假定：厂商有自行定价的能力，而不像完全竞争市场中那样是价格的接受者。这和现实生活是符合的。</p>
+</blockquote>
+<p>原因：</p>
+<ul>
+<li>厂商和消费者之间的长期合约，约定了不变的价格水平</li>
+<li>菜单成本</li>
+<li>厂商不想频繁地改变价格，以免触怒消费者</li>
+<li>黏性价格可能是黏性工资的反映：劳动合同通常规定不变的工资水平，带来了短期内不变的成本</li>
+</ul>
+<h3 id="黏性价格模型的推理"><a class="markdownIt-Anchor" href="#黏性价格模型的推理"></a> 黏性价格模型的推理</h3>
+<p>企业的合意价格（按照供求关系调整后的价格）：</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>=</mo><mi>P</mi><mo>+</mo><mi>a</mi><mo stretchy="false">(</mo><mi>Y</mi><mo>−</mo><mover accent="true"><mi>Y</mi><mo>ˉ</mo></mover><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p=P+a(Y-\bar{Y})
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.07011em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>它表示，合意价格=当前一般物价水平+实际产出水平与充分就业产出的偏离乘以一个系数。生产要素的价格（即生产成本）取决于一般物价水平；偏离体现出需求的变动，也带来企业生产的边际成本改变，进而影响定价；系数表示这种变动给企业定价带来的影响大小。<br>
+系数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span>是一个正值。当实际产出大于充分就业产出时，说明市场需求旺盛，企业由于过度生产导致边际成本增加，定价也随之增加；当实际产出小于充分就业产出时，市场萎缩，企业产量减小，边际成本减小，价格有下降空间；企业为了刺激需求也将降价。</p>
+<p>上面的方程是弹性定价的企业在需求变动时将采用的定价策略，设这部分企业所占比例为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>−</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">1-s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">s</span></span></span></span>。</p>
+<p>剩余占比<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">s</span></span></span></span>的企业是具有价格黏性的企业，他们的定价策略是根据自己预期的经济状况公布价格。即：将合意价格方程中的变量全部用预期值替换。</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>=</mo><mi>E</mi><mi>P</mi><mo>+</mo><mi>a</mi><mo stretchy="false">(</mo><mi>E</mi><mi>Y</mi><mo>−</mo><mi>E</mi><mover accent="true"><mi>Y</mi><mo>ˉ</mo></mover><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p=EP+a(EY-E\bar{Y})
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.07011em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>为了简化方程，我们假设这一类企业对未来产出的预期<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mi>Y</mi></mrow><annotation encoding="application/x-tex">EY</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span></span>等于自然产出水平<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mover accent="true"><mi>Y</mi><mo>ˉ</mo></mover></mrow><annotation encoding="application/x-tex">E\bar{Y}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8201099999999999em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span></span></span></span>，即他们认为下一期的产出水平会维持在自然的充分就业状态。因此，最终企业的合意价格是：</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>=</mo><mi>E</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">p=EP
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span></span></span></p>
+<p>物价总水平是这两种企业的价格加权平均。</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>=</mo><mi>s</mi><mi>E</mi><mi>P</mi><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>s</mi><mo stretchy="false">)</mo><mo stretchy="false">[</mo><mi>P</mi><mo>+</mo><mi>a</mi><mo stretchy="false">(</mo><mi>Y</mi><mo>−</mo><mover accent="true"><mi>Y</mi><mo>ˉ</mo></mover><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mspace linebreak="newline"></mspace><mi>s</mi><mi>P</mi><mo>=</mo><mi>s</mi><mi>E</mi><mi>P</mi><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>s</mi><mo stretchy="false">)</mo><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">(</mo><mi>Y</mi><mo>−</mo><mover accent="true"><mi>Y</mi><mo>ˉ</mo></mover><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mspace linebreak="newline"></mspace><mi>P</mi><mo>=</mo><mi>E</mi><mi>P</mi><mo>+</mo><mo stretchy="false">[</mo><mfrac><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>s</mi><mo stretchy="false">)</mo><mi>a</mi></mrow><mi>s</mi></mfrac><mo stretchy="false">]</mo><mo stretchy="false">(</mo><mi>Y</mi><mo>−</mo><mover accent="true"><mi>Y</mi><mo>ˉ</mo></mover><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace></mrow><annotation encoding="application/x-tex">P=sEP+(1-s)[P+a(Y-\bar{Y})]\\
+sP=sEP+(1-s)[a(Y-\bar{Y})]\\
+P=EP+[\frac{(1-s)a}{s}](Y-\bar{Y})\\
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.07011em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">]</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mopen">[</span><span class="mord mathdefault">a</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.07011em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">]</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mopen">[</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">s</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mord mathdefault">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">]</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.07011em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span><span class="mclose">)</span></span><span class="mspace newline"></span></span></span></span></p>
+<h3 id="黏性价格模型的含义"><a class="markdownIt-Anchor" href="#黏性价格模型的含义"></a> 黏性价格模型的含义</h3>
+<p>这个方程说明，<br>
+1.最终的物价总水平首先取决于企业对价格水平的预期<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">EP</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span></span>（当然他们的预期会考虑通胀率！）<br>
+2.价格还取决于产出波动，还取决于弹性定价的企业所占的比例。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>−</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">1-s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">s</span></span></span></span>越高，价格水平对产出做出的反应越大。</p>
+<p>这个方程就是黏性价格模型下的价格决定。黏性价格模型说明了产出与自然率的背离和物价水平与预期物价水平的背离是正相关的。这种关系和之前给出的总供给方程是一致的。<br>
+做一个简单的数学变换，令<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi><mo>=</mo><mfrac><mi>s</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>s</mi><mo stretchy="false">)</mo><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\alpha=\frac{s}{(1-s)a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.215392em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">1</span><span class="mbin mtight">−</span><span class="mord mathdefault mtight">s</span><span class="mclose mtight">)</span><span class="mord mathdefault mtight">a</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>，则<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi><mo>=</mo><mover accent="true"><mi>Y</mi><mo>ˉ</mo></mover><mo>+</mo><mi>α</mi><mo stretchy="false">(</mo><mi>P</mi><mo>−</mo><mi>E</mi><mi>P</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Y=\bar{Y}+\alpha(P-EP)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.9034399999999999em;vertical-align:-0.08333em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mclose">)</span></span></span></span>。</p>
+<h2 id="不完备信息模型"><a class="markdownIt-Anchor" href="#不完备信息模型"></a> 不完备信息模型</h2>
+<p>不完备信息模型认为，长短期总供给曲线的不同是因为对价格暂时的错误认知。</p>
+<h3 id="不完备信息模型的假定"><a class="markdownIt-Anchor" href="#不完备信息模型的假定"></a> 不完备信息模型的假定</h3>
+<ul>
+<li>市场出清</li>
+<li>每个供给方生产一种产品，消费多种商品（想象一个农夫，他出售农产品，购买各种生活用品）</li>
+<li>每种商品的供给取决于其相对价格–商品的名义价格与物价总水平的比值（相对价格越高，农夫就越有生产的动力——他生产的产品变贵了，有利可图）</li>
+<li>供给方在制定生产决策时，并不了解物价总水平，因此，他采用预期价格水平<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">EP</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span></span></li>
+<li>每个供给方了解自己产品的名义价格，但不了解物价总水平。<strong>由于信息的不完全，他们有时混淆物价总水平的变动与相对价格的变动</strong></li>
+</ul>
+<h3 id="不完备信息模型的推理"><a class="markdownIt-Anchor" href="#不完备信息模型的推理"></a> 不完备信息模型的推理</h3>
+<p>原始的不完备信息模型认为，由于企业不能获知所有商品的名义价格，也就无法推算现在的真实物价总水平。它会对于物价水平做预期<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">EP</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span></span>。</p>
+<p>当它观察到自己生产的产品的名义价格上升时，可能有两种反应：</p>
+<ol>
+<li>它预期到了物价水平的整体上升，因此它认为自己商品的相对价格没有变化，产量决策也不变；</li>
+<li>它没有预期到物价水平的总体上升，因此它认为自己商品的相对价格上升了，有增产的动力。</li>
+</ol>
+<p>不完备信息模型说明，当商品的实际物价超过预期物价时，供给者在原基础上增加其产出。这和我们提出的总供给方程是一致的。</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi><mo>=</mo><mover accent="true"><mi>Y</mi><mo>ˉ</mo></mover><mo>+</mo><mi>α</mi><mo stretchy="false">(</mo><mi>P</mi><mo>−</mo><mi>E</mi><mi>P</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Y=\bar{Y}+\alpha(P-EP)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.9034399999999999em;vertical-align:-0.08333em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mclose">)</span></span></span></span></span></p>
+<blockquote>
+<p>在现代，由于信息发达，人们可以很方便地获取所有商品的名义价格。修正后的不完备信息模型认为，人们对于市场信息处理能力有限，不能根据其正确估计物价水平的变动。</p>
+</blockquote>
+<h3 id="不完备信息模型的结论"><a class="markdownIt-Anchor" href="#不完备信息模型的结论"></a> 不完备信息模型的结论</h3>
+<p>在不完备信息模型中，人们之所以改变产量决策，仅仅由于其对于一般物价水平的错误认识以及人们对于市场信息的不了解，处理和理解信息的能力有限。</p>
+<h2 id="短期总供给曲线"><a class="markdownIt-Anchor" href="#短期总供给曲线"></a> 短期总供给曲线</h2>
+<p>神秘未完待续</p>
+<h1 id="通货膨胀-失业和菲利普斯曲线"><a class="markdownIt-Anchor" href="#通货膨胀-失业和菲利普斯曲线"></a> 通货膨胀、失业和菲利普斯曲线</h1>
+<h1 id="总供给和总需求的动态模型"><a class="markdownIt-Anchor" href="#总供给和总需求的动态模型"></a> 总供给和总需求的动态模型</h1>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Janiszzz
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://janiszzz.tk/post/20200422/5db28e22.html" title="宏经笔记-总供给与通货膨胀和失业之间的短期权衡">https://janiszzz.tk/post/20200422/5db28e22.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/20200404/38b7b9f6.html" rel="prev" title="宏经笔记-解释凯恩斯理论的IS-LM模型">
+      <i class="fa fa-chevron-left"></i> 宏经笔记-解释凯恩斯理论的IS-LM模型
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/post/20200511/346754c9.html" rel="next" title="宏经笔记-消费理论">
+      宏经笔记-消费理论 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#失业"><span class="nav-number">1.</span> <span class="nav-text"> 失业</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自然失业"><span class="nav-number">1.1.</span> <span class="nav-text"> 自然失业</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#含义"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#摩擦性失业"><span class="nav-number">1.1.2.</span> <span class="nav-text"> 摩擦性失业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构性失业"><span class="nav-number">1.1.3.</span> <span class="nav-text"> 结构性失业</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#周期性失业"><span class="nav-number">1.2.</span> <span class="nav-text"> 周期性失业</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#劳动力市场的经验"><span class="nav-number">1.3.</span> <span class="nav-text"> 劳动力市场的经验</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通货膨胀"><span class="nav-number">2.</span> <span class="nav-text"> 通货膨胀</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">2.0.1.</span> <span class="nav-text"> 分类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通货膨胀-2"><span class="nav-number">3.</span> <span class="nav-text"> 通货膨胀</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#作为货币现象的通货膨胀"><span class="nav-number">3.1.</span> <span class="nav-text"> 作为货币现象的通货膨胀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#货币铸造税从发行货币得到的收益"><span class="nav-number">3.2.</span> <span class="nav-text"> 货币铸造税：从发行货币得到的收益</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通货膨胀与利率"><span class="nav-number">3.3.</span> <span class="nav-text"> 通货膨胀与利率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#名义利率与实际利率"><span class="nav-number">3.3.1.</span> <span class="nav-text"> 名义利率与实际利率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事前的实际利率与事后的实际利率"><span class="nav-number">3.3.2.</span> <span class="nav-text"> 事前的实际利率与事后的实际利率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#货币市场均衡"><span class="nav-number">3.3.3.</span> <span class="nav-text"> 货币市场均衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未来货币供给的变化与现期价格水平"><span class="nav-number">3.3.4.</span> <span class="nav-text"> 未来货币供给的变化与现期价格水平</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通货膨胀的社会成本"><span class="nav-number">3.4.</span> <span class="nav-text"> 通货膨胀的社会成本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#预期的通货膨胀的成本"><span class="nav-number">3.4.1.</span> <span class="nav-text"> 预期的通货膨胀的成本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未预期的通货膨胀的成本"><span class="nav-number">3.4.2.</span> <span class="nav-text"> 未预期的通货膨胀的成本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通货膨胀的好处"><span class="nav-number">3.4.3.</span> <span class="nav-text"> 通货膨胀的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#恶性通货膨胀"><span class="nav-number">3.4.4.</span> <span class="nav-text"> 恶性通货膨胀</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总供给的基本理论"><span class="nav-number">4.</span> <span class="nav-text"> 总供给的基本理论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#黏性价格模型"><span class="nav-number">4.1.</span> <span class="nav-text"> 黏性价格模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#价格黏性的含义与原因"><span class="nav-number">4.1.1.</span> <span class="nav-text"> 价格黏性的含义与原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#黏性价格模型的推理"><span class="nav-number">4.1.2.</span> <span class="nav-text"> 黏性价格模型的推理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#黏性价格模型的含义"><span class="nav-number">4.1.3.</span> <span class="nav-text"> 黏性价格模型的含义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不完备信息模型"><span class="nav-number">4.2.</span> <span class="nav-text"> 不完备信息模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不完备信息模型的假定"><span class="nav-number">4.2.1.</span> <span class="nav-text"> 不完备信息模型的假定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不完备信息模型的推理"><span class="nav-number">4.2.2.</span> <span class="nav-text"> 不完备信息模型的推理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不完备信息模型的结论"><span class="nav-number">4.2.3.</span> <span class="nav-text"> 不完备信息模型的结论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#短期总供给曲线"><span class="nav-number">4.3.</span> <span class="nav-text"> 短期总供给曲线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通货膨胀-失业和菲利普斯曲线"><span class="nav-number">5.</span> <span class="nav-text"> 通货膨胀、失业和菲利普斯曲线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总供给和总需求的动态模型"><span class="nav-number">6.</span> <span class="nav-text"> 总供给和总需求的动态模型</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Janiszzz"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Janiszzz</p>
+  <div class="site-description" itemprop="description">Janiszzz 的个人博客,欢迎你来XD</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/janiszzz" title="GitHub → https://github.com/janiszzz" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/janiszzz@qq.com" title="E-Mail → janiszzz@qq.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://janiszzz.github.io/atom.xml" title="RSS → https://janiszzz.github.io/atom.xml" rel="noopener" target="_blank"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://muzhou233.github.io" title="https://muzhou233.github.io" rel="noopener" target="_blank">MuZhou</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.gyx.moe" title="https://blog.gyx.moe" rel="noopener" target="_blank">Tabing</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://hoohan.cn" title="http://hoohan.cn" rel="noopener" target="_blank">Hoohan</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.csdn.net/coolkid_cwm/" title="https://blog.csdn.net/coolkid_cwm/" rel="noopener" target="_blank">Coolkid</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.csdn.net/qq_34004420" title="https://blog.csdn.net/qq_34004420" rel="noopener" target="_blank">zzx</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.csdn.net/c_lyr/" title="https://blog.csdn.net/c_lyr/" rel="noopener" target="_blank">cl</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://rushtob.github.io" title="https://rushtob.github.io" rel="noopener" target="_blank">xiaoyao</a>
+        </li>
+    </ul>
+  </div>
+
+        <!--网易云音乐-->
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1426087898&auto=0&height=66"></iframe>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Janiszzz</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : 'DaKcnStFGarsvJAsMBAmadQW-MdYXbMMI',
+      appKey     : 'vFa4Tb26KJ6RADFFeEnEPyOR',
+      placeholder: "请输入评论。并请留下昵称和邮箱，以便其他人与您联系。",
+      avatar     : 'identicon',
+      meta       : guest,
+      pageSize   : '5' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
