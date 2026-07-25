@@ -1,0 +1,989 @@
+
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1" theme-name="Stellar" theme-version="1.33.1">
+  
+  
+  <meta name="generator" content="Hexo 8.1.2">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  <title>宏经笔记-投资理论 - Janiszzz's Blog</title>
+
+  
+    <meta name="description" content="深入研究投资函数的构成和影响要素。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="宏经笔记-投资理论">
+<meta property="og:url" content="http://janiszzz.github.io/2020/05/11/%E5%AE%8F%E7%BB%8F%E7%AC%94%E8%AE%B0-%E6%8A%95%E8%B5%84%E7%90%86%E8%AE%BA/">
+<meta property="og:site_name" content="Janiszzz&#39;s Blog">
+<meta property="og:description" content="深入研究投资函数的构成和影响要素。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/23077509?v=4">
+<meta property="article:published_time" content="2020-05-10T16:06:18.000Z">
+<meta property="article:modified_time" content="2020-05-10T16:06:18.000Z">
+<meta property="article:author" content="Janiszzz">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/23077509?v=4">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.33.1">
+
+
+  
+
+  
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Janiszzz","sameAs":[],"image":"https://avatars.githubusercontent.com/u/23077509?v=4"},"dateCreated":"2020-05-11T00:06:18+08:00","dateModified":"2020-05-11T00:06:18+08:00","datePublished":"2020-05-11T00:06:18+08:00","description":"深入研究投资函数的构成和影响要素。","headline":"宏经笔记-投资理论","mainEntityOfPage":{"@type":"WebPage","@id":"http://janiszzz.github.io/2020/05/11/%E5%AE%8F%E7%BB%8F%E7%AC%94%E8%AE%B0-%E6%8A%95%E8%B5%84%E7%90%86%E8%AE%BA/"},"publisher":{"@type":"Organization","name":"Janiszzz","sameAs":[],"image":"https://avatars.githubusercontent.com/u/23077509?v=4","logo":{"@type":"ImageObject","url":"https://avatars.githubusercontent.com/u/23077509?v=4"}},"url":"http://janiszzz.github.io/2020/05/11/%E5%AE%8F%E7%BB%8F%E7%AC%94%E8%AE%B0-%E6%8A%95%E8%B5%84%E7%90%86%E8%AE%BA/","thumbnailUrl":"/image/hgjjx/租赁价格决定.png","image":1}</script>
+  
+</head>
+<body>
+
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://avatars.githubusercontent.com/u/23077509?v=4" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Janiszzz's Blog</div><div class="sub normal cap">2026Ver.</div><div class="sub hover cap" style="opacity:0"> 用产出对抗孤独。</div></a></div></header>
+
+<div class="nav-area">
+
+<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#4db6ac"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="关于" href="/about/" style="color:#81c784"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="相册" href="/album/" style="color:#ef9a9a"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
+</div>
+<div class="widgets">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2021/06/15/%E8%A5%BF%E6%96%B9%E7%BB%8F%E6%B5%8E%E6%80%9D%E6%83%B3%E5%8F%B2%E7%AC%94%E8%AE%B0/"><span class="title">西方经济思想史笔记</span></a><a class="item title" href="/2021/02/09/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%8A%AF%E7%BD%AA%E8%A1%8C%E4%B8%BA/"><span class="title">经济学视角下的犯罪行为</span></a><a class="item title" href="/2021/02/09/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E5%87%BA%E7%8E%B0%E6%B6%88%E9%99%A4%E5%89%A5%E5%89%8A%E4%BA%86%E5%90%97%EF%BC%9F/"><span class="title">人工智能的出现消除剥削了吗？</span></a><a class="item title" href="/2021/01/04/%E8%AF%BB2019E-1902029/"><span class="title">读2019E 1902029</span></a><a class="item title" href="/2020/12/25/%E6%94%BF%E7%BB%8F%E7%AC%94%E8%AE%B0-%E8%81%8C%E8%83%BD%E8%B5%84%E6%9C%AC%E4%B8%8E%E5%B9%B3%E5%9D%87%E5%88%A9%E6%B6%A6/"><span class="title">政经笔记-职能资本与平均利润</span></a><a class="item title" href="/2020/11/07/%E6%94%BF%E7%BB%8F%E7%AC%94%E8%AE%B0-%E7%A4%BE%E4%BC%9A%E6%80%BB%E8%B5%84%E6%9C%AC%E5%86%8D%E7%94%9F%E4%BA%A7%E5%92%8C%E6%B5%81%E9%80%9A/"><span class="title">政经笔记-社会总资本再生产和流通</span></a><a class="item title" href="/2020/11/07/%E6%94%BF%E7%BB%8F%E7%AC%94%E8%AE%B0-%E8%B5%84%E6%9C%AC%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%91%A8%E8%BD%AC/"><span class="title">政经笔记-资本循环和周转</span></a><a class="item title" href="/2020/11/07/%E6%94%BF%E7%BB%8F%E7%AC%94%E8%AE%B0-%E8%B5%84%E6%9C%AC%E7%A7%AF%E7%B4%AF/"><span class="title">政经笔记-资本积累</span></a><a class="item title" href="/2020/11/07/%E6%94%BF%E7%BB%8F%E7%AC%94%E8%AE%B0-%E8%B5%84%E6%9C%AC%E5%92%8C%E5%89%A9%E4%BD%99%E4%BB%B7%E5%80%BC/"><span class="title">政经笔记-资本和剩余价值</span></a><a class="item title" href="/2020/10/01/%E6%94%BF%E7%BB%8F%E7%AC%94%E8%AE%B0-%E8%B4%A7%E5%B8%81/"><span class="title">政经笔记-货币</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E7%AC%94%E8%AE%B0/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%94%E8%AE%B0/">宏观经济学笔记</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2020-05-10T16:06:18.000Z">2020年5月11日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2020-05-10T16:06:18.000Z">2020年5月11日</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>宏经笔记-投资理论</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>深入研究投资函数的构成和影响要素。</p>
+<span id="more"></span>
+<h1 id="企业固定投资-新古典投资模型"><a href="#企业固定投资-新古典投资模型" class="headerlink" title="企业固定投资-新古典投资模型"></a>企业固定投资-新古典投资模型</h1><h2 id="新古典模型的假定"><a href="#新古典模型的假定" class="headerlink" title="新古典模型的假定"></a>新古典模型的假定</h2><ul>
+<li><p>有两种类型的企业：</p>
+<ul>
+<li><p>生产企业：用租来的资本生产物品和劳务</p>
+</li>
+<li><p>租赁企业：购买资本并出租给生产企业，进行经济中的全部投资</p>
+</li>
+</ul>
+<blockquote>
+<p>现实中的企业往往兼具这两种职能，把它们分开研究有助于分析，而且不会影响结论</p>
+</blockquote>
+</li>
+<li><p>新古典投资模型考察企业拥有资本的成本与收益，说明了投资水平取决于</p>
+<ul>
+<li><p>资本的边际产量（MPK）</p>
+</li>
+<li><p>利率</p>
+</li>
+<li><p>影响企业的税收规则</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="资本的租赁价格的决定（生产企业的决策）"><a href="#资本的租赁价格的决定（生产企业的决策）" class="headerlink" title="资本的租赁价格的决定（生产企业的决策）"></a>资本的租赁价格的决定（生产企业的决策）</h2><p>用$R$表示资本品的租金率，$P$表示企业产品的价格，则资本的租赁价格（一单位资本的实际成本）为$\frac{R}{P}$。<br>租赁价格的决定原则：生产企业通过比较每单位资本的成本与收益来决定租用多少资本，企业租赁资本直到资本的边际产量等于实际租赁价格。</p>
+<blockquote>
+<p>来源于新古典微观经济学的推导：$VMPK&#x3D;P \times MPK&#x3D;R$，$MPK&#x3D;\frac{R}{P}$</p>
+</blockquote>
+<h3 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h3><p>给定生产函数（这里选用柯布道格拉斯生产函数）：$Y&#x3D;AK^\alpha L^{1-\alpha}$<br>等号两边对$K$求导，得资本的边际产量：$MPK&#x3D;\alpha A(\frac{L}{K})^{1-\alpha}$<br>则根据租赁价格的决定原则，有：$\frac{R}{P}&#x3D;\alpha A(\frac{L}{K})^{1-\alpha}$<br>这就是生产企业希望达到的租赁数量：由于额外一单位资本产生的边际产量是递减的，企业将租赁到边际产量递减到等于租价为止，这样总产量是最大的。</p>
+<p><img src="/image/hgjjx/%E7%A7%9F%E8%B5%81%E4%BB%B7%E6%A0%BC%E5%86%B3%E5%AE%9A.png" alt="租赁价格决定"></p>
+<p>资本品（机器设备）的供给在短期内可以看做是不变的。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>观察决定式$\frac{R}{P}&#x3D;\alpha A(\frac{L}{K})^{1-\alpha}$，得知决定实际租赁价格的因素：</p>
+<ul>
+<li><p>资本存量$K$越低，资本的实际租赁价格越高</p>
+</li>
+<li><p>所雇用的劳动量$L$越多，资本的实际租赁价格越高。</p>
+</li>
+<li><p>技术越好（技术系数$A$越大），资本的实际租赁价格越高。</p>
+</li>
+</ul>
+<p>减少资本存量，或增加就业，或改进技术的事件提高了资本的均衡实际租赁价格。</p>
+<h2 id="资本成本的决定（租赁企业的决策）"><a href="#资本成本的决定（租赁企业的决策）" class="headerlink" title="资本成本的决定（租赁企业的决策）"></a>资本成本的决定（租赁企业的决策）</h2><p>租赁企业通过比较<strong>拥有并出租每单位资本</strong>的<strong>成本与收益</strong>来决定投资多少资本。当投资新资本的收益大于成本时，租赁企业进行投资。</p>
+<p>投资新资本的收益即租赁企业把一单位资本出租给生产企业所获得的租金收入$\frac{R}{P}$。</p>
+<h3 id="资本成本的组成"><a href="#资本成本的组成" class="headerlink" title="资本成本的组成"></a>资本成本的组成</h3><ul>
+<li><p>利息成本：花费现金购买资本品的机会成本</p>
+<ul>
+<li>$i \times P_K$，其中表示$P_K$资本的价格</li>
+</ul>
+</li>
+<li><p>折旧成本：当资本品被租出时，它会磨损消耗，带来一些成本</p>
+<ul>
+<li>$\delta \times P_K$，其中$\delta$表示折旧率</li>
+</ul>
+</li>
+<li><p>资本损失：资本品的价格上升给租赁企业带来收益，因为公司的资产价值上升了；反之亦然。是负号，因为这是在核算成本——资本品本身作为一种商品具有交易上的价值，如果出租给生产企业就无法获得这种价值。因此，资本品交易价格的上升带来出租行为机会成本的增加。</p>
+<ul>
+<li>$-\Delta P_K$</li>
+</ul>
+</li>
+</ul>
+<p>资本成本是这三者之和<br>$$<br>资本成本&#x3D;i \times P_K +\delta \times P_K-\Delta P_K&#x3D;P_K(i+\delta-\frac{\Delta P_K}{P_K})<br>$$</p>
+<h3 id="资本成本的决定公式"><a href="#资本成本的决定公式" class="headerlink" title="资本成本的决定公式"></a>资本成本的决定公式</h3><p>为了简化，假设资本品价格的变动是仅由通货膨胀引起的——假定$\frac{\Delta P_K}{P_K}$等于通货膨胀率$pi$。</p>
+<p>又因为$r&#x3D;i-\pi$，代入化简得：<br>$$<br>资本的名义成本&#x3D;P_K(i-\pi+\delta)&#x3D;P_K(r+\delta)\<br>资本的实际成本&#x3D;(\frac{P_K}{P})(r+\delta)<br>$$<br>资本的实际成本意味着把资本品的价格表示成相对于经济中其他产品和服务的量——用经济的产出单位数来衡量的购买并出租一单位资本的成本。资本品的相对价格$\frac{P_K}{P}$。</p>
+<h2 id="投资的决定"><a href="#投资的决定" class="headerlink" title="投资的决定"></a>投资的决定</h2><h3 id="资本存量的变动原则"><a href="#资本存量的变动原则" class="headerlink" title="资本存量的变动原则"></a>资本存量的变动原则</h3><p>$$<br>资本的利润率&#x3D;\frac{R}{P}-(\frac{P_K}{P})(r+\delta)<br>$$</p>
+<p>如果利润率&gt;0，则租赁企业增加资本存量能够获利;<br>如果利润率&lt;0，则租赁企业降低资本存量能够增加利润。</p>
+<p>而在生产企业的均衡时资本的边际产量等于资本租赁价格，所以：<br>$$<br>资本的利润率&#x3D;MPK-(\frac{P_K}{P})(r+\delta)<br>$$<br>通过$\frac{R}{P}&#x3D;MPK$，我们假设的两种企业之别消失了——前面已经说过，这个假设对于结论是没有影响的。<br>对于一个真实的企业——一个既使用资本又拥有资本的企业来说，额外一单位资本的收益是资本的边际产量，成本是资本成本。</p>
+<h3 id="净投资函数"><a href="#净投资函数" class="headerlink" title="净投资函数"></a>净投资函数</h3><p>净投资—资本存量的变动—取决于资本的边际产量和资本成本之差。</p>
+<blockquote>
+<p>租赁企业投资决策背后的经济激励：收益与成本之差&#x2F;利润率<br>$$<br>净投资&#x3D;\Delta K&#x3D;I_n[MPK-(\frac{P_K}{P})(r+\delta)]<br>$$<br>$I_n()$为表示<strong>净投资对投资激励的反应程度</strong>的函数——资本的利润率决定其最终量，但资本存量的实际变动还受到调整过程本身的成本（调整时间、）的影响，资本的净投资量和资本的利润率是函数关系。<br>利润率$MPK-(\frac{P_K}{P})(r+\delta)$体现为函数自变量。</p>
+</blockquote>
+<blockquote>
+<p>净投资是一个边际量概念，代表着企业此时对合意资本量做出的净调整。</p>
+</blockquote>
+<h3 id="总投资函数"><a href="#总投资函数" class="headerlink" title="总投资函数"></a>总投资函数</h3><p>企业的固定投资总支出是净投资与折旧资本的更换之和。<br>$$<br>I&#x3D;I_n[MPK-(\frac{P_K}{P})(r+\delta)]+\delta K<br>$$<br>企业固定投资取决于资本的边际产量、资本成本和折旧额。</p>
+<h3 id="投资曲线"><a href="#投资曲线" class="headerlink" title="投资曲线"></a>投资曲线</h3><p>投资曲线：r-I图</p>
+<p>投资曲线斜率为负：利率下降，降低资本成本，拥有资本有利可图，企业增加固定投资。</p>
+<p>投资曲线的移动体现出总投资函数中其他因素（除了r）对投资的影响。如图，资本边际产量的变动引起投资曲线的移动——MPK提高，增加资本的获利性，每个利率水平下总投资都上升，投资曲线右移。</p>
+<p><img src="/image/hgjjx/%E6%8A%95%E8%B5%84%E6%9B%B2%E7%BA%BF.png" alt="投资曲线"></p>
+<h4 id="资本存量的长期稳定"><a href="#资本存量的长期稳定" class="headerlink" title="资本存量的长期稳定"></a>资本存量的长期稳定</h4><p>资本存量的调整随时间的推移而趋于稳定，资本存量达到稳定状态水平时，资本的边际产量等于资本的实际成本。<br>$$<br>MPK&#x3D;(\frac{P_K}{P})(r+\delta)<br>$$<br>经济学家常常采用这样的假设来简化分析：一单位资本品的价格等于一单位其他产品或服务的价格（即$P_K&#x3D;P$）：</p>
+<p>当$P_K&#x3D;P$时，$r&#x3D;MPK-\delta$</p>
+<h2 id="税收与投资"><a href="#税收与投资" class="headerlink" title="税收与投资"></a>税收与投资</h2><p>各种有关税收的经济政策，改变了对投资的激励，从而使投资曲线发生移动。</p>
+<h3 id="影响投资的两种最重要的税收"><a href="#影响投资的两种最重要的税收" class="headerlink" title="影响投资的两种最重要的税收"></a>影响投资的两种最重要的税收</h3><ul>
+<li><p>公司所得税</p>
+</li>
+<li><p>投资税减免</p>
+</li>
+</ul>
+<h3 id="公司所得税：对利润征收的税"><a href="#公司所得税：对利润征收的税" class="headerlink" title="公司所得税：对利润征收的税"></a>公司所得税：对利润征收的税</h3><p>公司所得税对投资的影响取决于“利润”的定义。</p>
+<ul>
+<li><p>如果法律使用我们的定义（利润&#x3D;租赁价格-资本的成本）， 则公司所得税不影响投资。税是按比例扣除，不影响最终量。</p>
+</li>
+<li><p>我们按照重置成本折旧，而现行法律中公司税法按照历史成本计算折旧。这样，在通货膨胀时期，重置成本大于历史成本，公司所得税就会低估折旧而高估利润。因此即便企业的实际经济利润是零，也可能被征税。这提高了生产成本，使得拥有资本显得没有那么有吸引力了。</p>
+</li>
+</ul>
+<p>因此公司所得税<strong>抑制</strong>了投资。</p>
+<h3 id="投资税减免"><a href="#投资税减免" class="headerlink" title="投资税减免"></a>投资税减免</h3><p>投资税减免降低了企业每一美元投资所交纳的税收，使得企业收回了一部分在新资本上的支出。因此，投资税减免降低了$P_K$， 这减少了资本成本，从而增大了对投资的激励。</p>
+<h2 id="股票市场与托宾的q值"><a href="#股票市场与托宾的q值" class="headerlink" title="股票市场与托宾的q值"></a>股票市场与托宾的q值</h2><p>股票价格反映了对投资的激励。当一个企业有许多盈利的投资机会，股票价格就会上涨，因为公司的盈利前景变好了，股票表现的股东对公司的所有权意味着更高的未来收入。</p>
+<h3 id="托宾q值"><a href="#托宾q值" class="headerlink" title="托宾q值"></a>托宾q值</h3><p>$$<br>q&#x3D;\frac{已安装资本的市场价值}{已安装资本的重置成本}<br>$$</p>
+<p>市场价值：由股票市场决定的经济中资本的价值</p>
+<p>重置成本：现在购买资本品的价格</p>
+<h3 id="净投资取决于q值"><a href="#净投资取决于q值" class="headerlink" title="净投资取决于q值"></a>净投资取决于q值</h3><p>企业根据q值做出投资决策。</p>
+<ul>
+<li><p>如果q &gt; 1，股票市场对已安装资本的估价就大于其重置成本，企业购买更多资本来提高自身的市场价值。类似于利差，以较少的重置成本增加资本品带来了股票市场对于公司价值的更高估计。</p>
+</li>
+<li><p>如果q &lt; 1，股票市场对已安装资本的估价就小于其重置成本，资本损耗时企业也不对资本进行重置。</p>
+</li>
+</ul>
+<h3 id="托宾q值与政策"><a href="#托宾q值与政策" class="headerlink" title="托宾q值与政策"></a>托宾q值与政策</h3><p>托宾q值作为对投资激励的一种衡量指标既反应了资本的现期获利性，也反应了预期的未来获利性，该理论强调了投资决策既取决于现在的经济政策，也取决于预期未来将生效的政策。</p>
+<p>未来的政策会影响现在的投资：例如宣布将削减公司所得税，会带来未来的利润上升，这个信息促使现在的股票升值，提高了q值，刺激投资增加</p>
+<h2 id="融资约束"><a href="#融资约束" class="headerlink" title="融资约束"></a>融资约束</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>融资约束：企业在金融市场上能够筹集到的资金数额的限制。</p>
+<p>融资约束使投资对现期经济状况更为敏感，融资约束阻止了企业进行有利可图的投资，使企业根据其<strong>现期的现金流量</strong>而不是<strong>预期获利性</strong>决定自己的投资：</p>
+<p>考虑一次短期的经济衰退。</p>
+<p>在没有借款约束的情况下，由于企业知道衰退是短期的，出于公司长期发展的考虑，其仍会继续投资，以准备下一期的盈利；<br>但如果厂商不能借款用于投资，则只能用现期利润进行投资。现期利润因经济衰退而减少，阻止了投资。</p>
+<h3 id="融资约束的增加（信贷紧缩）的短期和长期效应"><a href="#融资约束的增加（信贷紧缩）的短期和长期效应" class="headerlink" title="融资约束的增加（信贷紧缩）的短期和长期效应"></a>融资约束的增加（信贷紧缩）的短期和长期效应</h3><ul>
+<li><p>短期效应</p>
+<p> 投资者的信贷申请被拒绝——在每一利率水平的投资品需求下降——IS曲线紧缩性移动——总需求、生产和就业下降。</p>
+</li>
+<li><p>长期效应</p>
+<p> 信贷紧缩阻止企业投资——金融市场不能实现储蓄的最优配置——生产性更小的投资项目代替更大的项目——经济生产产品和服务的能力下降。</p>
+<blockquote>
+<p>阻止借贷，则银行（生产性的）间接投资减少，大量货币堆积，银行只好投资于虚拟经济，虚拟经济缺乏生产性</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="住房投资"><a href="#住房投资" class="headerlink" title="住房投资"></a>住房投资</h1><h2 id="住房市场模型"><a href="#住房市场模型" class="headerlink" title="住房市场模型"></a>住房市场模型</h2><p>住房投资包括那些计划自己居住的人和计划向其他人出租住房的房东对新住房的购买（从而产生新房建造）。<br>为了使事情简化，设想所有住房都由所有者占用。</p>
+<p>模型由两部分构成：</p>
+<ul>
+<li>现有住房存量市场决定了均衡的住房价格。</li>
+<li>住房价格决定了住房投资的流量。</li>
+</ul>
+<p>模型意义：</p>
+<p>该模型表明，住房投资取决于住房的相对价格，住房的相对价格又取决于住房的需求，住房需求又取决于个人预期从其住房中得到的估算租金。</p>
+<p><img src="/../image/hgjjx/%E4%BD%8F%E6%88%BF%E5%B8%82%E5%9C%BA%E6%A8%A1%E5%9E%8B.png" alt="住房市场模型"></p>
+<p>住房的相对价格$\frac{P_H}{P}：$$P_H$表示住房的市场价格，$P$表示一般价格水平；前者表示收益，后者反映（砂石等建筑材料的）成本。</p>
+<p>(a)住房市场<br>在任何时点，住房的供给（存量）都是固定的，供给曲线是一条垂直线；<br>需求与价格成反相关（像其他正常品一样），需求曲线向下倾斜。</p>
+<p>(b)新住房供给<br>住房投资流量的供给曲线表示开发商受价格的激励而决定建造新住房的量。住房的相对价格越高，房地产商建造住房的激励越大。<br>新住房的流量——住房投资——取决于现有住房市场上确定的均衡价格。</p>
+<p><strong>住房的相对价格调整到使现有住房资本存量市场达到均衡。然后，这一相对价格决定住房投资，即建筑企业所建设的新住房的流量。</strong></p>
+<p>住房需求的变动</p>
+<ul>
+<li>经济繁荣增加国民收入，导致住房需求增加。</li>
+<li>人口的大量增加提高住房需求。</li>
+<li>利率下降增加了住房需求。利率是以住房形式持有财富的机会成本；利率也是房贷的成本。</li>
+<li>信贷可得性提高增加了住房需求。贷款条件（信用审查等）放松时，更多家庭能够借贷购买住房、或选择比无贷款时更大的户型。</li>
+</ul>
+<p><img src="/image/hgjjx/%E4%BD%8F%E6%88%BF%E9%9C%80%E6%B1%82%E5%8F%98%E5%8A%A8.png" alt="住房需求变动"></p>
+<p>利率下降提高了住房需求，使需求曲线右移，既而提高了住房价格和住房投资。</p>
+<h1 id="存货投资"><a href="#存货投资" class="headerlink" title="存货投资"></a>存货投资</h1><h2 id="愿意持有存货的原因"><a href="#愿意持有存货的原因" class="headerlink" title="愿意持有存货的原因"></a>愿意持有存货的原因</h2><ul>
+<li>持有存货可以使生产平稳化。想一想根据市场随时变动产量所带来的成本（招聘等等）。</li>
+<li>存货作为一种生产要素使企业更有效地运转。有些存货是备用的机器零件，可以及时用于替换。</li>
+<li>持有存货可以避免脱销。脱销带来销售额和利润等损失。</li>
+<li>存货是生产过程中的储备。生产过程的半成品。</li>
+</ul>
+<h2 id="存货与实际利率"><a href="#存货与实际利率" class="headerlink" title="存货与实际利率"></a>存货与实际利率</h2><ul>
+<li>存货投资取决于实际利率，实际利率衡量了持有存货的机会成本。<br>如果产品没有被立即出售，对应的货币产生的利息就被放弃了。当实际利率上升时，持有存货的机会成本变得更加昂贵，理性的企业就会减少存货。这样，实际利率的提高就压低了存货投资。</li>
+<li>存货也取决于信贷状况。<br>贷款的获得性降低，企业削减存货投资。因为很多企业依靠银行贷款来为购买存货融资，银行贷款难以获得，存货投资就减少了。</li>
+</ul>
+</article>
+<div class="article-footer">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
+</div>
+
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2020/05/11/%E5%AE%8F%E7%BB%8F%E7%AC%94%E8%AE%B0-%E5%BC%80%E6%94%BE%E7%BB%8F%E6%B5%8E%E7%90%86%E8%AE%BA/">宏经笔记-开放经济理论</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2020/05/11/%E5%AE%8F%E7%BB%8F%E7%AC%94%E8%AE%B0-%E6%B6%88%E8%B4%B9%E7%90%86%E8%AE%BA/">宏经笔记-消费理论</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Janiszzz</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1">Stellar 1.33.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%81%E4%B8%9A%E5%9B%BA%E5%AE%9A%E6%8A%95%E8%B5%84-%E6%96%B0%E5%8F%A4%E5%85%B8%E6%8A%95%E8%B5%84%E6%A8%A1%E5%9E%8B"><span class="toc-text">企业固定投资-新古典投资模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%8F%A4%E5%85%B8%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%81%87%E5%AE%9A"><span class="toc-text">新古典模型的假定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%9C%AC%E7%9A%84%E7%A7%9F%E8%B5%81%E4%BB%B7%E6%A0%BC%E7%9A%84%E5%86%B3%E5%AE%9A%EF%BC%88%E7%94%9F%E4%BA%A7%E4%BC%81%E4%B8%9A%E7%9A%84%E5%86%B3%E7%AD%96%EF%BC%89"><span class="toc-text">资本的租赁价格的决定（生产企业的决策）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E5%AF%BC"><span class="toc-text">推导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-text">结论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%9C%AC%E6%88%90%E6%9C%AC%E7%9A%84%E5%86%B3%E5%AE%9A%EF%BC%88%E7%A7%9F%E8%B5%81%E4%BC%81%E4%B8%9A%E7%9A%84%E5%86%B3%E7%AD%96%EF%BC%89"><span class="toc-text">资本成本的决定（租赁企业的决策）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%84%E6%9C%AC%E6%88%90%E6%9C%AC%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-text">资本成本的组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%84%E6%9C%AC%E6%88%90%E6%9C%AC%E7%9A%84%E5%86%B3%E5%AE%9A%E5%85%AC%E5%BC%8F"><span class="toc-text">资本成本的决定公式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%95%E8%B5%84%E7%9A%84%E5%86%B3%E5%AE%9A"><span class="toc-text">投资的决定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%84%E6%9C%AC%E5%AD%98%E9%87%8F%E7%9A%84%E5%8F%98%E5%8A%A8%E5%8E%9F%E5%88%99"><span class="toc-text">资本存量的变动原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%80%E6%8A%95%E8%B5%84%E5%87%BD%E6%95%B0"><span class="toc-text">净投资函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E6%8A%95%E8%B5%84%E5%87%BD%E6%95%B0"><span class="toc-text">总投资函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%95%E8%B5%84%E6%9B%B2%E7%BA%BF"><span class="toc-text">投资曲线</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B5%84%E6%9C%AC%E5%AD%98%E9%87%8F%E7%9A%84%E9%95%BF%E6%9C%9F%E7%A8%B3%E5%AE%9A"><span class="toc-text">资本存量的长期稳定</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8E%E6%94%B6%E4%B8%8E%E6%8A%95%E8%B5%84"><span class="toc-text">税收与投资</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%B1%E5%93%8D%E6%8A%95%E8%B5%84%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E7%A8%8E%E6%94%B6"><span class="toc-text">影响投资的两种最重要的税收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E5%8F%B8%E6%89%80%E5%BE%97%E7%A8%8E%EF%BC%9A%E5%AF%B9%E5%88%A9%E6%B6%A6%E5%BE%81%E6%94%B6%E7%9A%84%E7%A8%8E"><span class="toc-text">公司所得税：对利润征收的税</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%95%E8%B5%84%E7%A8%8E%E5%87%8F%E5%85%8D"><span class="toc-text">投资税减免</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%82%A1%E7%A5%A8%E5%B8%82%E5%9C%BA%E4%B8%8E%E6%89%98%E5%AE%BE%E7%9A%84q%E5%80%BC"><span class="toc-text">股票市场与托宾的q值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%98%E5%AE%BEq%E5%80%BC"><span class="toc-text">托宾q值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%80%E6%8A%95%E8%B5%84%E5%8F%96%E5%86%B3%E4%BA%8Eq%E5%80%BC"><span class="toc-text">净投资取决于q值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%98%E5%AE%BEq%E5%80%BC%E4%B8%8E%E6%94%BF%E7%AD%96"><span class="toc-text">托宾q值与政策</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%9E%8D%E8%B5%84%E7%BA%A6%E6%9D%9F"><span class="toc-text">融资约束</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%9E%8D%E8%B5%84%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%A2%9E%E5%8A%A0%EF%BC%88%E4%BF%A1%E8%B4%B7%E7%B4%A7%E7%BC%A9%EF%BC%89%E7%9A%84%E7%9F%AD%E6%9C%9F%E5%92%8C%E9%95%BF%E6%9C%9F%E6%95%88%E5%BA%94"><span class="toc-text">融资约束的增加（信贷紧缩）的短期和长期效应</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%8F%E6%88%BF%E6%8A%95%E8%B5%84"><span class="toc-text">住房投资</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8F%E6%88%BF%E5%B8%82%E5%9C%BA%E6%A8%A1%E5%9E%8B"><span class="toc-text">住房市场模型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%98%E8%B4%A7%E6%8A%95%E8%B5%84"><span class="toc-text">存货投资</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%84%BF%E6%84%8F%E6%8C%81%E6%9C%89%E5%AD%98%E8%B4%A7%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-text">愿意持有存货的原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E8%B4%A7%E4%B8%8E%E5%AE%9E%E9%99%85%E5%88%A9%E7%8E%87"><span class="toc-text">存货与实际利率</span></a></li></ol></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+
+
+<script type="text/javascript">
+  window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+    tag_plugins: {
+      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
+    }
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+    loading: `https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd`,
+  };
+  const deps = {
+    jquery: `https://gcore.jsdelivr.net/npm/jquery@3.7/dist/jquery.min.js`,
+    marked: `https://gcore.jsdelivr.net/npm/marked@13.0/lib/marked.umd.min.js`,
+    lazyload: `/%5Bobject%20Object%5D`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = () => {
+          utils.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) => {
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index, 1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')) {
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function () {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      const maxRetry = 3;
+      let retryCount = 0;
+
+      return new Promise((resolve, reject) => {
+        const load = () => {
+          utils.onLoading?.(el);
+
+          let timedOut = false;
+          const timeout = setTimeout(() => {
+            timedOut = true;
+            console.warn('[request] 超时:', url);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject('请求超时');
+            } else {
+              setTimeout(load, 1000);
+            }
+          }, 5000);
+
+          fetch(url).then(resp => {
+            if (timedOut) return;
+            clearTimeout(timeout);
+
+            if (!resp.ok) throw new Error('响应失败');
+            return resp;
+          }).then(data => {
+            if (timedOut) return;
+            utils.onLoadSuccess?.(el);
+            callback(data);
+            resolve(data);
+          }).catch(err => {
+            clearTimeout(timeout);
+            console.warn('[request] 错误:', err);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject(err);
+            } else {
+              setTimeout(load, 1000);
+            }
+          });
+        };
+
+        load();
+      });
+    },
+    requestWithoutLoading: (url, options = {}, maxRetry = 2, timeout = 5000) => {
+      return new Promise((resolve, reject) => {
+        let retryCount = 0;
+
+        const tryRequest = () => {
+          let timedOut = false;
+          const timer = setTimeout(() => {
+            timedOut = true;
+            if (++retryCount > maxRetry) reject('timeout');
+            else tryRequest();
+          }, timeout);
+
+          fetch(url, options)
+            .then(resp => {
+              clearTimeout(timer);
+              if (!resp.ok) throw new Error('bad response');
+              resolve(resp);
+            })
+            .catch(err => {
+              clearTimeout(timer);
+              if (++retryCount > maxRetry) reject(err);
+              else setTimeout(tryRequest, 500);
+            });
+        };
+
+        tryRequest();
+      });
+    },
+    /********************** requestAnimationFrame ********************************/
+    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+    requestAnimationFrame: (fn) => {
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      }
+      window.requestAnimationFrame(fn)
+    },
+    dark: {},
+  };
+
+  // utils.dark.mode 当前模式 dark or light
+  // utils.dark.toggle() 暗黑模式触发器
+  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  utils.dark.method = {
+    toggle: new RunItem(),
+  };
+  utils.dark = Object.assign(utils.dark, {
+    push: utils.dark.method.toggle.push,
+  });
+</script>
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+<script async src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+    callback_loaded: (el) => {
+      el.classList.add('loaded');
+      const wrapper = el.closest('.lazy-box');
+      const icon = wrapper?.querySelector('.lazy-icon');
+      if (icon) icon.remove();
+    }
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+
+  window.wrapLazyloadImages = (container) => {
+    if (typeof container === 'string') {
+      container = document.querySelector(container);
+    }
+    if (!container) return;
+    
+    const images = container.querySelectorAll('img');
+    images.forEach((img) => {
+      if (img.classList.contains('lazy')) return;
+
+      const src = img.getAttribute('src');
+      if (!src) return;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'lazy-box';
+
+      const newImg = img.cloneNode();
+      newImg.removeAttribute('src');
+      newImg.setAttribute('data-src', src);
+      newImg.classList.add('lazy');
+
+      const icon = document.createElement('div');
+      icon.className = 'lazy-icon';
+      if (def.loading) {
+        icon.style.backgroundImage = `url("${def.loading}")`;
+      }
+
+      wrapper.appendChild(newImg);
+      wrapper.appendChild(icon);
+
+      img.replaceWith(wrapper);
+    });
+
+    // 通知 LazyLoad 更新
+    if (window.lazyLoadInstance?.update) {
+      window.lazyLoadInstance.update();
+    }
+  }
+  
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.33.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    // applyThemeToGiscus(theme)
+  }
+
+  // FIXME: 这会导致无法使用 preferred_color_scheme 以外的主题
+  const applyThemeToGiscus = (theme) => {
+    // theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
+    utils.dark.method.toggle.start();
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    } else {
+      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    utils.dark.method.toggle.start();
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"rating":{"js":"/js/services/rating.js","api":"https://star-vote.xaox.cc/api/rating"},"vote":{"js":"/js/services/vote.js","api":"https://star-vote.xaox.cc/api/vote"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"},"contributors":{"edit_this_page":{"_posts/":null,"wiki/stellar/":"https://github.com/xaoxuu/hexo-theme-stellar-docs/blob/main/"},"js":"/js/services/contributors.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else if (id == 'voice') {
+        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
+        if (ctx.voiceAudios?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            createVoiceDom(ctx.voiceAudios);
+          });
+        }
+      } else if (id == 'video') {
+        ctx.videos = document.querySelectorAll('.video>video');
+        if (ctx.videos?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            videoEvents(ctx.videos);
+          });
+        }
+      } else if (id == 'download-file') {
+        ctx.files = document.querySelectorAll('.file');
+        if (ctx.files?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            downloadFileEvent(ctx.files);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+
+    if (phoneTimes.length > 0) {
+      NowTime();
+      var date = new Date();
+      var sec = date.getSeconds();
+      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+    }
+
+    function firstAdjustTime() {
+      NowTime();
+      clearInterval(firstAdjustInterval);
+      setInterval(NowTime, 1000 * 60);
+    }
+
+    function NowTime() {
+      for (let i = 0; i < phoneTimes.length; ++i) {
+        var timeSpan = phoneTimes[i];
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        timeSpan.innerHTML = check(hour) + ":" + check(min);
+      }
+    };
+
+    function check(val) {
+      if (val < 10) {
+        return ("0" + val);
+      }
+      return (val);
+    }
+
+    // chat quote
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      quote.addEventListener('click', function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error), .with-fancybox .atk-content img:not([atk-emoticon])';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const memos = document.getElementsByClassName('ds-memos');
+    if (memos != undefined && memos.length > 0) {
+      needFancybox = true;
+    }
+    const fancybox = document.getElementsByClassName('with-fancybox');
+    if (fancybox != undefined && fancybox.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
