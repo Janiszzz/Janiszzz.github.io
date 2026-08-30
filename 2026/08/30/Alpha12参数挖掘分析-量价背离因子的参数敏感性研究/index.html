@@ -1,0 +1,1743 @@
+
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.44.0" theme-name="Stellar" theme-version="1.44.0">
+  
+  
+  <meta name="generator" content="Hexo 8.1.2">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  <title>Alpha12参数挖掘分析：量价背离因子的参数敏感性研究 - Janiszzz's Blog</title>
+
+  <meta name="description" content="摘要本文结合 WorldQuant ALPHA12 量价背离因子的参数挖掘结果（2500 组候选 &#x2F; 702 个滚动窗口）与全周期 2015-2025 的回测表现，系统分析最优参数组合 (V&#x3D;29, C&#x3D;11) 的稳健性与实际交易特征。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Alpha12参数挖掘分析：量价背离因子的参数敏感性研究">
+<meta property="og:url" content="http://janiszzz.github.io/2026/08/30/Alpha12%E5%8F%82%E6%95%B0%E6%8C%96%E6%8E%98%E5%88%86%E6%9E%90-%E9%87%8F%E4%BB%B7%E8%83%8C%E7%A6%BB%E5%9B%A0%E5%AD%90%E7%9A%84%E5%8F%82%E6%95%B0%E6%95%8F%E6%84%9F%E6%80%A7%E7%A0%94%E7%A9%B6/">
+<meta property="og:site_name" content="Janiszzz's Blog">
+<meta property="og:description" content="摘要本文结合 WorldQuant ALPHA12 量价背离因子的参数挖掘结果（2500 组候选 &#x2F; 702 个滚动窗口）与全周期 2015-2025 的回测表现，系统分析最优参数组合 (V&#x3D;29, C&#x3D;11) 的稳健性与实际交易特征。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://janiszzz.github.io/image/alpha12-mining/heatmap_01.png">
+<meta property="article:published_time" content="2026-08-30T09:15:00.000Z">
+<meta property="article:modified_time" content="2026-08-30T15:20:00.000Z">
+<meta property="article:author" content="Janiszzz">
+<meta property="article:tag" content="Alpha因子">
+<meta property="article:tag" content="参数挖掘">
+<meta property="article:tag" content="因子分析">
+<meta property="article:tag" content="量价关系">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://janiszzz.github.io/image/alpha12-mining/heatmap_01.png"><meta name="twitter:title" content="Alpha12参数挖掘分析：量价背离因子的参数敏感性研究">
+  
+  
+  <meta name="keywords" content="Alpha因子,参数挖掘,量价关系,因子分析">
+
+  <!-- feed -->
+  
+
+  <link rel="preload" href="/css/main.css?v=1.44.0" as="style">
+  <link rel="stylesheet" href="/css/main.css?v=1.44.0">
+
+
+  
+
+  
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Janiszzz","sameAs":[],"image":"https://avatars.githubusercontent.com/u/23077509?v=4"},"dateCreated":"2026-08-30T17:15:00+08:00","dateModified":"2026-08-30T23:20:00+08:00","datePublished":"2026-08-30T17:15:00+08:00","description":"摘要本文结合 WorldQuant ALPHA12 量价背离因子的参数挖掘结果（2500 组候选 &#x2F; 702 个滚动窗口）与全周期 2015-2025 的回测表现，系统分析最优参数组合 (V&#x3D;29, C&#x3D;11) 的稳健性与实际交易特征。","headline":"Alpha12参数挖掘分析：量价背离因子的参数敏感性研究","mainEntityOfPage":{"@type":"WebPage","@id":"http://janiszzz.github.io/2026/08/30/Alpha12%E5%8F%82%E6%95%B0%E6%8C%96%E6%8E%98%E5%88%86%E6%9E%90-%E9%87%8F%E4%BB%B7%E8%83%8C%E7%A6%BB%E5%9B%A0%E5%AD%90%E7%9A%84%E5%8F%82%E6%95%B0%E6%95%8F%E6%84%9F%E6%80%A7%E7%A0%94%E7%A9%B6/"},"publisher":{"@type":"Organization","name":"Janiszzz","sameAs":[],"image":"https://avatars.githubusercontent.com/u/23077509?v=4","logo":{"@type":"ImageObject","url":"https://avatars.githubusercontent.com/u/23077509?v=4"}},"url":"http://janiszzz.github.io/2026/08/30/Alpha12%E5%8F%82%E6%95%B0%E6%8C%96%E6%8E%98%E5%88%86%E6%9E%90-%E9%87%8F%E4%BB%B7%E8%83%8C%E7%A6%BB%E5%9B%A0%E5%AD%90%E7%9A%84%E5%8F%82%E6%95%B0%E6%95%8F%E6%84%9F%E6%80%A7%E7%A0%94%E7%A9%B6/","keywords":"Alpha因子, 参数挖掘, 量价关系, 因子分析","thumbnailUrl":"/image/alpha12-mining/heatmap_01.png","image":["/image/alpha12-mining/heatmap_01.png"]}</script>
+  
+
+  <!-- icons.yml 驱动的 CSS 装饰图标 -->
+  
+  
+  <style>:root {
+  --icon-h3-left: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%3E%3C!--%20Icon%20from%20Solar%20by%20480%20Design%20-%20https%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby%2F4.0%2F%20--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M17.75%2019a.75.75%200%200%201-1.32.488l-6-7a.75.75%200%200%201%200-.976l6-7A.75.75%200%200%201%2017.75%205z%22%20opacity%3D%22.5%22%2F%3E%3Cpath%20fill%3D%22currentColor%22%20fill-rule%3D%22evenodd%22%20d%3D%22M13.488%2019.57a.75.75%200%200%200%20.081-1.058L7.988%2012l5.581-6.512a.75.75%200%201%200-1.138-.976l-6%207a.75.75%200%200%200%200%20.976l6%207a.75.75%200%200%200%201.057.082%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  --icon-h3-right: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%3E%3C!--%20Icon%20from%20Solar%20by%20480%20Design%20-%20https%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby%2F4.0%2F%20--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M6.25%2019a.75.75%200%200%200%201.32.488l6-7a.75.75%200%200%200%200-.976l-6-7A.75.75%200%200%200%206.25%205z%22%20opacity%3D%22.5%22%2F%3E%3Cpath%20fill%3D%22currentColor%22%20fill-rule%3D%22evenodd%22%20d%3D%22M10.512%2019.57a.75.75%200%200%201-.081-1.058L16.012%2012l-5.581-6.512a.75.75%200%201%201%201.139-.976l6%207a.75.75%200%200%201%200%20.976l-6%207a.75.75%200%200%201-1.058.082%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  --icon-quote-left: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%3E%3C!--%20Icon%20from%20BoxIcons%20Solid%20by%20Atisa%20-%20https%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby%2F4.0%2F%20--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M3.691%206.292C5.094%204.771%207.217%204%2010%204h1v2.819l-.804.161c-1.37.274-2.323.813-2.833%201.604A2.9%202.9%200%200%200%206.925%2010H10a1%201%200%200%201%201%201v7c0%201.103-.897%202-2%202H3a1%201%200%200%201-1-1v-5l.003-2.919c-.009-.111-.199-2.741%201.688-4.789M20%2020h-6a1%201%200%200%201-1-1v-5l.003-2.919c-.009-.111-.199-2.741%201.688-4.789C16.094%204.771%2018.217%204%2021%204h1v2.819l-.804.161c-1.37.274-2.323.813-2.833%201.604A2.9%202.9%200%200%200%2017.925%2010H21a1%201%200%200%201%201%201v7c0%201.103-.897%202-2%202%22%2F%3E%3C%2Fsvg%3E");
+  --icon-quote-right: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%3E%3C!--%20Icon%20from%20BoxIcons%20Solid%20by%20Atisa%20-%20https%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby%2F4.0%2F%20--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M20.309%2017.708C22.196%2015.66%2022.006%2013.03%2022%2013V5a1%201%200%200%200-1-1h-6c-1.103%200-2%20.897-2%202v7a1%201%200%200%200%201%201h3.078a2.9%202.9%200%200%201-.429%201.396c-.508.801-1.465%201.348-2.846%201.624l-.803.16V20h1c2.783%200%204.906-.771%206.309-2.292m-11.007%200C11.19%2015.66%2010.999%2013.03%2010.993%2013V5a1%201%200%200%200-1-1h-6c-1.103%200-2%20.897-2%202v7a1%201%200%200%200%201%201h3.078a2.9%202.9%200%200%201-.429%201.396c-.508.801-1.465%201.348-2.846%201.624l-.803.16V20h1c2.783%200%204.906-.771%206.309-2.292%22%2F%3E%3C%2Fsvg%3E");
+  --icon-loading: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.67%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.33%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%226%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%220%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3C%2Fsvg%3E");
+}</style>
+  
+</head>
+<body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left leftbar-card" data-ui-surface="card"><div class="sidebg"></div><div class="leftbar-container">
+
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg"></div><img no-lazy class="avatar" src="https://avatars.githubusercontent.com/u/23077509?v=4" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Janiszzz's Blog</div><div class="sub normal cap">2026Ver.</div><div class="sub hover cap" style="opacity:0"> 用产出对抗孤独。</div></a></div></header>
+
+
+<div class="search-wrapper" id="search-wrapper"><div class="search-form" role="search"><label class="search-button" for="search-input" aria-hidden="true"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></label><input type="search" class="search-input" id="search-input" aria-label="站内搜索" placeholder="站内搜索"></div><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+<div class="widgets">
+<svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="leftbar-active-icon-grad" x1="75%" y1="6.7%" x2="6.7%" y2="125%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></linearGradient></defs></svg>
+<div class="nav-area">
+
+<nav class="menu dis-select">
+<div class="ui-collection" data-layout="list" data-variant="nav" data-density="auto">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight is-active is-themed" href="/" title="博客" aria-current="page" style="--item-theme:#4db6ac;--item-grad:url(#menu-grad-post);">
+  
+  <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="currentColor"><path fill-rule="evenodd" d="M5.87868 2.87868C5 3.75736 5 5.17157 5 8V16C5 18.8284 5 20.2426 5.87868 21.1213C6.75736 22 8.17157 22 11 22H13C15.8284 22 17.2426 22 18.1213 21.1213C19 20.2426 19 18.8284 19 16V8C19 5.17157 19 3.75736 18.1213 2.87868C17.2426 2 15.8284 2 13 2H11C8.17157 2 6.75736 2 5.87868 2.87868ZM8.25 17C8.25 16.5858 8.58579 16.25 9 16.25H12C12.4142 16.25 12.75 16.5858 12.75 17C12.75 17.4142 12.4142 17.75 12 17.75H9C8.58579 17.75 8.25 17.4142 8.25 17ZM9 12.25C8.58579 12.25 8.25 12.5858 8.25 13C8.25 13.4142 8.58579 13.75 9 13.75H15C15.4142 13.75 15.75 13.4142 15.75 13C15.75 12.5858 15.4142 12.25 15 12.25H9ZM8.25 9C8.25 8.58579 8.58579 8.25 9 8.25H15C15.4142 8.25 15.75 8.58579 15.75 9C15.75 9.41421 15.4142 9.75 15 9.75H9C8.58579 9.75 8.25 9.41421 8.25 9Z" clip-rule="evenodd"/><path d="M5.23525 4.05811C5 4.94139 5 6.17689 5 7.99985V15.9999C5 17.8229 5 19.0584 5.23527 19.9417L5 19.9238C4.02491 19.8279 3.36857 19.6111 2.87868 19.1212C2 18.2425 2 16.8283 2 13.9999V9.99991C2 7.17148 2 5.75726 2.87868 4.87859C3.36857 4.3887 4.02491 4.17194 5 4.07602L5.23525 4.05811Z" opacity=".5"/><path d="M18.7646 19.9417C18.9999 19.0584 18.9999 17.8229 18.9999 15.9999V7.99985C18.9999 6.17689 18.9999 4.94139 18.7647 4.05811L18.9999 4.07602C19.975 4.17194 20.6314 4.3887 21.1212 4.87859C21.9999 5.75726 21.9999 7.17148 21.9999 9.99991V13.9999C21.9999 16.8283 21.9999 18.2425 21.1212 19.1212C20.6314 19.6111 19.975 19.8279 18.9999 19.9238L18.7646 19.9417Z" opacity=".5"/></g></svg></span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">博客</span>
+      
+      
+    </span>
+  
+  
+  <span class="ui-collection__indicator"></span>
+  
+<svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="menu-grad-post" x1="75%" y1="6.7%" x2="6.7%" y2="125%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></linearGradient></defs></svg>
+
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight is-themed" href="/wiki/betalens/" title="教程" style="--item-theme:#7e57c2;--item-grad:url(#menu-grad-wiki);">
+  
+  <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="currentColor"><path d="M12 20.0283V18H8L8 20.0283C8 20.3054 8 20.444 8.09485 20.5C8.18971 20.556 8.31943 20.494 8.57888 20.3701L9.82112 19.7766C9.9089 19.7347 9.95279 19.7138 10 19.7138C10.0472 19.7138 10.0911 19.7347 10.1789 19.7767L11.4211 20.3701C11.6806 20.494 11.8103 20.556 11.9051 20.5C12 20.444 12 20.3054 12 20.0283Z" opacity=".5"/><path d="M8 18H7.42598C6.34236 18 5.96352 18.0057 5.67321 18.0681C5.15982 18.1785 4.71351 18.4151 4.38811 18.7347C4.27837 18.8425 4.22351 18.8964 4.09696 19.2397C3.97041 19.5831 3.99045 19.7288 4.03053 20.02C4.03761 20.0714 4.04522 20.1216 4.05343 20.1706C4.16271 20.8228 4.36259 21.1682 4.66916 21.4142C4.97573 21.6602 5.40616 21.8206 6.21896 21.9083C7.05566 21.9986 8.1646 22 9.75461 22H14.1854C15.7754 22 16.8844 21.9986 17.7211 21.9083C18.5339 21.8206 18.9643 21.6602 19.2709 21.4142C19.5774 21.1682 19.7773 20.8228 19.8866 20.1706C19.9784 19.6228 19.9965 18.9296 20 18H12V20.0283C12 20.3054 12 20.444 11.9051 20.5C11.8103 20.556 11.6806 20.494 11.4211 20.3701L10.1789 19.7767C10.0911 19.7347 10.0472 19.7138 10 19.7138C9.95279 19.7138 9.9089 19.7347 9.82112 19.7766L8.57888 20.3701C8.31943 20.494 8.18971 20.556 8.09485 20.5C8 20.444 8 20.3054 8 20.0283V18Z"/><path d="M4.72718 2.73332C5.03258 2.42535 5.46135 2.22456 6.27103 2.11478C7.10452 2.00177 8.2092 2 9.7931 2H14.2069C15.7908 2 16.8955 2.00177 17.729 2.11478C18.5387 2.22456 18.9674 2.42535 19.2728 2.73332C19.5782 3.0413 19.7773 3.47368 19.8862 4.2902C19.9982 5.13073 20 6.24474 20 7.84202L20 18H7.42598C6.34236 18 5.96352 18.0057 5.67321 18.0681C5.15982 18.1785 4.71351 18.4151 4.38811 18.7347C4.27837 18.8425 4.22351 18.8964 4.09696 19.2397C4.02435 19.4367 4 19.5687 4 19.7003V7.84202C4 6.24474 4.00176 5.13073 4.11382 4.2902C4.22268 3.47368 4.42179 3.0413 4.72718 2.73332Z" opacity=".5"/><path d="M7.25 7C7.25 6.58579 7.58579 6.25 8 6.25H16C16.4142 6.25 16.75 6.58579 16.75 7C16.75 7.41421 16.4142 7.75 16 7.75H8C7.58579 7.75 7.25 7.41421 7.25 7Z"/><path d="M8 9.75C7.58579 9.75 7.25 10.0858 7.25 10.5C7.25 10.9142 7.58579 11.25 8 11.25H13C13.4142 11.25 13.75 10.9142 13.75 10.5C13.75 10.0858 13.4142 9.75 13 9.75H8Z"/></g></svg></span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">教程</span>
+      
+      
+    </span>
+  
+  
+  
+  
+<svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="menu-grad-wiki" x1="75%" y1="6.7%" x2="6.7%" y2="125%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></linearGradient></defs></svg>
+
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight is-themed" href="/about/" title="关于" style="--item-theme:#81c784;--item-grad:url(#menu-grad-about);">
+  
+  <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="currentColor"><path d="M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z" opacity=".5"/><path d="M17.7124 5.45331C18.7593 5.25995 19.7184 5.19444 20.5094 5.30066C21.2797 5.40411 22.0451 5.69443 22.4649 6.36546C22.9112 7.07875 22.7767 7.90702 22.4527 8.62306C22.1234 9.35067 21.5345 10.1218 20.7806 10.8912C19.2652 12.4379 16.9446 14.1173 14.1835 15.5883C11.4214 17.0599 8.68924 18.0721 6.49015 18.5079C5.39463 18.7249 4.39197 18.807 3.56745 18.709C2.76731 18.614 1.96779 18.3262 1.53503 17.6345C1.06423 16.882 1.23859 16.0043 1.60462 15.2551C1.97963 14.4875 2.63744 13.6693 3.47686 12.8522L4 12.4165C4 12.6349 4.08336 13.1257 4.16811 13.5624C4.21263 13.7918 4.25753 14.0062 4.29093 14.1584C3.6391 14.8237 3.19304 15.421 2.95236 15.9136C2.67513 16.481 2.74418 16.7391 2.80665 16.8389C2.87948 16.9553 3.1117 17.1443 3.74441 17.2195C4.35275 17.2918 5.18406 17.2375 6.1986 17.0365C8.21962 16.636 10.8118 15.685 13.4782 14.2644C16.1457 12.8433 18.3298 11.2493 19.7092 9.84143C20.4027 9.13359 20.8587 8.50726 21.0861 8.00467C21.3187 7.4905 21.2526 7.25586 21.1933 7.16105C21.1231 7.04882 20.9042 6.86715 20.3097 6.78731C19.7683 6.7146 19.0378 6.74602 18.1466 6.89948L16.8697 5.65597C17.2085 5.55454 17.5278 5.48526 17.7124 5.45331Z"/></g></svg></span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">关于</span>
+      
+      
+    </span>
+  
+  
+  
+  
+<svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="menu-grad-about" x1="75%" y1="6.7%" x2="6.7%" y2="125%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></linearGradient></defs></svg>
+
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight is-themed" href="/album/" title="相册" style="--item-theme:#ef9a9a;--item-grad:url(#menu-grad-album);">
+  
+  <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="currentColor"><path d="M13.6288 20.4718L13.0867 21.3877C12.6035 22.204 11.3965 22.204 10.9133 21.3877L10.3712 20.4718C9.95073 19.7614 9.74049 19.4063 9.40279 19.2098C9.06509 19.0134 8.63992 19.0061 7.78958 18.9915C6.53422 18.9698 5.74689 18.8929 5.08658 18.6194C3.86144 18.1119 2.88807 17.1386 2.3806 15.9134C2 14.9946 2 13.8297 2 11.5V10.5C2 7.22657 2 5.58985 2.7368 4.38751C3.14908 3.71473 3.71473 3.14908 4.38751 2.7368C5.58985 2 7.22657 2 10.5 2H13.5C16.7734 2 18.4101 2 19.6125 2.7368C20.2853 3.14908 20.8509 3.71473 21.2632 4.38751C22 5.58985 22 7.22657 22 10.5V11.5C22 13.8297 22 14.9946 21.6194 15.9134C21.1119 17.1386 20.1386 18.1119 18.9134 18.6194C18.2531 18.8929 17.4658 18.9698 16.2104 18.9915C15.36 19.0061 14.9349 19.0134 14.5972 19.2098C14.2595 19.4062 14.0492 19.7614 13.6288 20.4718Z" opacity=".5"/><path d="M10.9901 14.3082C9.6633 13.3304 7.5 11.4674 7.5 9.71476C7.5 7.03759 9.97507 6.03807 12 8.10615C14.0249 6.03807 16.5 7.03759 16.5 9.71475C16.5 11.4674 14.3367 13.3304 13.0099 14.3082C12.5558 14.643 12.3287 14.8103 12 14.8103C11.6713 14.8103 11.4442 14.643 10.9901 14.3082Z"/></g></svg></span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">相册</span>
+      
+      
+    </span>
+  
+  
+  
+  
+<svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="menu-grad-album" x1="75%" y1="6.7%" x2="6.7%" y2="125%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></linearGradient></defs></svg>
+
+</a>
+
+  
+</div>
+
+</nav>
+</div>
+
+
+
+<widget class="widget-wrapper slide-up recent-widget">
+  
+    <div class="widget-header dis-select">
+      <span class="name">最近更新</span>
+      
+    </div>
+  
+  <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/2026/08/30/Alpha12%E5%8F%82%E6%95%B0%E6%8C%96%E6%8E%98%E5%88%86%E6%9E%90-%E9%87%8F%E4%BB%B7%E8%83%8C%E7%A6%BB%E5%9B%A0%E5%AD%90%E7%9A%84%E5%8F%82%E6%95%B0%E6%95%8F%E6%84%9F%E6%80%A7%E7%A0%94%E7%A9%B6/" title="Alpha12参数挖掘分析：量价背离因子的参数敏感性研究">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Alpha12参数挖掘分析：量价背离因子的参数敏感性研究</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/2021/06/15/%E8%A5%BF%E6%96%B9%E7%BB%8F%E6%B5%8E%E6%80%9D%E6%83%B3%E5%8F%B2%E7%AC%94%E8%AE%B0/" title="西方经济思想史笔记">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">西方经济思想史笔记</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/2021/02/09/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%8A%AF%E7%BD%AA%E8%A1%8C%E4%B8%BA/" title="经济学视角下的犯罪行为">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">经济学视角下的犯罪行为</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/2021/02/09/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E5%87%BA%E7%8E%B0%E6%B6%88%E9%99%A4%E5%89%A5%E5%89%8A%E4%BA%86%E5%90%97%EF%BC%9F/" title="人工智能的出现消除剥削了吗？">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">人工智能的出现消除剥削了吗？</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/2021/01/04/%E8%AF%BB2019E-1902029/" title="读2019E 1902029">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">读2019E 1902029</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/2020/12/25/%E6%94%BF%E7%BB%8F%E7%AC%94%E8%AE%B0-%E8%81%8C%E8%83%BD%E8%B5%84%E6%9C%AC%E4%B8%8E%E5%B9%B3%E5%9D%87%E5%88%A9%E6%B6%A6/" title="政经笔记-职能资本与平均利润">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">政经笔记-职能资本与平均利润</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/2020/11/07/%E6%94%BF%E7%BB%8F%E7%AC%94%E8%AE%B0-%E7%A4%BE%E4%BC%9A%E6%80%BB%E8%B5%84%E6%9C%AC%E5%86%8D%E7%94%9F%E4%BA%A7%E5%92%8C%E6%B5%81%E9%80%9A/" title="政经笔记-社会总资本再生产和流通">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">政经笔记-社会总资本再生产和流通</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/2020/11/07/%E6%94%BF%E7%BB%8F%E7%AC%94%E8%AE%B0-%E8%B5%84%E6%9C%AC%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%91%A8%E8%BD%AC/" title="政经笔记-资本循环和周转">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">政经笔记-资本循环和周转</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/2020/11/07/%E6%94%BF%E7%BB%8F%E7%AC%94%E8%AE%B0-%E8%B5%84%E6%9C%AC%E7%A7%AF%E7%B4%AF/" title="政经笔记-资本积累">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">政经笔记-资本积累</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/2020/11/07/%E6%94%BF%E7%BB%8F%E7%AC%94%E8%AE%B0-%E8%B5%84%E6%9C%AC%E5%92%8C%E5%89%A9%E4%BD%99%E4%BB%B7%E5%80%BC/" title="政经笔记-资本和剩余价值">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">政经笔记-资本和剩余价值</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+</div></div>
+  
+</widget>
+
+
+</div>
+
+</div></aside><div class="l_main" id="main" data-ui-surface="content">
+
+
+
+
+
+
+<div class="article-banner-wrap slide-up"><div class="article banner top">
+  <div class="content">
+    
+    <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E9%87%8F%E5%8C%96%E7%A0%94%E7%A9%B6/">量化研究</a>
+</div></div><div class="meta-row">
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-08-30T09:15:00.000Z">2026年8月30日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-08-30T15:20:00.000Z">2026年8月30日</time></span></div>
+</div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>Alpha12参数挖掘分析：量价背离因子的参数敏感性研究</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div></div>
+<article class="md-text content slide-up"><div class="tag-plugin colorful note" color="cyan"><div class="title">摘要</div><div class="body"><p>本文结合 WorldQuant ALPHA12 量价背离因子的参数挖掘结果（2500 组候选 / 702 个滚动窗口）与全周期 2015-2025 的回测表现，系统分析最优参数组合 (V=29, C=11) 的稳健性与实际交易特征。</p></div></div>
+
+<span id="more"></span>
+
+<h1 id="一、Alpha12-因子公式与经济含义"><a href="#一、Alpha12-因子公式与经济含义" class="headerlink" title="一、Alpha12 因子公式与经济含义"></a>一、Alpha12 因子公式与经济含义</h1><p>Alpha12 的核心公式为：</p>
+<p>$$<br>\alpha_{12,t}(V, C) = \mathrm{sign}(\Delta_V Volume_t) \times (-\Delta_C Close_t)<br>$$</p>
+<p>其中：</p>
+<ul>
+<li><strong>V</strong> = volume_delta_lag，成交量变化周期</li>
+<li><strong>C</strong> = close_delta_lag，价格变化周期</li>
+</ul>
+<p>该因子的设计逻辑是：<strong>量价背离时发出信号</strong>。</p>
+<div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="center">价格变化</th>
+<th align="center">成交量变化</th>
+<th align="center">Alpha12 符号</th>
+<th align="left">经济含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">下跌</td>
+<td align="center">放量</td>
+<td align="center">正</td>
+<td align="left">恐慌释放后超跌反弹可能</td>
+</tr>
+<tr>
+<td align="center">上涨</td>
+<td align="center">缩量</td>
+<td align="center">正</td>
+<td align="left">上涨参与度不足，抛压减弱</td>
+</tr>
+<tr>
+<td align="center">上涨</td>
+<td align="center">放量</td>
+<td align="center">负</td>
+<td align="left">量价同向上涨，趋势确认</td>
+</tr>
+<tr>
+<td align="center">下跌</td>
+<td align="center">缩量</td>
+<td align="center">负</td>
+<td align="left">弱势延续，缺乏反弹动力</td>
+</tr>
+</tbody></table></div>
+<p>需要注意的几个细节：</p>
+<ol>
+<li><code>sign()</code> 只保留方向，不保留幅度——成交量从 100 到 101 与从 100 到 1000 都映射为 +1。</li>
+<li>价格部分使用原始价差 <code>Close_t - Close_{t-C}</code>，不是收益率，因此高价股天然具有更大的价格差，截面排名、标准化与中性化可缓解但不能完全消除。</li>
+<li>当两个 lag 不同时，因子表达的是不同周期的量价背离。例如 <code>V=29, C=11</code> 表示用约一个月的成交量状态判断方向，再结合约两周的价格反转幅度。</li>
+</ol>
+<h1 id="二、参数挖掘实验"><a href="#二、参数挖掘实验" class="headerlink" title="二、参数挖掘实验"></a>二、参数挖掘实验</h1><h2 id="2-1-实验设置"><a href="#2-1-实验设置" class="headerlink" title="2.1 实验设置"></a>2.1 实验设置</h2><div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">范围</th>
+<th align="center">步长</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">volume_delta_lag</td>
+<td align="center">1 ~ 50</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">close_delta_lag</td>
+<td align="center">1 ~ 50</td>
+<td align="center">1</td>
+</tr>
+</tbody></table></div>
+<p>共生成 <strong>2500 组</strong>参数候选参与评估。回测配置：</p>
+<ul>
+<li>样本期：2010-01-01 ~ 2022-12-31</li>
+<li>调仓频率：周频</li>
+<li>滚动窗口长度：252 / 504 / 756 日</li>
+<li>滚动窗口步长：21 / 42 / 63 日</li>
+<li>有效窗口数量：702</li>
+</ul>
+<h2 id="2-2-Top-10-参数组合（按-Sharpe-中位数）"><a href="#2-2-Top-10-参数组合（按-Sharpe-中位数）" class="headerlink" title="2.2 Top 10 参数组合（按 Sharpe 中位数）"></a>2.2 Top 10 参数组合（按 Sharpe 中位数）</h2><div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="center">排名</th>
+<th align="center">volume_lag</th>
+<th align="center">close_lag</th>
+<th align="center">Sharpe 中位数</th>
+<th align="center">年化收益</th>
+<th align="center">最大回撤</th>
+<th align="center">Rank IC</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center"><strong>29</strong></td>
+<td align="center"><strong>11</strong></td>
+<td align="center"><strong>1.4769</strong></td>
+<td align="center">11.9%</td>
+<td align="center">7.3%</td>
+<td align="center">1.24%</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1.3716</td>
+<td align="center">10.0%</td>
+<td align="center">9.6%</td>
+<td align="center">1.53%</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">29</td>
+<td align="center">12</td>
+<td align="center">1.3553</td>
+<td align="center">10.8%</td>
+<td align="center">7.2%</td>
+<td align="center">1.23%</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">50</td>
+<td align="center">9</td>
+<td align="center">1.3476</td>
+<td align="center">11.0%</td>
+<td align="center">6.4%</td>
+<td align="center">0.29%</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">29</td>
+<td align="center">3</td>
+<td align="center">1.3442</td>
+<td align="center">10.2%</td>
+<td align="center">7.9%</td>
+<td align="center">0.86%</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">24</td>
+<td align="center">3</td>
+<td align="center">1.3421</td>
+<td align="center">10.1%</td>
+<td align="center">8.5%</td>
+<td align="center">0.62%</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">29</td>
+<td align="center">2</td>
+<td align="center">1.3040</td>
+<td align="center">10.0%</td>
+<td align="center">6.7%</td>
+<td align="center">0.59%</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">46</td>
+<td align="center">11</td>
+<td align="center">1.2724</td>
+<td align="center">10.9%</td>
+<td align="center">8.2%</td>
+<td align="center">0.99%</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">29</td>
+<td align="center">13</td>
+<td align="center">1.2673</td>
+<td align="center">10.1%</td>
+<td align="center">8.5%</td>
+<td align="center">0.79%</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">42</td>
+<td align="center">10</td>
+<td align="center">1.2592</td>
+<td align="center">9.4%</td>
+<td align="center">6.8%</td>
+<td align="center">0.99%</td>
+</tr>
+</tbody></table></div>
+<p><strong>关键发现</strong>：最优参数 <code>(29, 11)</code> 的 Sharpe 中位数为 <strong>1.4769</strong>，相比默认 <code>(1,1)</code> 的 <strong>1.3716</strong> 提升约 7.7%。</p>
+<h2 id="2-3-热力图分析"><a href="#2-3-热力图分析" class="headerlink" title="2.3 热力图分析"></a>2.3 热力图分析</h2><p>每个热力图的横轴为 <code>close_delta_lag</code>（1<del>50），纵轴为 <code>volume_delta_lag</code>（1</del>50）。每个格子的值是该参数组合在 702 个滚动窗口上的<strong>平均表现</strong>。每张图包含五个子图：上排为 Sharpe / 年化收益 / Rank IC，下排为最大回撤（颜色方向相反，绿色更差）/ 换手率。</p>
+<h3 id="252-日窗口-21-日步长"><a href="#252-日窗口-21-日步长" class="headerlink" title="252 日窗口 / 21 日步长"></a>252 日窗口 / 21 日步长</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/heatmap_01.png" alt="252 日窗口 21 日步长"></p>
+<h3 id="252-日窗口-42-日步长"><a href="#252-日窗口-42-日步长" class="headerlink" title="252 日窗口 / 42 日步长"></a>252 日窗口 / 42 日步长</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/heatmap_02.png" alt="252 日窗口 42 日步长"></p>
+<h3 id="252-日窗口-63-日步长"><a href="#252-日窗口-63-日步长" class="headerlink" title="252 日窗口 / 63 日步长"></a>252 日窗口 / 63 日步长</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/heatmap_03.png" alt="252 日窗口 63 日步长"></p>
+<h3 id="504-日窗口-21-日步长"><a href="#504-日窗口-21-日步长" class="headerlink" title="504 日窗口 / 21 日步长"></a>504 日窗口 / 21 日步长</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/heatmap_04.png" alt="504 日窗口 21 日步长"></p>
+<h3 id="504-日窗口-42-日步长"><a href="#504-日窗口-42-日步长" class="headerlink" title="504 日窗口 / 42 日步长"></a>504 日窗口 / 42 日步长</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/heatmap_05.png" alt="504 日窗口 42 日步长"></p>
+<h3 id="504-日窗口-63-日步长"><a href="#504-日窗口-63-日步长" class="headerlink" title="504 日窗口 / 63 日步长"></a>504 日窗口 / 63 日步长</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/heatmap_06.png" alt="504 日窗口 63 日步长"></p>
+<h3 id="756-日窗口-21-日步长"><a href="#756-日窗口-21-日步长" class="headerlink" title="756 日窗口 / 21 日步长"></a>756 日窗口 / 21 日步长</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/heatmap_07.png" alt="756 日窗口 21 日步长"></p>
+<h3 id="756-日窗口-42-日步长"><a href="#756-日窗口-42-日步长" class="headerlink" title="756 日窗口 / 42 日步长"></a>756 日窗口 / 42 日步长</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/heatmap_08.png" alt="756 日窗口 42 日步长"></p>
+<h3 id="756-日窗口-63-日步长"><a href="#756-日窗口-63-日步长" class="headerlink" title="756 日窗口 / 63 日步长"></a>756 日窗口 / 63 日步长</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/heatmap_09.png" alt="756 日窗口 63 日步长"></p>
+<h2 id="2-4-参数敏感性解读"><a href="#2-4-参数敏感性解读" class="headerlink" title="2.4 参数敏感性解读"></a>2.4 参数敏感性解读</h2><h3 id="close-delta-lag-是绩效主驱动"><a href="#close-delta-lag-是绩效主驱动" class="headerlink" title="close_delta_lag 是绩效主驱动"></a>close_delta_lag 是绩效主驱动</h3><p>价格差分是公式中唯一的连续幅度项 <code>-Δ_C Close</code>。从热力图可以清晰看到：</p>
+<ul>
+<li><code>C = 1</code> 附近表现较强：典型短期反转信号。</li>
+<li><code>C ≈ 8 ~ 13</code> 出现一个强区域：约两周的价格变化周期最适配当前样本，最优点是约 <code>(V=29, C=11)</code>。</li>
+<li><code>C &gt; 30</code> 后明显走弱：信号滞后，短期反转效果被稀释，并与趋势成分混合。</li>
+</ul>
+<p>量化指标印证了这一判断（Spearman 相关）：</p>
+<div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="left">close_lag 与指标</th>
+<th align="center">相关系数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">夏普比率</td>
+<td align="center">-0.51</td>
+</tr>
+<tr>
+<td align="left">年化收益</td>
+<td align="center">-0.49</td>
+</tr>
+<tr>
+<td align="left">Rank IC</td>
+<td align="center"><strong>-0.69</strong></td>
+</tr>
+</tbody></table></div>
+<h3 id="volume-delta-lag-是方向筛选器"><a href="#volume-delta-lag-是方向筛选器" class="headerlink" title="volume_delta_lag 是方向筛选器"></a>volume_delta_lag 是方向筛选器</h3><p>成交量部分只有 <code>sign(Δ_V Volume)</code>，取值为 <code>-1、0、+1</code>，它不改变价格变化的幅度，只决定是否把价格反转信号翻转。</p>
+<div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="left">volume_lag 与指标</th>
+<th align="center">相关系数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">夏普比率</td>
+<td align="center">+0.31</td>
+</tr>
+<tr>
+<td align="left">换手率</td>
+<td align="center"><strong>-0.59</strong></td>
+</tr>
+</tbody></table></div>
+<p><code>V</code> 越大，换手率越低——因为长周期的成交量符号变化更慢，信号更稳定。图中在 <code>V ≈ 29、33、46 ~ 50</code> 附近出现横向绿色带，说明这些成交量周期在当前样本中更容易把价格信号分到有效方向。</p>
+<h3 id="两参数存在乘法交互"><a href="#两参数存在乘法交互" class="headerlink" title="两参数存在乘法交互"></a>两参数存在乘法交互</h3><p>公式是 <code>S_V(t) × R_C(t)</code>，所以最优区域取决于<strong>成交量状态的方向，是否刚好与 C 日价格反转方向匹配</strong>。这就是热力图上不是简单的「左上最好、右下最差」，而是出现横向条带和局部斑块的原因。</p>
+<h1 id="三、全周期回测验证（V-29-C-11）"><a href="#三、全周期回测验证（V-29-C-11）" class="headerlink" title="三、全周期回测验证（V=29, C=11）"></a>三、全周期回测验证（V=29, C=11）</h1><p>为了验证挖掘结果，我们使用最优参数 <code>(V=29, C=11)</code> 在更长样本（2015-01-01 ~ 2025-12-31）上做了完整的截面回测，对比参数搜索结论的实际稳健性。</p>
+<h2 id="3-1-回测配置"><a href="#3-1-回测配置" class="headerlink" title="3.1 回测配置"></a>3.1 回测配置</h2><div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="center">项目</th>
+<th align="center">值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">因子参数</td>
+<td align="center">volume_delta_lag=29, close_delta_lag=11</td>
+</tr>
+<tr>
+<td align="center">截面方法</td>
+<td align="center">行业中性化（申万一级行业）+ 等分 40 组</td>
+</tr>
+<tr>
+<td align="center">多头组合</td>
+<td align="center">第 39 组（Q39，纯多头）</td>
+</tr>
+<tr>
+<td align="center">调仓频率</td>
+<td align="center">周频</td>
+</tr>
+<tr>
+<td align="center">买入价</td>
+<td align="center">收盘价(元)</td>
+</tr>
+<tr>
+<td align="center">基准</td>
+<td align="center">000906.SH（偏股混合指数）</td>
+</tr>
+<tr>
+<td align="center">初始资金</td>
+<td align="center">1 亿</td>
+</tr>
+</tbody></table></div>
+<h2 id="3-2-核心绩效指标"><a href="#3-2-核心绩效指标" class="headerlink" title="3.2 核心绩效指标"></a>3.2 核心绩效指标</h2><div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="center">类别</th>
+<th align="left">指标</th>
+<th align="center">值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">收益</td>
+<td align="left">累计收益</td>
+<td align="center"><strong>76.37%</strong></td>
+</tr>
+<tr>
+<td align="center">收益</td>
+<td align="left">年化收益</td>
+<td align="center">5.50%</td>
+</tr>
+<tr>
+<td align="center">收益</td>
+<td align="left">年化波动率</td>
+<td align="center">30.44%</td>
+</tr>
+<tr>
+<td align="center">收益</td>
+<td align="left">夏普比率</td>
+<td align="center"><strong>0.3292</strong></td>
+</tr>
+<tr>
+<td align="center">收益</td>
+<td align="left">索提诺比率</td>
+<td align="center">0.3181</td>
+</tr>
+<tr>
+<td align="center">收益</td>
+<td align="left">日胜率</td>
+<td align="center">51.27%</td>
+</tr>
+<tr>
+<td align="center">收益</td>
+<td align="left">盈亏比</td>
+<td align="center">0.9767</td>
+</tr>
+<tr>
+<td align="center">回撤</td>
+<td align="left">最大回撤</td>
+<td align="center"><strong>56.32%</strong></td>
+</tr>
+<tr>
+<td align="center">回撤</td>
+<td align="left">卡玛比率</td>
+<td align="center">0.0977</td>
+</tr>
+<tr>
+<td align="center">回撤</td>
+<td align="left">痛苦指数</td>
+<td align="center">36.02%</td>
+</tr>
+<tr>
+<td align="center">回撤</td>
+<td align="left">最长回撤期</td>
+<td align="center">1510 日（约 5 年）</td>
+</tr>
+<tr>
+<td align="center">因子</td>
+<td align="left">IC 均值</td>
+<td align="center"><strong>0.0132</strong></td>
+</tr>
+<tr>
+<td align="center">因子</td>
+<td align="left">ICIR</td>
+<td align="center">0.2014</td>
+</tr>
+<tr>
+<td align="center">因子</td>
+<td align="left">IC 胜率</td>
+<td align="center"><strong>59.07%</strong></td>
+</tr>
+<tr>
+<td align="center">持仓</td>
+<td align="left">平均持仓数</td>
+<td align="center">18.36 只</td>
+</tr>
+<tr>
+<td align="center">持仓</td>
+<td align="left">平均持仓寿命</td>
+<td align="center"><strong>1.14 期</strong>（约 1 周）</td>
+</tr>
+<tr>
+<td align="center">持仓</td>
+<td align="left">单边换手率（年化）</td>
+<td align="center"><strong>3097.74%</strong></td>
+</tr>
+</tbody></table></div>
+<p><strong>说明</strong>：年化收益 5.50% 与挖掘阶段的 11.9% 出现明显差异，原因有三：</p>
+<ol>
+<li><strong>样本期不同</strong>：挖掘用 2010-2022 共 13 年，全周期验证用 2015-2025 共 11 年（覆盖了 2022 熊市 + 2023-2024 持续低迷）。</li>
+<li><strong>组合方式不同</strong>：挖掘阶段在 702 个滚动窗口上做平均，单一窗口内表现会被平均；全周期回测是单一长程净值，会受到长期回撤的拖累。</li>
+<li><strong>多空/纯多头差异</strong>：挖掘阶段用的是 long-short 排序指标（Rank IC），全周期回测只做第 39 组纯多头，吃不到对冲端的负向收益。</li>
+</ol>
+<p>尽管如此，<strong>Sharpe 0.3292、IC 0.0132、IC 胜率 59.07%</strong> 这些核心指标仍稳定在挖掘阶段观察到的方向上。</p>
+<h2 id="3-3-40-分组净值曲线"><a href="#3-3-40-分组净值曲线" class="headerlink" title="3.3 40 分组净值曲线"></a>3.3 40 分组净值曲线</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/ALPHA12_group_nav.png" alt="40 分组净值曲线"></p>
+<p>40 个等分组的累计收益曲线呈现明显的<strong>单调梯度</strong>：因子值越高的组（G39、G40 深绿色）累计收益越高，因子值越低的组（G1、G2 红色）则累计为负收益。</p>
+<ul>
+<li><strong>最强组（G40）累计收益接近 500%</strong>：在 11 年时间里翻了约 5 倍。</li>
+<li><strong>最弱组（G1 ~ G4）累计为负</strong>：做空低因子值的股票组合长期亏损。</li>
+<li><strong>2020-2021 出现明显加速</strong>：与全 A 牛市同步，分组差距迅速拉开。</li>
+<li><strong>2022 年熊市差距收窄</strong>：高因子组在 2022 年回撤相对较大，但优势保持。</li>
+</ul>
+<h2 id="3-4-分年度交易表现"><a href="#3-4-分年度交易表现" class="headerlink" title="3.4 分年度交易表现"></a>3.4 分年度交易表现</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/ALPHA12_annual.png" alt="分年度交易表现"></p>
+<p>11 个完整年度（2015-2025）中，<strong>6 年盈利、5 年亏损</strong>，胜率约 55%：</p>
+<div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="center">年份</th>
+<th align="center">盈亏</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">2015</td>
+<td align="center">+1.86%</td>
+<td align="left">牛市首段，胜率 55%</td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center">-0.79%</td>
+<td align="left">熔断后修复期</td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center">+0.27%</td>
+<td align="left">价值回归</td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"><strong>-2.58%</strong></td>
+<td align="left">贸易战 + 去杠杆，单边市</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">+2.32%</td>
+<td align="left">牛市主升</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">+6.18%</td>
+<td align="left">流动性牛市（最强年）</td>
+</tr>
+<tr>
+<td align="center">2021</td>
+<td align="center">+5.04%</td>
+<td align="left">结构牛市延续</td>
+</tr>
+<tr>
+<td align="center">2022</td>
+<td align="center"><strong>-1.17%</strong></td>
+<td align="left">熊市</td>
+</tr>
+<tr>
+<td align="center">2023</td>
+<td align="center">-1.70%</td>
+<td align="left">持续阴跌</td>
+</tr>
+<tr>
+<td align="center">2024</td>
+<td align="center">-0.74%</td>
+<td align="left">9 月反弹前</td>
+</tr>
+<tr>
+<td align="center">2025</td>
+<td align="center">+7.00%</td>
+<td align="left">AI 行情复苏（最强年之一）</td>
+</tr>
+</tbody></table></div>
+<p>观察：</p>
+<ul>
+<li><strong>胜率集中在 40%-60%</strong>：与 IC 胜率 59% 吻合。</li>
+<li><strong>牛市放大效应明显</strong>：2020、2021、2025 三年累计贡献了大部分收益。</li>
+<li><strong>熊市控制回撤一般</strong>：2022 年仍录得 -1.17%，绝对值不大但拖累整体年化收益。</li>
+<li><strong>2018 年最大单年亏损 -2.58%</strong>：单边下跌市中，反转因子失效。</li>
+</ul>
+<h2 id="3-5-因子截面分布（Profiling）"><a href="#3-5-因子截面分布（Profiling）" class="headerlink" title="3.5 因子截面分布（Profiling）"></a>3.5 因子截面分布（Profiling）</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/ALPHA12_profiling.png" alt="因子截面分布"></p>
+<p>八张子图呈现了 ALPHA12 因子值的截面分布特征：</p>
+<ol>
+<li><strong>Factor value distribution</strong>（左上）：呈现明显的<strong>三峰结构</strong>——负峰（约 -1.6）、中心峰（接近 0）、正峰（约 +1.6）。这与 <code>sign()</code> 函数对成交量方向的三值离散化（-1、0、+1）以及价格差分的连续性叠加形成。</li>
+<li><strong>Empirical CDF</strong>（右上）：CDF 平滑单调，无明显跳跃，说明整体分布连续但有混合高斯特征。</li>
+<li><strong>Coverage</strong>（左中）：覆盖率长期稳定在 50% 附近，反映了”非停牌、非一字板”的常规交易股票占比。</li>
+<li><strong>Outlier ratio</strong>（右中）：截面异常值比例约 5%-15%，与多峰结构对应——价格差分极端的样本容易被识别为离群。</li>
+<li><strong>Rank autocorrelation</strong>（左下）：<strong>lag=1 自相关 0.151</strong>（明显），随后 lag=3/6/12 迅速衰减到 0.02 ~ 0.04。这说明因子在相邻调仓周期上有<strong>较强的连续性</strong>——这是为什么 <code>V=29, C=11</code>（用一个月成交量 + 两周价格差）能在周频调仓下形成稳定信号。</li>
+<li><strong>Top 20% turnover</strong>（右中）：高频截面上 20% 的换手率约 60%-70%，与持仓寿命 1.14 期高度吻合——组合每周近乎完全换仓。</li>
+<li><strong>Distribution drift</strong>（左下）：均值（蓝）与波动率（橙）的时序走势。波动率长期稳定，均值长期接近 0（中位数为 0.044），说明截面标准化做得较好。</li>
+<li><strong>Skew / Kurt</strong>（右下）：偏度长期接近 0（轻度正偏），峰度约 -0.5（比正态略平）。整体接近正态，与多峰结构混合后接近对称分布。</li>
+</ol>
+<h2 id="3-6-持仓集中度：行业科技龙头主导"><a href="#3-6-持仓集中度：行业科技龙头主导" class="headerlink" title="3.6 持仓集中度：行业科技龙头主导"></a>3.6 持仓集中度：行业科技龙头主导</h2><p>按<strong>持仓频率</strong>排序，Top 10 股票均为计算机 / 软件 / 自动化领域的科技龙头：</p>
+<div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="left">股票</th>
+<th align="center">持仓频率</th>
+<th align="center">平均权重</th>
+<th align="center">最大权重</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">广联达 (002410.SZ)</td>
+<td align="center">16.52%</td>
+<td align="center">5.40%</td>
+<td align="center">6.23%</td>
+</tr>
+<tr>
+<td align="left">伊利股份 (600887.SH)</td>
+<td align="center">15.99%</td>
+<td align="center">5.48%</td>
+<td align="center">7.14%</td>
+</tr>
+<tr>
+<td align="left">石基信息 (002153.SZ)</td>
+<td align="center">15.63%</td>
+<td align="center">5.52%</td>
+<td align="center">9.06%</td>
+</tr>
+<tr>
+<td align="left">海康威视 (002415.SZ)</td>
+<td align="center">15.10%</td>
+<td align="center">5.39%</td>
+<td align="center">6.24%</td>
+</tr>
+<tr>
+<td align="left">用友网络 (600588.SH)</td>
+<td align="center">14.03%</td>
+<td align="center">5.40%</td>
+<td align="center">6.25%</td>
+</tr>
+<tr>
+<td align="left">恒生电子 (600570.SH)</td>
+<td align="center">13.85%</td>
+<td align="center">5.40%</td>
+<td align="center">6.62%</td>
+</tr>
+<tr>
+<td align="left">大华股份 (002236.SZ)</td>
+<td align="center">13.14%</td>
+<td align="center">5.50%</td>
+<td align="center">6.66%</td>
+</tr>
+<tr>
+<td align="left">汇川技术 (300124.SZ)</td>
+<td align="center">12.08%</td>
+<td align="center">5.46%</td>
+<td align="center">10.00%</td>
+</tr>
+<tr>
+<td align="left">卫宁健康 (300253.SZ)</td>
+<td align="center">11.55%</td>
+<td align="center">5.55%</td>
+<td align="center">9.98%</td>
+</tr>
+<tr>
+<td align="left">国电南瑞 (600406.SH)</td>
+<td align="center">11.01%</td>
+<td align="center">5.43%</td>
+<td align="center">6.66%</td>
+</tr>
+</tbody></table></div>
+<p>按 <strong>PnL 贡献</strong>排序则呈现明显的赢家/输家对立：</p>
+<div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="left">股票</th>
+<th align="right">PnL (元)</th>
+<th align="center">贡献</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">广联达 (002410.SZ)</td>
+<td align="right">+8,847,003</td>
+<td align="center">+11.58%</td>
+</tr>
+<tr>
+<td align="left">辽宁成大 (600739.SH)</td>
+<td align="right">-8,629,421</td>
+<td align="center">-11.30%</td>
+</tr>
+<tr>
+<td align="left">华友钴业 (603799.SH)</td>
+<td align="right">-8,081,348</td>
+<td align="center">-10.58%</td>
+</tr>
+<tr>
+<td align="left">*ST 闻泰 (600745.SH)</td>
+<td align="right">+7,594,625</td>
+<td align="center">+9.94%</td>
+</tr>
+<tr>
+<td align="left">用友网络 (600588.SH)</td>
+<td align="right">+7,233,707</td>
+<td align="center">+9.47%</td>
+</tr>
+<tr>
+<td align="left">华胜天成 (600410.SH)</td>
+<td align="right">+7,127,653</td>
+<td align="center">+9.33%</td>
+</tr>
+<tr>
+<td align="left">豫园股份 (600655.SH)</td>
+<td align="right">-6,858,117</td>
+<td align="center">-8.98%</td>
+</tr>
+<tr>
+<td align="left">胜宏科技 (300476.SZ)</td>
+<td align="right">+6,817,402</td>
+<td align="center">+8.93%</td>
+</tr>
+<tr>
+<td align="left">中源协和 (600645.SH)</td>
+<td align="right">+6,484,627</td>
+<td align="center">+8.49%</td>
+</tr>
+<tr>
+<td align="left">中金岭南 (000060.SZ)</td>
+<td align="right">-6,336,518</td>
+<td align="center">-8.30%</td>
+</tr>
+</tbody></table></div>
+<p><strong>观察</strong>：</p>
+<ul>
+<li>平均持仓数仅 <strong>18.36 只</strong>，但平均持仓寿命只有 <strong>1.14 期</strong>——组合每周近乎完全换仓。</li>
+<li><strong>前 5 大持仓集中度 27.33%</strong>：单一股票权重上限 10%（汇川、卫宁等触及上限）。</li>
+<li><strong>权重 HHI 0.0543</strong>：远低于行业阈值 0.18，说明组合分散度尚可，但相比纯市值加权仍偏向中盘成长。</li>
+<li>持仓偏向 <strong>TMT / 软件 / 自动化</strong>：这是因为这些行业的<strong>量价波动更明显</strong>，更容易满足”放量下跌”或”缩量上涨”的反转条件。</li>
+</ul>
+<h1 id="四、挖掘结论与全周期验证的差异"><a href="#四、挖掘结论与全周期验证的差异" class="headerlink" title="四、挖掘结论与全周期验证的差异"></a>四、挖掘结论与全周期验证的差异</h1><div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="center">维度</th>
+<th align="center">挖掘阶段 (2010-2022)</th>
+<th align="center">全周期验证 (2015-2025)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Sharpe 中位数</td>
+<td align="center">1.4769</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">单周期 Sharpe</td>
+<td align="center">—</td>
+<td align="center">0.3292</td>
+</tr>
+<tr>
+<td align="center">IC 均值</td>
+<td align="center">0.0124</td>
+<td align="center">0.0132</td>
+</tr>
+<tr>
+<td align="center">IC 胜率</td>
+<td align="center">—</td>
+<td align="center">59.07%</td>
+</tr>
+<tr>
+<td align="center">最大回撤</td>
+<td align="center">7.32% (中位数)</td>
+<td align="center">56.32% (实际最大)</td>
+</tr>
+<tr>
+<td align="center">换手率</td>
+<td align="center">1.37 (周单边)</td>
+<td align="center">~62% (周单边)</td>
+</tr>
+</tbody></table></div>
+<p><strong>核心差异解读</strong>：</p>
+<ol>
+<li><strong>Sharpe 显著下降</strong>：1.48 → 0.33。原因：挖掘用 702 个 252/504/756 日窗口的<strong>平均</strong>，每个窗口内样本独立；全周期回测是单一长程，<strong>最大回撤 56.32%</strong>（2021/11 ~ 2024/02 横跨 5 年）严重拖累了复合收益。</li>
+<li><strong>IC 和 IC 胜率几乎一致</strong>：0.0124 vs 0.0132，59% vs 59%。这是<strong>因子本身</strong>的预测能力，跨样本稳健。</li>
+<li><strong>换手率数量级一致</strong>：挖掘阶段周单边换手 1.37（即每周换 137%），全周期截面上 20% 换手 60-70%（即每周换 60-70%）。换手率偏高说明这是个<strong>典型的反转因子</strong>，每周都在追逐新的”超跌放量”或”缩量上涨”信号。</li>
+<li><strong>回撤结构差异</strong>：挖掘阶段窗口最大回撤 7.32%，全周期 56.32%——后者包含了 2021-2024 的长期低迷期。这正是反转因子的”阿喀琉斯之踵”：<strong>单边市失效</strong>。</li>
+</ol>
+<h1 id="五、结论与建议"><a href="#五、结论与建议" class="headerlink" title="五、结论与建议"></a>五、结论与建议</h1><ol>
+<li><p><strong>最优参数 <code>(V=29, C=11)</code> 的预测能力稳健</strong>：IC、IC 胜率、Sharpe 排序在两个样本期保持一致，方向有效。</p>
+</li>
+<li><p><strong>挖掘阶段的高 Sharpe 不能直接等同于实盘 Sharpe</strong>：单窗口平均收益高 ≠ 长程复合收益高。<strong>最大回撤</strong>（特别是 5 年以上的回撤期）才是实盘可承受性的关键约束。</p>
+</li>
+<li><p><strong>close_delta_lag 是主要优化方向</strong>：建议聚焦在 8~13 的区间内做精细搜索，过大会明显拖累绩效。</p>
+</li>
+<li><p><strong>volume_delta_lag 的作用是局部增强</strong>：建议优先搜索 <code>V ≈ 29、46 ~ 50</code> 附近的横向绿色带。</p>
+</li>
+<li><p><strong>参数交互显著</strong>：不宜单独优化任一参数，应通过网格搜索或贝叶斯优化寻找联合最优。</p>
+</li>
+<li><p><strong>换手率权衡</strong>：组合换手率极高（年化 3098%），需考虑交易成本对净收益的侵蚀。在全周期 5.5% 年化收益的情况下，假设双边千二手续费已可能侵蚀 60% 以上的收益。</p>
+</li>
+<li><p><strong>适用场景</strong>：该因子在<strong>震荡市 / 结构牛</strong>中表现最佳（2019-2021 累计 +13.5%），但在<strong>单边熊市</strong>（2018、2022）容易失效。<strong>不建议单独作为主因子使用</strong>，更适合作为反转类因子组合的一个分量。</p>
+</li>
+</ol>
+<hr>
+<p><em>数据来源：Betalens Alpha101 因子挖掘框架（2010-2022 滚动窗口）与 ALPHA12 全周期回测（2015-2025）</em></p>
+</article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/Alpha%E5%9B%A0%E5%AD%90/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Alpha因子</a><a class="tag" href="/tags/%E5%8F%82%E6%95%B0%E6%8C%96%E6%8E%98/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>参数挖掘</a><a class="tag" href="/tags/%E9%87%8F%E4%BB%B7%E5%85%B3%E7%B3%BB/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>量价关系</a><a class="tag" href="/tags/%E5%9B%A0%E5%AD%90%E5%88%86%E6%9E%90/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>因子分析</a></div>
+
+<div class="article-footer slide-up">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
+</div>
+
+<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2021/06/15/%E8%A5%BF%E6%96%B9%E7%BB%8F%E6%B5%8E%E6%80%9D%E6%83%B3%E5%8F%B2%E7%AC%94%E8%AE%B0/">西方经济思想史笔记</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer slide-up footnote"><hr><div class="text"><p>本站由 <a href="/">Janiszzz</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.44.0">Stellar 1.44.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right" data-ui-surface="sidebar"><div class="widgets">
+<widget class="widget-wrapper slide-up user-card ghuser"><div class="widget-body data-service ds-ghinfo" data-api="https://api.github.com/users/Janiszzz"><div class="avatar" ><img no-lazy type="img" id="avatar_url" src="https://avatars.githubusercontent.com/u/23077509?v=4" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><p class="username" type="text" id="name">&nbsp;</p><p class="bio" type="text" id="bio">&nbsp;</p><div class="buttons"><a class="btn" target="_blank" rel="noopener" href="https://github.com/Janiszzz?tab=followers"><span class="title" type="text" id="followers">0</span><span class="desc">followers</span></a><a class="btn" target="_blank" rel="noopener" href="https://github.com/Janiszzz?tab=following"><span class="title" type="text" id="following">0</span><span class="desc">following</span></a><a class="btn" target="_blank" rel="noopener" href="https://github.com/Janiszzz?tab=repositories"><span class="title" type="text" id="public_repos">0</span><span class="desc">repos</span></a></div><a class="follow" target="_blank" rel="noopener" href="https://github.com/Janiszzz"><svg class="icon" data-icon="github:logo" aria-hidden="true"></svg>Follow</a></div></widget>
+
+
+
+<widget class="widget-wrapper slide-up toc" id="data-toc" collapse="false">
+  
+    <div class="widget-header dis-select">
+      <span class="name">本文目录</span>
+      <a class="cap-action" onclick="sidebar.toggleTOC()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a>
+    </div>
+  
+  <div class="widget-body"><ol class="toc ui-collection-adapter"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81Alpha12-%E5%9B%A0%E5%AD%90%E5%85%AC%E5%BC%8F%E4%B8%8E%E7%BB%8F%E6%B5%8E%E5%90%AB%E4%B9%89"><span class="toc-text">一、Alpha12 因子公式与经济含义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%8F%82%E6%95%B0%E6%8C%96%E6%8E%98%E5%AE%9E%E9%AA%8C"><span class="toc-text">二、参数挖掘实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E5%AE%9E%E9%AA%8C%E8%AE%BE%E7%BD%AE"><span class="toc-text">2.1 实验设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Top-10-%E5%8F%82%E6%95%B0%E7%BB%84%E5%90%88%EF%BC%88%E6%8C%89-Sharpe-%E4%B8%AD%E4%BD%8D%E6%95%B0%EF%BC%89"><span class="toc-text">2.2 Top 10 参数组合（按 Sharpe 中位数）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E7%83%AD%E5%8A%9B%E5%9B%BE%E5%88%86%E6%9E%90"><span class="toc-text">2.3 热力图分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#252-%E6%97%A5%E7%AA%97%E5%8F%A3-21-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">252 日窗口 &#x2F; 21 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#252-%E6%97%A5%E7%AA%97%E5%8F%A3-42-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">252 日窗口 &#x2F; 42 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#252-%E6%97%A5%E7%AA%97%E5%8F%A3-63-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">252 日窗口 &#x2F; 63 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#504-%E6%97%A5%E7%AA%97%E5%8F%A3-21-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">504 日窗口 &#x2F; 21 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#504-%E6%97%A5%E7%AA%97%E5%8F%A3-42-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">504 日窗口 &#x2F; 42 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#504-%E6%97%A5%E7%AA%97%E5%8F%A3-63-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">504 日窗口 &#x2F; 63 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#756-%E6%97%A5%E7%AA%97%E5%8F%A3-21-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">756 日窗口 &#x2F; 21 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#756-%E6%97%A5%E7%AA%97%E5%8F%A3-42-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">756 日窗口 &#x2F; 42 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#756-%E6%97%A5%E7%AA%97%E5%8F%A3-63-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">756 日窗口 &#x2F; 63 日步长</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E5%8F%82%E6%95%B0%E6%95%8F%E6%84%9F%E6%80%A7%E8%A7%A3%E8%AF%BB"><span class="toc-text">2.4 参数敏感性解读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#close-delta-lag-%E6%98%AF%E7%BB%A9%E6%95%88%E4%B8%BB%E9%A9%B1%E5%8A%A8"><span class="toc-text">close_delta_lag 是绩效主驱动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#volume-delta-lag-%E6%98%AF%E6%96%B9%E5%90%91%E7%AD%9B%E9%80%89%E5%99%A8"><span class="toc-text">volume_delta_lag 是方向筛选器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E5%8F%82%E6%95%B0%E5%AD%98%E5%9C%A8%E4%B9%98%E6%B3%95%E4%BA%A4%E4%BA%92"><span class="toc-text">两参数存在乘法交互</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%85%A8%E5%91%A8%E6%9C%9F%E5%9B%9E%E6%B5%8B%E9%AA%8C%E8%AF%81%EF%BC%88V-29-C-11%EF%BC%89"><span class="toc-text">三、全周期回测验证（V&#x3D;29, C&#x3D;11）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E5%9B%9E%E6%B5%8B%E9%85%8D%E7%BD%AE"><span class="toc-text">3.1 回测配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E6%A0%B8%E5%BF%83%E7%BB%A9%E6%95%88%E6%8C%87%E6%A0%87"><span class="toc-text">3.2 核心绩效指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-40-%E5%88%86%E7%BB%84%E5%87%80%E5%80%BC%E6%9B%B2%E7%BA%BF"><span class="toc-text">3.3 40 分组净值曲线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E5%88%86%E5%B9%B4%E5%BA%A6%E4%BA%A4%E6%98%93%E8%A1%A8%E7%8E%B0"><span class="toc-text">3.4 分年度交易表现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-%E5%9B%A0%E5%AD%90%E6%88%AA%E9%9D%A2%E5%88%86%E5%B8%83%EF%BC%88Profiling%EF%BC%89"><span class="toc-text">3.5 因子截面分布（Profiling）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-%E6%8C%81%E4%BB%93%E9%9B%86%E4%B8%AD%E5%BA%A6%EF%BC%9A%E8%A1%8C%E4%B8%9A%E7%A7%91%E6%8A%80%E9%BE%99%E5%A4%B4%E4%B8%BB%E5%AF%BC"><span class="toc-text">3.6 持仓集中度：行业科技龙头主导</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8C%96%E6%8E%98%E7%BB%93%E8%AE%BA%E4%B8%8E%E5%85%A8%E5%91%A8%E6%9C%9F%E9%AA%8C%E8%AF%81%E7%9A%84%E5%B7%AE%E5%BC%82"><span class="toc-text">四、挖掘结论与全周期验证的差异</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%BB%93%E8%AE%BA%E4%B8%8E%E5%BB%BA%E8%AE%AE"><span class="toc-text">五、结论与建议</span></a></li></ol></div>
+  <div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" fill-rule="evenodd" d="M11.9426 1.25H12.0574C14.3658 1.24999 16.1748 1.24998 17.5863 1.43975C19.031 1.63399 20.1711 2.03933 21.0659 2.93414C21.9607 3.82895 22.366 4.96897 22.5603 6.41371C22.75 7.82519 22.75 9.63423 22.75 11.9426V12.0574C22.75 14.3658 22.75 16.1748 22.5603 17.5863C22.366 19.031 21.9607 20.1711 21.0659 21.0659C20.1711 21.9607 19.031 22.366 17.5863 22.5603C16.1748 22.75 14.3658 22.75 12.0574 22.75H11.9426C9.63423 22.75 7.82519 22.75 6.41371 22.5603C4.96897 22.366 3.82895 21.9607 2.93414 21.0659C2.03933 20.1711 1.63399 19.031 1.43975 17.5863C1.24998 16.1748 1.24999 14.3658 1.25 12.0574V11.9426C1.24999 9.63423 1.24998 7.82519 1.43975 6.41371C1.63399 4.96897 2.03933 3.82895 2.93414 2.93414C3.82895 2.03933 4.96897 1.63399 6.41371 1.43975C7.82519 1.24998 9.63423 1.24999 11.9426 1.25ZM6.61358 2.92637C5.33517 3.09825 4.56445 3.42514 3.9948 3.9948C3.42514 4.56445 3.09825 5.33517 2.92637 6.61358C2.75159 7.91356 2.75 9.62177 2.75 12C2.75 14.3782 2.75159 16.0864 2.92637 17.3864C3.09825 18.6648 3.42514 19.4355 3.9948 20.0052C4.56445 20.5749 5.33517 20.9018 6.61358 21.0736C7.91356 21.2484 9.62177 21.25 12 21.25C14.3782 21.25 16.0864 21.2484 17.3864 21.0736C18.6648 20.9018 19.4355 20.5749 20.0052 20.0052C20.5749 19.4355 20.9018 18.6648 21.0736 17.3864C21.2484 16.0864 21.25 14.3782 21.25 12C21.25 9.62177 21.2484 7.91356 21.0736 6.61358C20.9018 5.33517 20.5749 4.56445 20.0052 3.9948C19.4355 3.42514 18.6648 3.09825 17.3864 2.92637C16.0864 2.75159 14.3782 2.75 12 2.75C9.62177 2.75 7.91356 2.75159 6.61358 2.92637ZM12 9.56066L9.53033 12.0303C9.23744 12.3232 8.76256 12.3232 8.46967 12.0303C8.17678 11.7374 8.17678 11.2626 8.46967 10.9697L11.4697 7.96967C11.7626 7.67678 12.2374 7.67678 12.5303 7.96967L15.5303 10.9697C15.8232 11.2626 15.8232 11.7374 15.5303 12.0303C15.2374 12.3232 14.7626 12.3232 14.4697 12.0303L12 9.56066ZM12 13.5607L9.53033 16.0303C9.23744 16.3232 8.76256 16.3232 8.46967 16.0303C8.17678 15.7374 8.17678 15.2626 8.46967 14.9697L11.4697 11.9697C11.7626 11.6768 12.2374 11.6768 12.5303 11.9697L15.5303 14.9697C15.8232 15.2626 15.8232 15.7374 15.5303 16.0303C15.2374 16.3232 14.7626 16.3232 14.4697 16.0303L12 13.5607Z" clip-rule="evenodd"/></svg><span>回到顶部</span></a></div>
+</widget>
+
+
+</div></aside><div class='float-panel'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+
+
+<script type="text/javascript">
+  window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
+  window.canonical["param"] = {"permalink":"http://janiszzz.github.io/2026/08/30/Alpha12%E5%8F%82%E6%95%B0%E6%8C%96%E6%8E%98%E5%88%86%E6%9E%90-%E9%87%8F%E4%BB%B7%E8%83%8C%E7%A6%BB%E5%9B%A0%E5%AD%90%E7%9A%84%E5%8F%82%E6%95%B0%E6%95%8F%E6%84%9F%E6%80%A7%E7%A0%94%E7%A9%B6/","checklink":"/js/plugins/video.js"};
+  // Fix: Ensure page is at the correct top position on data load
+  if (history.scrollRestoration) {
+    history.scrollRestoration = 'auto';
+  }
+  (function() {
+    const scrollHandler = () => {
+      // 存在有效锚点时，等待布局稳定后滚动到目标
+      // （浏览器原生锚点滚动发生在布局完成前，长文章的懒加载图片/异步组件会把目标顶偏）
+      const hash = window.location.hash;
+      if (hash.length > 1) {
+        let anchorId = hash.slice(1);
+        try {
+          anchorId = decodeURIComponent(anchorId);
+        } catch (e) {
+          // 片段含非法编码时按原样查找
+        }
+        const anchor = document.getElementById(anchorId);
+        if (anchor) {
+          // #start 锚点贴顶，不预留 offset；其余锚点与 TOC 点击滚动保持一致
+          const offset = anchorId === 'start' ? 0 : 32;
+          const targetY = () => anchor.getBoundingClientRect().top + window.scrollY - offset;
+          let timer = null;
+          let lastY = null;
+          let quiet = 0;
+          let attempts = 0;
+          // 记录最近一次资源加载完成时间，判断异步数据/图片是否仍在改变布局
+          let lastResourceTime = performance.now();
+          let observer = null;
+          try {
+            observer = new PerformanceObserver(function (list) {
+              lastResourceTime = performance.now();
+            });
+            observer.observe({ entryTypes: ['resource'] });
+          } catch (e) {}
+          // 统计进行中的 fetch/XHR 请求，异步组件（timeline 等）未完成前不判定布局稳定
+          let pendingRequests = 0;
+          const trackRequest = (fn) => {
+            pendingRequests++;
+            try {
+              const result = fn();
+              if (result && typeof result.finally === 'function') {
+                result.finally(function () {
+                  pendingRequests = Math.max(0, pendingRequests - 1);
+                });
+              } else {
+                pendingRequests = Math.max(0, pendingRequests - 1);
+              }
+              return result;
+            } catch (e) {
+              pendingRequests = Math.max(0, pendingRequests - 1);
+              throw e;
+            }
+          };
+          if (typeof window.fetch === 'function') {
+            const origFetch = window.fetch.bind(window);
+            window.fetch = function () {
+              const args = arguments;
+              return trackRequest(function () {
+                return origFetch.apply(window, args);
+              });
+            };
+          }
+          if (window.XMLHttpRequest) {
+            const origOpen = window.XMLHttpRequest.prototype.open;
+            const origSend = window.XMLHttpRequest.prototype.send;
+            window.XMLHttpRequest.prototype.open = function () {
+              this.__anchorTracked = true;
+              return origOpen.apply(this, arguments);
+            };
+            window.XMLHttpRequest.prototype.send = function () {
+              if (this.__anchorTracked) {
+                pendingRequests++;
+                const done = () => {
+                  if (this.__anchorTracked) {
+                    this.__anchorTracked = false;
+                    pendingRequests = Math.max(0, pendingRequests - 1);
+                  }
+                };
+                this.addEventListener('loadend', done);
+              }
+              return origSend.apply(this, arguments);
+            };
+          }
+          const cancel = () => {
+            if (timer !== null) {
+              clearInterval(timer);
+              timer = null;
+            }
+            if (observer !== null) {
+              try {
+                observer.disconnect();
+              } catch (e) {}
+            }
+          };
+          const adjust = () => {
+            const y = targetY();
+            const atTarget = Math.abs(window.scrollY - y) <= 2;
+            if (!atTarget || lastY === null || Math.abs(y - lastY) > 2) {
+              window.scrollTo({ top: y, behavior: 'instant' });
+              lastY = y;
+              quiet = 0;
+            } else {
+              quiet++;
+            }
+            attempts++;
+            const resourceQuiet = performance.now() - lastResourceTime > 3000;
+            // 位置连续 1.8 秒无变化、无进行中的请求且最近 3 秒无资源加载才视为稳定；最长等待 30 秒
+            if ((quiet >= 3 && pendingRequests === 0 && resourceQuiet) || attempts >= 50) {
+              cancel();
+            }
+          };
+          requestAnimationFrame(() => {
+            // 锚点链接打开时直接定位，不做动画；用户主动点击（如 TOC）仍走平滑滚动
+            window.scrollTo({ top: targetY(), behavior: 'instant' });
+            timer = setInterval(adjust, 600);
+          });
+          // 用户主动滚动时停止自动校正
+          window.addEventListener('wheel', cancel, { passive: true });
+          window.addEventListener('touchstart', cancel, { passive: true });
+          window.addEventListener('mousedown', cancel, { passive: true });
+          window.addEventListener('keydown', cancel, { passive: true });
+          return;
+        }
+      }
+      // 没有锚点时始终保持页面顶部；Wiki Hero 只在用户显式访问 #start 时定位正文。
+      window.scrollTo(0, 0);
+    };
+    if (document.readyState !== 'loading') scrollHandler();
+    else document.addEventListener('DOMContentLoaded', scrollHandler);
+  })();
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+    tag_plugins: {
+      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
+    },
+    // 图标由构建期生成的 /js/stellar-icons.js 填充（defer，早于 DOMContentLoaded 就绪）
+    icons: {},
+    services: {"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"rating":{"js":"/js/services/rating.js","api":"https://star-vote.xaox.cc/api/rating"},"vote":{"js":"/js/services/vote.js","api":"https://star-vote.xaox.cc/api/vote"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"},"contributors":{"edit_this_page":{"_posts/":null,"wiki/stellar/":"https://github.com/xaoxuu/hexo-theme-stellar-docs/blob/main/"},"js":"/js/services/contributors.js"},"rss":{"js":"/js/services/rss.js"}},
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"lazy_load":true,"cache_ttl":86400,"skip_search":null,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+    data_cache: {"enable":true,"default_ttl":3600,"ttl":{"giscus":600,"waline":600,"artalk":600,"memos":600,"memos-user":86400,"sites":86400,"friends":86400,"friends_and_posts":86400,"siteinfo":86400},"max_entries":200},
+  };
+  const deps = {
+    marked: `https://gcore.jsdelivr.net/npm/marked@13.0/lib/marked.umd.min.js`,
+    lazyload: `https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js`
+  }
+
+  // 主题切换提示文案（供 /js/theme.js 使用）
+  window.__STELLAR_I18N__ = {
+    light: `切换到浅色模式`,
+    dark: `切换到深色模式`,
+    auto: `切换到跟随系统配色`,
+  };
+
+  // 搜索跳转高亮：URL 带 ?kw= 时按需加载，定位正文中的匹配词
+  (function () {
+    try {
+      if (!window.location.search) return;
+      if (!new URLSearchParams(window.location.search).has('kw')) return;
+      document.addEventListener('DOMContentLoaded', function () {
+        // utils 由 /js/utils.js 定义（同时暴露 window.utils）；
+        // 未就绪时由 bootstrap 队列兜底，此处按就绪状态判断
+        if (typeof utils === 'object' && typeof utils.js === 'function') {
+          utils.js('/js/search/highlight.js', { defer: true }).catch(function () {});
+        }
+      });
+    } catch (e) {}
+  })();
+</script>
+
+
+<script>
+  // 插件注册队列：utils.js 尚未就绪时先缓存注册请求，就绪后统一补跑，
+  // 保证解析期注册的插件不因加载时序丢失。
+  window.stellar = window.stellar || {};
+  window.stellar._pluginQueue = window.stellar._pluginQueue || [];
+  window.stellar.initPlugin = function (fn, name, options) {
+    if (typeof utils === 'object' && typeof utils.initPlugin === 'function') {
+      return utils.initPlugin(fn, name, options);
+    }
+    window.stellar._pluginQueue.push({ fn: fn, name: name, options: options || {} });
+  };
+  window.stellar._flushPlugins = function () {
+    var pending = window.stellar._pluginQueue.splice(0);
+    if (typeof utils !== 'object' || typeof utils.initPlugin !== 'function') return;
+    for (var i = 0; i < pending.length; i++) {
+      try {
+        utils.initPlugin(pending[i].fn, pending[i].name, pending[i].options);
+      } catch (e) {
+        console.error('[Stellar] 插件补注册失败:', e);
+      }
+    }
+  };
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof utils === 'object') return;
+    // utils 未就绪时补载；加载成功后由 utils.js 内部补跑插件队列
+    var s = document.createElement('script');
+    // 用 setAttribute 赋值 src，避免被基于 `s.src = "..."` 的正则
+    // （图片懒加载 / 脚本延迟优化器）误改写
+    s.setAttribute('src', '/js/utils.js?v=1.44.0');
+    s.async = false;
+    s.onerror = function () {
+      console.error('[Stellar] 无法加载 /js/utils.js，已启用内容兜底显示（sr-fallback）');
+      document.documentElement.classList.add('sr-fallback');
+    };
+    document.head.appendChild(s);
+  });
+</script>
+
+
+<!-- core: utils 必须同步加载（页尾内联插件片段在解析期即调用 utils.initPlugin） -->
+<script src="/js/utils.js?v=1.44.0"></script>
+<script>
+  // 解析期检测 utils 是否已就绪；未就绪时同步补载，
+  // 保证「utils 先于页尾插件片段定义」的不变量。
+  if (typeof utils === 'undefined') {
+    document.write('<script src="/js/utils.js?v=1.44.0"><\/script>');
+  }
+</script>
+<script defer src="/js/stellar-icons.js?v=1.44.0"></script>
+<!-- 非首屏图标异步加载：占位符替换依赖构建期生成的 js/icons/{ns}.json -->
+<script defer src="/js/icons.js?v=1.44.0" data-version="1.44.0"></script>
+<script defer src="/js/plugins/dropdown.js?v=1.44.0"></script>
+<script src="/js/main.js?v=1.44.0" defer></script>
+<script defer src="/js/theme.js?v=1.44.0"></script>
+
+
+
+<script>
+  // 先声明配置与初始化监听，再异步加载库：
+  // 保证库执行时 lazyLoadOptions 已就绪，避免 async 脚本抢先执行导致自初始化失败
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+    callback_loaded: (el) => {
+      el.classList.add('loaded');
+      // {% image %} 没有 .lazy-box 包裹，回退到父元素查找加载图标
+      const wrapper = el.closest('.lazy-box') || el.parentElement;
+      const icon = wrapper?.querySelector('.lazy-icon');
+      if (icon) icon.remove();
+    }
+  };
+  // 监听初始化事件，获取 LazyLoad 实例
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+
+  // 兜底：动态插入的 .lazy 元素（如站点自定义脚本在 update() 之后追加的图片）
+  // 不会被 vanilla-lazyload 自动扫描，未注册的 img.lazy 会被 CSS opacity:0 永久隐藏。
+  // MutationObserver 检测到新增 .lazy 元素后自动调用 update() 重新注册。
+  if (window.MutationObserver) {
+    window.lazyMutationObserver = new MutationObserver((mutations) => {
+      if (window.lazyMutationObserver._pending) return;
+      const hasLazy = mutations.some((m) =>
+        Array.prototype.some.call(m.addedNodes, (node) =>
+          node.nodeType === 1 &&
+          (node.matches?.('.lazy') || !!node.querySelector?.('.lazy'))
+        )
+      );
+      if (!hasLazy) return;
+      window.lazyMutationObserver._pending = requestAnimationFrame(() => {
+        window.lazyMutationObserver._pending = null;
+        window.lazyLoadInstance?.update();
+      });
+    });
+    window.lazyMutationObserver.observe(document.documentElement, {
+      childList: true,
+      subtree: true
+    });
+  }
+
+  window.wrapLazyloadImages = (container) => {
+    if (typeof container === 'string') {
+      container = document.querySelector(container);
+    }
+    if (!container) return;
+
+    const images = container.querySelectorAll('img');
+    images.forEach((img) => {
+      if (img.classList.contains('lazy')) return;
+
+      const src = img.getAttribute('src');
+      if (!src) return;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'lazy-box';
+
+      const newImg = img.cloneNode();
+      newImg.removeAttribute('src');
+      newImg.setAttribute('data-src', src);
+      newImg.classList.add('lazy');
+
+      const icon = document.createElement('div');
+      icon.className = 'lazy-icon';
+
+      wrapper.appendChild(newImg);
+      wrapper.appendChild(icon);
+
+      img.replaceWith(wrapper);
+    });
+
+    // 通知 LazyLoad 更新
+    if (window.lazyLoadInstance?.update) {
+      window.lazyLoadInstance.update();
+    }
+  }
+</script>
+<script async src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
+
+
+<!-- optional -->
+
+
+
+<script defer src="/js/services.js?v=1.44.0"></script>
+<script>
+  // 防御：bootstrap 被第三方优化器改写/移除导致 window.stellar.initPlugin 缺失时，
+  // 在此补一个等价注册点：utils 就绪时直接委托，未就绪时入队，utils 加载后自动补跑。
+  if (typeof window.stellar === 'undefined' || typeof window.stellar.initPlugin !== 'function') {
+    window.stellar = window.stellar || {};
+    window.stellar._pluginQueue = window.stellar._pluginQueue || [];
+    window.stellar.initPlugin = function (fn, name, options) {
+      if (typeof utils === 'object' && typeof utils.initPlugin === 'function') {
+        return utils.initPlugin(fn, name, options);
+      }
+      window.stellar._pluginQueue.push({ fn: fn, name: name, options: options || {} });
+    };
+    window.stellar._flushPlugins = function () {
+      var pending = window.stellar._pluginQueue.splice(0);
+      if (typeof utils !== 'object' || typeof utils.initPlugin !== 'function') return;
+      for (var i = 0; i < pending.length; i++) {
+        try {
+          utils.initPlugin(pending[i].fn, pending[i].name, pending[i].options);
+        } catch (e) {
+          console.error('[Stellar] 插件补注册失败:', e);
+        }
+      }
+    };
+  }
+</script>
+
+<script>window.addEventListener('DOMContentLoaded', function () { utils.js('/js/search/shortcut.js', { defer: true }); });</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = Object.assign({}, ctx.search, {
+      path: `/search.json`,
+      local_search: {"field":"all","path":"/search.json","content":true,"lazy_load":true,"cache_ttl":86400,"skip_search":null,"sort":"-date"},
+    });
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script>
+<script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script>
+  ctx.fancybox = {
+    mode: `auto`,
+    selector: `.timenode p>img`,
+    css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  // auto=按需：页面存在可弹窗图片才加载；global=全局：所有页面加载
+  const isGlobal = ctx.fancybox.mode === 'global';
+  // 评论区图片（artalk/twikoo/waline）显示较小，自动支持放大；
+  // 仅绑定各评论服务的评论内容区，编辑器、表情面板等非内容区图片不弹窗
+  var selector = '[data-fancybox]:not(.error), .with-fancybox .atk-content img:not([atk-emoticon]):not([class*="emo"]), .with-fancybox .tk-content img:not([atk-emoticon]):not([class*="emo"]), .with-fancybox .wl-content img:not([atk-emoticon]):not([class*="emo"])';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = isGlobal;
+  if (!needFancybox) {
+    needFancybox = document.querySelectorAll(selector).length !== 0;
+    if (!needFancybox) {
+      // 图片型评论系统容器：评论区图片小图需要 fancybox
+      const withFancybox = document.getElementsByClassName('with-fancybox');
+      if (withFancybox != undefined && withFancybox.length > 0) {
+        needFancybox = true;
+      }
+    }
+    if (!needFancybox) {
+      // 动态数据服务：memos 渲染的图片需要 fancybox
+      const memos = document.getElementsByClassName('ds-memos');
+      if (memos != undefined && memos.length > 0) {
+        needFancybox = true;
+      }
+    }
+  }
+  if (needFancybox) {
+    utils.css(`/css/plugins/fancybox.css?v=1.44.0`);
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      if (isGlobal) {
+        // 全局模式：正文所有非内联图片均可弹窗
+        selector += ', .md-text img:not(.inline):not([atk-emoticon])';
+      }
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  stellar.initPlugin(() => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`/css/plugins/swiper.css?v=1.44.0`);
+      utils.css(`https://unpkg.com/swiper@10.3/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  }, 'swiper');
+</script>
+<script>
+  (function () {
+    // 兜底看门狗独立于插件初始化：3 秒内未完成 reveal 时强制显示 .slide-up 内容
+    let fallbackApplied = false;
+    const revealFallback = () => {
+      if (fallbackApplied) return;
+      fallbackApplied = true;
+      document.documentElement.classList.add('sr-fallback');
+    };
+    const watchdog = setTimeout(() => revealFallback(), 3000);
+
+    stellar.initPlugin(() => {
+      const els = Array.prototype.slice.call(document.querySelectorAll('.slide-up'));
+      if (els.length === 0) {
+        clearTimeout(watchdog);
+        return;
+      }
+
+    // 吸顶/固定定位容器内的元素始终在视口内（或由容器控制显隐），
+    // 但 ScrollReveal 按文档坐标判断可见性，会误判这类元素为不可见，
+    // 导致带锚点/恢复滚动位置打开页面时组件一直不显示。
+    // 解决方式：以最近的吸顶/固定祖先作为该组元素的容器，
+    // 使可见性判断恒成立，入场动画保留且不再依赖主文档滚动。
+    const findPinnedContainer = (el) => {
+      let node = el;
+      while (node && node.nodeType === 1) {
+        const pos = window.getComputedStyle(node).position;
+        if (pos === 'sticky' || pos === 'fixed') return node;
+        node = node.parentElement;
+      }
+      return null;
+    };
+
+    // 最近的滚动容器（overflow-y: auto/scroll）
+    // 吸顶容器内可能存在内部滚动容器（如侧栏 .widgets），
+    // 若直接用吸顶容器做 reveal 容器，折叠区下方的元素永远不会进入视口，导致一直不显示。
+    const findScrollContainer = (el) => {
+      let node = el.parentElement;
+      while (node && node.nodeType === 1) {
+        const oy = window.getComputedStyle(node).overflowY;
+        if (oy === 'auto' || oy === 'scroll') return node;
+        node = node.parentElement;
+      }
+      return null;
+    };
+
+    const pinnedGroups = new Map(); // 容器 -> 元素列表
+    const targets = [];
+    els.forEach((el) => {
+      const pinned = findPinnedContainer(el);
+      if (pinned) {
+        // 优先使用最近的滚动容器，其次才用吸顶容器
+        const container = findScrollContainer(el) || pinned;
+        const group = pinnedGroups.get(container) || [];
+        group.push(el);
+        pinnedGroups.set(container, group);
+      } else {
+        targets.push(el);
+      }
+    });
+    if (pinnedGroups.size === 0 && targets.length === 0) {
+      clearTimeout(watchdog);
+      return;
+    }
+
+    const slideUp = {
+      distance: `8px`,
+      duration: `1000`,
+      interval: `100`,
+      scale: `1`,
+      opacity: 0,
+      easing: "ease-out"
+    };
+
+    utils.js(`https://gcore.jsdelivr.net/npm/scrollreveal@4.0/dist/scrollreveal.min.js`, { defer: true })
+      .then(() => {
+        if (fallbackApplied) return;
+        if (typeof ScrollReveal !== 'function') {
+          revealFallback();
+          return;
+        }
+        try {
+          const sr = ScrollReveal();
+          if (targets.length > 0) {
+            sr.reveal(targets, { ...slideUp });
+          }
+          pinnedGroups.forEach((group, container) => {
+            sr.reveal(group, { ...slideUp, container: container });
+          });
+          clearTimeout(watchdog);
+        } catch (err) {
+          console.error('[Plugin scrollreveal] 初始化失败:', err);
+          revealFallback();
+        }
+      })
+      .catch((err) => {
+        console.error('[Plugin scrollreveal] 加载失败:', err);
+        revealFallback();
+      });
+    }, 'scrollreveal');
+  })();
+</script>
+
+<script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script>
+  stellar.initPlugin(() => {
+    const codeElements = document.querySelectorAll('.code');
+    if (codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js', { defer: true }).then(() => {
+        if (typeof createCopyButtons === 'function') {
+          createCopyButtons(codeElements);
+        }
+      });
+    }
+  }, 'copycode');
+</script>
+<script>
+  stellar.initPlugin(() => {
+    const els = Array.prototype.slice.call(document.querySelectorAll('[data-text-adaptive]'));
+    if (els.length === 0) return;
+    utils.js('/js/color.js').then(() => utils.js('/js/plugins/adaptive-text.js')).then(() => {
+      if (typeof applyAdaptiveText === 'function') {
+        applyAdaptiveText(els);
+      }
+    });
+  }, 'adaptive-text');
+</script>
+
+
+
+<!-- inject -->
+
+</div></body></html>
