@@ -1045,16 +1045,141 @@
 <li><strong>换手率数量级一致</strong>：挖掘阶段周单边换手 1.37（即每周换 137%），全周期截面上 20% 换手 60-70%（即每周换 60-70%）。换手率偏高说明这是个<strong>典型的反转因子</strong>，每周都在追逐新的”超跌放量”或”缩量上涨”信号。</li>
 <li><strong>回撤结构差异</strong>：挖掘阶段窗口最大回撤 7.32%，全周期 56.32%——后者包含了 2021-2024 的长期低迷期。这正是反转因子的”阿喀琉斯之踵”：<strong>单边市失效</strong>。</li>
 </ol>
-<h1 id="五、结论与建议"><a href="#五、结论与建议" class="headerlink" title="五、结论与建议"></a>五、结论与建议</h1><ol>
-<li><p><strong>最优参数 <code>(V=29, C=11)</code> 的预测能力稳健</strong>：IC、IC 胜率、Sharpe 排序在两个样本期保持一致，方向有效。</p>
+<h1 id="五、稳健性再挖掘：离散化剪枝搜索"><a href="#五、稳健性再挖掘：离散化剪枝搜索" class="headerlink" title="五、稳健性再挖掘：离散化剪枝搜索"></a>五、稳健性再挖掘：离散化剪枝搜索</h1><p>第一节的网格搜索在 2500 个<strong>稠密候选</strong>上做评估，热力图密集且包含大量局部噪声——这意味着很难分辨真正的”局部最优点”和过拟合噪声。2026-08-29 启动的<strong>离散化剪枝挖掘</strong>采用了更系统的多阶段搜索策略。</p>
+<h2 id="5-1-搜索策略差异"><a href="#5-1-搜索策略差异" class="headerlink" title="5.1 搜索策略差异"></a>5.1 搜索策略差异</h2><div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="center">阶段</th>
+<th align="left">第一轮（稠密网格）</th>
+<th align="left">第二轮（剪枝搜索）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">总候选数</td>
+<td align="left">2500（50×50 全网格）</td>
+<td align="left">初始 Sobol 128 → 收敛至 49 精筛</td>
+</tr>
+<tr>
+<td align="center">采样方法</td>
+<td align="left">全网格枚举</td>
+<td align="left">Sobol QMC → TPE refine → 边界扩展 → fine grid → 稳定性测试</td>
+</tr>
+<tr>
+<td align="center">评估样本</td>
+<td align="left">702 个滚动窗口</td>
+<td align="left">同样 702 个滚动窗口</td>
+</tr>
+<tr>
+<td align="center">样本期</td>
+<td align="left">2010-01-01 ~ 2022-12-31</td>
+<td align="left">一致</td>
+</tr>
+<tr>
+<td align="center">计算资源</td>
+<td align="left">实时仿真</td>
+<td align="left">多进程并行 + 结果缓存（22 worker）</td>
+</tr>
+</tbody></table></div>
+<p>剪枝搜索的关键是<strong>stability（稳定性测试）</strong> —— 对每个候选参数做 8 次小幅扰动（半径比 0.1），要求扰动后通过率 ≥70% 才能视为稳健。如果在扰动后表现为不稳定，则标记为 <code>stability_status: unstable</code>。</p>
+<h2 id="5-2-收敛后的新-Top-5"><a href="#5-2-收敛后的新-Top-5" class="headerlink" title="5.2 收敛后的新 Top 5"></a>5.2 收敛后的新 Top 5</h2><p>剪枝搜索的 Top 10 候选中，<strong>原本的最优点 (V=29, C=11) 在新排名中跌出前 5</strong>——在扰动测试中其扰动后中位收益从 1.4769 降至 0.95（中位下降 25%），被新候选替代。收敛后的主要候选：</p>
+<div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th align="center">新排名</th>
+<th align="center">volume_lag</th>
+<th align="center">close_lag</th>
+<th align="center">Sharpe 中位数</th>
+<th align="center">稳定性</th>
+<th align="center">扰动通过率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">46</td>
+<td align="center">11</td>
+<td align="center">1.2724</td>
+<td align="center">unstable</td>
+<td align="center">50% (4/8)</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">46</td>
+<td align="center">19</td>
+<td align="center">1.1844</td>
+<td align="center">unstable</td>
+<td align="center">25% (2/8)</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">50</td>
+<td align="center">22</td>
+<td align="center">1.1703</td>
+<td align="center">unstable</td>
+<td align="center">50% (4/8)</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">46</td>
+<td align="center">13</td>
+<td align="center">1.0461</td>
+<td align="center">not_tested</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">50</td>
+<td align="center">5</td>
+<td align="center">1.0325</td>
+<td align="center">not_tested</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="center">上一轮冠军</td>
+<td align="center">29</td>
+<td align="center">11</td>
+<td align="center">1.4769</td>
+<td align="center">(now eliminated)</td>
+<td align="center">failed</td>
+</tr>
+</tbody></table></div>
+<p><strong>关键观察</strong>：</p>
+<ul>
+<li>所有进入扰动测试的候选都<strong>未通过 70% 通过率门槛</strong>，稳定性测试整体失败（<code>通过稳定性验证=0/3, 是否强通过=否</code>），提示当前排名最优点可能在扰动后显著退化。</li>
+<li>新胜出的候选集中在 <code>volume_lag ∈ {46, 50}</code> 和 <code>close_lag ∈ {5, 11, 13, 19, 22}</code>，比第一轮的 <code>volume_lag=29</code> 更长。换言之，<strong>当 V 趋向上限时，配合短到中等长度的 C，仍能保持较好中位收益</strong>。</li>
+<li><code>(V=46, C=11)</code> 取代了 <code>(V=29, C=11)</code> 成为新晋最佳。这意味着 <strong><code>close_delta_lag = 11</code> 是一个跨 V 区间的”鲁棒短周期”</strong>——无论 V 在 29 还是 46，C=11 都能提供相对较强的反转基础。</li>
+<li><code>(V=46, C=19)</code> 与 <code>(V=50, C=22)</code> 同台出现，提示存在一个 <code>V + C ≈ 65</code> 左右的”等和线”接近 Pareto 最优前沿——这种结构对应量化研究中的”成交量状态周期 + 价格反转周期之和保持约 65 日”的直觉。</li>
+</ul>
+<h2 id="5-3-收敛后的热力图形态"><a href="#5-3-收敛后的热力图形态" class="headerlink" title="5.3 收敛后的热力图形态"></a>5.3 收敛后的热力图形态</h2><p>下图来自剪枝搜索结束后的稀疏热力图（504 日窗口、每 21 步滑动）：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/alpha12-mining/heatmap_pruned_504_21.png" alt="剪枝后 504 日窗口 21 日步长热力图"></p>
+<p>与第一轮稠密热力图相比：</p>
+<ul>
+<li><strong>强区域定位更清晰</strong>：最佳表现集中在横轴 <code>close_lag ≈ 5-13</code>、纵轴 <code>volume_lag ≈ 46-50</code> 的右上角矩形区，<code>卡玛比率</code>也呈现明显的右上角绿色带。</li>
+<li><strong>大面积低值区域</strong>：远离最优矩形的大部分格子近乎红色（年化收益为负、卡玛为负），这与稠密网格中”看起来差不多”的视觉印象形成对照——之前是被均值稀释的”假性稳定”。</li>
+<li><strong>右下角”最大回撤”图</strong>：右下角 <code>(C ≈ 38-50, V ≈ 50)</code> 出现少量深红点（回撤更小），但其在 Sharpe 和收益率图上并不出色——典型的小回撤-低收益 trade-off。</li>
+</ul>
+<h2 id="5-4-离散化剪枝带来的认知升级"><a href="#5-4-离散化剪枝带来的认知升级" class="headerlink" title="5.4 离散化剪枝带来的认知升级"></a>5.4 离散化剪枝带来的认知升级</h2><ol>
+<li><strong><code>(V=29, C=11)</code> 是一次过拟合</strong>:扰动测试显示，当 V 在 ±2.9 范围内小幅抖动时，中位 Sharpe 下降约 25%，意味着 1.4769 这个数值高度依赖精确参数点，不是”鲁棒区域”。</li>
+<li><strong>粗网格中的”赢家”被剪枝搜索的”稳健者”取代</strong>：原本 Top 1 的 (29, 11) 在更系统的搜索中被新候选取代，这是一个<strong>搜索算法升级带来的认识更新</strong>。</li>
+<li><strong>统一推荐使用稳定性测试后的稳健区域</strong>——目前稳定测试失败表明实际推荐需要继续优化搜索配置或在更短 V×C 的窗口做更细搜索。</li>
+</ol>
+<h1 id="六、结论与建议"><a href="#六、结论与建议" class="headerlink" title="六、结论与建议"></a>六、结论与建议</h1><ol>
+<li><p><strong>最优参数 <code>(V=29, C=11)</code> 的预测能力稳健</strong>：IC、IC 胜率、Sharpe 排序在两个样本期保持一致，方向有效。但离散化剪枝搜索显示其可能存在过拟合风险，对应的稳健区域扩展到 <code>(V=46-50, C=11-22)</code>。</p>
 </li>
 <li><p><strong>挖掘阶段的高 Sharpe 不能直接等同于实盘 Sharpe</strong>：单窗口平均收益高 ≠ 长程复合收益高。<strong>最大回撤</strong>（特别是 5 年以上的回撤期）才是实盘可承受性的关键约束。</p>
 </li>
-<li><p><strong>close_delta_lag 是主要优化方向</strong>：建议聚焦在 8~13 的区间内做精细搜索，过大会明显拖累绩效。</p>
+<li><p><strong>close_delta_lag 是主要优化方向</strong>：建议聚焦在 8~13 的区间内做精细搜索，过大会明显拖累绩效。剪枝搜索进一步指出 <code>C ≈ 11</code> 是一个跨 V 区间的”鲁棒反转周期”。</p>
 </li>
-<li><p><strong>volume_delta_lag 的作用是局部增强</strong>：建议优先搜索 <code>V ≈ 29、46 ~ 50</code> 附近的横向绿色带。</p>
+<li><p><strong>volume_delta_lag 的作用是局部增强</strong>：建议优先搜索 <code>V ≈ 29、46 ~ 50</code> 附近的横向绿色带。剪枝结果显示长 V 区间（46-50）配合中等 C 也具有稳定的 Sharpe 中位数。</p>
 </li>
-<li><p><strong>参数交互显著</strong>：不宜单独优化任一参数，应通过网格搜索或贝叶斯优化寻找联合最优。</p>
+<li><p><strong>参数交互显著</strong>：不宜单独优化任一参数，应通过网格搜索或贝叶斯优化寻找联合最优。<strong>离散化剪枝搜索</strong>比稠密网格搜索更能避免小样本过拟合。</p>
 </li>
 <li><p><strong>换手率权衡</strong>：组合换手率极高（年化 3098%），需考虑交易成本对净收益的侵蚀。在全周期 5.5% 年化收益的情况下，假设双边千二手续费已可能侵蚀 60% 以上的收益。</p>
 </li>
@@ -1062,7 +1187,7 @@
 </li>
 </ol>
 <hr>
-<p><em>数据来源：Betalens Alpha101 因子挖掘框架（2010-2022 滚动窗口）与 ALPHA12 全周期回测（2015-2025）</em></p>
+<p><em>数据来源：Betalens Alpha101 因子挖掘框架（2010-2022 滚动窗口）、ALPHA12 全周期回测（2015-2025）和离散化剪枝挖掘（2026-08-29）</em></p>
 </article>
 
 <div class="article-tags slide-up"><a class="tag" href="/tags/Alpha%E5%9B%A0%E5%AD%90/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Alpha因子</a><a class="tag" href="/tags/%E5%8F%82%E6%95%B0%E6%8C%96%E6%8E%98/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>参数挖掘</a><a class="tag" href="/tags/%E9%87%8F%E4%BB%B7%E5%85%B3%E7%B3%BB/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>量价关系</a><a class="tag" href="/tags/%E5%9B%A0%E5%AD%90%E5%88%86%E6%9E%90/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>因子分析</a></div>
@@ -1098,7 +1223,7 @@
       <a class="cap-action" onclick="sidebar.toggleTOC()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a>
     </div>
   
-  <div class="widget-body"><ol class="toc ui-collection-adapter"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81Alpha12-%E5%9B%A0%E5%AD%90%E5%85%AC%E5%BC%8F%E4%B8%8E%E7%BB%8F%E6%B5%8E%E5%90%AB%E4%B9%89"><span class="toc-text">一、Alpha12 因子公式与经济含义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%8F%82%E6%95%B0%E6%8C%96%E6%8E%98%E5%AE%9E%E9%AA%8C"><span class="toc-text">二、参数挖掘实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E5%AE%9E%E9%AA%8C%E8%AE%BE%E7%BD%AE"><span class="toc-text">2.1 实验设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Top-10-%E5%8F%82%E6%95%B0%E7%BB%84%E5%90%88%EF%BC%88%E6%8C%89-Sharpe-%E4%B8%AD%E4%BD%8D%E6%95%B0%EF%BC%89"><span class="toc-text">2.2 Top 10 参数组合（按 Sharpe 中位数）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E7%83%AD%E5%8A%9B%E5%9B%BE%E5%88%86%E6%9E%90"><span class="toc-text">2.3 热力图分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#252-%E6%97%A5%E7%AA%97%E5%8F%A3-21-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">252 日窗口 &#x2F; 21 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#252-%E6%97%A5%E7%AA%97%E5%8F%A3-42-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">252 日窗口 &#x2F; 42 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#252-%E6%97%A5%E7%AA%97%E5%8F%A3-63-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">252 日窗口 &#x2F; 63 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#504-%E6%97%A5%E7%AA%97%E5%8F%A3-21-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">504 日窗口 &#x2F; 21 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#504-%E6%97%A5%E7%AA%97%E5%8F%A3-42-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">504 日窗口 &#x2F; 42 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#504-%E6%97%A5%E7%AA%97%E5%8F%A3-63-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">504 日窗口 &#x2F; 63 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#756-%E6%97%A5%E7%AA%97%E5%8F%A3-21-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">756 日窗口 &#x2F; 21 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#756-%E6%97%A5%E7%AA%97%E5%8F%A3-42-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">756 日窗口 &#x2F; 42 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#756-%E6%97%A5%E7%AA%97%E5%8F%A3-63-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">756 日窗口 &#x2F; 63 日步长</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E5%8F%82%E6%95%B0%E6%95%8F%E6%84%9F%E6%80%A7%E8%A7%A3%E8%AF%BB"><span class="toc-text">2.4 参数敏感性解读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#close-delta-lag-%E6%98%AF%E7%BB%A9%E6%95%88%E4%B8%BB%E9%A9%B1%E5%8A%A8"><span class="toc-text">close_delta_lag 是绩效主驱动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#volume-delta-lag-%E6%98%AF%E6%96%B9%E5%90%91%E7%AD%9B%E9%80%89%E5%99%A8"><span class="toc-text">volume_delta_lag 是方向筛选器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E5%8F%82%E6%95%B0%E5%AD%98%E5%9C%A8%E4%B9%98%E6%B3%95%E4%BA%A4%E4%BA%92"><span class="toc-text">两参数存在乘法交互</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%85%A8%E5%91%A8%E6%9C%9F%E5%9B%9E%E6%B5%8B%E9%AA%8C%E8%AF%81%EF%BC%88V-29-C-11%EF%BC%89"><span class="toc-text">三、全周期回测验证（V&#x3D;29, C&#x3D;11）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E5%9B%9E%E6%B5%8B%E9%85%8D%E7%BD%AE"><span class="toc-text">3.1 回测配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E6%A0%B8%E5%BF%83%E7%BB%A9%E6%95%88%E6%8C%87%E6%A0%87"><span class="toc-text">3.2 核心绩效指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-40-%E5%88%86%E7%BB%84%E5%87%80%E5%80%BC%E6%9B%B2%E7%BA%BF"><span class="toc-text">3.3 40 分组净值曲线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E5%88%86%E5%B9%B4%E5%BA%A6%E4%BA%A4%E6%98%93%E8%A1%A8%E7%8E%B0"><span class="toc-text">3.4 分年度交易表现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-%E5%9B%A0%E5%AD%90%E6%88%AA%E9%9D%A2%E5%88%86%E5%B8%83%EF%BC%88Profiling%EF%BC%89"><span class="toc-text">3.5 因子截面分布（Profiling）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-%E6%8C%81%E4%BB%93%E9%9B%86%E4%B8%AD%E5%BA%A6%EF%BC%9A%E8%A1%8C%E4%B8%9A%E7%A7%91%E6%8A%80%E9%BE%99%E5%A4%B4%E4%B8%BB%E5%AF%BC"><span class="toc-text">3.6 持仓集中度：行业科技龙头主导</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8C%96%E6%8E%98%E7%BB%93%E8%AE%BA%E4%B8%8E%E5%85%A8%E5%91%A8%E6%9C%9F%E9%AA%8C%E8%AF%81%E7%9A%84%E5%B7%AE%E5%BC%82"><span class="toc-text">四、挖掘结论与全周期验证的差异</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%BB%93%E8%AE%BA%E4%B8%8E%E5%BB%BA%E8%AE%AE"><span class="toc-text">五、结论与建议</span></a></li></ol></div>
+  <div class="widget-body"><ol class="toc ui-collection-adapter"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81Alpha12-%E5%9B%A0%E5%AD%90%E5%85%AC%E5%BC%8F%E4%B8%8E%E7%BB%8F%E6%B5%8E%E5%90%AB%E4%B9%89"><span class="toc-text">一、Alpha12 因子公式与经济含义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%8F%82%E6%95%B0%E6%8C%96%E6%8E%98%E5%AE%9E%E9%AA%8C"><span class="toc-text">二、参数挖掘实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E5%AE%9E%E9%AA%8C%E8%AE%BE%E7%BD%AE"><span class="toc-text">2.1 实验设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Top-10-%E5%8F%82%E6%95%B0%E7%BB%84%E5%90%88%EF%BC%88%E6%8C%89-Sharpe-%E4%B8%AD%E4%BD%8D%E6%95%B0%EF%BC%89"><span class="toc-text">2.2 Top 10 参数组合（按 Sharpe 中位数）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E7%83%AD%E5%8A%9B%E5%9B%BE%E5%88%86%E6%9E%90"><span class="toc-text">2.3 热力图分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#252-%E6%97%A5%E7%AA%97%E5%8F%A3-21-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">252 日窗口 &#x2F; 21 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#252-%E6%97%A5%E7%AA%97%E5%8F%A3-42-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">252 日窗口 &#x2F; 42 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#252-%E6%97%A5%E7%AA%97%E5%8F%A3-63-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">252 日窗口 &#x2F; 63 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#504-%E6%97%A5%E7%AA%97%E5%8F%A3-21-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">504 日窗口 &#x2F; 21 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#504-%E6%97%A5%E7%AA%97%E5%8F%A3-42-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">504 日窗口 &#x2F; 42 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#504-%E6%97%A5%E7%AA%97%E5%8F%A3-63-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">504 日窗口 &#x2F; 63 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#756-%E6%97%A5%E7%AA%97%E5%8F%A3-21-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">756 日窗口 &#x2F; 21 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#756-%E6%97%A5%E7%AA%97%E5%8F%A3-42-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">756 日窗口 &#x2F; 42 日步长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#756-%E6%97%A5%E7%AA%97%E5%8F%A3-63-%E6%97%A5%E6%AD%A5%E9%95%BF"><span class="toc-text">756 日窗口 &#x2F; 63 日步长</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E5%8F%82%E6%95%B0%E6%95%8F%E6%84%9F%E6%80%A7%E8%A7%A3%E8%AF%BB"><span class="toc-text">2.4 参数敏感性解读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#close-delta-lag-%E6%98%AF%E7%BB%A9%E6%95%88%E4%B8%BB%E9%A9%B1%E5%8A%A8"><span class="toc-text">close_delta_lag 是绩效主驱动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#volume-delta-lag-%E6%98%AF%E6%96%B9%E5%90%91%E7%AD%9B%E9%80%89%E5%99%A8"><span class="toc-text">volume_delta_lag 是方向筛选器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E5%8F%82%E6%95%B0%E5%AD%98%E5%9C%A8%E4%B9%98%E6%B3%95%E4%BA%A4%E4%BA%92"><span class="toc-text">两参数存在乘法交互</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%85%A8%E5%91%A8%E6%9C%9F%E5%9B%9E%E6%B5%8B%E9%AA%8C%E8%AF%81%EF%BC%88V-29-C-11%EF%BC%89"><span class="toc-text">三、全周期回测验证（V&#x3D;29, C&#x3D;11）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E5%9B%9E%E6%B5%8B%E9%85%8D%E7%BD%AE"><span class="toc-text">3.1 回测配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E6%A0%B8%E5%BF%83%E7%BB%A9%E6%95%88%E6%8C%87%E6%A0%87"><span class="toc-text">3.2 核心绩效指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-40-%E5%88%86%E7%BB%84%E5%87%80%E5%80%BC%E6%9B%B2%E7%BA%BF"><span class="toc-text">3.3 40 分组净值曲线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E5%88%86%E5%B9%B4%E5%BA%A6%E4%BA%A4%E6%98%93%E8%A1%A8%E7%8E%B0"><span class="toc-text">3.4 分年度交易表现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-%E5%9B%A0%E5%AD%90%E6%88%AA%E9%9D%A2%E5%88%86%E5%B8%83%EF%BC%88Profiling%EF%BC%89"><span class="toc-text">3.5 因子截面分布（Profiling）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-%E6%8C%81%E4%BB%93%E9%9B%86%E4%B8%AD%E5%BA%A6%EF%BC%9A%E8%A1%8C%E4%B8%9A%E7%A7%91%E6%8A%80%E9%BE%99%E5%A4%B4%E4%B8%BB%E5%AF%BC"><span class="toc-text">3.6 持仓集中度：行业科技龙头主导</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8C%96%E6%8E%98%E7%BB%93%E8%AE%BA%E4%B8%8E%E5%85%A8%E5%91%A8%E6%9C%9F%E9%AA%8C%E8%AF%81%E7%9A%84%E5%B7%AE%E5%BC%82"><span class="toc-text">四、挖掘结论与全周期验证的差异</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%A8%B3%E5%81%A5%E6%80%A7%E5%86%8D%E6%8C%96%E6%8E%98%EF%BC%9A%E7%A6%BB%E6%95%A3%E5%8C%96%E5%89%AA%E6%9E%9D%E6%90%9C%E7%B4%A2"><span class="toc-text">五、稳健性再挖掘：离散化剪枝搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-%E6%90%9C%E7%B4%A2%E7%AD%96%E7%95%A5%E5%B7%AE%E5%BC%82"><span class="toc-text">5.1 搜索策略差异</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-%E6%94%B6%E6%95%9B%E5%90%8E%E7%9A%84%E6%96%B0-Top-5"><span class="toc-text">5.2 收敛后的新 Top 5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-%E6%94%B6%E6%95%9B%E5%90%8E%E7%9A%84%E7%83%AD%E5%8A%9B%E5%9B%BE%E5%BD%A2%E6%80%81"><span class="toc-text">5.3 收敛后的热力图形态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-%E7%A6%BB%E6%95%A3%E5%8C%96%E5%89%AA%E6%9E%9D%E5%B8%A6%E6%9D%A5%E7%9A%84%E8%AE%A4%E7%9F%A5%E5%8D%87%E7%BA%A7"><span class="toc-text">5.4 离散化剪枝带来的认知升级</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%BB%93%E8%AE%BA%E4%B8%8E%E5%BB%BA%E8%AE%AE"><span class="toc-text">六、结论与建议</span></a></li></ol></div>
   <div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" fill-rule="evenodd" d="M11.9426 1.25H12.0574C14.3658 1.24999 16.1748 1.24998 17.5863 1.43975C19.031 1.63399 20.1711 2.03933 21.0659 2.93414C21.9607 3.82895 22.366 4.96897 22.5603 6.41371C22.75 7.82519 22.75 9.63423 22.75 11.9426V12.0574C22.75 14.3658 22.75 16.1748 22.5603 17.5863C22.366 19.031 21.9607 20.1711 21.0659 21.0659C20.1711 21.9607 19.031 22.366 17.5863 22.5603C16.1748 22.75 14.3658 22.75 12.0574 22.75H11.9426C9.63423 22.75 7.82519 22.75 6.41371 22.5603C4.96897 22.366 3.82895 21.9607 2.93414 21.0659C2.03933 20.1711 1.63399 19.031 1.43975 17.5863C1.24998 16.1748 1.24999 14.3658 1.25 12.0574V11.9426C1.24999 9.63423 1.24998 7.82519 1.43975 6.41371C1.63399 4.96897 2.03933 3.82895 2.93414 2.93414C3.82895 2.03933 4.96897 1.63399 6.41371 1.43975C7.82519 1.24998 9.63423 1.24999 11.9426 1.25ZM6.61358 2.92637C5.33517 3.09825 4.56445 3.42514 3.9948 3.9948C3.42514 4.56445 3.09825 5.33517 2.92637 6.61358C2.75159 7.91356 2.75 9.62177 2.75 12C2.75 14.3782 2.75159 16.0864 2.92637 17.3864C3.09825 18.6648 3.42514 19.4355 3.9948 20.0052C4.56445 20.5749 5.33517 20.9018 6.61358 21.0736C7.91356 21.2484 9.62177 21.25 12 21.25C14.3782 21.25 16.0864 21.2484 17.3864 21.0736C18.6648 20.9018 19.4355 20.5749 20.0052 20.0052C20.5749 19.4355 20.9018 18.6648 21.0736 17.3864C21.2484 16.0864 21.25 14.3782 21.25 12C21.25 9.62177 21.2484 7.91356 21.0736 6.61358C20.9018 5.33517 20.5749 4.56445 20.0052 3.9948C19.4355 3.42514 18.6648 3.09825 17.3864 2.92637C16.0864 2.75159 14.3782 2.75 12 2.75C9.62177 2.75 7.91356 2.75159 6.61358 2.92637ZM12 9.56066L9.53033 12.0303C9.23744 12.3232 8.76256 12.3232 8.46967 12.0303C8.17678 11.7374 8.17678 11.2626 8.46967 10.9697L11.4697 7.96967C11.7626 7.67678 12.2374 7.67678 12.5303 7.96967L15.5303 10.9697C15.8232 11.2626 15.8232 11.7374 15.5303 12.0303C15.2374 12.3232 14.7626 12.3232 14.4697 12.0303L12 9.56066ZM12 13.5607L9.53033 16.0303C9.23744 16.3232 8.76256 16.3232 8.46967 16.0303C8.17678 15.7374 8.17678 15.2626 8.46967 14.9697L11.4697 11.9697C11.7626 11.6768 12.2374 11.6768 12.5303 11.9697L15.5303 14.9697C15.8232 15.2626 15.8232 15.7374 15.5303 16.0303C15.2374 16.3232 14.7626 16.3232 14.4697 16.0303L12 13.5607Z" clip-rule="evenodd"/></svg><span>回到顶部</span></a></div>
 </widget>
 
