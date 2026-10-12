@@ -1006,7 +1006,55 @@ $\Sigma^{-1}$ 同时考虑各资产风险与资产间相关性；$\gamma$ 控制
 <li>比较静态权重、打乱信号、固定协方差及逐一剔除资产的组合，区分预测、风险估计和分散化作用。</li>
 </ol>
 <p><strong>权重演示。</strong> 假设年化超额收益依次为股票 6%、国债 2%、商品 5%，年化波动依次为 18%、7%、22%，并为手算演示假设协方差为对角矩阵。原始权重与 $\hat\mu_i/\hat\sigma_i^2$ 成比例。债券上限设为 40%，超出的部分按另外两项原始比例重新分配；所有数字均为教学示意。</p>
-<p>| 资产 | $\hat\mu$ | $\hat\sigma$ | 原始$\hat\mu/\hat\sigma^2$ | 归一化权重 | 上限后权重 | 方差贡献份额（示意） |       |<br>| —- | ———-: | ——————————————–: | ———: | ———: | ——————-: | —-: |<br>| 股票 |          6% |                                           18% |      1.852 |      26.6% |                38.5% | 61.5% |<br>| 国债 |          2% |                                            7% |      4.082 |      58.6% |                40.0% | 10.0% |<br>| 商品 |          5% |                                           22% |      1.033 |      14.8% |                21.5% | 28.5% |<br>| 合计 |          — |                                            — |      6.967 |       100% |                 100% |  100% |</p>
+<div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th>资产</th>
+<th align="right">$\hat\mu$</th>
+<th align="right">$\hat\sigma$</th>
+<th align="right">原始$\hat\mu/\hat\sigma^2$</th>
+<th align="right">归一化权重</th>
+<th align="right">上限后权重</th>
+<th align="right">方差贡献份额（示意）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>股票</td>
+<td align="right">6%</td>
+<td align="right">18%</td>
+<td align="right">1.852</td>
+<td align="right">26.6%</td>
+<td align="right">38.5%</td>
+<td align="right">61.5%</td>
+</tr>
+<tr>
+<td>国债</td>
+<td align="right">2%</td>
+<td align="right">7%</td>
+<td align="right">4.082</td>
+<td align="right">58.6%</td>
+<td align="right">40.0%</td>
+<td align="right">10.0%</td>
+</tr>
+<tr>
+<td>商品</td>
+<td align="right">5%</td>
+<td align="right">22%</td>
+<td align="right">1.033</td>
+<td align="right">14.8%</td>
+<td align="right">21.5%</td>
+<td align="right">28.5%</td>
+</tr>
+<tr>
+<td>合计</td>
+<td align="right">—</td>
+<td align="right">—</td>
+<td align="right">6.967</td>
+<td align="right">100%</td>
+<td align="right">100%</td>
+<td align="right">100%</td>
+</tr>
+</tbody></table></div>
 <p><strong>结论判别与边界。</strong> 若动态组合 Sharpe 提高但单资产信号未胜过基准，改善可能来自分散化或估计出的静态风险溢价。Kandel and Stambaugh（1996）从资产配置角度评价收益可预测性，关注的是预测能否改变配置价值；实际归因还要用同资产池静态组合、打乱信号、固定协方差和剔除资产等对照。所有收益应扣除换汇、展期与再平衡成本。</p>
 <p><strong>围绕文献的问答。</strong></p>
 <p><strong>问：Kandel–Stambaugh 为什么把预测变量放到资产配置问题里？</strong> 答（Kandel and Stambaugh, 1996）：显著的预测关系不一定足以改变投资者选择；配置框架把预测收益和风险放进权重决策，再看投资者的收益—风险组合是否改善。这个经济价值仍依赖预期收益、协方差和风险偏好估计。</p>
@@ -1396,7 +1444,7 @@ $$
 <li>Merton, R. C. (1981). On Market Timing and Investment Performance I: An Equilibrium Theory of Value for Market Forecasts. <em>The Journal of Business, 54</em>(3), 363–406.</li>
 <li>Welch, I., &amp; Goyal, A. (2008). A Comprehensive Look at the Empirical Performance of Equity Premium Prediction. <em>Review of Financial Studies, 21</em>(4), 1455–1508.</li>
 </ol>
-<p>**文献说明：**两篇专题部分依据 Daniel and Moskowitz（2016）与 Zhang and Wong（2020）的论文内容作中文转述，并按作者—年份标注来源；正文未使用未经核实的英文直接引文。公式、数值和中文解释用于学术总结，不替代原论文中的完整模型、附录推导和数据定义。</p>
+<p><strong>文献说明：</strong>  两篇专题部分依据 Daniel and Moskowitz（2016）与 Zhang and Wong（2020）的论文内容作中文转述，并按作者—年份标注来源；正文未使用未经核实的英文直接引文。公式、数值和中文解释用于学术总结，不替代原论文中的完整模型、附录推导和数据定义。</p>
 </article>
 <div class="article-tags slide-up"><a class="tag" href="/tags/%E9%87%8F%E5%8C%96%E6%8B%A9%E6%97%B6/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>量化择时</a><a class="tag" href="/tags/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>投资组合</a><a class="tag" href="/tags/%E6%A0%B7%E6%9C%AC%E5%A4%96%E6%A3%80%E9%AA%8C/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>样本外检验</a><a class="tag" href="/tags/%E5%9B%9E%E6%B5%8B%E7%A8%B3%E5%81%A5%E6%80%A7/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>回测稳健性</a><a class="tag" href="/tags/Sharpe-%E6%AF%94%E7%8E%87/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>Sharpe 比率</a></div>
 

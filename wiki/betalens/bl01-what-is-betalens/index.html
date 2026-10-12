@@ -771,7 +771,7 @@
 <p>几个关键约定：</p>
 <ol>
 <li><strong>所有因子数据都存在 PostgreSQL 里</strong>，<code>datafeed</code> 是唯一的查询入口。</li>
-<li><strong>权重矩阵</strong>的行是调仓日（<code>DatetimeIndex</code>），列是证券代码，<strong>必须补一列 <code>cash</code></strong>。多头合计 1、空头合计 -1。</li>
+<li><strong>权重矩阵</strong>的行是调仓日（<code>DatetimeIndex</code>），列是证券代码**，必须补一列 <code>cash</code>**。多头合计 1、空头合计 -1。</li>
 <li><strong>回测真正用的是 <code>engine.actual_weight</code></strong>，不是输入的目标 <code>weight</code>——因为停牌、整数手等原因，输入的权重会被框架调整。</li>
 <li><strong>分组函数不叫</strong> <code>single_factor</code>，而叫 <code>single_characteristic</code>（同理有 <code>double_characteristic</code>、<code>multi_characteristic</code>）。这是最容易踩的命名坑。</li>
 </ol>
