@@ -29,17 +29,17 @@
     })();
   </script>
 
-  <meta name="description" content="从 VaR、ES 与极值理论出发，梳理尾部依赖、风险溢价、因子崩溃与组合风控的度量方法、经验证据和适用边界。" data-stellar-page-meta="">
+  <meta name="description" content="面向具有数理与经济学基础的金融学本科生，结合二十篇论文的原文方法、实证案例和结果，讲解尾部损失、风险溢价、动量崩溃与组合管理。" data-stellar-page-meta="">
 <meta property="og:type" content="article" data-stellar-page-meta="">
 <meta property="og:title" content="市场尾部风险综述：从极端损失的度量到风险溢价与组合管理" data-stellar-page-meta="">
 <meta property="og:url" content="http://janiszzz.github.io/2026/10/26/market-tail-risk-review/" data-stellar-page-meta="">
 <meta property="og:site_name" content="Janiszzz's Blog" data-stellar-page-meta="">
-<meta property="og:description" content="从 VaR、ES 与极值理论出发，梳理尾部依赖、风险溢价、因子崩溃与组合风控的度量方法、经验证据和适用边界。" data-stellar-page-meta="">
+<meta property="og:description" content="面向具有数理与经济学基础的金融学本科生，结合二十篇论文的原文方法、实证案例和结果，讲解尾部损失、风险溢价、动量崩溃与组合管理。" data-stellar-page-meta="">
 <meta property="og:locale" content="zh_CN" data-stellar-page-meta="">
 <meta property="og:image" content="http://janiszzz.github.io/image/market-tail-risk-review/momentum-crash-months.png" data-stellar-page-meta="">
 <meta property="article:author" content="Janiszzz" data-stellar-page-meta="">
 <meta property="article:published_time" content="2026-10-25T16:00:00.000Z" data-stellar-page-meta="">
-<meta property="article:modified_time" content="2026-10-28T16:00:00.000Z" data-stellar-page-meta="">
+<meta property="article:modified_time" content="2026-11-09T16:00:00.000Z" data-stellar-page-meta="">
 <meta property="article:tag" content="尾部风险" data-stellar-page-meta="">
 <meta property="article:tag" content="投资组合" data-stellar-page-meta="">
 <meta property="article:tag" content="极值理论" data-stellar-page-meta="">
@@ -64,7 +64,7 @@
 
   
 
-  <script type="application/ld+json" data-stellar-page-meta="">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Janiszzz","sameAs":[],"image":"https://avatars.githubusercontent.com/u/23077509?v=4"},"dateCreated":"2026-10-26T00:00:00+08:00","dateModified":"2026-10-29T00:00:00+08:00","datePublished":"2026-10-26T00:00:00+08:00","description":"尾部风险不是一个统一指标。本文围绕极端损失如何测量、风险如何进入资产价格、风控能否改善投资结果三个问题，比较二十篇文献中的方法与证据，并区分真实风险、风险价格和可实现的投资收益。","headline":"市场尾部风险综述：从极端损失的度量到风险溢价与组合管理","mainEntityOfPage":{"@type":"WebPage","@id":"http://janiszzz.github.io/2026/10/26/market-tail-risk-review/"},"publisher":{"@type":"Organization","name":"Janiszzz","sameAs":[],"image":"https://avatars.githubusercontent.com/u/23077509?v=4","logo":{"@type":"ImageObject","url":"https://avatars.githubusercontent.com/u/23077509?v=4"}},"url":"http://janiszzz.github.io/2026/10/26/market-tail-risk-review/","image":["/image/market-tail-risk-review/momentum-crash-months.png"],"keywords":"尾部风险, 极值理论, 预期损失, 资产定价, 投资组合, 风险管理","thumbnailUrl":"/image/market-tail-risk-review/momentum-crash-months.png"}</script>
+  <script type="application/ld+json" data-stellar-page-meta="">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Janiszzz","sameAs":[],"image":"https://avatars.githubusercontent.com/u/23077509?v=4"},"dateCreated":"2026-10-26T00:00:00+08:00","dateModified":"2026-11-10T00:00:00+08:00","datePublished":"2026-10-26T00:00:00+08:00","description":"从国际股指组合、个股排序、动量反弹到银行资本缺口，逐步说明二十篇文献怎样定义风险、构造指标、检验结果，以及这些方法分别适用于什么问题。","headline":"市场尾部风险综述：从极端损失的度量到风险溢价与组合管理","mainEntityOfPage":{"@type":"WebPage","@id":"http://janiszzz.github.io/2026/10/26/market-tail-risk-review/"},"publisher":{"@type":"Organization","name":"Janiszzz","sameAs":[],"image":"https://avatars.githubusercontent.com/u/23077509?v=4","logo":{"@type":"ImageObject","url":"https://avatars.githubusercontent.com/u/23077509?v=4"}},"url":"http://janiszzz.github.io/2026/10/26/market-tail-risk-review/","image":["/image/market-tail-risk-review/momentum-crash-months.png"],"keywords":"尾部风险, 极值理论, 预期损失, 资产定价, 投资组合, 风险管理","thumbnailUrl":"/image/market-tail-risk-review/momentum-crash-months.png"}</script>
   
 
   <link rel="stylesheet" href="/css/stellar-icons.css?v=7c185ad1a9a79674">
@@ -409,7 +409,7 @@
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E9%87%8F%E5%8C%96%E7%A0%94%E7%A9%B6/">量化研究</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E9%87%8F%E5%8C%96%E7%A0%94%E7%A9%B6/%E6%96%87%E7%8C%AE%E7%BB%BC%E8%BF%B0/">文献综述</a>
 </div></div><div class="meta-row">
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-10-25T16:00:00.000Z">2026年10月26日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-28T16:00:00.000Z">2026年10月29日</time></span></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-10-25T16:00:00.000Z">2026年10月26日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-11-09T16:00:00.000Z">2026年11月10日</time></span></div>
 </div></div>
     
     <div class="bottom only-title">
@@ -427,14 +427,15 @@
 
 <p>长期持有股票，最难熬的往往是少数几个交易日。但“少数日子亏得多”还没有说清问题：亏损来自单只股票突然暴跌，还是许多资产一起下跌？来自市场崩盘，还是市场反弹时空头头寸急剧亏损？如果为躲开这些日子长期减仓，少掉的损失能否补偿放弃的收益？</p>
 <p><strong>尾部风险（tail risk）是收益分布极端区域中的风险。</strong> 对持有股票的人，通常关心收益最差的一端；对多空策略，首先要找出会让策略亏损的市场状态。本文沿着三个问题展开：极端损失怎样测量，为什么有人愿意付钱转移它，以及投资者怎样据此调整组合。二十篇文献分别解决其中的一部分，彼此之间的区别，正是理解这条研究线索的关键。</p>
+<p>本文以具有概率统计、回归分析和基础资产定价知识的金融学大三学生为读者。每节从研究问题出发，说明原文使用的数据、计算步骤、实证结果与对应的决策场景；数学符号在首次出现时解释。</p>
 <!--more-->
 
 <h2 id="一、从一笔亏损到三个问题"><a href="#一、从一笔亏损到三个问题" class="headerlink" title="一、从一笔亏损到三个问题" data-stellar-navigation=""></a>一、从一笔亏损到三个问题</h2><p>2009 年 4 月，股票市场反弹，买入过去赢家、卖空过去输家的<strong>动量策略（momentum strategy）</strong>却单月亏损 45.89%。在 Daniel 等的样本中，这类超过 20% 的月度亏损共有十三次，集中发生的巨亏足以改变长期持有的结果（<a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al., 2017, p. 43</a>）。标准差把上涨和下跌都计入波动，不能完整表达这种损失对账户的打击：若亏损恰好发生在需要补保证金时，投资者可能被迫平仓，再也等不到平均收益兑现。</p>
 <p>下图把这些月份放在一起。横轴用市场收益减去无风险收益，称为<strong>超额收益（excess return）</strong>。十三个动量崩溃月里，十二个月的市场超额收益为正；策略的坏日子，显然不能只按大盘是否下跌来判断。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/momentum-crash-months.png" alt="原文全部13个动量崩溃月：市场当月超额收益与动量收益的散点图" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1296" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[207.5479,27.2222,96.4018,1]}" data-stellar-image-source="/image/market-tail-risk-review/momentum-crash-months.png"></p>
-<p><em>图 1. 动量亏损与市场方向。依据 <a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al. (2017, p. 43, Table 2)</a> 重绘，保留原表全部十三个月；橙点为 2009 年。这些月份先按动量亏损超过 20% 筛选，因此图中比例不能解释为市场反弹时的崩溃概率。</em></p>
-<p>把几个策略放进组合，也未必解决问题。相关系数概括整个样本中的线性关系；我们真正担心的，是其中一个已经陷入困境时，其他几个能否保住价值。平时分散的资产，可能在共同冲击下同时下跌。这需要同时观察几个资产在坏日子里的表现。</p>
-<p>还有第三层：风险能被识别出来，不代表规避它就会赚得更多。危机时能提供现金的资产有保险价值，投资者可能愿意接受较低收益；危机时一起亏损的资产，则需要更便宜的买入价格和更高的预期收益作为补偿。因而，发现一类股票的平均收益较高，需要继续追问它在什么时刻支付了代价。</p>
+<p><em>图 1. 动量亏损与市场方向。依据 <a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al. (2017, p. 43, Table 2)</a> 重绘原表全部十三个动量亏损超过 20% 的月份；橙点为 2009 年。横轴为市场超额收益，纵轴为动量收益，十二个点落在市场上涨一侧，显示空头端反弹是重要损失来源。</em></p>
+<p>把几个策略放进组合，也未必解决问题。相关系数概括整个样本中的线性关系，尾部依赖则专门描述共同坏状态。例如，先找出美国股指落入自身最差 1% 的日期，再计算日本股指在这些日期中也落入自身最差 1% 的比例，就能直接观察极端亏损是否重叠。配置时，再用同日的两国收益计算加权组合损失，检验分散持仓实际减少了多少亏损。Poon 等的国际股指研究将这一思路落实为联合尾部建模与组合模拟（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, pp. 584–591, 598–601</a>）。</p>
+<p>还有第三层：风险能被识别出来，不代表规避它就会赚得更多。危机时能提供现金的资产有保险价值，投资者可能愿意接受较低收益；危机时一起亏损的资产，则需要更便宜的买入价格和更高的预期收益作为补偿。Chabi-Yo 等就发现，共崩盘暴露高的股票组合平时回报较高，而暴露低的组合在最差市场日损失较轻。把后续平均收益与危机日损失同时列出，才看得到额外回报对应的承担代价（<a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al., 2016, pp. 44–45, Tables 3–4</a>）。</p>
 <p>这三个问题分别指向损失测量、资产定价和投资管理。先把它们分开，才能判断某个指标是在描述风险、解释收益，还是确实改善了投资结果。</p>
 <h2 id="二、先说清楚损失属于谁"><a href="#二、先说清楚损失属于谁" class="headerlink" title="二、先说清楚损失属于谁" data-stellar-navigation=""></a>二、先说清楚损失属于谁</h2><p>下文以 $r$ 表示一段持有期的收益率，以 $L=-r$ 表示损失；$L$ 越大，结果越差。<strong>边际分布</strong>只描述一个资产或组合自身的收益，<strong>联合分布</strong>还描述多个收益如何一起变化。讨论“尾部”时，还必须指定持有期，以及要研究最差的多大比例。</p>
 <div class="md-table-scroll"><table>
@@ -477,35 +478,37 @@
 </tr>
 </tbody></table></div>
 <p>还要区分损失的<strong>尺度</strong>和尾部的<strong>形状</strong>。尺度变大，相当于把原有分布横向拉宽；尾部变厚，则意味着越往极端走，概率下降得越慢。若收益满足 $r_t=\mu_t+\sigma_t\varepsilon_t$，其中 $\mu_t$ 是位置、$\sigma_t$ 是波动尺度，$\varepsilon_t$ 是标准化后的随机扰动，那么即使扰动分布完全不变，波动上升也会推高损失分位数。反过来，分布尺度相近，尾部形状不同，极端损失仍可能相差很远。</p>
-<p>金额风险还取决于头寸。单位资本上的风险下降，如果同时伴随更高杠杆，并不保证账户损失下降。因此，下文从收益分布出发，到了组合管理，再把仓位、融资和交易成本放回去。</p>
+<p>金额风险按<strong>持仓金额乘以损失率</strong>换算。用一组数说明：100 万元权益持有 100 万元股票，股票下跌 3%，账户亏损 3 万元；若再借入 100 万元，使股票持仓达到 200 万元，同样跌幅就造成 6 万元损失。即使股票的单日 99% 损失分位点从 3% 降到 2%，仓位从一倍升至两倍后，账户对应的金额分位点仍会从 3 万元升至 4 万元。确定的资金费用直接加在损失上：若这一天另付 100 元借款利息，后一金额就是 40,100 元。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/risk-map.png" alt="尾部风险的四类研究对象：自身损失、共同坏状态、风险价格和机构资本承受能力" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1350" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[211.2948,22.741,95.7626,1]}" data-stellar-image-source="/image/market-tail-risk-review/risk-map.png"></p>
-<p><em>图 2. 阅读后文的概念地图。本文按研究对象整理；每一类都须另外指定期限与坏状态，不能只凭“尾部风险”四个字比较指标。</em></p>
-<h2 id="三、怎样从有限数据估计极端损失"><a href="#三、怎样从有限数据估计极端损失" class="headerlink" title="三、怎样从有限数据估计极端损失" data-stellar-navigation=""></a>三、怎样从有限数据估计极端损失</h2><h3 id="3-1-先找到损失分位点，再看越界之后"><a href="#3-1-先找到损失分位点，再看越界之后" class="headerlink" title="3.1 先找到损失分位点，再看越界之后" data-stellar-navigation=""></a>3.1 先找到损失分位点，再看越界之后</h3><p><strong>风险价值（value at risk，VaR）</strong>是给定期限和置信水平下的损失分位数。令置信水平为 $\alpha$，则</p>
+<p><em>图 2. 阅读后文的概念地图。按自身损失、共同坏状态、风险价格和机构资本承受能力整理研究对象；期限、条件事件与输出单位决定每项指标回答的问题。</em></p>
+<h2 id="三、怎样从有限数据估计极端损失"><a href="#三、怎样从有限数据估计极端损失" class="headerlink" title="三、怎样从有限数据估计极端损失" data-stellar-navigation=""></a>三、怎样从有限数据估计极端损失</h2><h3 id="3-1-先找到损失分位点，再看越界之后"><a href="#3-1-先找到损失分位点，再看越界之后" class="headerlink" title="3.1 先找到损失分位点，再看越界之后" data-stellar-navigation=""></a>3.1 先找到损失分位点，再看越界之后</h3><p>一位持有美国和日本股票的基金经理，要决定给未来一个交易日的亏损准备多少缓冲。这里至少有两个问题：大多数时候，损失会不会越过某条线；一旦越线，通常会亏到什么程度。Poon 等的国际股指组合实验，正是同时计算这两个量（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, pp. 598–601, Figures 2–3</a>）。</p>
+<p><strong>风险价值（value at risk，VaR）</strong>回答第一个问题。设损失为 $L$，置信水平为 $\alpha$，则</p>
 $$
 \operatorname{VaR}_{\alpha}(L)=\inf\{\ell:\Pr(L\leq\ell)\geq\alpha\}.
 $$
 
-<p>在连续分布下，超过这条分界线的损失占 $1-\alpha$ 的概率。VaR 告诉我们分界线在哪里，尚未告诉我们越界后的损失有多严重。</p>
-<p><strong>期望尾部损失（expected shortfall，ES）</strong>进一步计算最差的 $1-\alpha$ 部分平均亏多少：</p>
+<p>例如，单日 99% VaR 为组合价值的 3%，含义是：按这个损失分布，99% 的交易日损失不超过 3%，剩下 1% 的交易日位于这条线以外。3% 是损失分位点。继续区分“超过 3% 后通常亏 4%”和“超过后通常亏 10%”，就需要第二个量。</p>
+<p><strong>期望尾部损失（expected shortfall，ES）</strong>计算最差的 $1-\alpha$ 部分的平均损失：</p>
 $$
 \operatorname{ES}_{\alpha}(L)=\frac{1}{1-\alpha}\int_{\alpha}^{1}\operatorname{VaR}_{v}(L)\,dv.
 $$
 
-<p>分布连续时，它等于超过相应 VaR 的条件平均损失。存在相同损失值或离散情景时，要按规定的概率比例取平均，必要时只计入分位点上一部分权重。本文所说的<strong>条件风险价值（conditional value at risk，CVaR）</strong>采用这一能处理离散分布的定义，与 ES 对应（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 40–43</a>）。</p>
-<p>原文的实证分析能说明这一区别。Poon 等用美国与日本股指的历史收益估计组合风险：如果把主要反映普通涨跌的依赖模型用于尾部，单日 VaR 会低估 29–111 个基点，而 ES 会低估 40–184 个基点。一个基点为 0.01 个百分点，所以上述 ES 误差相当于组合价值的 0.40–1.84 个百分点。这里比较的是同一数据下不同模型的估计，不是实际亏损超过预测的回测；它说明，对共同大跌估计不足，会在“越界后平均亏多少”这一问题上产生更大的误差（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, p. 599</a>）。</p>
-<p>实际估计可以先将历史损失排序，取经验分位数，再算最差部分的平均值。困难在样本量：置信水平越高，真正决定估计的尾部观测越少。历史里没有出现的损失，经验分布也不会自动给出。要估计更罕见的结果，就需要对尾部形状作假设。</p>
-<p>ES 仍是单个持有期的风险。<strong>最大回撤（maximum drawdown）</strong>衡量净值从先前高点到随后低点的最大跌幅，取决于亏损发生的顺序。相同的一组日收益可以有相同 ES，却因排列不同产生不同回撤；后续检验需要同时观察二者。</p>
-<h3 id="3-2-极值理论：把模型用在最需要它的地方"><a href="#3-2-极值理论：把模型用在最需要它的地方" class="headerlink" title="3.2 极值理论：把模型用在最需要它的地方" data-stellar-navigation=""></a>3.2 极值理论：把模型用在最需要它的地方</h3><p><strong>极值理论（extreme value theory，EVT）</strong>研究极端观测的极限分布。它的价值在于：不同总体分布的极端区域，在适当条件下可以由少数分布族近似，因此不必先找到一种能拟合全部普通涨跌的分布。常用做法有两种：从每个时间区块中选最大损失，或者保留所有超过高阈值的损失。后一种方法能利用同一区块内的多次极端观测（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 14–22</a>）。</p>
-<p>选定损失阈值 $u$，只看超过它的部分 $Y=L-u$。在极值理论的适用条件下，阈值足够高时，超额损失可以用<strong>广义帕累托分布（generalized Pareto distribution，GPD）</strong>近似：</p>
+<p>分布连续时，这等于 $E[L\mid L&gt;\operatorname{VaR}_{\alpha}(L)]$。用 1,000 个等概率历史日估计 99% ES，就是把损失最大的十天取平均；VaR 则位于进入这十天的边界。若分位点上有多个相同损失，就按概率权重截取恰好 1% 的样本质量。下文的<strong>条件风险价值（conditional value at risk，CVaR）</strong>采用这一包含离散情景的定义，与 ES 对应（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 40–43</a>）。</p>
+<p><strong>Poon 等怎样把定义用到组合上？</strong> 他们先估计两个股指各自的损失分布及其依赖关系，再模拟 300,000 对同日收益。给定美国股票权重 $w$，每一对模拟收益都生成一个组合损失 $L_p=-[wr_{\mathrm{US}}+(1-w)r_{\mathrm{JP}}]$。把这些损失排序，就能计算该权重下的 VaR 和 ES；改变 $w$，得到图 4 的整条风险曲线。这里的应用是比较不同国际配置的损失预算，同一批模拟情景可用于所有候选权重（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, pp. 598–599, Section 5</a>）。</p>
+<p>原文还用不同依赖模型重复计算。对美国—日本组合，使用全样本普通相关关系拟合的高斯依赖模型，相比更适合其极端区域的联合尾部模型，低估单日 VaR 29–111 个基点，低估 ES 40–184 个基点。一个基点等于 0.01 个百分点，因此 ES 的估计差异达到组合价值的 0.40–1.84 个百分点。对基金经理而言，这意味着采用什么依赖模型，会实际改变需要保留的亏损缓冲；ES 的差距较大，是因为它进一步计入了越界后的严重损失（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, p. 599, notes 14–15</a>）。</p>
+<p>这个例子也说明为什么需要尾部模型。若只拿 1,000 天历史数据，99.9% 尾部平均几乎只由一天决定；模拟的作用是把对尾部规律的统计估计转成更多可能情景。下一节的极值理论，提供了这种外推所用的分布近似。</p>
+<h3 id="3-2-极值理论：把模型用在最需要它的地方"><a href="#3-2-极值理论：把模型用在最需要它的地方" class="headerlink" title="3.2 极值理论：把模型用在最需要它的地方" data-stellar-navigation=""></a>3.2 极值理论：把模型用在最需要它的地方</h3><p><strong>极值理论（extreme value theory，EVT）</strong>从一个朴素问题出发：研究千分之一的极端损失，是否必须先准确拟合其余 99.9% 的普通涨跌？它的办法是直接描述极端区域。Rocco 综述了两条路线：<strong>区块最大值法</strong>从每月或每年的观测中取最大损失；<strong>超阈值法</strong>保留所有超过给定损失门槛的观测。同一个月若有五次大跌，后者可使用全部五次的信息（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 14–22</a>）。</p>
+<p>设损失门槛为 $u$，把越过门槛的部分记为 $Y=L-u$。超阈值法要估计的是“已经亏过 $u$ 以后，还会多亏多少”的条件分布。对足够高的阈值，一大类总体分布的超额损失可以用<strong>广义帕累托分布（generalized Pareto distribution，GPD）</strong>近似：</p>
 $$
 \Pr(L-u\leq y\mid L&gt;u)\approx
 1-\left(1+\xi\frac{y}{\beta_u}\right)^{-1/\xi},
 \quad y\geq0,\quad \beta_u&gt;0,\quad 1+\xi y/\beta_u&gt;0.
 $$
 
-$\beta_u$ 控制超额损失的尺度，$\xi$ 控制尾部形状。$\xi&gt;0$ 表示概率按幂律缓慢衰减；$\xi=0$ 取公式的连续极限，得到指数分布；$\xi\lt0$ 则对应有上界的尾部。这里建模的是超过 $u$ 之后的损失，还要乘上超过 $u$ 本身的概率，才能回到完整损失分布。
+$\beta_u$ 决定超额损失的尺度，$\xi$ 决定尾部的形状。$\xi&gt;0$ 时，越大的损失仍保留相对较多的概率，称为重尾；$\xi=0$ 的连续极限是指数分布；$\xi\lt0$ 时尾部有上界。模型先描述条件概率，再乘上 $\Pr(L&gt;u)$，才得到完整的极端损失概率。
 
-<p>若窗口内有 $n$ 个观测，其中 $N_u$ 个超过阈值，记 $\hat p_u=N_u/n$。拟合 $\hat\xi$、$\hat\beta_u$ 后，对阈值以外的置信水平 $\alpha&gt;1-\hat p_u$，可估计</p>
+<p><strong>Dias 的行业组合研究给出了具体做法。</strong> 她使用美国十个行业组合，每次取过去 1,000 个交易日，阈值设在使 15% 观测位于损失尾部的位置。因此，每次约有 150 个超阈值观测可用于拟合 GPD。最大似然估计选择一组 $\xi$、$\beta_u$，使这些实际超额损失在模型下最可能出现；随后再计算 90%、95%、99% 水平的 CVaR。估计针对候选组合自己的历史收益进行，得到的 CVaR 随组合权重改变（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 6–12</a>）。</p>
+<p>若窗口有 $n$ 个观测，超过 $u$ 的有 $N_u$ 个，记 $\hat p_u=N_u/n$，则对 $\alpha&gt;1-\hat p_u$，</p>
 $$
 \widehat{\operatorname{VaR}}_{\alpha}
 =u+\frac{\hat\beta_u}{\hat\xi}
@@ -515,395 +518,533 @@ $$
 =\frac{\widehat{\operatorname{VaR}}_{\alpha}+\hat\beta_u-\hat\xi u}{1-\hat\xi}.
 $$
 
-<p>第二式要求 $\hat\xi\lt1$，即模型中的尾部均值存在；$\hat\xi$ 接近 1 时，ES 会对很小的估计误差也非常敏感。$\hat\xi=0$ 时，两式都按连续极限计算（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 42–43</a>）。</p>
-<p>于是估计过程变得明确：构造同一持有期的损失，选若干候选阈值，拟合超过阈值的样本，检查参数与风险估计是否稳定，再用后续数据检验。难点集中在阈值：选得低，普通波动混进尾部，近似偏差变大；选得高，可用观测锐减，估计误差变大。用整个测试期挑选“效果最好”的阈值，会把未来信息带进模型。</p>
-<p>另一个难点是极端损失往往成串出现。一次危机中的五个大跌日，不能简单当作五次相互独立的危机。可行做法之一，是先预测收益的位置和波动，再对标准化残差估计尾部，最后按下一期的预测波动还原损失。这样既利用了波动持续性，又让尾部模型负责异常冲击；前一步若没有消除主要依赖，后一步的独立样本假设仍会出错（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 27–30</a>）。</p>
-<p>Rocco 汇总的研究发现，EVT 的优势主要出现在很高的损失分位数，较温和的分位数上证据混合。这与方法的用途一致：离极端区域还很远时，准确预测日常波动可能更重要。这是所综述研究的经验规律，不能把 99% 当成所有资产通用的适用分界（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 44–46</a>）。</p>
-<h3 id="3-3-Hill-估计：用相对损失识别尾厚"><a href="#3-3-Hill-估计：用相对损失识别尾厚" class="headerlink" title="3.3 Hill 估计：用相对损失识别尾厚" data-stellar-navigation=""></a>3.3 Hill 估计：用相对损失识别尾厚</h3><p>如果只关心重尾的衰减速度，可以使用 <strong>Hill 估计量（Hill estimator）</strong>。设正损失 $X$ 满足 $\Pr(X&gt;x)\approx\ell(x)x^{-\kappa}$，其中 $\ell(x)$ 是变化缓慢的修正项，$\kappa&gt;0$ 是幂律指数。$\kappa$ 越小，尾部越厚；其倒数 $\xi=1/\kappa$ 则越大表示尾部越厚。论文里的“尾指数”（tail index）可能指两者中的任何一个，必须先看定义。</p>
-<p>将正损失从小到大排为 $X_{(1)}\leq\cdots\leq X_{(n)}$，取最大的 $k$ 个，常用写法为</p>
+<p>第一式把“超过阈值的频率”和“超过后衰减的速度”接起来。以 Dias 的设定为例，估计 99% VaR 时，公式中的概率比是 $0.15/0.01=15$：用最差 15% 中的损失规律，推到最差 1% 的入口。第二式则继续算入口以外的平均损失，要求 $\hat\xi\lt1$；当 $\xi\geq1$，这一 GPD 模型的尾部均值发散。$\hat\xi=0$ 时使用连续极限（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 42–43</a>）。</p>
+<p>阈值为何需要选择？门槛过低，会把不符合极端近似的普通波动也放进模型；门槛过高，又会减少估计所用的观测。Dias 的案例把两者折中落实为一个可复现的规则，并将参数法与历史排序法比较：十个行业的周度 CVaR 估计序列，在大多数情形下相关系数超过 99%，最低也在 94% 以上。随后，作者把这些估计用于每周的行业配置，具体投资结果在第 6.2 节展开（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 12–13</a>）。</p>
+<p>另一个应用是<strong>每日风险预测</strong>。危机中的大跌常连续发生，因为今天高波动，明天通常仍高波动。Rocco 介绍的两步法先拟合 $L_t=\mu_t+\sigma_t Z_t$，用 AR–GARCH 模型预测位置与波动，再对标准化残差 $Z_t$ 的尾部拟合 GPD。于是明日损失分位数为 $\hat\mu_{t+1}+\hat\sigma_{t+1}\widehat{\operatorname{VaR}}_\alpha(Z)$。GARCH 负责回答“明天整个分布会多宽”，EVT 负责回答“在这一尺度上，异常冲击有多大”（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 27–30</a>）。</p>
+<p>Rocco 所综述的 NASDAQ 指数研究比较了十三种条件风险模型，过滤波动后再拟合 EVT 的方法与过滤历史模拟法表现较好；其综述的美国股票和新兴市场研究则发现，EVT 的优势主要集中在更极端的分位数。这里形成了两个清楚的用途：给行业配置估算极端平均损失，以及随每日波动变化更新损失分位点（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 44–46</a>）。</p>
+<h3 id="3-3-Hill-估计：用相对损失识别尾厚"><a href="#3-3-Hill-估计：用相对损失识别尾厚" class="headerlink" title="3.3 Hill 估计：用相对损失识别尾厚" data-stellar-navigation=""></a>3.3 Hill 估计：用相对损失识别尾厚</h3><p>GPD 同时估计超额损失的尺度和形状。如果问题更集中——“极端损失的概率衰减有多快”——可以使用 <strong>Hill 估计量（Hill estimator）</strong>。设正损失 $X$ 的尾部满足 $\Pr(X&gt;x)\approx\ell(x)x^{-\kappa}$，其中 $\ell(x)$ 是变化缓慢的修正项，$\kappa&gt;0$ 为幂律指数。$\kappa$ 越小，极端损失的概率衰减越慢；其倒数 $\xi=1/\kappa$ 则越大表示尾部越厚（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 17–19, 24–27</a>）。</p>
+<p>将损失从小到大排列为 $X_{(1)}\leq\cdots\leq X_{(n)}$，只取最大的 $k$ 个，计算</p>
 $$
 \hat\xi_k=\frac{1}{k}\sum_{j=1}^{k}
 \log\left(\frac{X_{(n-j+1)}}{X_{(n-k)}}\right),
 \qquad \hat\kappa_k=\frac{1}{\hat\xi_k}.
 $$
 
-<p>每次极端损失都与阈值相比，再平均对数比值。所有损失同比放大，分子和分母一起变化，估计值不会因此改变。这解释了它为什么关注尾部形状，而不是绝对亏损金额。实际操作要比较多个 $k$ 的结果，并报告不确定性；Hill 只适用于这一重尾类别，不能覆盖 GPD 的所有形状（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 17–19, 24–27</a>）。</p>
-<p>还有一个先于模型的选择：使用简单收益还是对数收益。不加杠杆的股票简单收益最低为 −100%，对数收益没有同样的下界；经过非线性变换，尾部性质也可能改变。尾部外推必须尊重所选变量的取值范围。</p>
+<p>这个式子可以逐步读：先用第 $k+1$ 大损失作为尾部入口；把每个更大的损失除以入口值，得到它超出入口多少倍；取对数，再求平均。若超过入口以后还有许多特别大的损失，对数比值就大，$\hat\xi_k$ 也大。所有损失同时翻倍时，分子与分母一起翻倍，比值保持不变，因此它识别的是形状。</p>
+<p><strong>Kelly 和 Jiang 用这一性质解决了一个实际测量问题。</strong> 他们希望每月获得一个全市场尾部风险指标，但指数的大跌次数太少。于是将一个月中所有股票的日收益汇集起来，以其中最差 5% 的收益确定负阈值 $u_t$，对每个低于阈值的负收益 $r_{j,t}$ 计算 $\log(r_{j,t}/u_t)$。负数除以负数得到正数，而更大的亏损使比值大于 1。其月度指标是</p>
+$$
+\tau_t=\frac{1}{K_t}\sum_{r_{j,t}<u_t}\log\left(\frac{r_{j,t}}{u_t}\right), $$="" <p="">其中 $K_t$ 为该月落入尾部的观测数。一个观测对应“一只股票在一天的收益”，因此某月有数千只股票时，就能从许多个股极端收益中估计共同形状（<a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly &amp; Jiang, 2013, pp. 7–10</a>）。<p></p>
+<p>为理解计算，设教学例子中的当月阈值为 −4%：−8% 收益对指标贡献 $\log2$，−12% 收益贡献 $\log3$，后者更大。如果全部跌幅和阈值同时扩大一倍，贡献不变。这解释了原文为何让阈值随每月分布移动：普遍波动变大可以推高绝对损失，但只有超出阈值后的相对亏损加深，才会推高这一尾厚指标。</p>
+<p>作者的统计假设是，股票可以各有不同的长期尾厚，但其时间变化包含共同成分。设个股尾部幂律指数为 $a_i/\lambda_t$，其中 $a_i$ 是个股参数、$\lambda_t$ 是共同状态，则单个对数比值的期望与 $\lambda_t/a_i$ 对应。汇总后的 Hill 指标因此能够跟踪共同状态。作者还用扣除市场、规模和价值因子后的收益残差重算指标，并比较不同行业、不同规模股票的结果，以检验这种共同变化（<a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly &amp; Jiang, 2013, pp. 8–10</a>）。</p>
+<p>这项方法的输出是<strong>每月的共同尾厚状态</strong>。Kelly 和 Jiang 将 $\tau_t$ 放进市场收益预测回归，并按个股对该状态的预测敏感度分组，比较各组的后续收益；第 4.1 节给出回归及结果。由于指标由相对损失构成，同一个 $\tau_t$ 可以对应不同的跌幅和账户金额。</p>
+<p><strong>从尾部模型算到账户金额，可以按以下步骤完成。</strong> 固定明日持仓，设股票组合内部权重为 $w_i$、合计为 1。先用每个历史日的同日收益计算 $r_{p,s}=\sum_iw_ir_{i,s}$，得到这组持仓自身的损失序列 $L_{p,s}=-r_{p,s}$；资产之间的共同涨跌由同日加总保留。再按第 3.2 节的波动过滤方法，预测组合明日损失的位置 $\hat\mu$ 和尺度 $\hat\sigma$，并对其标准化残差拟合 GPD，得到 99% 分位数 $q_{.99}$ 和尾部均值 $e_{.99}$。联合收益先合成为组合损失、再计算尾部，以及过滤波动后估计尾部，分别对应 Poon 等与 Rocco 介绍的计算方法（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, pp. 598–599</a>；<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 27–30, 42–43</a>）。</p>
+<p>设账户权益为 $V$，股票持仓金额为 $aV$，其中 $a\geq0$；明日已知的净资金费用为 $d$，利息收入记为负费用。由金额损失 $aV L_p+d$，可直接得到</p>
+$$
+\widehat{\operatorname{VaR}}^{\mathrm{金额}}_{.99}
+=aV(\hat\mu+\hat\sigma q_{.99})+d,
+\qquad
+\widehat{\operatorname{ES}}^{\mathrm{金额}}_{.99}
+=aV(\hat\mu+\hat\sigma e_{.99})+d.
+$$
+
+<p>例如，取一组演算数值：账户权益 100 万元、股票仓位 1.2 倍，预测日损失均值为 0、日波动为 1%，残差的 99% 分位数为 3、尾部均值为 4，单日净资金费用为 100 元。金额 VaR 就是 $120\text{万元}\times1\%\times3+100\text{元}=36{,}100\text{元}$，ES 为 $120\text{万元}\times1\%\times4+100\text{元}=48{,}100\text{元}$。前者表示预测分布中 99% 的日损失不超过 36,100 元，后者表示最差 1% 情形的平均损失为 48,100 元。至此，尾部形状、当期波动、资产搭配、持仓规模和资金费用都进入了同一个金额计算。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/evt-workflow.png" alt="极值估计流程及阈值过低与过高之间的取舍" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1440" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[207.817,20.5851,95.9521,1]}" data-stellar-image-source="/image/market-tail-risk-review/evt-workflow.png"></p>
-<p><em>图 3. 从数据走到尾部估计。根据 <a href="#ref-rocco-2010" data-stellar-navigation="">Rocco (2010, pp. 14–30, 42–46)</a> 整理的方法图。阈值选择必须留在估计期内；GPD 可以描述多类尾部，Hill 则只针对重尾类别。</em></p>
-<h3 id="3-4-一起下跌：先辨认依赖，再谈分散化"><a href="#3-4-一起下跌：先辨认依赖，再谈分散化" class="headerlink" title="3.4 一起下跌：先辨认依赖，再谈分散化" data-stellar-navigation=""></a>3.4 一起下跌：先辨认依赖，再谈分散化</h3><p>估计好每只股票自己的尾部，仍然不知道组合会怎样。为单独研究共同变化，令 $F_i$、$F_m$ 分别是股票和市场收益的累积分布函数，把收益转成各自分布中的位置 $U_i=F_i(r_i)$、$U_m=F_m(r_m)$。连续分布下，两者都落在 0 到 1 的均匀尺度上。两者的联合分布 $C$ 称为<strong>连接函数（copula）</strong>，它保留依赖关系，剥离各自边际分布的差异。</p>
-<p>令 $q$ 是一个很小的尾部概率。<strong>下尾依赖系数（lower tail dependence，LTD）</strong>考察：市场进入最差的 $q$ 部分时，股票也进入自己最差的 $q$ 部分的概率，在 $q$ 趋近零时会怎样：</p>
+<p><em>图 3. 从数据走到尾部估计。根据 <a href="#ref-rocco-2010" data-stellar-navigation="">Rocco (2010, pp. 14–30, 42–46)</a> 整理。GPD 拟合超过阈值的损失，Hill 估计重尾衰减速度；阈值高低分别影响可用观测数与极端近似的贴合程度。</em></p>
+<h3 id="3-4-一起下跌：先辨认依赖，再谈分散化"><a href="#3-4-一起下跌：先辨认依赖，再谈分散化" class="headerlink" title="3.4 一起下跌：先辨认依赖，再谈分散化" data-stellar-navigation=""></a>3.4 一起下跌：先辨认依赖，再谈分散化</h3><p>跨国股票配置的出发点是，不同市场的波动可以互相抵消。真正检验这一点，需要研究某个市场已出现极端损失时，另一个市场仍能否起缓冲作用。Poon 等使用美国、英国、德国、法国和日本的股指，样本从 1968 年末到 2001 年，共有 8,577 个日收益观测。由于美国收盘较晚，与其他市场配对时使用前一天的美国收益，使信息传递的先后顺序进入分析（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, p. 592</a>）。</p>
+<p>第一步是剥离边际分布。设两个市场的收益分别为 $r_i,r_m$，累积分布函数分别为 $F_i,F_m$，将收益换成各自的分位位置 $U_i=F_i(r_i)$、$U_m=F_m(r_m)$。例如，$U_i=0.01$ 表示该收益处在本市场最差的 1%。这样，无论一个市场平时波动 1% 还是 3%，都在同一个 0 到 1 的尺度上比较。两者在这一尺度上的联合分布 $C$，称为<strong>连接函数（copula）</strong>。</p>
+<p>第二步是问：市场进入最差的 $q$ 部分时，另一资产也进入自己最差的 $q$ 部分的概率是多少？将 $q$ 向零推进，得到<strong>下尾依赖系数（lower tail dependence，LTD）</strong>：</p>
 $$
 \lambda_L=\lim_{q\downarrow0}\Pr(U_i\leq q\mid U_m\leq q)
 =\lim_{q\downarrow0}\frac{C(q,q)}{q}.
 $$
 
-<p>极限为正，称为渐近下尾依赖；极限为零，称为渐近下尾独立。“渐近”指不断向更极端区域推进。即使极限为零，在实际关心的最差 5% 或 1% 中，两者仍可能明显一起下跌。若两者完全独立，上述条件概率就等于 $q$。</p>
-<p>有限样本可以先把收益转成历史秩，再在固定 $q$ 下计算“共同落入尾部的次数／市场落入尾部的次数”。它估计的是该阈值下的条件频率。要推断极限，还需要尾部模型及阈值稳定性检验，不能把几次共同大跌直接当成一个可靠的极限参数。</p>
-<p>这正是 Poon 等人研究的重点。他们发现，只用一个极限系数还不够：当它等于零时，还需要刻画共同极端概率消失得有多快。其补充指标 $\bar\chi$ 就承担这个任务；改写为收益左尾记号，是 $\bar\chi=\lim_{q\downarrow0}[2\log q/\log C(q,q)-1]$。完全独立时它为零，某些渐近独立但仍有较强共同极端倾向的资产，可以有正值。识别依赖类别以后，才能选择合适的联合尾部模型（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, pp. 584–591</a>）。</p>
-<p>在 1968—2001 年五个国际股票市场的数据中，过滤可预测波动会削弱极端联动，却不能全部消除它。美国—日本的结果支持渐近独立，德国—法国则表现出较强的尾部依赖。在作者的组合示例中，对美国—日本硬套渐近依赖模型，会高估损失；用全部数据拟合的高斯依赖结构，又会低估尾部损失。风险估计既可能偏低，也可能偏高，关键是依赖模型是否适合这些资产（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, pp. 592–601</a>）。</p>
+<p>极限为正称为渐近下尾依赖，为零称为渐近下尾独立。这里“独立”描述的是极端极限：即使极限为零，两个市场在最差 5% 或 1% 的实际区域仍可能明显联动。Poon 等因此同时估计 $\chi$ 和 $\bar\chi$；前者对应这里的 $\lambda_L$，后者在 $\chi=0$ 时继续描述共同尾部概率衰减得多快。改写为左尾记号，</p>
+$$
+\bar\chi=\lim_{q\downarrow0}\left[\frac{2\log q}{\log C(q,q)}-1\right].
+$$
+
+<p>完全独立时 $C(q,q)=q^2$，代入得到 $\bar\chi=0$。若共同极端概率比 $q^2$ 衰减慢，$\bar\chi$ 可以为正。作者先用这些诊断量辨认依赖类别，再选择对应的联合尾部模型：渐近依赖采用 logistic 模型，渐近独立采用高斯联合尾部模型；后一模型的依赖参数用尾部信息估计（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, pp. 584–591</a>）。</p>
+<p><strong>原文的美国—日本与德国—法国比较，展示了模型选择怎样影响配置。</strong> 美国—日本组合的极端关系适合渐近独立模型；德国—法国的尾部依赖更强。作者保持边际损失模型一致，分别代入全样本高斯依赖、尾部估计的高斯依赖和 logistic 依赖，模拟各权重下的组合损失。对于美国—日本组合，普通相关关系低估风险，渐近依赖模型却高估风险；尾部高斯模型处在两者之间。图 4 展示其中 99% 水平的结果（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, pp. 598–601</a>）。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/var-es-original.png" alt="美国与日本股票组合在99%置信水平下的单日VaR与ES，截取原研究图中的对应面板" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2088" height="972" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[211.8373,5.9547,96.0795,1]}" data-stellar-image-source="/image/market-tail-risk-review/var-es-original.png"></p>
-<p><em>图 4. 同一组股指收益的 VaR 与 ES。截取并并列 Poon et al. (2004, pp. 600–601, Figures 2–3) 的美国—日本组合 99% 面板；横轴为美国股票权重。原研究用 1968—2001 年数据拟合联合分布并模拟 300,000 次，曲线为模型风险估计。圆点、叉号与三角形对应不同依赖设定；图中的 $\alpha$ 是尾部概率，与本文用作置信水平的 $\alpha$ 方向相反。左图读损失分界点，右图读越过分界点后的平均损失。</em></p>
+<p><em>图 4. 美国—日本组合的单日 VaR 与 ES。截取 Poon et al. (2004, pp. 600–601, Figures 2–3) 的 99% 置信水平面板；横轴为美国股票权重。原文用 1968—2001 年数据拟合分布并模拟 300,000 对收益，圆点、叉号与三角形表示不同依赖模型。原图的 $\alpha$ 表示尾部概率，0.01 对应本文的 99% 置信水平。</em></p>
+<p>读取这张图时，先根据前述尾部依赖诊断选择相应模型，再固定美国股票权重，纵向比较模型误选造成的损失估计差异。给定模型后，沿 ES 曲线寻找最低点，其横坐标就是仅以最小化 ES 为目标时的美国股票权重。如果账户权益为 $V$、金额 ES 预算为 $B$，则曲线上满足 $\operatorname{ES}_{.99}(L_p(w))\leq B/V$ 的权重都在预算内，可以继续按收益目标筛选。这样，图中的风险曲线就转成了具体的可行持仓集合。作者进一步对收益做波动过滤，发现共同高波动能够解释一部分极端联动，而尾部依赖仍有剩余。这将“大家同时更剧烈地波动”和“大家特别容易一起落入最坏区域”区分开来（<a href="#ref-poon-2004" data-stellar-navigation="">Poon et al., 2004, pp. 593–601</a>）。</p>
 <div class="md-table-scroll"><table>
 <thead>
 <tr>
 <th>方法</th>
-<th>它估计什么</th>
-<th>最需要认真处理的选择</th>
+<th>输入与计算</th>
+<th>原文中的用途</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>历史 VaR、ES</td>
-<td>指定期限的损失分位点与尾部平均</td>
-<td>窗口长度、置信水平、离散权重</td>
+<td>对损失排序，取分位数及尾部平均</td>
+<td>给定组合的单期损失预算</td>
 </tr>
 <tr>
 <td>GPD</td>
-<td>超阈值损失的分布，并外推 VaR、ES</td>
-<td>阈值、波动过滤、参数不确定性</td>
+<td>拟合超阈值损失，再外推分位数与均值</td>
+<td>Dias 的行业组合 CVaR 估计</td>
 </tr>
 <tr>
 <td>Hill</td>
-<td>重尾衰减速度</td>
-<td>尾部观测数、指数方向、重尾假设</td>
+<td>平均极端损失相对阈值的对数比值</td>
+<td>Kelly–Jiang 的月度共同尾厚指标</td>
 </tr>
 <tr>
-<td>有限阈值共同频率</td>
-<td>在指定市场坏状态下，资产也很差的概率</td>
-<td>时间对齐、阈值和有效观测数</td>
-</tr>
-<tr>
-<td>联合极值模型</td>
-<td>更极端区域中的共同损失</td>
-<td>依赖类别、边际模型及联合模型</td>
+<td>联合尾部模型</td>
+<td>估计边际与依赖，再生成联合情景</td>
+<td>Poon 等的国际股指组合风险比较</td>
 </tr>
 </tbody></table></div>
 <h2 id="四、尾部风险为什么会影响今天的价格"><a href="#四、尾部风险为什么会影响今天的价格" class="headerlink" title="四、尾部风险为什么会影响今天的价格" data-stellar-navigation=""></a>四、尾部风险为什么会影响今天的价格</h2><p>假设两项投资的平均收益和波动相近，但其中一项总在收入下降、融资困难时亏钱，另一项在这些时候还能提供现金。投资者通常更愿意持有后者。前者要吸引买家，价格就需要更低，预期收益也就更高。这种为承担不利状态中的损失而要求的额外回报，称为<strong>风险溢价（risk premium）</strong>。尾部风险的定价研究，要找的是这条“坏状态中的损失—今天的折价—未来的补偿”关系。</p>
-<h3 id="4-1-大盘崩盘太少，能否从个股中找到更多信息"><a href="#4-1-大盘崩盘太少，能否从个股中找到更多信息" class="headerlink" title="4.1 大盘崩盘太少，能否从个股中找到更多信息" data-stellar-navigation=""></a>4.1 大盘崩盘太少，能否从个股中找到更多信息</h3><p>只看指数，一年未必遇到一次足够大的下跌，很难按月判断尾部有没有变厚。个股却每天都有大涨大跌。Kelly 和 Jiang 的办法，是把一个月中所有股票的日收益放在一起，从中提取共同的尾部变化：每月以最差 5% 的收益为尾部，计算这些收益相对于当月阈值的对数比值，再取平均。它就是前文 Hill 估计在股票横截面上的应用，数值越大，超过阈值后继续发生严重损失的倾向越强。阈值随当月收益分布移动，尽量避免把普遍放大的日常波动误当成尾部变厚（<a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly &amp; Jiang, 2013, pp. 7–10</a>）。</p>
-<p>这个办法增加了观测数，也增加了一项假设：不同公司的尾部可以有不同厚度，但其变化包含共同成分。作者按行业和规模分别估计，发现各组指标明显同向变化；先扣除个股收益随市场等共同变化的部分，主要结果仍在。这些检验支持共同成分的存在，但同日受冲击的上百只股票仍不能当作上百次独立危机。</p>
-<p>有了每月指标，下一步才是检验它与未来收益的关系。用 $\tau_t$ 表示当月尾部指标，$r^e_{m,t+1}$ 表示下一期市场超额收益，预测回归写成</p>
+<h3 id="4-1-大盘崩盘太少，能否从个股中找到更多信息"><a href="#4-1-大盘崩盘太少，能否从个股中找到更多信息" class="headerlink" title="4.1 大盘崩盘太少，能否从个股中找到更多信息" data-stellar-navigation=""></a>4.1 大盘崩盘太少，能否从个股中找到更多信息</h3><p>Kelly 和 Jiang 的研究从测量走向定价：第 3.3 节得到每月共同尾厚指标 $\tau_t$ 后，作者要回答两个问题——尾部风险较高时，整个市场是否提供更高的后续收益；对这种风险更敏感的股票，是否需要支付更多补偿。这里的经济故事是，投资者不喜欢消费或财富已经受损时再遭遇严重亏损。尾部状态变差，持有股票所要求的回报提高，今天的价格就会相应下降（<a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly &amp; Jiang, 2013, pp. 10–13</a>）。</p>
+<p><strong>市场层面的检验使用美国 1963—2010 年数据。</strong> 作者先用当月所有个股日收益估计 $\tau_t$，再用它解释后续市场超额收益。以一个月预测为例，</p>
 $$
 r^e_{m,t+1}=a+b\tau_t+\varepsilon_{t+1}.
 $$
 
-<p>这里 $a$ 是截距，$b$ 衡量预测关系，$\varepsilon_{t+1}$ 是未被解释的收益。美国 1963—2010 年样本中，指标提高一个标准差，对应未来一年市场超额收益的预测值增加约 4.02 个百分点。作者还逐月重新估计回归，只用当时已有数据预测未来，再用未参与估计的数据评价，这称为<strong>样本外检验（out-of-sample test）</strong>。一年期样本外 $R^2$ 为 4.5%，即相对于截至当时的历史平均收益预测，平方误差下降了 4.5%（<a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly &amp; Jiang, 2013, pp. 21–22, 44, 46</a>）。</p>
+$r^e_{m,t+1}$ 是下月市场收益减无风险收益，$b$ 表示尾部状态每增加一个单位，下一期平均超额收益的预测值改变多少。作者还把因变量换成未来一年、三年和五年的收益，观察风险补偿的变化能持续多久。预测变量先发生、被解释收益后发生，这个时序使回归对应“看到本月尾部状态后，如何调整未来回报预期”（[Kelly &amp; Jiang, 2013, pp. 20–22](#ref-kelly-jiang-2013)）。
+
+<p>一年期结果中，尾部指标提高一个标准差，未来一年市场超额收益的预测值增加约 4.02 个百分点。“一个标准差”用指标自身的历史波动来统一单位；4.02 个百分点则给出了经济量级。例如，在其他条件不变时，原先预测 6% 的超额收益，按该估计斜率会提高到约 10.02%。这是对原文系数的换算，用来说明高尾部状态怎样对应较高的要求回报（<a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly &amp; Jiang, 2013, p. 44, Table 3</a>）。</p>
+<p>作者随后模拟逐月更新的预测过程：最初用 120 个月估计系数；预测下一期；等下一期结束，再扩展样本并重新估计。比较对象是每个时点已有数据的历史平均收益。样本外 $R^2$ 定义为</p>
+$$
+R^2_{\mathrm{OS}}=1-
+\frac{\sum_t(r^e_{m,t+1}-\hat r^e_{m,t+1|t})^2}
+{\sum_t(r^e_{m,t+1}-\bar r^e_{m,t})^2}.
+$$
+
+<p>分子是尾部模型的预测平方误差，分母是历史均值预测的平方误差。一年期 $R^2_{\mathrm{OS}}=4.5\%$，就是前者比后者少 4.5%。图 5 同时展示其他期限，说明尾部状态中与预期收益有关的信息有一定持续性（<a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly &amp; Jiang, 2013, pp. 21–22, 46, Table 5</a>）。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/tail-return-forecast.png" alt="共同尾部指标在一个月、一年、三年和五年期限的样本内与样本外R平方" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1170" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[198.2821,25.4339,91.3411,1]}" data-stellar-image-source="/image/market-tail-risk-review/tail-return-forecast.png"></p>
-<p><em>图 5. 预测期限改变，证据也会改变。依据 <a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly and Jiang (2013, pp. 44, 46, Tables 3 and 5)</a> 重绘。左图为样本内回归 $R^2$；右图为相对实时历史均值预测的样本外 $R^2$，从初始 120 个月之后开始评价。较长期限的收益窗口重叠，数值上升不意味着独立有效样本增多，也不能直接换算成交易利润。</em></p>
-<p>这里较高的未来收益，符合风险上升后投资者要求更多补偿的解释。它并不要求未来真的发生崩盘。论文还发现，用过去尾部状态预测个股收益的回归斜率，可以区分后续平均收益；这个斜率与“股票当天对市场跌幅有多敏感”是不同的量。其贡献因此有两层：先解决共同尾部状态的测量，再检验这种状态是否进入市场和个股的预期收益。</p>
-<h3 id="4-2-保险价格里，有风险，也有承担风险的报酬"><a href="#4-2-保险价格里，有风险，也有承担风险的报酬" class="headerlink" title="4.2 保险价格里，有风险，也有承担风险的报酬" data-stellar-navigation=""></a>4.2 保险价格里，有风险，也有承担风险的报酬</h3><p>历史收益告诉我们某种损失发生过多少次，期权价格则告诉我们投资者愿意花多少钱转移这种损失。看跌期权赋予持有人按约定价格卖出资产的权利；行权价远低于当前价格的<strong>深度虚值看跌期权（deep out-of-the-money put）</strong>，主要在大跌时才有明显价值，因此很适合观察市场如何给极端下跌定价。</p>
-<p>两种信息对应两套概率权重。<strong>真实概率测度（physical measure，$P$）</strong>描述现实中事件发生的概率；<strong>风险中性测度（risk-neutral measure，$Q$）</strong>则把不同状态下现金的价值纳入权重，用于给资产定价。假设 $A$ 是未来一次严重下跌事件，$M$ 是随机贴现因子，即把不同未来状态的一元现金换算为今天价值的权重，则在单期设定下</p>
+<p><em>图 5. 共同尾部状态的收益预测。依据 <a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly and Jiang (2013, pp. 44, 46, Tables 3 and 5)</a> 重绘。左图为样本内解释比例，右图为从初始 120 个月之后逐期预测、相对实时历史均值的误差改善；一年期样本外改善为 4.5%。长期收益窗口按原文逐月重叠构造。</em></p>
+<p><strong>个股层面的检验进一步问，谁需要更多补偿。</strong> 每个月，作者用过去 120 个月数据估计 $r^e_{i,t+1}=a_i+b_i\tau_t+\varepsilon_{i,t+1}$，按 $b_i$ 把股票分成五组，再跟踪形成组合后十二个月的收益。高 $b_i$ 表示：当共同尾部状态升高时，这只股票的后续要求回报上升得更多。最高组与最低组的市值加权年收益差约为 4.2 个百分点，等权差约为 4.0 个百分点；常见因子调整后，收益差仍然保留（<a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly &amp; Jiang, 2013, pp. 22–24, Table 6</a>）。</p>
+<p>至此，论文的应用链条完整了：汇集个股极端收益，估计共同尾部状态；用该状态形成市场收益预测；再依据个股对状态的预测敏感度，研究股票之间的补偿差异。它适用于讨论折现率与风险补偿随时间如何变化。即使未来一年没有真正崩盘，投资者在年初承担的风险仍然可能已体现在买入价格中。</p>
+<h3 id="4-2-保险价格里，有风险，也有承担风险的报酬"><a href="#4-2-保险价格里，有风险，也有承担风险的报酬" class="headerlink" title="4.2 保险价格里，有风险，也有承担风险的报酬" data-stellar-navigation=""></a>4.2 保险价格里，有风险，也有承担风险的报酬</h3><p>历史收益记录“实际发生过什么”，期权价格记录“市场愿意花多少钱购买某种状态下的现金”。<strong>看跌期权</strong>允许持有人在到期时按约定行权价 $K$ 卖出资产，支付为 $(K-S_T)_+$。如果 $K$ 远低于当前资产价格，称为<strong>深度虚值看跌期权</strong>；它主要在价格大幅下跌时支付，因此可以用来观察崩盘保险的定价（<a href="#ref-bollerslev-todorov-2009" data-stellar-navigation="">Bollerslev &amp; Todorov, 2009, pp. 5–8</a>）。</p>
+<p>先从定价公式理解这种信息。设 $M$ 为随机贴现因子，即不同未来状态下一元钱折算为今天价值的权重，则期权价格为</p>
+$$
+P_t=E_t^P[M(K-S_T)_+].
+$$
+
+<p>上标 $P$ 表示<strong>真实概率测度（physical measure）</strong>。如果某状态发生概率很低，但它恰逢收入下降、融资收紧，投资者在该状态下一元钱的价值就高，$M$ 也高。于是，这种状态在价格中获得的权重可以显著超过其实际发生概率。</p>
+<p>将贴现因素与概率权重重新整理，得到用于定价的<strong>风险中性测度（risk-neutral measure，$Q$）</strong>。对严重下跌事件 $A$，单期关系为</p>
 $$
 Q_t(A)=\frac{E_t^P[M\mathbf1_A]}{E_t^P[M]}.
 $$
 
-$\mathbf1_A$ 在事件发生时等于 1，否则为 0。危机中一元现金更珍贵，事件 $A$ 在定价中的权重便可能大于它的实际发生概率。因而，保护变贵既可能因为大跌更容易发生，也可能因为投资者更不愿承担同样的大跌风险。
+$\mathbf1_A$ 是事件发生时为 1 的指示变量。若危机状态的 $M$ 较高，$Q_t(A)$ 就会高于 $P_t(A)$。这里已经能看出两条使保险涨价的路径：实际发生危机的机会提高，或危机时现金更加珍贵。研究尾部风险溢价，就是要把这两部分放在同一口径下比较。
 
-<p>价格的不连续变动称为<strong>跳跃（jump）</strong>。为了衡量尾部风险的价差，可以考察<strong>负跳跃变差</strong>：在给定期限内，将超过负向阈值的对数价格跳跃幅度平方后相加。记这一非负随机量为 $X^-$，本文以</p>
+<p><strong>Bollerslev 和 Todorov 的实证场景是标普 500 的崩盘保险。</strong> 作者使用 1990—2008 年的五分钟期货价格，以及 1996—2008 年的期权报价。期权一侧选取较短期限的合约，并比较相对期货价格约 90% 行权价的看跌期权和 110% 行权价的看涨期权。前者主要对应大幅下跌，后者主要对应大幅上涨。历史高频收益中的左右跳跃尾部较接近，期权隐含的左尾权重却明显高于右尾，这为识别下跌保险的特殊价格提供了信息（<a href="#ref-bollerslev-todorov-2009" data-stellar-navigation="">Bollerslev &amp; Todorov, 2009, pp. 13–17</a>）。</p>
+<p>为与后续文献统一，可以用<strong>负跳跃变差</strong>表示尾部风险量。价格的不连续变化称为跳跃；在给定期限内，把幅度超过负向阈值的对数价格跳跃平方后相加，得到 $X^-$。平方让损失越大的跳跃获得越大的权重。本文记</p>
 $$
-\Pi^-_t=E_t^Q[X^-]-E_t^P[X^-]
+\Pi^-_t=E_t^Q[X^-]-E_t^P[X^-].
 $$
 
-<p>表示相应的尾部风险溢价。正值意味着定价中的尾部变差高于真实期望。若进一步把连续波动的累计方差和全部跳跃平方和加起来，就得到<strong>总变差</strong>；它在两种测度下的期望之差，称为<strong>方差风险溢价（variance risk premium）</strong>。这里统一采用 $Q-P$ 的记号约定；Bollerslev 等的理论部分使用 $P-Q$，实证部分又把符号翻转为 $Q-P$，比较回归方向时应以该部分实际定义为准（<a href="#ref-bollerslev-et-al-2015" data-stellar-navigation="">Bollerslev et al., 2015, pp. 117, 126</a>）。</p>
-<h3 id="4-3-期权研究怎样分开“更危险”与“更怕危险”"><a href="#4-3-期权研究怎样分开“更危险”与“更怕危险”" class="headerlink" title="4.3 期权研究怎样分开“更危险”与“更怕危险”" data-stellar-navigation=""></a>4.3 期权研究怎样分开“更危险”与“更怕危险”</h3><p>估计两套权重的困难不同。短期期权在同一天就提供了许多行权价，可以据此推断大跌状态的价格；真正的大跌却很少，现实发生概率仍需从历史数据推断。Bollerslev 和 Todorov 用高频期货收益中较常见的中等跳跃，结合极值近似向更大的跳跃外推，再与短期虚值期权隐含的尾部比较。他们发现，大幅下跌在期权价格中的权重明显高于真实概率估计，而且这部分补偿有自己的变化，单靠当前波动率解释不完（<a href="#ref-bollerslev-todorov-2009" data-stellar-navigation="">Bollerslev &amp; Todorov, 2009, pp. 12–19, 27–28</a>）。</p>
-<p>这项研究的重点，是把股票和方差的风险溢价拆开，说明极端跳跃为何占有重要位置。它并未绕开模型：从中等跳跃推断极端跳跃，仍依赖尾部近似和动态设定。价值在于不必先选定一个完整的消费模型，就能把实际风险与市场给它的价格放在一起比较。</p>
-<p>随后，Bollerslev 等允许期权隐含尾部的<strong>形状</strong>和<strong>强度</strong>分别随时间变化：前者描述跳跃越大、发生权重下降得多快，后者描述总体跳跃活动有多强。他们从不同行权价的短期期权估计这两个量，再构造风险中性左跳尾部变差，简称 <strong>LJV（left jump variation）</strong>。在真实左右跳尾近似对称、风险中性左尾又明显大于右尾等条件下，LJV 可以近似反映投资者为负向尾部风险要求的特殊补偿；它本身仍是风险中性统计量，并非直接观测到的完整溢价差额。</p>
-<p>1996 年 1 月至 2013 年 8 月的美国月度数据中，LJV 对未来六个月市场超额收益的单变量预测回归 $R^2$ 为 11.38%，总方差风险溢价对应值为 7.19%。若强制尾部形状不变，预测关系明显减弱。核心发现是：总方差溢价中不同部分的信息并不相同，负向跳尾包含较多收益预测信息。这是预测回归的证据，尚未给出扣除交易成本后的择时收益（<a href="#ref-bollerslev-et-al-2015" data-stellar-navigation="">Bollerslev et al., 2015, pp. 117–118, 126–128</a>）。</p>
-<p>Andersen 等把同一问题带到美国和欧洲七个股指的期权市场。他们用少数统计变量概括多种期权价格的共同变化，这些变量称为<strong>因子（factor）</strong>。从 2007—2014 年的期权中估计波动因子和左尾因子后，再将左尾因子中可由波动解释的部分剔除，保留额外的尾部信息。结果很有启发性：波动因子主要预测未来实际收益的变差，剩下的尾部信息主要预测未来超额收益，对未来实际负跳跃变差却没有显著预测力。危机过后，波动可能已回落，尾部补偿仍维持高位。作者进一步分解风险溢价，发现收益预测力主要来自负跳跃部分（<a href="#ref-andersen-et-al-2018" data-stellar-navigation="">Andersen et al., 2018, pp. 17–27</a>）。</p>
-<p>因此，期权里的尾部指标有时更像“承担风险的报价”，而不是“大跌预报”。这一判断来自额外的预测和分解检验；仅仅把尾部指标对波动回归、取一个残差，还不足以证明它测到了纯粹的风险价格。</p>
+<p>第一项来自期权定价中的权重，第二项来自实际收益过程的预测，两者相减衡量这一风险量的溢价。连续波动的累计方差加上全部跳跃平方和，构成总变差；对总变差做同样的 $Q-P$ 比较，就得到<strong>方差风险溢价</strong>。Bollerslev 等在理论部分使用相反的 $P-Q$ 符号，在实证部分转为 $Q-P$，本文采用后一方向解释保险补偿（<a href="#ref-bollerslev-et-al-2015" data-stellar-navigation="">Bollerslev et al., 2015, pp. 116–118, 126</a>）。</p>
+<p>按这个定义，期权隐含尾部变差的变化可以拆成 $\Delta E_t^Q[X^-]=\Delta E_t^P[X^-]+\Delta\Pi^-_t$。实际计算时，先把期权估计与收益数据预测统一到相同期限、负跳跃阈值和变差单位，再逐期相减。若期权隐含量上升，而真实测度下的预测量不变，上升部分就计为尾部溢价增加；若两者等幅上升，尾部溢价保持不变，上升来自预测风险增加。这就把“保险变贵”的两种来源分开了。</p>
+<h3 id="4-3-期权研究怎样分开“更危险”与“更怕危险”"><a href="#4-3-期权研究怎样分开“更危险”与“更怕危险”" class="headerlink" title="4.3 期权研究怎样分开“更危险”与“更怕危险”" data-stellar-navigation=""></a>4.3 期权研究怎样分开“更危险”与“更怕危险”</h3><p><strong>Bollerslev–Todorov：先把真实尾部和定价尾部放在同一张图上。</strong> 实际大崩盘稀少，直接用“历史崩盘次数除以交易日数”很难估计随时间变化的风险。作者先用五分钟期货收益区分连续波动和跳跃，再利用出现次数较多的中等跳跃拟合尾部规律，向更大跳跃外推。跳跃强度允许随波动变化，连续波动及正负跳跃的日、周、月信息用于预测未来风险。这提供真实测度 $P$ 下的估计；短期限虚值期权则提供风险中性测度 $Q$ 下的尾部定价（<a href="#ref-bollerslev-todorov-2009" data-stellar-navigation="">Bollerslev &amp; Todorov, 2009, pp. 10–15</a>）。</p>
+<p>这一步很像分别估算“保险公司预计要赔多少”和“客户愿意付多少保费”。原文对标普 500 的分析发现，极端事件的补偿对股票溢价和方差溢价都很重要。作者又检验这些尾部指标能否只由一个波动因素解释：真实跳跃强度与波动联动的设定获得支持，期权隐含尾部却需要额外变化来源。因此，股票价格已经恢复平静时，崩盘保险仍可能昂贵；保险报价中存在独立于当前波动的尾部补偿信息（<a href="#ref-bollerslev-todorov-2009" data-stellar-navigation="">Bollerslev &amp; Todorov, 2009, pp. 26–28, Tables 3–4</a>）。</p>
+<p><strong>Bollerslev–Todorov–Xu：再让尾部的形状也随时间改变。</strong> 如果只是跳跃发生得更频繁，所有大小的跳跃概率可以同比增加；如果尾部变厚，特别大的跳跃会相对增多。作者分别用“强度”和“形状”表示这两种变化。实证中，选取到期剩余 8–45 天的虚值期权：不同行权价的期权价格随虚值程度衰减得多快，用来估计形状；给定形状后的价格水平，用来估计强度。每周重估这两个参数，再积分得到风险中性的<strong>左跳尾部变差 LJV</strong>（<a href="#ref-bollerslev-et-al-2015" data-stellar-navigation="">Bollerslev et al., 2015, pp. 119–120, Section 3</a>）。</p>
+<p>LJV 怎样联系到补偿？原文先把负跳跃溢价分成“未来跳跃强度变化的补偿”和“对跳跃事件本身的特殊定价”。在真实左右大跳跃近似对称时，比较左右尾溢价可抵消部分共同的强度变化补偿；又因为期权隐含左尾远大于右尾，LJV 就成为这项特殊补偿的近似代理。这是论文从期权统计量走到经济解释的推导步骤（<a href="#ref-bollerslev-et-al-2015" data-stellar-navigation="">Bollerslev et al., 2015, pp. 117–118</a>）。</p>
+<p>原文图 5 给出了容易理解的历史对照：2008 年危机中，VIX 和 LJV 都大幅上升，随后 VIX 较快回落，LJV 却在更长时间内保持高位；2010 年欧洲主权债务危机也伴随较持续的 LJV 升高。相对地，2002 年科技股下跌使 VIX 上升，对 LJV 的影响较小。普通波动与极端下跌定价，因此具有不同的时间路径（<a href="#ref-bollerslev-et-al-2015" data-stellar-navigation="">Bollerslev et al., 2015, pp. 126–127, Figure 5</a>）。</p>
+<p>作者将每周指标平均成月度指标，预测未来六个月的市场超额收益。1996 年 1 月至 2013 年 8 月样本中，LJV 单变量回归的 $R^2$ 为 11.38%，总方差风险溢价为 7.19%，从总溢价中减去 LJV 后约为 3.54%；固定尾部形状的 LJV 版本则只有约 1.91%。这一组对照支持两项结论：收益预测信息较多地集中在左尾部分，且让尾部形状变化有助于提取这种信息（<a href="#ref-bollerslev-et-al-2015" data-stellar-navigation="">Bollerslev et al., 2015, p. 128, Table 2</a>）。</p>
+<p><strong>Andersen–Fusari–Todorov：最后检验它到底在预测风险，还是预测收益。</strong> 作者研究标普 500、欧洲斯托克、德国 DAX、瑞士 SMI、英国 FTSE、意大利 MIB 和西班牙 IBEX 七个股指的期权。各市场样本按数据可得性展开，图中共同区间为 2007 年 5 月至 2014 年底。每天一组不同期限、行权价的期权价格，组成“期权曲面”；平值附近报价主要帮助识别波动因子，深度虚值看跌报价主要帮助识别左尾因子（<a href="#ref-andersen-et-al-2018" data-stellar-navigation="">Andersen et al., 2018, pp. 8–10, Table 1</a>）。</p>
+<p>为了分开两者，作者将左尾因子对波动因子回归，取残差 $\mathrm{NJV}^{\perp}$，即尾部信息中随波动共同变化以外的部分。随后做两套预测：一套预测未来由高频收益计算的实际变差，另一套预测未来股票超额收益。第一套中，波动因子发挥主要作用；第二套中，额外尾部因子发挥主要作用。进一步分解后，收益预测信息主要与负跳跃补偿有关，而额外尾部因子对未来实际负跳跃变差没有显著预测力（<a href="#ref-andersen-et-al-2018" data-stellar-navigation="">Andersen et al., 2018, pp. 17–27</a>）。</p>
+<p>这三篇论文依次完成了“比较真实与定价尾部”“提取随时间变化的尾部形状”“检查新增信息预测什么”。在这些实证场景中，期权尾部指标包含股票市场要求回报的信息：Bollerslev–Todorov–Xu 用 LJV 预测未来半年超额收益，Andersen–Fusari–Todorov 则通过回归分离出额外尾部因子的收益预测作用。实际负跳跃风险的估计使用高频收益：先识别跳跃、拟合真实尾部，再利用滞后的波动和跳跃信息预测未来变差。将这个预测量从同口径的期权隐含量中扣除，才得到风险补偿的估计。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/physical-risk-pricing.png" alt="历史收益下的真实尾部风险、期权隐含尾部权重及两者之差" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1368" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[209.1583,19.3087,96.0135,1]}" data-stellar-image-source="/image/market-tail-risk-review/physical-risk-pricing.png"></p>
-<p><em>图 6. 实际风险与风险报价。根据 <a href="#ref-bollerslev-todorov-2009" data-stellar-navigation="">Bollerslev and Todorov (2009, pp. 12–19)</a> 及 <a href="#ref-bollerslev-et-al-2015" data-stellar-navigation="">Bollerslev et al. (2015, pp. 117–118, 126)</a> 整理的概念图。两侧须采用相同期限、跳跃阈值和统计量；LJV 只提供风险中性一侧的信息。</em></p>
-<h3 id="4-4-灾难尚未发生，担忧为什么已经能压低股价"><a href="#4-4-灾难尚未发生，担忧为什么已经能压低股价" class="headerlink" title="4.4 灾难尚未发生，担忧为什么已经能压低股价" data-stellar-navigation=""></a>4.4 灾难尚未发生，担忧为什么已经能压低股价</h3><p>经验研究找到价格关系，还需要经济机制。<strong>罕见灾难模型（rare-disaster model）</strong>把低概率、严重的消费或产出下降加入资产定价：平时股票收益看似足够诱人，但它可能在消费已经大幅下降、钱最有用的时候继续缩水，持有人因此要求补偿。</p>
-<p>Barro 用二十世纪跨国历史来校准灾难规模与频率，避免只根据较平稳的美国经历判断风险。他统计的是一段连续年份中实际人均 GDP 的累计收缩，基准门槛为 15%，并非一年产出或一天股价的跌幅。在模型中，这些罕见但严重的损失能够帮助解释较高的股权溢价和较低的无风险利率（<a href="#ref-barro-2006" data-stellar-navigation="">Barro, 2006, pp. 823–831</a>）。</p>
-<p>但固定灾难概率仍难解释股价为何远比股息波动。Wachter 加入两项变化：灾难发生强度随时间改变；投资者采用<strong>递归偏好（recursive preferences）</strong>，使“多厌恶风险”和“多愿意在今天与未来之间调整消费”可以分别设定。灾难风险上升时，投资者既面对未来可能的消费损失，也承受担忧加深带来的即时股价下跌。因此，即便灾难一直没有发生，股价也能大幅波动，预期收益也会变化（<a href="#ref-wachter-2012" data-stellar-navigation="">Wachter, 2012, pp. 1–3, 12, 15–16</a>）。</p>
-<p>这些模型说明尾部风险为何值得补偿，并不把宏观灾难参数直接转换成某个股票指数下月的崩盘概率。消费灾难、股票跳跃和收益分布的厚尾彼此有关，但各自需要不同的数据来识别。</p>
+<p><em>图 6. 实际风险与风险报价。根据 <a href="#ref-bollerslev-todorov-2009" data-stellar-navigation="">Bollerslev and Todorov (2009, pp. 12–19)</a> 及 <a href="#ref-bollerslev-et-al-2015" data-stellar-navigation="">Bollerslev et al. (2015, pp. 117–118, 126)</a> 整理。收益数据估计真实测度下的尾部，期权提供定价测度下的尾部；相同期限、阈值和统计量下的两者差额构成溢价。</em></p>
+<h3 id="4-4-灾难尚未发生，担忧为什么已经能压低股价"><a href="#4-4-灾难尚未发生，担忧为什么已经能压低股价" class="headerlink" title="4.4 灾难尚未发生，担忧为什么已经能压低股价" data-stellar-navigation=""></a>4.4 灾难尚未发生，担忧为什么已经能压低股价</h3><p>前面的研究从数据提取尾部状态与价格关系。**罕见灾难模型（rare-disaster model）**进一步解释：为什么极小概率事件能够对今天的估值产生很大影响？关键在于灾难会同时改变消费、现金流和投资者对钱的边际评价。</p>
+<p><strong>Barro 从跨国历史重新认识“罕见”的含义。</strong> 仅看美国战后消费，大部分年份的波动很温和；以这种波动为全部风险，用通常大小的风险厌恶系数计算，很难解释股票长期明显高于国库券的平均收益。Barro 因此考察二十世纪多国历史，把连续若干年实际人均 GDP 累计收缩至少 15% 的事件记为灾难。表 1 包括美国 1929—1933 年下降 31%、日本 1943—1945 年下降 52%、德国 1944—1946 年下降 64% 等经历；这些是宏观产出的累计收缩（<a href="#ref-barro-2006" data-stellar-navigation="">Barro, 2006, pp. 826–829, Table I</a>）。</p>
+<p>作者把这些事件的频率与损失规模分布放进消费定价模型。平时，消费按较温和的均值和波动增长；灾难到来时，消费突然按一定比例下降。股票代表对经济现金流的索取权，会在消费下降时一起损失。若投资者采用相对风险厌恶系数为 $\gamma$ 的幂效用，其边际效用与 $C^{-\gamma}$ 成正比。因此，消费大幅收缩会使灾难状态下的一元钱获得很大权重，而股票恰恰在该状态减少支付（<a href="#ref-barro-2006" data-stellar-navigation="">Barro, 2006, pp. 830–839</a>）。</p>
+<p>例如，按模型关系计算，消费下降 30%、$\gamma=4$ 时，边际效用变为原来的 $0.7^{-4}\approx4.16$ 倍。这个计算解释了灾难为何能显著提高股权风险补偿：很小的事件概率，乘上很大的边际效用变化和资产损失，仍可产生很大的价格影响。同时，对安全储值的需求会压低无风险利率。Barro 将模型结果与 G7 国家股票和国库券的历史回报比较；其表 4 中，长样本和 1954—2004 年样本的平均股权溢价都约为 7%，这是模型要解释的经验事实（<a href="#ref-barro-2006" data-stellar-navigation="">Barro, 2006, pp. 841–843, Tables IV–V</a>）。</p>
+<p>原文表 5 量化了这一步的作用：当风险厌恶系数为 4、正常消费增长波动率为 2% 时，不含灾难的模型只产生约 0.16% 的股权溢价。加入每年 1.7% 的灾难概率和历史损失规模分布后，基准溢价提高至 3.6%；再加入 0.5 的债务—权益比，升至 5.4%。模型的预期国库券实际回报也从无灾难时的 12.7% 降至基准的 3.5%。这些对照展示了历史灾难信息如何改变定价结果（<a href="#ref-barro-2006" data-stellar-navigation="">Barro, 2006, pp. 843–846, Table V</a>）。</p>
+<p><strong>Wachter 接着处理一个新问题：没有发生灾难的时期，股票为什么仍能剧烈波动？</strong> 她让灾难发生强度 $\lambda_t$ 随时间变化，并采用<strong>递归偏好</strong>，把风险厌恶与跨期消费替代意愿分开设置。灾难风险上升会减少未来预期现金流、提高股票要求回报，并改变无风险利率。其模型设定下，前两种压低估值的作用占优，股票的价格—股息比下降。因此，坏消息即使只是“将来更可能出事”，也会立刻造成资本损失（<a href="#ref-wachter-2012" data-stellar-navigation="">Wachter, 2012, pp. 10–16, 20–22</a>）。</p>
+<p>Wachter 使用 22 个国家 1870—2006 年的<strong>消费</strong>灾难资料，门槛为累计下降至少 10%，校准出的平均灾难强度为每年 3.55%。她把风险厌恶设为 3，并让股息对消费变化具有杠杆式放大：设股息与 $C^{2.6}$ 成正比，消费下降 40% 时，股息下降约 $1-0.6^{2.6}=74\%$。这体现企业利润通常比居民消费更敏感的经济机制（<a href="#ref-wachter-2012" data-stellar-navigation="">Wachter, 2012, pp. 22–25</a>）。</p>
+<p>检验方式是根据校准模型模拟消费、灾难强度、股价和回报，再与美国 1947 年至 2010 年一季度的数据比较。包含全部模拟年份时，模型股权溢价约 7.6%、股票波动率约 19.9%；只看未发生灾难的年份，分别约 8.9% 和 17.7%；历史数据对应约 7.1% 和 17.7%。特别有解释力的是后一个波动结果：即使删去真正灾难发生的年份，灾难概率的变化仍能产生明显的股价波动（<a href="#ref-wachter-2012" data-stellar-navigation="">Wachter, 2012, pp. 25–27, Table 2</a>）。</p>
+<p>两篇论文的应用因此有所推进：Barro 用跨国灾难史解释平均股权溢价与低利率，Wachter 用灾难风险的动态变化解释正常时期的估值波动和时变预期收益。它们为前文“尾部状态恶化—今天价格下降—随后要求回报提高”的经验关系提供了经济机制。</p>
 <h2 id="五、同一场市场波动，为什么有人更容易受伤"><a href="#五、同一场市场波动，为什么有人更容易受伤" class="headerlink" title="五、同一场市场波动，为什么有人更容易受伤" data-stellar-navigation=""></a>五、同一场市场波动，为什么有人更容易受伤</h2><p>市场有多危险，是一个随时间变化的问题；哪只股票、哪种策略更怕这种危险，则要比较它们在相同状态下的表现。下面几种方法的差别，可以归结为一句话：先选出谁的坏日子，再观察谁的收益。</p>
-<h3 id="5-1-市场表现较差时，这只股票跟跌多少"><a href="#5-1-市场表现较差时，这只股票跟跌多少" class="headerlink" title="5.1 市场表现较差时，这只股票跟跌多少" data-stellar-navigation=""></a>5.1 市场表现较差时，这只股票跟跌多少</h3><p>普通市场 beta 是股票收益对市场收益的线性敏感度。若只在市场收益低于自身均值的日子计算同样的敏感度，就得到<strong>下行 beta（downside beta）</strong>。令 $r_i$、$r_m$ 分别为股票和市场的超额收益，$\mu_m$ 为市场超额收益均值，则</p>
+<h3 id="5-1-市场表现较差时，这只股票跟跌多少"><a href="#5-1-市场表现较差时，这只股票跟跌多少" class="headerlink" title="5.1 市场表现较差时，这只股票跟跌多少" data-stellar-navigation=""></a>5.1 市场表现较差时，这只股票跟跌多少</h3><p>CAPM 用普通市场 beta 衡量股票对市场的敏感度：市场多涨或多跌一个百分点时，股票通常随之变化多少。但投资者可能特别在意下跌阶段的联动，因为那时其他股票、劳动收入与融资条件也可能变差。Ang 等据此研究<strong>下行 beta（downside beta）</strong>，即只在市场收益低于其均值的日子计算敏感度（<a href="#ref-ang-et-al-2004" data-stellar-navigation="">Ang et al., 2004, pp. 1–8</a>）。</p>
+<p>令 $r_i,r_m$ 为股票与市场超额收益，$\mu_m$ 为市场超额收益均值，则</p>
 $$
 \beta_i^-=
 \frac{\operatorname{Cov}(r_i,r_m\mid r_m\lt\mu_m)}
 {\operatorname{Var}(r_m\mid r_m\lt\mu_m)}.
 $$
 
-<p>这个条件覆盖大量表现低于平均水平的交易日，测量的是较宽泛的下行暴露。Ang 等更进一步，将下行 beta 减去普通 beta，得到<strong>相对下行 beta</strong>，以分开一般市场敏感度与下跌时额外增加的敏感度。否则，高下行 beta 股票的较高收益，可能只是普通市场风险也更高。</p>
-<p>在 1963—2001 年的主要同期检验中，按相对下行 beta 排序后，高低组合的年收益差约为 6.6 个百分点，普通 beta 则基本持平。这比单看下行 beta 排序的收益差，更直接地支持下行暴露另有补偿（<a href="#ref-ang-et-al-2004" data-stellar-navigation="">Ang et al., 2004, pp. 8–10, 28</a>）。</p>
-<p>不过，同一年估出的风险和收益相互对应，不等于过去风险能指导下一期选股。改用历史下行 beta 预测下月收益时，高低组合的月收益差只有 0.11%，不显著；排除波动最高的五分之一股票后，差额为 0.34%，才达到常规显著水平。作者将差异与高波动股票的低后续收益联系起来。这里得到的经验是：风险补偿关系和可用于选股的滞后信号，需要分别检验（<a href="#ref-ang-et-al-2004" data-stellar-navigation="">Ang et al., 2004, pp. 17–20, 32–33</a>）。</p>
-<h3 id="5-2-重仓股大跌时，其他持仓能不能接住它"><a href="#5-2-重仓股大跌时，其他持仓能不能接住它" class="headerlink" title="5.2 重仓股大跌时，其他持仓能不能接住它" data-stellar-navigation=""></a>5.2 重仓股大跌时，其他持仓能不能接住它</h3><p>如果一个投资者把相当多财富放在一只股票上，其余买了市场基金，他最差的日子未必是指数最差的日子。Bali 等由此改变了条件：先找出个股最差的交易日，再看同一天市场是否也很差。他们将这一指标称为<strong>混合尾部协动风险（hybrid tail covariance risk，H-TCR）</strong>。</p>
-<p>令 $h_i$、$h_m$ 分别为个股和市场收益的低分位阈值，指标写为</p>
+<p>计算时，先用市场收益筛出下行日，再在这些同一天的股票—市场收益对上计算协方差和市场方差。它等价于在所选样本中做带截距的线性回归。条件是“市场低于自身平均水平”，所以这里研究的是广义下行状态；选样后的斜率，表示股票在这些日子跟随市场变动的幅度。</p>
+<p>还需要分开普通 beta 与下行 beta。例如，一只股票在所有市场状态都很敏感，当然也可能具有很高的下行 beta；投资者得到的补偿可能来自通常的市场暴露。作者因此定义<strong>相对下行 beta</strong> 为 $\beta_i^--\beta_i$，用来刻画下行时额外增加的敏感度（<a href="#ref-ang-et-al-2004" data-stellar-navigation="">Ang et al., 2004, pp. 8–10</a>）。</p>
+<p><strong>原文先用同期组合检验经济定价关系。</strong> 基准样本是 1963—2001 年的纽约证券交易所股票。作者逐月考察一个十二个月区间，利用该区间的日收益估计每只股票的普通、上行和下行 beta，按指标分成五组，再比较同一区间的年超额收益。相对下行 beta 最高组与最低组的年收益差约为 6.6 个百分点，五组的普通 beta 基本持平。这组比较的作用，是在一般市场敏感度相近的股票之间，识别下行暴露与平均回报的关系（<a href="#ref-ang-et-al-2004" data-stellar-navigation="">Ang et al., 2004, pp. 7–10, Table 1</a>）。</p>
+<p>作者还进行 Fama–MacBeth 横截面回归：在每个截面上，以股票收益为因变量，解释变量同时放入下行 beta、规模、账面市值比、过去收益及其他风险特征，再将各期系数求平均。这样可以检查，组合排序看到的收益差是否由小公司、价值股或其他特征造成。控制这些变量后，下行风险的定价关系仍然保留（<a href="#ref-ang-et-al-2004" data-stellar-navigation="">Ang et al., 2004, pp. 10–13, Table 2</a>）。</p>
+<p><strong>若应用于选股，信息顺序要改为过去风险、未来收益。</strong> 原文随后用历史下行 beta 排序并持有到下月。这个版本中，高低组月收益差为 0.11%，统计上不显著；排除波动率最高的五分之一股票后，差额为 0.34%，达到常规显著水平。作者将这种变化联系到高波动股票的低后续收益：下行风险与总波动同时存在时，两种收益关系会相互抵消（<a href="#ref-ang-et-al-2004" data-stellar-navigation="">Ang et al., 2004, pp. 17–20, Tables 5–6</a>）。</p>
+<p>这篇研究因而提供了两个相连的应用：解释普通 beta 相近的股票为何回报不同，以及检验历史下行敏感度能否用于下一期选股。前一问题由同期风险—收益关系回答，后一问题由滞后排序结果回答；两套证据各自对应明确的投资问题。</p>
+<h3 id="5-2-重仓股大跌时，其他持仓能不能接住它"><a href="#5-2-重仓股大跌时，其他持仓能不能接住它" class="headerlink" title="5.2 重仓股大跌时，其他持仓能不能接住它" data-stellar-navigation=""></a>5.2 重仓股大跌时，其他持仓能不能接住它</h3><p>Bali 等关注一种常见持仓结构：投资者直接持有少数几只股票，同时通过基金或退休账户持有分散组合。论文引用的家庭账户研究显示，直接持股的中位数往往只有两三只。在这种结构下，某只重仓股大跌就可能使家庭财富严重受损，因此需要观察“重仓股最差时，其他财富表现如何”（<a href="#ref-bali-et-al-2013" data-stellar-navigation="">Bali et al., 2013, p. 5</a>）。</p>
+<p>原文用下面两个状态说明，<strong>持仓权重会改变最坏状态的排序</strong>：</p>
+<div class="md-table-scroll"><table>
+<thead>
+<tr>
+<th>状态</th>
+<th>个股收益</th>
+<th>市场收益</th>
+<th>个股占 60%、市场占 40%</th>
+<th>个股占 40%、市场占 60%</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>个股跌得更多</td>
+<td>−20%</td>
+<td>−10%</td>
+<td>−16%</td>
+<td>−14%</td>
+</tr>
+<tr>
+<td>两者一起下跌</td>
+<td>−15%</td>
+<td>−15%</td>
+<td>−15%</td>
+<td>−15%</td>
+</tr>
+</tbody></table></div>
+<p>个股占 60% 时，第一种状态损失更严重；个股占 40% 时，第二种状态更严重。因此，只用市场最差的日期来衡量每个人的坏状态，会遗漏集中持仓的特点。这是作者提出**混合尾部协动风险（hybrid tail covariance risk，H-TCR）**的出发点（<a href="#ref-bali-et-al-2013" data-stellar-navigation="">Bali et al., 2013, pp. 6–7</a>）。</p>
+<p>令 $h_i,h_m$ 分别为个股和市场的低分位收益阈值。原文对个股进入自身尾部时的乘积求和；写成尾部内平均的形式，便于解释，为</p>
 $$
 \operatorname{H\!\text{-}\!TCR}_i
 =E[(r_i-h_i)(r_m-h_m)\mid r_i\lt h_i].
 $$
 
-<p>个股跌破阈值时，第一项为负。如果市场也跌破自己的阈值，两项相乘为正，表示两部分财富在坏日子一起受损；如果市场仍高于其阈值，乘积可以为负。市场项没有被截断，指标也不是围绕条件均值计算的协方差。它保留的正是“重仓股出事时，分散持仓还能提供多少缓冲”这一信息（<a href="#ref-bali-et-al-2013" data-stellar-navigation="">Bali et al., 2013, pp. 3, 6–8</a>）。</p>
-<p>基准估计用过去六个月日收益及各自最差十分位，每月更新，观察下月收益。1963 年 7 月至 2009 年 12 月，高 H-TCR 减低 H-TCR 的等权十分位组合平均月收益为 0.77%，对常见股票特征作控制后，正向关系仍在。反而是个股自身的尾部损失和以市场坏日子为条件的指标，没有得到相同结果（<a href="#ref-bali-et-al-2013" data-stellar-navigation="">Bali et al., 2013, pp. 10–12, 23–24, 32</a>）。</p>
-<p>这里的关键并非又多了一个尾部名称，而是投资者的实际持仓改变了“最坏状态”的含义。对充分分散的组合，市场状态自然重要；对集中持仓，个股与其他财富在个股坏日子里的配合也重要。</p>
+<p>先由 $r_i<h_i$ 选出个股坏日子。此时第一项为负：如果市场也低于自己的阈值，第二项也为负，乘积为正，表明两部分财富一起受损；若市场高于自己的阈值，乘积为负，表示市场持仓提供了缓冲。亏得越深，乘积的绝对值越大。因此，h-tcr="" 同时考虑坏日子是否重叠和亏损幅度。它使用阈值作为参照；原文求和形式与上述平均形式，在尾部观测数相同时仅差一个比例因子（<a="" href="#ref-bali-et-al-2013">Bali et al., 2013, pp. 6–8, equation 9）。</h_i$></p>
+<p><strong>两类坏日子在实际数据中差多少？</strong> 作者在约 125 天的半年窗口中，分别找出个股和市场最差的约十三天。两组日期的重叠天数，中位数约为 2.77 天，只有约两成。一年窗口得到相近的重叠比例。这项检查直接说明，以个股尾部为条件会选出一组与市场尾部很不相同的观察日（<a href="#ref-bali-et-al-2013" data-stellar-navigation="">Bali et al., 2013, p. 8</a>）。</p>
+<p>实证选股使用过去六个月日收益，基准阈值为各自第 10 百分位，每月计算 H-TCR、分成十组，再观察下月收益。样本覆盖 1963 年 7 月至 2009 年底，并剔除极小市值及低价股票。高 H-TCR 减低 H-TCR 的等权组合月收益差为 0.77%；控制规模、价值、动量、流动性、波动及极端正收益等特征后，正向关系仍在。相比之下，仅看个股自身尾部损失，或只在市场坏日子计算尾部暴露，得不到相同的正向收益关系（<a href="#ref-bali-et-al-2013" data-stellar-navigation="">Bali et al., 2013, pp. 10–12, 23–24, Table 1</a>）。</p>
+<p>这篇论文把应用场景锁定在<strong>集中持股与分散财富的配合</strong>。一只股票自身亏损严重时，若市场基金也无法提供缓冲，持有它就需要更多补偿；若其坏日子里其他财富相对稳定，持有人更容易承受这笔损失。H-TCR 的选样条件正是由这一经济问题决定的。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/conditioning-map.png" alt="下行beta、H-TCR与LTD在选样条件和观察结果上的区别" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1386" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[209.0169,24.6843,96.2123,1]}" data-stellar-image-source="/image/market-tail-risk-review/conditioning-map.png"></p>
-<p><em>图 7. 三种暴露，三种条件。根据 <a href="#ref-ang-et-al-2004" data-stellar-navigation="">Ang et al. (2004, pp. 8–10)</a>、<a href="#ref-bali-et-al-2013" data-stellar-navigation="">Bali et al. (2013, pp. 6–8)</a> 及 <a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al. (2016, pp. 5–8)</a> 整理。箭头表示选样与计算顺序；LTD 还要考察尾部概率趋近零时的极限。</em></p>
-<h3 id="5-3-一起崩盘的股票，平时是否更便宜"><a href="#5-3-一起崩盘的股票，平时是否更便宜" class="headerlink" title="5.3 一起崩盘的股票，平时是否更便宜" data-stellar-navigation=""></a>5.3 一起崩盘的股票，平时是否更便宜</h3><p>沿用前文定义的 LTD，可以进一步检验共同崩盘是否获得补偿。这个指标先剥离两条收益分布的尺度，关注两者是否一起进入各自的极端区域。</p>
-<p>Chabi-Yo 等每月用过去一年日收益估计股票与市场的联合分布。为缓解极端观测太少的问题，他们让不同连接函数的混合来拟合整个分布，再从拟合结果计算 LTD。这样利用了更多数据，但尾部结果也会受到所选函数的影响。</p>
-<p>1963—2012 年美国样本中，强 LTD 组合比弱 LTD 组合的未来月度超额收益高 0.360%；用市场、规模、价值和动量四个常见收益因子解释后，剩余平均收益差仍为 0.237%。但换到严重下跌日，弱 LTD 股票表现更好。根据此前估计的 LTD 排序，在样本中十个最差市场交易日，弱 LTD 组合平均少跌 2.90 个百分点（<a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al., 2016, pp. 13–15, 44–45</a>）。</p>
+<p><em>图 7. 三种暴露的选样顺序。根据 <a href="#ref-ang-et-al-2004" data-stellar-navigation="">Ang et al. (2004, pp. 8–10)</a>、<a href="#ref-bali-et-al-2013" data-stellar-navigation="">Bali et al. (2013, pp. 6–8)</a> 及 <a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al. (2016, pp. 5–8)</a> 整理。下行 beta 选择市场下行日，H-TCR 选择个股尾部日，LTD 则比较两者共同进入极端分位区域的倾向。</em></p>
+<h3 id="5-3-一起崩盘的股票，平时是否更便宜"><a href="#5-3-一起崩盘的股票，平时是否更便宜" class="headerlink" title="5.3 一起崩盘的股票，平时是否更便宜" data-stellar-navigation=""></a>5.3 一起崩盘的股票，平时是否更便宜</h3><p>Chabi-Yo 等把问题进一步推到共同崩盘：即使两只股票的普通 beta 相近，它们在市场最差时一起落入自身尾部的倾向也可能不同。论文先模拟几种联合分布：边际分布都为标准正态，线性相关系数都为 0.8，但有的在左下角聚集，有的在右上角聚集，有的两端都聚集。这个实验表明，相同相关系数可以对应不同的共崩盘暴露（<a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al., 2016, pp. 5–6, Figure 1</a>）。</p>
+<p>作者采用第 3.4 节的 LTD 作为暴露指标。实际困难在于，每月只用此前一年日收益时，真正极端的共同观测很少。其估计方案分三步。第一，把股票和市场收益转为经验分位数，即各自在窗口内的排名除以 $n+1$。第二，在这个统一尺度上拟合连接函数。第三，从拟合函数的参数计算其隐含的 LTD，得到股票在市场极端下跌时共同进入左尾的敏感度（<a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al., 2016, pp. 6–10</a>）。</p>
+<p>拟合时，作者没有让每只股票永远服从同一种依赖形状，而是构造三类连接函数的混合：一类描述下尾依赖，一类没有渐近尾部依赖，一类描述上尾依赖。每类有四种候选，合计 $4\times4\times4=64$ 种组合。对每个股票—月份，先估计各候选的参数和混合权重，再用 Integrated Anderson–Darling 距离比较模型与经验联合分布的接近程度，选择最合适的一个。这一距离对分布尾端的偏差赋予较大权重，因而与研究共崩盘的目的相符（<a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al., 2016, pp. 7–10, equation 5</a>）。</p>
+<p><strong>原文用两组收益检验指标的经济含义。</strong> 第一组是危机保护：每月按此前估计的 LTD 分成五组，再看这些组在历史上最差的市场日表现如何。十个最差市场交易日中，低 LTD 组平均比高 LTD 组少跌 2.90 个百分点。形成组合时使用的是过去信息，而最差日期用于事后的压力比较。这个检验先确认，估计出的“低共崩盘暴露”确实对应较好的危机表现（<a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al., 2016, pp. 13–15, 44, Table 3</a>）。</p>
+<p>第二组是平时补偿：在 1963—2012 年样本中，按过去一年 LTD 排序并持有下月，高 LTD 组的月度超额收益比低 LTD 组高 0.360 个百分点。再把两组收益差对市场、规模、价值和动量因子回归，剩余平均收益差，即四因子 alpha，为每月 0.237 个百分点。这个调整检查了收益差中有多少能由常见风险和风格暴露解释（<a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al., 2016, p. 45, Table 4</a>）。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/ltd-return-tradeoff.png" alt="五组LTD股票的未来平均月收益和最差十个市场交易日的平均日收益" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1206" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[38.8315,5.8405,90.3728,1]}" data-stellar-image-source="/image/market-tail-risk-review/ltd-return-tradeoff.png"></p>
-<p><em>图 8. 收益补偿与危机保护。依据 <a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al. (2016, pp. 44–45, Tables 3 and 4)</a> 重绘，展示市值加权五分位组合。左图使用全样本后续月度超额收益，右图只看事后选出的十个最差市场日；两图的期限和纵轴不同。组合用此前一年估计的 LTD 排序，不需要事先知道危机日期。</em></p>
-<p>这两组结果共同讲清了补偿与保护的关系：容易共崩盘的股票，持有人要求较高的平时回报；较能抵御共崩盘的股票，持有人愿意接受较低回报。研究能够识别“危机发生时谁更脆弱”，并没有因此预测出危机日期。十个最差交易日的比较也是历史压力检验，不能当作预先知道这些日期的交易规则。</p>
-<h3 id="5-4-动量最怕的，有时恰好是市场反弹"><a href="#5-4-动量最怕的，有时恰好是市场反弹" class="headerlink" title="5.4 动量最怕的，有时恰好是市场反弹" data-stellar-navigation=""></a>5.4 动量最怕的，有时恰好是市场反弹</h3><p>回到开头的动量亏损。Daniel 等研究的基准按过去第 12 至第 2 个月的累计收益排序，跳过最近一个月，买入赢家十分位、卖空输家十分位。在 1927—2013 年，策略有十三个月亏损超过 20%；这些月份市场平均超额收益却为正 16.14%，输家组合更达到 45.69%。主要损失来自空头端暴涨（<a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al., 2017, pp. 7–9, 43</a>）。</p>
-<p>2009 年 4 月提供了一个直观例子：市场超额收益为 10.19%，动量的赢家组合为 −0.13%，输家组合却上涨 45.76%。按策略的多空构造，收益就是 $-0.13\%-45.76\%=-45.89\%$。投资者即便看对市场反弹方向，也可能因做空输家而严重受损。这三个数及以下另外两个月的结果均来自原文表 2。</p>
+<p><em>图 8. 收益补偿与危机保护。依据 <a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al. (2016, pp. 44–45, Tables 3 and 4)</a> 重绘市值加权五分位组合。组合按此前一年 LTD 排序；左图展示后续月度超额收益，右图展示十个最差市场日的平均日收益。两幅图分别检验平时补偿和危机表现。</em></p>
+<p>两项结果接在一起，就形成了定价故事：高 LTD 股票在市场危机中提供的保护较少，买入时需要更低价格，因此后续平均回报较高；低 LTD 股票在最需要保护的时候损失较轻，投资者愿意为此接受较低的平时回报。对选股者，LTD 可用于比较股票之间的危机暴露；对组合经理，低 LTD 组合的机会成本就是这份保险的持有代价。图 8 左右两部分分别展示补偿和保护，合起来才构成这项资产定价检验。</p>
+<h3 id="5-4-动量最怕的，有时恰好是市场反弹"><a href="#5-4-动量最怕的，有时恰好是市场反弹" class="headerlink" title="5.4 动量最怕的，有时恰好是市场反弹" data-stellar-navigation=""></a>5.4 动量最怕的，有时恰好是市场反弹</h3><p>Daniel 等的研究对象是<strong>动量策略</strong>：每月按过去第 12 至第 2 个月的累计收益给股票排序，跳过最近一个月，买入赢家十分位、卖空输家十分位。平时，趋势延续使策略获利；市场在大跌后猛烈反弹时，过去输家可能涨得远快于赢家，空头腿就会发生大额损失。1927—2013 年样本中，动量共有十三个月亏损超过 20%；这些月份市场平均超额收益为正 16.14%，输家组合平均为正 45.69%（<a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al., 2017, pp. 7–9, 43, Table 2</a>）。</p>
+<p>2009 年 4 月是一个可以直接核算的例子：市场超额收益 10.19%，赢家组合 −0.13%，输家组合 45.76%，所以动量收益为 $-0.13\%-45.76\%=-45.89\%$。空头亏损来自借来卖出的输家股大涨，买回归还时要付出更多资金。图 9 还列出同年另外两个动量崩溃月，显示这种损失来源如何重复出现（<a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al., 2017, p. 43, Table 2</a>）。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/momentum-rebound.png" alt="2009年三个动量崩溃月的市场、赢家、输家和动量收益对比" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2088" height="1206" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[43.0276,5.9535,94.7537,1]}" data-stellar-image-source="/image/market-tail-risk-review/momentum-rebound.png"></p>
-<p><em>图 9. 市场反弹与动量亏损。依据 Daniel et al. (2017, p. 43, Table 2) 重绘；仅展示原表中的三个 2009 年崩溃月。市场、赢家和输家为超额收益，动量为赢家减输家。原表先筛选动量亏损超过 20% 的月份，因此此图用于解释这些亏损的来源，不用于估计反弹期间发生崩溃的概率。</em></p>
-<p>为什么输家会突然反弹得这么猛？股价长期下跌后，债务与固定经营支出相对于剩余股权变得更大，这就是有效杠杆上升。股东只享有扣除债务后的剩余价值，又受有限责任保护，股权因而类似看涨期权：企业价值已经很低时，再跌能损失的股权有限；一旦经营前景改善，股权却可能成倍上涨。动量卖空这些股票，就带上了卖出看涨期权般的收益形状。即便账面债务很少，固定经营成本也能产生类似作用。</p>
-<p>这种关系可以用一个简单的分段式说明。令 $r_{M,t}$ 为市场超额收益，$r_{\mathrm{MOM},t}$ 为动量收益，$a$ 为截距，$b_0$ 为市场非正收益时的敏感度，$b_+$ 为市场上涨时额外增加的敏感度，则</p>
+<p><em>图 9. 市场反弹与动量亏损。依据 <a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al. (2017, p. 43, Table 2)</a> 重绘三个 2009 年动量崩溃月。市场、赢家和输家为超额收益，动量为赢家减输家；2009 年 4 月的 −45.89% 可由两条持仓腿直接相减得到。</em></p>
+<p><strong>输家为什么具有特别强的反弹敏感度？</strong> 原文的解释是有效杠杆。企业价值先大幅下降，债务与固定经营成本相对剩余股权变大；股东享有企业扣除债务后的剩余价值，又有有限责任保护，股权因此呈现看涨期权般的非线性。企业处于困境时，前景略有改善就可能使剩余股权大幅升值。动量做空这些公司，相当于承担卖出看涨期权般的反弹风险；固定经营成本也能产生这种放大，所以低账面负债企业同样可能出现该特征（<a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al., 2017, pp. 9–12</a>）。</p>
+<p>作者用分段市场回归检验这一机制：</p>
 $$
 r_{\mathrm{MOM},t}
 =a+b_0r_{M,t}+b_+\max(r_{M,t},0)+\varepsilon_t.
 $$
 
-<p>市场上涨时总敏感度为 $b_0+b_+$。当 $b_+$ 显著为负，市场反弹越强，动量损失就可能越大。由于式中的期权形状项不是扣除成本后的可交易超额收益，截距 $a$ 不能直接解释成策略的异常收益；原文另用期权价格作了调整（<a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al., 2017, pp. 10–14, 23–26</a>）。</p>
-<p>作者再用<strong>隐马尔可夫模型（hidden Markov model，HMM）</strong>识别这种暴露：假设市场在不可直接观察的平静、动荡两种状态间转换，两种状态有不同的收益、波动和上涨敏感度；根据截至上月的市场及动量收益，更新本月处于动荡状态的概率。模型因此同时利用了波动和收益形状，而不只把高波动叫作危险。</p>
-<p>原文确有 1980 年 9 月至 2013 年 12 月的递归样本外检验：每月只使用此前数据重新估计参数，大额亏损仍集中在较高的动荡概率区间。不过，“十三次崩溃全部发生在概率超过 80% 时”的结果使用了全样本参数，而且高概率状态共出现 155 个月，不能理解为十三次精准报时。模型的作用是识别风险容易积累的环境，是否据此减仓，还要比较误报的机会成本与避险收益（<a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al., 2017, pp. 20–22, 49, 58</a>）。</p>
-<h2 id="六、知道风险以后，怎样改变组合"><a href="#六、知道风险以后，怎样改变组合" class="headerlink" title="六、知道风险以后，怎样改变组合" data-stellar-navigation=""></a>六、知道风险以后，怎样改变组合</h2><p>风险指标只有改变持仓，才会改变投资结果。这里有两种决定：一是重新分配资产权重，让组合少承受某类损失；二是保留原来的选股或因子规则，只调整投入多少资金。前者需要估计资产之间如何共同亏损，后者需要判断风险何时值得承担。</p>
-<h3 id="6-1-把尾部损失写进组合约束"><a href="#6-1-把尾部损失写进组合约束" class="headerlink" title="6.1 把尾部损失写进组合约束" data-stellar-navigation=""></a>6.1 把尾部损失写进组合约束</h3><p>投资者可以要求：在最差的 $1-\alpha$ 部分情景里，平均损失不能超过给定预算。这就是对 $\alpha$ 水平的 CVaR 设置上限。困难在于，组合权重一变，哪些情景属于这一最差部分也会改变，不能先选出一组坏日子，再把它们永远固定下来。</p>
-<p>一种有效做法是引入辅助变量 $\eta$，让优化程序同时寻找组合和尾部起点。设 $w$ 为资产权重，$L(w)$ 为组合损失，$(x)_+=\max(x,0)$，则</p>
+<p>市场收益非正时斜率为 $b_0$，为正时斜率为 $b_0+b_+$。如果 $b_+&lt;0$，动量在上涨时具有额外的负敏感度。作者按此前 36 个月市场累计收益，把月份分为低、中、高三组；在低组中，输家对上涨项的系数约为 0.72，动量则显著为负。十三次崩溃中有十一次落在该低组。控制这种非线性后，低组动量收益的偏度从 −2.33 变为残差偏度 −0.48，说明卖出看涨式暴露解释了相当一部分左尾形状（<a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al., 2017, pp. 10–12, Table 3</a>）。</p>
+<p><strong>怎样在每个月开始时判断是否处于这种环境？</strong> 作者使用<strong>隐马尔可夫模型（hidden Markov model，HMM）</strong>，设市场存在平静和动荡两种无法直接观察的状态。每种状态有自己的市场收益、波动和动量上涨敏感度；两种状态之间按一定概率转换。模型先依据上月的状态概率和转移概率，算出本月动荡的先验概率；等本月市场与动量收益出现，再比较它们在两种状态下的可能性，更新状态概率。下个月的预测就从这个更新后的概率出发（<a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al., 2017, pp. 13–20</a>）。</p>
+<p>论文分别报告两种估计。全样本参数下，十三次崩溃都处于预测动荡概率超过 80% 的月份，该高概率区间共包含 155 个月。递归样本外版本则从 1980 年 9 月开始，每月只用此前数据重估参数；大额亏损同样集中在高动荡概率区间。前一检验展示模型识别的状态分布，后一检验展示当时可得信息的预测效果（<a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al., 2017, pp. 20, 49, 58, Table 7 and Figure 2</a>）。</p>
+<p>作者还专门比较“捕捉崩溃所需的预警范围”。在 1930—2013 年的全样本比较中，各指标的阈值选到能覆盖所有超过 20% 的动量亏损：基准 HMM 有 114 个未发生崩溃的预警月，过去六个月动量波动指标为 187 个；从 HMM 去掉上涨非线性项后，增至 150 个。这个实验显示，把策略对反弹的特殊暴露加入模型，有助于比单看波动更集中地识别危险环境（<a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al., 2017, pp. 21–22, Table 8</a>）。</p>
+<p>动量案例把本节的核心问题具体化了：风险来自持仓对某种状态的支付结构。对做多股票，市场大跌通常是坏状态；对做空过去输家的动量策略，大跌后的急剧反弹可能更加危险。原文用输家与赢家的收益差核算亏损，再用非线性回归和状态模型识别反弹暴露，因此将策略的大额损失明确归结到了空头持仓及其发生环境。</p>
+<h2 id="六、知道风险以后，怎样改变组合"><a href="#六、知道风险以后，怎样改变组合" class="headerlink" title="六、知道风险以后，怎样改变组合" data-stellar-navigation=""></a>六、知道风险以后，怎样改变组合</h2><p>风险指标只有改变持仓，才会改变投资结果。这里有两种决定：一是重新分配资产权重，让组合少承受某类损失；二是保留原来的选股或因子规则，只调整投入多少资金。前者把各资产的同期收益合成为候选组合损失，用尾部预算筛选权重；后者根据预测收益与方差计算投入比例，或按目标波动直接缩放持仓。</p>
+<h3 id="6-1-把尾部损失写进组合约束"><a href="#6-1-把尾部损失写进组合约束" class="headerlink" title="6.1 把尾部损失写进组合约束" data-stellar-navigation=""></a>6.1 把尾部损失写进组合约束</h3><p>Palmquist、Uryasev 和 Krokhmal 研究的是一个明确的配置问题：投资者已知一组可能的未来资产收益，希望在最差情景的平均损失不超过预算的条件下，尽量提高期望收益。CVaR 在这里直接决定可接受的持仓集合。困难在于，权重一变，哪些情景进入最差部分也会变化；优化程序需要同时选择权重和尾部边界（<a href="#ref-palmquist-1999" data-stellar-navigation="">Palmquist et al., 1999, pp. 5–12</a>）。</p>
+<p>设资产权重为 $w$，情景损失为 $L(w)$，引入一个待优化的边界 $\eta$。CVaR 可以写为</p>
 $$
 \operatorname{CVaR}_{\alpha}(L(w))
 =\min_{\eta}\left\{\eta+\frac{1}{1-\alpha}\mathbb E[(L(w)-\eta)_+]\right\}.
 $$
 
-<p>对于 $N$ 个等概率情景，令 $L_s(w)$ 为第 $s$ 个情景的损失，$z_s$ 为超过 $\eta$ 的损失，风险预算为 $B$，就能把约束写成</p>
+<p>读这个式子，可以把 $\eta$ 理解为暂定的尾部入口：入口以下的损失不增加第二项，入口以上只计算超出部分，再按尾部概率放大。如果入口设得太低，计入的超额损失太多；设得太高，第一项本身又大。最小化后的边界位于相应分位点，整个表达式等于尾部平均损失。</p>
+<p>若有 $N$ 个等概率情景，给每个情景引入变量 $z_s$ 表示超过边界的部分，风险预算为 $B$，约束变为</p>
 $$
 \eta+\frac{1}{N(1-\alpha)}\sum_{s=1}^{N}z_s\leq B,
 \qquad z_s\geq L_s(w)-\eta,\quad z_s\geq0.
 $$
 
-<p>当情景损失随权重线性变化，配合线性的预算、持仓和交易限制，整个问题可以用线性规划求解。Palmquist 等把这一方法用于“在 CVaR 预算内尽量提高期望收益”，并展示了如何把现金、比例交易成本和单只股票权重上限一起纳入模型。贡献在于让尾部约束能够实际求解，而不是证明某组最优权重会在未来胜出（<a href="#ref-palmquist-1999" data-stellar-navigation="">Palmquist et al., 1999, pp. 5–12</a>）。</p>
-<p>计算上的方便仍有一个前提：情景要包含需要防范的风险。若历史窗口恰好没有共同暴跌，优化器可能把组合配置到几只过去从未一起亏损的资产上。求得很低的 CVaR，只能说明组合适合输入的情景。危机情景、权重上限和成本假设，应与优化结果一起接受检验。</p>
-<h3 id="6-2-少亏大钱，也要付出代价"><a href="#6-2-少亏大钱，也要付出代价" class="headerlink" title="6.2 少亏大钱，也要付出代价" data-stellar-navigation=""></a>6.2 少亏大钱，也要付出代价</h3><p>只盯着最坏的损失，可能让资金过度集中于少数历史尾部较轻的资产。Dias 尝试把日常分散化与极端损失一起考虑。她先对不同资产子集分别求解满足目标收益的最小方差组合，再从这些候选组合中选出 CVaR 最低的一个。每个候选组合的 CVaR 都由组合收益估计，因此保留了资产共同涨跌的信息。另一种单阶段方案，把各资产 CVaR 的加权和放进目标函数；这个和是组合 CVaR 的上界，较容易计算，却没有利用尾部的分散效果（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 9–12</a>）。</p>
-<p>研究用美国十个行业组合，每周根据此前 1,000 个交易日重估权重，考察 2003—2014 年的后续表现，禁止做空，也不持有现金。两阶段方案在金融危机子期表现较好，但优势有明显代价：危机前放弃了收益，危机时换手更高。全测试期的年化 Sharpe 比率——平均超额收益除以超额收益标准差——为 0.909，低于均值—方差组合的 0.976；危机子期分别为 0.178 和 0.047。原研究用<strong>分块重抽样（block bootstrap）</strong>估计不确定性：将连续的收益片段反复抽取，重新计算绩效；由此得到的置信区间很宽（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 6–7, 23, 25–26</a>）。</p>
+<p>只要 $L_s(w)$ 随持仓线性变化，这些都是线性约束。再加入资金预算、禁止做空、单只股票权重上限及买卖成本，就能用线性规划求解。假设有 500 个情景、置信水平为 95%，分母 $N(1-\alpha)=25$，表达式对应最差 25 个等概率情景的平均损失；这也让风险预算的含义直观可见。</p>
+<p><strong>原文的数值案例使用标普 100 成分股。</strong> 六只股票因数据不足被排除，其余股票加上现金构成投资集合。初始资金为 10,000 美元，投资期为两个星期，即十个交易日。作者使用最近 500 个重叠两周区间，每个区间所有股票的同期收益共同组成一个情景；由此保留股票在历史中一起涨跌的信息。禁止做空，每个资产的价值占比上限为 20%，现金在两周内获得 0.16% 回报（<a href="#ref-palmquist-1999" data-stellar-navigation="">Palmquist et al., 1999, pp. 13–14</a>）。</p>
+<p>优化器先根据每个情景下的价格计算候选持仓的期末价值，再求其损失和 CVaR。将允许损失的预算逐步放宽，得到一条“期望收益—CVaR”有效前沿。这里所谓有效，是在相同风险预算下没有另一可行组合具有更高的模型期望收益。以 10,000 美元初始资金换算，1% 的尾部损失预算就是 100 美元，5% 则是 500 美元。</p>
+<p>原文表 1 展示了权重怎样随预算改变：风险预算较宽时，资金集中于少数历史期望收益较高的股票，20% 的单资产上限使组合至少需要五项持仓；预算收紧到 1% 或 2% 一类较保守水平时，持仓增加到十项以上，并包含现金。交易成本加入优化后，前沿向下移动，而且股票选择也会改变，因为频繁调整某项持仓可能不再划算（<a href="#ref-palmquist-1999" data-stellar-navigation="">Palmquist et al., 1999, pp. 14–17, Figures 1–2 and Table 1</a>）。</p>
+<p>这个案例给出了 CVaR 的完整应用过程：历史或模拟的联合收益情景进入模型，投资者把可承受尾部损失写成金额预算，优化器输出满足预算的买卖数量。它特别适合存在明确损失额度、现金安排和持仓限制的配置问题。</p>
+<h3 id="6-2-少亏大钱，也要付出代价"><a href="#6-2-少亏大钱，也要付出代价" class="headerlink" title="6.2 少亏大钱，也要付出代价" data-stellar-navigation=""></a>6.2 少亏大钱，也要付出代价</h3><p>把 CVaR 写进优化问题后，还需要回答一个经济问题：投资者实际持有这些权重，是否比普通均值—方差配置更满意？Dias 用美国十个行业组合进行比较，数据从 1999 年开始，2003—2014 年形成样本外投资期。每周取过去 1,000 个交易日重估权重，持有一周后再更新，共得到 605 个周收益。所有方案都禁止做空，资金全部投在行业股票组合中（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 6–8, 16</a>）。</p>
+<p><strong>基准方案先解决日常分散化。</strong> 均值—方差组合在给定期望收益目标下最小化 $w'\Sigma w$。作者用过去窗口的平均收益估计各行业期望回报，用对近期观测赋较高权重的方法估计协方差；每周收益目标取当时十行业等权组合的估计收益。这样，各方法面对相同收益目标，比较集中于风险配置方式（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 7–9</a>）。</p>
+<p>加入尾部风险时，论文比较了几条路线。单阶段方案在目标函数中同时放入组合方差和各行业 CVaR 的加权和。由于 CVaR 具有次可加性，这个加权和是组合 CVaR 的上界：它把每个行业各自最差时的损失合在一起，计算简便。纯均值—CVaR 方案则直接寻找满足收益目标、组合 CVaR 最小的权重（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 9–11</a>）。</p>
+<p>作者提出的<strong>两阶段方案</strong>把两类选择按顺序进行。十个行业可以形成 1,013 个至少包含两个行业的资产子集。第一阶段，在这些子集中分别寻找满足目标收益的最小方差组合，得到一批利用日常协方差分散风险的候选；第二阶段，计算每个候选组合的历史收益序列，用 GPD 估计其 CVaR，再选择 CVaR 最小者。因为第二阶段直接计算整组持仓的收益，行业之间在坏日子怎样共同变化，也进入了尾部估计（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 10–12</a>）。</p>
+<p>这套设计的直觉是：先找出若干平时搭配合理的组合，再比较哪一组在极端情况下损失较小。每周实际持有被选中的组合后，作者分别统计全期与危机期的收益、Sharpe 比率和换手，并与未增加尾部筛选的均值—方差方案比较。</p>
+<p>原文将样本分为危机前、危机中和危机后，其中危机期为 2007 年 12 月至 2009 年 6 月。表 3 使用 95% CVaR 进行配置，其年化 Sharpe 比率显示，全投资期均值—方差组合为 0.976，两阶段尾部组合为 0.909；危机期分别为 0.047 和 0.178。Sharpe 是平均超额收益与标准差的比值，这组结果意味着尾部方案在危机段的风险收益搭配较好，但全期的普通风险调整回报较低。原文同时发现，危机前存在收益机会成本，危机期间尾部方案的换手较高（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 23–26, Tables 3–4</a>）。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/tail-constraint-performance.png" alt="均值方差与两阶段尾部控制组合的Sharpe比率及原文90%置信区间" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2088" height="1206" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[224.0255,5.9134,97.8016,1]}" data-stellar-image-source="/image/market-tail-risk-review/tail-constraint-performance.png"></p>
-<p><em>图 10. 尾部约束的收益代价与不确定性。依据 Dias (n.d., p. 23, Table 3) 重绘。圆点为年化 Sharpe 比率，竖线完整保留原文 90% 置信区间。危机期间的点估计较好，但区间很宽；单个策略区间是否重叠也不能代替两策略差值的正式检验。</em></p>
-<p>这项研究的启发是，在均值—方差选择中加入尾部信息，能够改变组合面对危机的方式。但“危机里相对好一些”与“整个投资期更值得持有”要分开评价；答案还取决于投资者愿意为保护付出多少正常时期收益和交易成本。</p>
-<h3 id="6-3-风险变大时，为什么应该减仓"><a href="#6-3-风险变大时，为什么应该减仓" class="headerlink" title="6.3 风险变大时，为什么应该减仓" data-stellar-navigation=""></a>6.3 风险变大时，为什么应该减仓</h3><p>调整总仓位不必先判断哪只股票会崩盘。对一项已有策略，如果近期波动能够预示下一期风险，就可以在风险升高时少投一些。真正决定这种做法是否有利的，是<strong>风险上升以后，预期收益有没有跟着充分提高</strong>。</p>
-<p>Moreira 和 Muir 从均值—方差投资者出发。若下一期超额收益的条件均值为 $\mu_t$、方差为 $v_t$，风险厌恶系数为 $\gamma&gt;0$，在没有仓位约束的单资产问题中，最优持仓是 $\mu_t/(\gamma v_t)$。他们发现，样本中的方差变化很大，却没有得到预期收益同比例的补偿，于是用上一月日收益算出的实现方差 $\hat v_t$ 近似下一月风险，并按其倒数配置：</p>
+<p><em>图 10. 尾部控制在全期与危机期的表现。依据 <a href="#ref-dias-nd" data-stellar-navigation="">Dias (n.d., p. 23, Table 3)</a> 重绘。圆点为年化 Sharpe，竖线为原文 90% 置信区间；两阶段方案的全期点估计较低、危机期点估计较高，区间展示绩效估计的不确定性。</em></p>
+<p>作者还专门把<strong>投资者对偏度和极端损失的偏好</strong>放进评价。她用幂效用的四阶展开，让平均收益、方差、偏度和峰度共同影响满意程度，再计算投资者最多愿意支付多少费用，从均值—方差组合切换到另一个策略。这样，评价就能反映“愿意放弃一些正常收益，以换取较少极端亏损”的偏好。原文表 3 中，风险厌恶系数为 5 时，切换到两阶段方案的全期年化费用估计为 −1.3%，危机期为正 2.0%：前者表示投资者需要补偿才愿切换，后者表示愿为危机保护付费。作者再以 50,000 次分块重抽样给这些估计配上不确定性区间（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 13–15, 23–26</a>）。</p>
+<p>这篇研究适用于行业配置中的保护成本比较：既看尾部控制在危机期间提供了什么，也看为此在整个持有期放弃了什么。CVaR 决定权重怎样选择，实际收益和效用比较决定这种选择对特定风险偏好的投资者是否有价值。</p>
+<h3 id="6-3-风险变大时，为什么应该减仓"><a href="#6-3-风险变大时，为什么应该减仓" class="headerlink" title="6.3 风险变大时，为什么应该减仓" data-stellar-navigation=""></a>6.3 风险变大时，为什么应该减仓</h3><p>前两节改变资产之间的权重。另一条路线是保留选股或因子组合，只决定本月投入多少资金。Moreira 和 Muir 从均值—方差投资者的仓位问题推导这一规则。设下一期超额收益均值为 $\mu_t$、方差为 $v_t$，风险厌恶系数为 $\gamma$，选择仓位 $a$ 使</p>
 $$
-r^{\mathrm{VM}}_{t+1}=a_t r_{t+1},\qquad
- a_t=\frac{c}{\hat v_t}.
+\max_a\left\{a\mu_t-\frac{\gamma}{2}a^2v_t\right\}.
 $$
 
-<p>这里 $r_{t+1}$ 是原策略的超额收益，$c&gt;0$ 只控制平均规模。这称为<strong>逆方差缩放</strong>。机制也解释了一个看似矛盾的现象：危机之后股票可能有较高预期回报，但短期风险增幅更大，投资者仍有理由先减仓，等波动回落后再增加持仓。论文的主要资产定价含义，正是检验风险与回报的变化是否相称（<a href="#ref-moreira-muir-2016" data-stellar-navigation="">Moreira &amp; Muir, 2016, pp. 5–8, 16–17</a>）。</p>
-<p>Barroso 和 Santa-Clara 对动量采取另一种办法：按预测标准差的倒数调整仓位，尽量保持风险水平稳定，称为<strong>逆波动缩放</strong>。若 $d(t)$ 为月末最后一个交易日，$r_d$ 为动量日收益，以此前 126 个交易日估计下一月方差，再按月度目标标准差 $\sigma_\star$ 调整：</p>
+<p>对 $a$ 求导并令其为零，得到 $a_t^*=\mu_t/(\gamma v_t)$。因此，风险增加时是否减仓，取决于预期收益增加得够不够多。若方差翻倍、预期收益只略有上升，每单位风险所获得的回报下降，最优仓位就会减少（<a href="#ref-moreira-muir-2016" data-stellar-navigation="">Moreira &amp; Muir, 2016, pp. 5–6</a>）。</p>
+<p><strong>Moreira–Muir 的应用是按月调整市场与因子暴露。</strong> 作者研究市场、规模、价值、动量、盈利、投资等股票因子以及货币套利因子。用上一月日收益估计实现方差 $\hat v_t$，按其倒数配置：</p>
+$$
+r^{\mathrm{VM}}_{t+1}=a_t r_{t+1},\qquad a_t=\frac{c}{\hat v_t}.
+$$
+
+$r_{t+1}$ 为原策略超额收益，$c$ 控制整体规模。基准展示中，作者选取 $c$ 使缩放与原策略具有相同的全样本标准差，便于比较承担相近总波动的收益。决定本月相对加减仓的是滞后的方差输入，称为**逆方差缩放**（[Moreira &amp; Muir, 2016, pp. 5–7](#ref-moreira-muir-2016)）。
+
+<p>对于 1926—2015 年的市场组合，原文报告缩放版本对原市场回归的年化 alpha 约为 4.86%，beta 约为 0.6。其累计收益图显示，策略在大萧条和金融危机等高波动时期降低市场暴露，在低波动时期增加暴露。作者据此解释收益来源：样本中的风险变化很大，但高风险时期的预期回报没有同比例提高，调整承担风险的时间可以改善组合机会集合（<a href="#ref-moreira-muir-2016" data-stellar-navigation="">Moreira &amp; Muir, 2016, pp. 7–8, Table 1 and Figure 3</a>）。</p>
+<p><strong>Barroso–Santa-Clara 则聚焦动量，并以保持目标波动为目的。</strong> 动量风险的变化既大又持续：原文报告其月度实现方差 AR(1) 模型的样本外 $R^2$ 约为 57.82%。AR(1) 用上期方差预测本期方差，这项检验说明最近风险对未来风险有较强信息。作者还按此前六个月风险高低分组，发现平静阶段之后的动量 Sharpe 约为 1.72，动荡阶段之后约为 0.28，高风险伴随较差的后续风险收益比（<a href="#ref-barroso-santa-clara-2014" data-stellar-navigation="">Barroso &amp; Santa-Clara, 2014, pp. 8–11</a>）。</p>
+<p>实际调仓采用更直接的规则：设 $d(t)$ 为月末最后一个交易日，用此前 126 天动量日收益平方和预测下月方差，按预测标准差倒数缩放：</p>
 $$
 \hat\sigma^2_{t+1|t}=\frac{21}{126}\sum_{j=0}^{125}r^2_{d(t)-j},
-\qquad r^{\mathrm{RM}}_{t+1}=\frac{\sigma_\star}{\hat\sigma_{t+1|t}}r_{t+1}.
+\qquad
+r^{\mathrm{RM}}_{t+1}=\frac{\sigma_\star}{\hat\sigma_{t+1|t}}r_{t+1}.
 $$
 
-<p>论文采用相当于年化 12% 的目标。同样的预测方差上升，会触发比逆方差规则更温和的减仓。作者另用一阶自回归模型，即用上期风险解释本期风险的回归，检验风险是否可预测；真正用于调仓的输入，是上式的六个月日收益估计（<a href="#ref-barroso-santa-clara-2014" data-stellar-navigation="">Barroso &amp; Santa-Clara, 2014, pp. 8–12</a>）。</p>
-<p>动量特别适合这一思路，因为它的高风险状态有持续性，而且高风险之后的收益表现较差。只对冲市场 beta 会漏掉大量动量自身的风险；直接控制策略总波动，能覆盖更大一部分可预测风险。在 1927—2011 年样本中，缩放后 Sharpe 比率从 0.53 升至 0.97，收益分布的负偏度与极端程度也明显下降，剔除两次最严重崩盘所在年份后仍有改善（<a href="#ref-barroso-santa-clara-2014" data-stellar-navigation="">Barroso &amp; Santa-Clara, 2014, pp. 12–15, 18</a>）。这里的“动量自身风险”是市场因子以外的组合风险，并非可通过多持几只股票消除的个股风险。</p>
-<p>这两条规则都依赖滞后数据。低波动时期形成的高仓位，仍会承受尚未出现的冲击；目标波动也不是实际损失的上限。Moreira 和 Muir 在 1926—2015 年样本中的基准市场策略，仓位第 99 百分位达到 6.39 倍；他们也检验了限制杠杆和加入交易成本的版本，发现部分收益仍然保留。因此，实施时应比较完整规则，包括融资与交易限制，而不能只比较未经约束的收益曲线（<a href="#ref-moreira-muir-2016" data-stellar-navigation="">Moreira &amp; Muir, 2016, pp. 11–13, 33–34</a>）。</p>
+<p>21 把日方差换成约一个月的方差，126 对应约半年交易日；月度目标标准差 $\sigma_\star$ 设为 $12\%/\sqrt{12}$，对应年化 12%。该规则称为<strong>逆波动缩放</strong>。按年化口径理解，预测波动为 24% 时，投入原策略的规模约为一半；预测波动为 6% 时，规模约为两倍（<a href="#ref-barroso-santa-clara-2014" data-stellar-navigation="">Barroso &amp; Santa-Clara, 2014, pp. 11–12</a>）。</p>
+<p>两个规则的反应强度不同：预测标准差翻倍时，逆波动规则把仓位减半，逆方差规则把仓位减至四分之一。前者针对目标波动，后者来自预期收益相对平稳时的均值—方差最优仓位。它们使用的数据窗口也不同。</p>
+<p>在 1927—2011 年的动量样本中，风险管理后的 Sharpe 从 0.53 升至 0.97，负偏度和极端程度下降；剔除最严重的两次崩盘所在年份后，改善仍在。作者还发现，仅对冲市场 beta 无法取得同样效果，因为动量风险中还有相当部分来自市场线性暴露以外的策略自身变化（<a href="#ref-barroso-santa-clara-2014" data-stellar-navigation="">Barroso &amp; Santa-Clara, 2014, pp. 12–15, 18</a>）。</p>
+<p>持仓规模也是原文的实证对象。Moreira–Muir 的基准市场策略，在低波动时期会使用杠杆，仓位第 99 百分位约为 6.39 倍。作者因此另做最高一倍、一点五倍仓位以及不同交易成本的版本，发现这些约束下仍保留部分收益改善（<a href="#ref-moreira-muir-2016" data-stellar-navigation="">Moreira &amp; Muir, 2016, pp. 11–13, Tables 4–5</a>）。仓位上限在计算上对应 $\tilde a_t=\min(c/\hat v_t,a_{\max})$：例如原规则给出 6.39 倍、上限为 1.5 倍，就以 1.5 倍持有到下次调仓。每次逐项计算目标持仓与调仓前持仓的金额差，取绝对值后加总，得到实际买卖金额；按该金额计费，从策略收益中扣除，再重算 Sharpe 和累计净值，就能衡量限制杠杆和支付交易费用后的表现。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/volatility-rules.png" alt="逆方差与逆波动缩放的数据窗口、仓位规则及目标对照" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1350" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[209.4567,20.2132,95.5018,1]}" data-stellar-image-source="/image/market-tail-risk-review/volatility-rules.png"></p>
-<p><em>图 11. 两种缩放规则的区别。根据 <a href="#ref-moreira-muir-2016" data-stellar-navigation="">Moreira and Muir (2016, pp. 5–8)</a> 及 <a href="#ref-barroso-santa-clara-2014" data-stellar-navigation="">Barroso and Santa-Clara (2014, pp. 8–12)</a> 整理。逆方差规则对相同风险增幅反应更强，但两篇原文连估计窗口也不同，不能把它们当作仅更换了一个指数的同一策略。</em></p>
-<h3 id="6-4-历史上的搭配，为什么到了未来就失效"><a href="#6-4-历史上的搭配，为什么到了未来就失效" class="headerlink" title="6.4 历史上的搭配，为什么到了未来就失效" data-stellar-navigation=""></a>6.4 历史上的搭配，为什么到了未来就失效</h3><p>更广的样本带来了不同答案。Cederburg 等利用 1926 年 7 月至 2016 年 12 月的美国股票数据，把检验扩展到 103 个策略，各策略随数据可得性具有不同起点。直接比较缩放前后表现：53 个 Sharpe 比率提高，50 个降低，显著改善主要集中于动量相关策略。波动管理因此有适合的对象，尚不能据此成为所有策略的通用规则（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 8–10</a>）。</p>
-<p>收益回归中无法由基准解释的截距称为 <strong>alpha</strong>。Moreira 和 Muir 报告的正 alpha，与直接持有缩放组合未必更好，可以同时成立。把缩放组合对原组合回归，称为<strong>覆盖回归（spanning regression）</strong>：</p>
+<p><em>图 11. 两种仓位规则。根据 <a href="#ref-moreira-muir-2016" data-stellar-navigation="">Moreira and Muir (2016, pp. 5–8)</a> 及 <a href="#ref-barroso-santa-clara-2014" data-stellar-navigation="">Barroso and Santa-Clara (2014, pp. 8–12)</a> 整理。预测标准差翻倍时，逆方差仓位降至四分之一，逆波动仓位降至一半；各自使用原文规定的估计窗口。</em></p>
+<h3 id="6-4-历史上的搭配，为什么到了未来就失效"><a href="#6-4-历史上的搭配，为什么到了未来就失效" class="headerlink" title="6.4 历史上的搭配，为什么到了未来就失效" data-stellar-navigation=""></a>6.4 历史上的搭配，为什么到了未来就失效</h3><p>Cederburg 等把波动管理扩展到 103 个股票策略，使用 1926 年 7 月至 2016 年底的数据，各策略起点随数据可得性变化。这个更大的实验同时比较三件事：直接持有缩放版本是否更好；事后知道全部历史时，两种版本能否搭配得更好；每个月只用已有数据决定搭配，后续表现能否改善（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 5–13</a>）。</p>
+<p><strong>第一项是直接比较。</strong> 依照逆方差规则生成每个策略的缩放版本后，103 个策略中有 53 个 Sharpe 提高、50 个降低。显著改善较多地出现在动量相关策略。作者还用重抽样构造“波动有持续性、但不预测平均收益”的基准世界；在该基准下，平均约有 66 个策略应得到改善，而真实数据只观察到 53 个。这提示更广泛的策略中，高风险阶段往往也有一定收益补偿，减仓会同时放弃一部分回报（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 8–10, Table 2 and Figure 1</a>）。</p>
+<p><strong>第二项解释为什么正 alpha 可以与直接表现变差并存。</strong> 将缩放收益对原收益做回归，称为<strong>覆盖回归（spanning regression）</strong>：</p>
 $$
 r^{\mathrm{VM}}_t=a+b r_t+\varepsilon_t.
 $$
 
-<p>在允许持有无风险资产、没有额外持仓或杠杆约束的设定中，正的 $a$ 表示：事后把原组合与缩放组合适当搭配，可以改善收益与波动的组合选择。它没有要求缩放组合单独持有时更好。原因很直观：两者表现并不完全同步，缩放组合即使平均收益稍低，也可能提供有价值的搭配。若两者标准差相等、相关系数为 $\rho$、样本平均超额收益分别为 $\bar r^{\mathrm{VM}}$ 和 $\bar r$，正 alpha 只要求 $\bar r^{\mathrm{VM}}&gt;\rho\bar r$；单独持有的 Sharpe 更高，却要求 $\bar r^{\mathrm{VM}}&gt;\bar r$。这是两道不同的门槛（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 11–13</a>）。</p>
-<p>投资者接下来还要知道，今天应把多少资金分给两种组合。Cederburg 等从最初 120 个月开始估计权重，以后每月只使用当时已有的数据，同时允许持有无风险资产，并把两版本合并后对原策略的净头寸限制在 −5 至 5 倍。基准风险厌恶系数为 5。103 个实时组合中，45 个提高了 Sharpe，31 个提高了<strong>确定性等价收益（certainty equivalent return）</strong>，即在给定风险偏好下，与该风险组合同样有吸引力的确定收益（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 16–20</a>）。</p>
+<p>截距 $a$ 是缩放策略平均收益中，无法由对原策略的线性暴露解释的部分。两者标准差相等时，回归斜率等于相关系数 $\rho$，所以 $a=\bar r^{\mathrm{VM}}-\rho\bar r$。只要缩放平均收益高于 $\rho\bar r$，alpha 就为正；要使其独立持有的 Sharpe 更高，则要求缩放平均收益高于 $\bar r$。原文九个股票因子的相关系数约在 0.48–0.70 之间，两道门槛可以相差很大（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 11–13</a>）。</p>
+<p>在允许组合两种策略和无风险资产的均值—方差问题中，正 alpha 的经济含义是：适当加入缩放版本，可以扩展历史样本的有效前沿。因为两种版本并非完全同步，即使缩放版本本身回报较低，也可能通过搭配减少组合波动。最佳搭配权重依赖两者的均值、方差和协方差，写为 $a^*=\gamma^{-1}\Sigma^{-1}\mu$（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 12–13</a>）。</p>
+<p><strong>第三项把这组权重放回真实决策顺序。</strong> 作者先积累 120 个月数据，估计原策略与缩放策略的均值和协方差；求出本月权重，持有至下月；再加入新数据重新估计。两者最终都对应同一原始策略的头寸，因此将合并净暴露限制在 −5 至 5 倍，同时允许持有无风险资产，基准风险厌恶系数为 5。对照组用同样的信息和偏好，只在原策略与无风险资产之间选择（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 16–20</a>）。</p>
+<p>结果是，103 个实时组合中，45 个提高 Sharpe，31 个提高<strong>确定性等价收益（certainty equivalent return，CER）</strong>。在这里，CER 按均值—方差偏好计算为平均收益减去 $\gamma/2$ 倍方差，衡量投资者愿意用多少确定收益替换风险组合。它同时评价回报和风险水平，因此与只评价收益风险比的 Sharpe 给出不同数量（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 17–20, Table 6</a>）。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/volatility-management-evidence.png" alt="103个策略在直接波动缩放与实时组合检验中改善和未改善的数量" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2088" height="1044" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[209.8956,27.3515,89.238,1]}" data-stellar-image-source="/image/market-tail-risk-review/volatility-management-evidence.png"></p>
-<p><em>图 12. 波动管理的三种检验。依据 Cederburg et al. (2019, pp. 9, 20, Tables 2 and 6) 重绘。第一行比较缩放前后直接持有的表现；后两行比较允许加入缩放版本与不允许加入它的实时组合。三行各含 103 个策略，检验对象不同，不能读成同一批成功策略的逐层筛选。“改善”仅指差值为正，并不都具有统计显著性。</em></p>
-<p>问题不只是数据不够多。延长训练期并未系统改善结果；作者发现，缩放组合与原组合之间的回归关系经常发生结构变化，过去估出的搭配比例到了下一段时期就不再合适。市场组合就是一个例子：早期大萧条期间的出色表现会使投资者偏向缩放版本，后来的相对表现却变弱了（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 18, 22–23</a>）。</p>
-<p>因此，波动能否预测与波动管理能否获利之间，还隔着两件事：高风险时是否已有足够回报补偿，以及这种关系是否稳定到足以指导仓位。CVaR 约束可以表达投资者不愿承受什么，波动缩放可以改变承担风险的时机；最终仍须看真实未来损失、成本后收益和资金约束下的表现。</p>
+<p><em>图 12. 波动管理的三种评价结果。依据 <a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al. (2019, pp. 9, 20, Tables 2 and 6)</a> 重绘。第一行比较缩放与原策略的直接持有表现，后两行比较允许与不允许加入缩放版本的实时配置；每行均包含 103 个策略，以绩效差值正负分类。</em></p>
+<p>市场组合提供了具体解释：加入波动管理版本的实时组合 Sharpe 为 0.42，对照组为 0.46；年化 CER 分别为 1.56% 和 1.75%。缩放市场在大萧条附近的出色历史表现，使后来的估计权重偏向缩放版本，而其后续相对表现减弱。延长初始训练期到二十年或三十年，也没有系统扭转结果。作者结合结构稳定性检验，将问题与风险—收益关系随时间改变联系起来（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 18–23, Tables 5–8</a>）。</p>
+<p>这篇研究的应用是<strong>评价一条准备实施的仓位规则</strong>。减仓的经济依据可以用第 6.3 节的 $\mu_t/v_t$ 直接判断：预期收益与方差同比例增加时，均值—方差最优仓位不变；方差增加得更快时，该比值下降，最优仓位才下降。原策略与缩放策略的搭配，则把截至当月估计的均值和协方差代入组合优化，持有一期后记录实际收益。Cederburg 等按这个时序得到 45 个 Sharpe 改善、31 个 CER 改善的结果；市场组合的具体失败来自历史上较强的缩放表现抬高了后续配置权重，而该表现随后减弱。由此，波动预测、风险收益比和搭配效果都有各自的计算与检验结果。</p>
 <h2 id="七、当亏损发生在金融机构：还要看谁能补上资本"><a href="#七、当亏损发生在金融机构：还要看谁能补上资本" class="headerlink" title="七、当亏损发生在金融机构：还要看谁能补上资本" data-stellar-navigation=""></a>七、当亏损发生在金融机构：还要看谁能补上资本</h2><p>一家银行受损，其他银行有余力接手它的资产，问题可能止于这家银行；如果大家同时缺钱，就可能一起抛售资产、收缩贷款，把损失传到实体经济。系统性风险研究关心的，正是这种共同受困时的后果。只看一家机构平时波动多大，或最坏时股价跌多少，还少了两个问题：它是否恰好在全系统最困难时受损，损失后还剩多少资本？</p>
-<h3 id="7-1-从共同亏损到资本缺口"><a href="#7-1-从共同亏损到资本缺口" class="headerlink" title="7.1 从共同亏损到资本缺口" data-stellar-navigation=""></a>7.1 从共同亏损到资本缺口</h3><p>先挑出市场最差的那些日子，再看一家机构平均亏多少，得到<strong>边际预期损失</strong>（marginal expected shortfall，MES）。这里令 $r_i$ 为机构股票收益、$r_m$ 为市场收益，$q_{1-\alpha}(r_m)$ 为市场收益的下分位点；沿用损失为正的约定，</p>
+<h3 id="7-1-从共同亏损到资本缺口"><a href="#7-1-从共同亏损到资本缺口" class="headerlink" title="7.1 从共同亏损到资本缺口" data-stellar-navigation=""></a>7.1 从共同亏损到资本缺口</h3><p>Acharya 等从金融危机中的外部成本出发：一家银行资本不足时，可以向仍健康的机构融资或出售资产；许多银行同时资本不足时，这些渠道也收缩，大家被迫抛售、减少贷款，损失就会传到整个经济。因此，衡量一家机构的风险，需要同时看它是否在全系统困难时受损，以及损失后资本还够不够（<a href="#ref-acharya-2010" data-stellar-navigation="">Acharya et al., 2010, pp. 1–4, 11–15</a>）。</p>
+<p>第一步是<strong>边际预期损失（marginal expected shortfall，MES）</strong>。设 $r_i$ 为机构股票收益、$r_m$ 为市场收益，选取市场收益最差的 $1-\alpha$ 部分，计算机构在这些日子的平均损失：</p>
 $$
 \operatorname{MES}_{i,\alpha}
-=-\mathbb E[r_i\mid r_m\le q_{1-\alpha}(r_m)].
+=-E[r_i\mid r_m\leq q_{1-\alpha}(r_m)].
 $$
 
-<p>它与机构自身的 ES，区别在于选了谁的坏日子。在损失分布足够平滑的加权组合中，这个条件平均还等于组合 ES 对机构权重的边际变化，所以名字里有“边际”。Acharya 等人的估计方法很直接：取市场收益最差的 5% 交易日，平均机构在这些日子的收益并取负号。若只按机构自己的最差日期取样，就丢掉了共同困境这一条件（<a href="#ref-acharya-2010" data-stellar-navigation="">Acharya et al., 2010, pp. 8, 18–20</a>）。</p>
-<p>共同亏损仍不等于资本不足。面对相同比例的股权损失，一家资本充足的银行可能还能正常经营，另一家高杠杆银行却可能需要补资。<strong>系统性预期损失</strong>（systemic expected shortfall，SES）把这件事纳入定义：令 $\mathcal S$ 表示全系统资本不足，$A_i$ 是机构的资产规模、$k$ 是要求的资本比例，$W_i$ 是期末权益，则</p>
+<p>原文的简单估计使用过去一年中市场最差的 5% 交易日。具体来说，先按市场收益排序，留下约十三个坏日子，再平均机构在相同日期的股票收益并取负号。机构自身 ES 则按机构自己的收益选日期。两者的差别就是是否把“与系统一起受困”放进条件。对足够平滑的收益分布，MES 还等于组合 ES 对该机构权重的边际变化，由此得到“边际”这个名称（<a href="#ref-acharya-2010" data-stellar-navigation="">Acharya et al., 2010, pp. 7–8, 18–20</a>）。</p>
+<p>第二步加入<strong>杠杆</strong>。作者用“账面资产减账面权益加权益市值”近似资产的市场价值，再除以权益市值得到杠杆 LVG。贝尔斯登在 2007 年 6 月的 MES 为 3.15%、LVG 为 25.62：前者表示它在市场最差 5% 日期的平均股权损失，后者表示每一美元权益支撑约 25.62 美元的准市场价值资产。相同的股权跌幅，在资本缓冲很薄的机构上，意味着更大的资本充足压力（<a href="#ref-acharya-2010" data-stellar-navigation="">Acharya et al., 2010, pp. 20–21, note 12</a>）。</p>
+<p>模型将这种压力定义为<strong>系统性预期损失（systemic expected shortfall，SES）</strong>。令 $\mathcal S$ 表示系统资本不足，$A_i$ 为机构资产规模，$k$ 为要求的资本比例，$W_i$ 为期末权益，则</p>
 $$
 \operatorname{SES}_i
-=\mathbb E[\mathbf1_{\mathcal S}(kA_i-W_i)]
-=\Pr(\mathcal S)\mathbb E[kA_i-W_i\mid\mathcal S].
+=E[\mathbf1_{\mathcal S}(kA_i-W_i)]
+=\Pr(\mathcal S)E[kA_i-W_i\mid\mathcal S].
 $$
 
-<p>这里衡量的是资本缺口金额，并乘上系统危机的概率。这个定义来自一个明确的经济问题：银行作决策时没有承担其资本不足给其他人造成的全部损失；如果事前收费随这种预期损失增加，银行就有理由少加杠杆、少承担共同风险（<a href="#ref-acharya-2010" data-stellar-navigation="">Acharya et al., 2010, pp. 11–15</a>）。</p>
-<p>论文用危机前的 MES 和杠杆解释美国金融机构在 2007 年 7 月至 2008 年底的股票表现，二者结合比仅看自身 ES 或波动率更有解释力。但这不是一条已经校准好的实时资本预测公式：回归关系是用这场危机的结果估出来的。原文还指出，从普通坏日子向真正危机外推，会漏掉危机才出现的融资困境成本，尤其容易低估高杠杆机构和出售尾部保险机构的风险（<a href="#ref-acharya-2010" data-stellar-navigation="">Acharya et al., 2010, pp. 19–20, 23–27</a>）。</p>
-<h3 id="7-2-一家机构陷入困境时，系统会怎样"><a href="#7-2-一家机构陷入困境时，系统会怎样" class="headerlink" title="7.2 一家机构陷入困境时，系统会怎样" data-stellar-navigation=""></a>7.2 一家机构陷入困境时，系统会怎样</h3><p>现在把条件调转过来：已知一家机构受困，整个金融系统的损失分位数是多少？这就是这里的<strong>条件风险价值</strong>（conditional value-at-risk，CoVaR）；它是条件分布的分位数，与前文平均尾部损失的 CVaR 不是同一个量。</p>
-<p>Girardi 和 Ergün 将“机构收益恰好等于其下尾分位点”改成“收益不高于该分位点”，把跌得更深的情形也纳入困境。若 $L_m=-r_m$ 为系统损失，其修改后的定义可写为</p>
+$kA_i-W_i$ 是资本要求与实际权益的差，乘上系统困境的条件，就只计入共同危机中的资本不足。理论进一步说明，如果银行事前承担的费用随这种系统性预期损失增加，就能将一部分共同资本不足的外部成本带回银行的融资和投资决策（[Acharya et al., 2010, pp. 11–15](#ref-acharya-2010)）。
+
+<p><strong>原文用 2007—2008 年金融机构股价检验这条思路。</strong> 作者先用危机前数据计算 MES 和杠杆，再比较 2007 年 7 月至 2008 年底的累计股票表现。AIG 与伯克希尔的 MES 都相对较低，但杠杆分别约为 6.12 和 2.29；仅看共同下跌敏感度，两者似乎相近，加入资本结构后就能分开。房地美按 MES 排名第 61，但约 21 倍杠杆使其在 MES 与杠杆结合的拟合风险排序中上升到第 2；相反，CB Richard Ellis 的 MES 排名第 5，较低杠杆使综合排序降到第 24（<a href="#ref-acharya-2010" data-stellar-navigation="">Acharya et al., 2010, pp. 25–27</a>）。</p>
+<p>作者还用 2009 年美国监管压力测试作为另一项检验。监管部门考察十九家大型银行，其中十家合计需要补充 746 亿美元资本；股票数据可用于回归的机构为十七家。用 2008 年 4 月至 2009 年 3 月估计的 MES，能够解释监管评估资本缺口的一部分截面差异。这样，论文同时连接了市场损失结果与监管资本评估两种证据（<a href="#ref-acharya-2010" data-stellar-navigation="">Acharya et al., 2010, pp. 21–23, Tables 1–2</a>）。</p>
+<p>这一方法适用于筛查共同危机中脆弱的金融机构：MES 描述其股权怎样随市场坏日子受损，杠杆描述吸收损失的缓冲，SES 则给出共同资本不足的经济目标。原文中的机构对照说明，风险暴露与资本结构需要一起读取。</p>
+<h3 id="7-2-一家机构陷入困境时，系统会怎样"><a href="#7-2-一家机构陷入困境时，系统会怎样" class="headerlink" title="7.2 一家机构陷入困境时，系统会怎样" data-stellar-navigation=""></a>7.2 一家机构陷入困境时，系统会怎样</h3><p>MES 先给定市场困境，再观察机构。<strong>CoVaR</strong> 把问题反过来：给定某家机构受困，金融系统的损失分位数会移到哪里？Girardi 和 Ergün 用这一问题研究机构与系统的共同尾部状态。这里 CoVaR 是条件分布的分位点，前文 CVaR 则是尾部平均损失，两者计算对象不同（<a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi &amp; Ergün, 2012, pp. 5–8</a>）。</p>
+<p>作者将机构困境定义为“机构收益不高于自身下尾分位点”，把跌破门槛的全部情况纳入条件。沿用损失为正的记号，</p>
 $$
 \operatorname{CoVaR}^{m|i}_{\alpha}
 =\operatorname{VaR}_{\alpha}
-\bigl(L_m\mid r_i\le q_{1-\alpha}(r_i)\bigr).
+\bigl(L_m\mid r_i\leq q_{1-\alpha}(r_i)\bigr).
 $$
 
-<p>上式为简便使用同一概率水平，两处也可分别设定。这个修改有实际用处：数据中存在一批跌破阈值的日期，可以直接检验在这些日期里，系统损失超过所报分位数的频率；连续收益“恰好等于阈值”的条件则难以如此检验（<a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi &amp; Ergün, 2012, pp. 7, 12–14</a>）。</p>
-<p>作者进一步比较困境状态与正常状态的 CoVaR，并把<strong>相对正常状态的百分比变化</strong>记为 $\Delta\mathrm{CoVaR}$。正常状态指机构收益处于条件均值上下一个标准差内。估计时，他们先求机构的分位数，再拟合机构与系统的联合分布，让波动和相关性随时间变化，最后计算条件分位数。对 2000 年 6 月至 2008 年 2 月的 74 家美国金融机构，允许分布不对称且厚尾的偏斜 $t$ 分布未被文中的覆盖检验拒绝，正态设定则被拒绝。自身 VaR 与 $\Delta\mathrm{CoVaR}$ 的联系较弱，也说明只盯住一家机构自己的风险，可能漏掉它与系统之间变化的联系。这里识别的是共同困境的统计关系，不能据此确定风险传染的因果方向（<a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi &amp; Ergün, 2012, pp. 8–10, 14–19</a>）。</p>
-<h3 id="7-3-把压力情景直接换算成补资金额"><a href="#7-3-把压力情景直接换算成补资金额" class="headerlink" title="7.3 把压力情景直接换算成补资金额" data-stellar-navigation=""></a>7.3 把压力情景直接换算成补资金额</h3><p>Brownlees 和 Engle 把资本需求写成可逐期计算的<strong>条件资本缺口</strong>（conditional capital shortfall，SRISK）。计算先设定压力情景：未来 $h$ 期市场累计收益低于阈值 $C$。在这个情景下，机构股票的预期累计损失称为<strong>长期边际预期损失</strong>（long-run marginal expected shortfall，LRMES）：</p>
+<p>例如，先挑出机构自身最差 5% 的状态，再问在这些状态中，系统损失的 95% 分位点是多少。它不只取机构“恰好等于”分位点的边界状态，也包含更严重的机构损失。这使定义可以直接落到实际观察到的一组困境日上（<a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi &amp; Ergün, 2012, p. 7</a>）。</p>
+<p><strong>估计分三步完成。</strong> 先对机构收益拟合 GARCH 模型，让今天的条件方差由过去的收益冲击与方差更新，得到随时间变化的机构 VaR。再对机构和系统联合拟合动态条件相关模型 DCC，使两者的波动和相关性都可变化。最后，用估计的联合分布求出系统的条件分位点。作者分别使用正态分布与允许偏斜、厚尾的偏斜 $t$ 分布，比较尾部假设对结果的影响（<a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi &amp; Ergün, 2012, pp. 8–12</a>）。</p>
+<p>第三步可以用一个概率等式理解。若机构尾部概率和系统条件尾部概率都设为 $q=5\%$，那么要求</p>
+$$
+\Pr(r_m\leq c,\ r_i\leq\operatorname{VaR}^{r}_{i,q})=q^2=0.25\%.
+$$
+
+<p>这里 $\operatorname{VaR}^{r}_{i,q}$ 表示收益下分位点，$c$ 是待求的系统收益分位点；除以机构困境概率 5%，就得到条件概率 5%。估计程序在联合密度下积分并寻找满足等式的 $c$，转成损失记号即为 CoVaR（<a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi &amp; Ergün, 2012, p. 10, equation 3</a>）。</p>
+<p>为比较困境前后变化，作者另把机构收益处于条件均值上下一个标准差内定义为正常状态，并将困境 CoVaR 相对正常 CoVaR 的<strong>百分比增幅</strong>记为 $\Delta\mathrm{CoVaR}$。因此，这个版本的 $\Delta$ 表示相对比例变化。</p>
+<p><strong>实证使用 74 家美国金融机构和道琼斯美国金融指数。</strong> 每家机构有 2000 年 6 月 26 日至 2008 年 2 月 29 日的 1,930 个日收益观测，机构分为存款机构、券商、保险与其他类别。在正态设定下，机构受困对应的系统损失分位数平均比正常状态提高 95.69%；偏斜 $t$ 设定下提高 168.77%。这些数是系统分位损失的相对增幅，例如基准损失为 $v$ 时，后者对应约 $2.6877v$，反映厚尾假设如何改变共同困境估计（<a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi &amp; Ergün, 2012, pp. 14–15, Table 3</a>）。</p>
+<p>作者随后在机构跌破 VaR 的日期中检验：系统跌破 CoVaR 的频率是否接近设定值，超越是否依赖前一次超越。正态版本未通过无条件覆盖检验；偏斜 $t$ 版本在文中的覆盖与独立性检验中均未被拒绝。进一步的截面与时间序列分析发现，机构自身 VaR 与 $\Delta\mathrm{CoVaR}$ 的联系较弱，规模、beta 和下行市场中的杠杆则包含更多解释信息（<a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi &amp; Ergün, 2012, pp. 16–19, Tables 4–5</a>）。</p>
+<p>这项方法的用途，是将“机构自身可能跌多深”与“观察到该机构受困时，系统也有多脆弱”分开监测。监管者因而可以识别自身 VaR 相近、系统联系却不同的机构，并跟踪这种联系随市场状态怎样变化。</p>
+<h3 id="7-3-把压力情景直接换算成补资金额"><a href="#7-3-把压力情景直接换算成补资金额" class="headerlink" title="7.3 把压力情景直接换算成补资金额" data-stellar-navigation=""></a>7.3 把压力情景直接换算成补资金额</h3><p>Brownlees 和 Engle 希望把共同亏损进一步换算成资本金额。他们提出<strong>条件资本缺口 SRISK</strong>：如果市场在未来一段时间明显下跌，某家机构的权益会缩水多少，剩余权益距资本要求还差多少钱？这个问题同时需要市场价格、负债规模和压力情景（<a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle, 2016, pp. 5–7</a>）。</p>
+<p>先定义<strong>长期边际预期损失（long-run marginal expected shortfall，LRMES）</strong>。设未来 $h$ 期累计市场收益低于 $C$ 为系统压力事件，则</p>
 $$
 \operatorname{LRMES}_{i,t}
-=-\mathbb E_t[R_{i,t+1:t+h}\mid R_{m,t+1:t+h}\lt C],
+=-E_t[R_{i,t+1:t+h}\mid R_{m,t+1:t+h}\lt C].
 $$
 
-<p>其中 $R$ 表示区间累计简单收益。再令 $D_{i,t}$ 为账面债务、$W_{i,t}$ 为权益市值，资本要求为总资产的 $k$，并假设压力期间预期债务不变，就得到</p>
+$R$ 是累计简单收益，因此 $W_{i,t}(1-\operatorname{LRMES}_{i,t})$ 表示该压力条件下的预期剩余权益市值。设账面债务 $D_{i,t}$ 在压力期间的条件期望保持不变，要求资本占“债务加权益”的比例为 $k$，则资本不足等于
+
 $$
+\begin{aligned}
 \operatorname{SRISK}_{i,t}
-=kD_{i,t}-(1-k)W_{i,t}(1-\operatorname{LRMES}_{i,t}).
+&amp;=k[D_{i,t}+W_{i,t}(1-\operatorname{LRMES}_{i,t})]
+-W_{i,t}(1-\operatorname{LRMES}_{i,t})\\
+&amp;=kD_{i,t}-(1-k)W_{i,t}(1-\operatorname{LRMES}_{i,t}).
+\end{aligned}
 $$
 
-<p>公式把三件事连了起来：债务需要多少资本支撑，现有股权能吸收多少损失，以及股权在共同危机中预计缩水多少。因此，两家股票跌幅相同的机构，可能有完全不同的补资需求。与上述 SES 定义相比，这里直接报告“危机已经发生这一条件下缺多少”，不再乘危机概率（<a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle, 2016, pp. 5–7</a>）。</p>
+<p>第一行直接体现“要求持有多少权益，减去实际预计剩多少权益”。整理后的第二行说明：债务越大，要求资本越多；当前权益越多，缓冲越大；LRMES 越大，危机中保留下来的权益越少。这里报告的是危机条件下的缺口；第 7.1 节 SES 定义还对系统危机的概率加权（<a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle, 2016, pp. 5–7</a>）。</p>
+<p>用一组演算数值说明金额转换：一家机构债务为 90 亿元、权益市值为 10 亿元，压力情景下 LRMES 为 40%，资本比例要求为 8%。预计剩余权益为 $10\times(1-40\%)=6$ 亿元；按压力后的债务加权益 96 亿元计算，要求资本为 $96\times8\%=7.68$ 亿元。因此，SRISK 为 $7.68-6=1.68$ 亿元。这一步把压力下的股权跌幅转成了同一情景下的资本不足金额。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/systemic-risk-map.png" alt="MES和CoVaR的条件方向，以及SES和SRISK的资本缺口定义对照" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1494" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[210.8124,21.1709,95.4093,1]}" data-stellar-image-source="/image/market-tail-risk-review/systemic-risk-map.png"></p>
-<p><em>图 13. 从条件损失到资本不足。根据 <a href="#ref-acharya-2010" data-stellar-navigation="">Acharya et al. (2010, pp. 8, 13–14)</a>、<a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi and Ergün (2012, p. 7)</a> 及 <a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees and Engle (2016, pp. 5–7)</a> 整理。四项指标不是逐级换算公式：条件方向、输出单位和危机概率权重各不相同。</em></p>
-<p>实际估计先拟合机构和市场的波动、相关性变化，再联合模拟未来收益路径，留下满足市场压力条件的路径，平均其中的机构损失。论文采用 22 个交易日内市场下跌超过 10%、资本比例为 8% 的设定；这些是压力测试参数，可以改变。单家机构算出负值表示资本盈余，汇总系统缺口时只加正值，因为危机中别家的盈余未必能及时调来救助缺资本的机构（<a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle, 2016, pp. 6–10</a>）。</p>
-<p>原文的行业分解把这种变化画得很清楚：危机前，缺口较多来自券商与其他机构；危机扩散后，存款机构与保险公司的部分显著扩大。总量相近也可能掩盖风险承担者的变化，因此只盯住一个系统总数还不够（<a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle, 2016, pp. 16–17</a>）。</p>
+<p><em>图 13. 从条件损失到资本不足。根据 <a href="#ref-acharya-2010" data-stellar-navigation="">Acharya et al. (2010, pp. 8, 13–14)</a>、<a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi and Ergün (2012, p. 7)</a> 及 <a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees and Engle (2016, pp. 5–7)</a> 整理。MES 与 CoVaR 采用不同的条件方向，SES 与 SRISK 则进一步引入资本要求和危机条件。</em></p>
+<p><strong>LRMES 怎样从日收益推到一个月？</strong> 原文先对机构和市场日对数收益拟合 GJR–GARCH 与 DCC。前者允许负收益对未来波动产生不同于正收益的影响，后者更新机构与市场的相关性。再从模型的标准化残差中重抽样，生成许多条未来联合收益路径；将每日对数收益相加并转换为累计简单收益；只保留累计市场跌幅超过压力门槛的路径，平均其中的机构累计损失。每个月重新使用当时已有数据估计并模拟，便得到随信息更新的 LRMES（<a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle, 2016, pp. 7–9, 14</a>）。</p>
+<p>论文的压力设定为 <strong>22 个交易日内市场累计下跌超过 10%，资本比例 $k=8\%$</strong>。按公式，单家 SRISK 可为负，表示压力下仍有资本盈余；汇总系统缺口时，作者只加正值。其经济理由是，危机时一家机构的盈余资本未必能及时调给另一家机构（<a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle, 2016, pp. 6–10</a>）。</p>
+<p><strong>2005—2009 年的行业变化展示了指标的实际用途。</strong> 2005 年至 2007 年中，美国样本的总条件资本缺口约为 1,000 亿美元，主要来自券商和其他金融机构；房利美与房地美合计占总量超过 40%，摩根士丹利、贝尔斯登和雷曼也是主要贡献者。2007 年 7 月以后，总缺口在约半年内增长至原来的四倍；雷曼破产后进一步升至约 8,000 亿美元，商业银行与保险公司的份额明显提高。2009 年一季度前五名变为花旗、美国银行、摩根大通、富国和 AIG（<a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle, 2016, pp. 16–17, Figure 1 and Table 3</a>）。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/srisk-original.png" alt="原文美国金融机构总SRISK及券商、存款机构、保险和其他行业的分解" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1404" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[327.1203,1.7188,89.5218,1]}" data-stellar-image-source="/image/market-tail-risk-review/srisk-original.png"></p>
-<p><em>图 14. 资本缺口的总量与行业构成。截取 <a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees and Engle (2016, p. 17, Figure 1)</a>，横轴为 2005—2012 年，纵轴为十亿美元，竖线标出雷曼破产。模型设定为 22 个交易日内市场跌超 10%、资本比例 8%；机构样本按 2007 年 6 月底规模筛选。这是估计的条件资本需求，不是已经支付的救助金额。</em></p>
-<p>这套方法的进展在于把市场信息和资产负债表接起来，并让资本缺口随当时信息更新。论文逐期估计的 SRISK 与随后金融机构获得的危机支持有预测关系，但支持金额也受政府和机构自身决策影响；它是一个有用却不完美的检验对象。用这类指标筛查脆弱机构时，还需查看表外承诺与融资结构，因为股价和账面债务无法完整覆盖它们（<a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle, 2016, pp. 10, 13–14, 18–20</a>）。</p>
+<p><em>图 14. 美国金融机构条件资本缺口的行业构成。截取 <a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees and Engle (2016, p. 17, Figure 1)</a>。纵轴为十亿美元，竖线标出雷曼破产；压力条件为 22 个交易日内市场下跌超过 10%，资本比例为 8%。图中机构按 2007 年 6 月底规模筛选，总量与行业份额共同展示风险承担者的变化。</em></p>
+<p>这些变化同时包含股价下跌、共同风险上升和资本结构的影响。对监测者，图 14 不仅给出系统总缺口，还指出补资压力从哪类机构向哪类机构扩散。机构退出排序也应结合原文事件读取：贝尔斯登被收购，雷曼破产，房利美与房地美进入托管，这些变化改变了样本中仍以独立上市机构存在的风险承担者。</p>
+<p>作者用危机期间的官方支持数据检验预测价值：以 2008 年 3 月前的信息计算风险指标，以此解释此后的最大借款支持规模。由于很多机构没有使用支持项目，回归采用可处理零值集中情况的 Tobit 模型。加入 SRISK 后，基准模型的伪 $R^2$ 从 18.2% 提高至 21.5%；与其他资本缺口指标共同加入时，SRISK 的解释作用较强（<a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle, 2016, pp. 18–20, Table 4</a>）。</p>
+<p>SRISK 的应用由此十分具体：设定共同市场压力，模拟机构股权损失，把损失与资产负债表连接，再按补资金额和系统份额排列机构。它把“在危机中容易下跌”转化为“在危机中预计需要多少资本”，使市场风险研究能够服务于资本监测。</p>
 <h2 id="八、把这些研究变成一次可信的检验"><a href="#八、把这些研究变成一次可信的检验" class="headerlink" title="八、把这些研究变成一次可信的检验" data-stellar-navigation=""></a>八、把这些研究变成一次可信的检验</h2><p>真正开始研究时，第一步是把问题写成一句可以检验的话。Cederburg 等的问题就很具体：每个月用过去收益决定原策略与缩放策略的搭配，再比较加入缩放版本是否改善下一期投资结果。它固定了信息时点、持有期和用途。接下来才轮到挑选模型。</p>
-<h3 id="8-1-沿着投资者真正经历的时间往前走"><a href="#8-1-沿着投资者真正经历的时间往前走" class="headerlink" title="8.1 沿着投资者真正经历的时间往前走" data-stellar-navigation=""></a>8.1 沿着投资者真正经历的时间往前走</h3><p>先划出训练期，在其中确定窗口、阈值和候选模型；之后每到一个决策时点，只用当时可得的数据重新估计，再留下下一期实际结果。公司名单要包含后来退市的股票，财务数据要按公布时间进入，期权报价与标的价格要对齐。否则，模型会提前知道哪些公司活下来、哪些危机发生过。</p>
+<h3 id="8-1-沿着投资者真正经历的时间往前走"><a href="#8-1-沿着投资者真正经历的时间往前走" class="headerlink" title="8.1 沿着投资者真正经历的时间往前走" data-stellar-navigation=""></a>8.1 沿着投资者真正经历的时间往前走</h3><p>前文各项研究可以组成一个清楚的工作流程：先固定要作的决策，再按时间顺序生成它所需的估计，最后评价下一期结果。Cederburg 等的逐月组合实验给出了完整例子，其决策是：本月给原策略、波动管理策略和无风险资产分别多少权重（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 16–20</a>）。</p>
+<p><strong>在第一个决策点，先积累 120 个月历史。</strong> 用这段历史构造原策略与缩放策略的收益、估计各自均值和协方差；缩放策略每个月的收益也必须由该月之前的方差决定。给定风险厌恶系数和净仓位上限，求出下一月权重。这样，投资者在月末看到的信息，与生成持仓的信息一致。</p>
+<p><strong>在下个月结束时，记录这组已确定权重的收益。</strong> 随后将刚结束月份的数据加入估计窗口，重新计算下一组权重。不断重复后，就得到由一连串实际可作出的决策形成的收益序列。对照组按照相同时间顺序和相同约束，只使用原策略与无风险资产。两组之间的差异，因而集中于新增波动管理版本带来的价值（<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 16–18</a>）。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/realtime-research.png" alt="以原文初始120个月训练及逐月更新为例的实时投资研究流程" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1350" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[209.9646,20.1195,96.1299,1]}" data-stellar-image-source="/image/market-tail-risk-review/realtime-research.png"></p>
-<p><em>图 15. 把信息时点落实到每次决策。根据 <a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al. (2019, pp. 16–20)</a> 整理的流程图。下一期结果只能用于评价已作出的决策，并在到达下一决策时点后进入估计；不能倒过来选择当前仓位。</em></p>
-<p>尾部模型还需要一项特殊检查：样本里究竟有多少份独立的极端信息。把同一天几千只股票的亏损当成几千次独立冲击，会低估误差；把一轮危机拆成许多独立交易日，也有同样的问题。前文的分块重抽样可用于评估这类误差：按连续时间块抽取整组资产收益，保留波动聚集和共同冲击。阈值选择与组合优化也要在每次抽样中重新执行，才能看到整条研究流程的不确定性。</p>
-<p>阈值、估计窗口和依赖模型可以有多个合理选择。重要的是把这个范围事先固定，并展示结果是否依赖某一个特殊设置。越罕见的事件，能用于区分模型的证据越少；一条平滑的风险预测曲线无法改变这一事实。</p>
-<h3 id="8-2-三种成功，要分别证明"><a href="#8-2-三种成功，要分别证明" class="headerlink" title="8.2 三种成功，要分别证明" data-stellar-navigation=""></a>8.2 三种成功，要分别证明</h3><div class="md-table-scroll"><table>
+<p><em>图 15. 每次决策的信息时序。根据 <a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al. (2019, pp. 16–20)</a> 整理：初始 120 个月用于估计，每月生成下一期持仓，记录实现收益后再扩展样本并重估。</em></p>
+<p>这个时序也可以对应到前文其他方法。Kelly–Jiang 的样本外预测，每期用已有尾部指标与收益重新估计预测斜率；Dias 的行业组合，每周仅用此前 1,000 天拟合风险、选择持仓；Brownlees–Engle 的资本监测，每个月使用截至当时的市场和财务信息更新压力路径。它们分别输出预测收益、组合权重和资本缺口，但都将估计信息与被评价的未来结果在时间上分开（<a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly &amp; Jiang, 2013, pp. 21–22</a>；<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 6–7</a>；<a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle, 2016, p. 14</a>）。</p>
+<p>估计误差的处理也要配合数据结构。股票在同一天受共同冲击，连续交易日又可能处于同一轮高波动状态。Dias 因此用<strong>分块重抽样</strong>评估绩效：每次抽取连续的收益片段，以保留相邻日期的部分依赖，再重新计算绩效，观察结果如何变化。图 10 的区间就是这种不确定性在实证结果中的表现（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 23–26</a>）。</p>
+<p>对已经形成的策略收益做分块重抽样，每次只重新计算 Sharpe 或效用差，得到的是<strong>这条收益序列的绩效估计不确定性</strong>。要把尾部拟合与权重选择本身的估计误差也纳入，可以在 Dias 行业配置框架上作如下扩展：把十个行业同日的收益作为一整行，按连续日期块共同抽取，拼成一条模拟历史；在这条历史的每个周度决策点，仅用此前 1,000 天重新生成候选组合、拟合 GPD、选择权重，再用紧接着的一周收益计算投资结果。这样，每次重抽样都会重新产生整条持仓和收益序列。</p>
+<p>在同一条模拟历史上，也逐周重做均值—方差基准，最后记录两套方案的 Sharpe 差或效用差。例如重复 1,000 次，就得到 1,000 个绩效差值；取其第 5 和第 95 百分位，可构造 90% 的百分位区间。两套方案共用每次抽取的行情，比较中就保留了共同市场冲击。Dias 的原文评估实现收益的不确定性，上述扩展把重新估计和重新选仓也放进抽样循环。</p>
+<h3 id="8-2-三种成功，要分别证明"><a href="#8-2-三种成功，要分别证明" class="headerlink" title="8.2 三种成功，要分别证明" data-stellar-navigation=""></a>8.2 三种成功，要分别证明</h3><p>尾部研究常用“有效”概括结果，但不同论文中的有效有不同含义。Poon 等比较损失估计，Kelly–Jiang 检验收益预测，Cederburg 等检验投资配置。将它们对应的观察量列出来，可以直接看到一项研究究竟回答了哪一问。</p>
+<div class="md-table-scroll"><table>
 <thead>
 <tr>
 <th>检验目的</th>
-<th>应当观察的结果</th>
-<th>容易忽略的失败</th>
+<th>原文怎样实施</th>
+<th>结果如何解释</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>预测损失</td>
-<td>VaR 超越频率、超越是否聚集、尾部损失严重程度</td>
-<td>总次数正确，但危机时连续失守；ES 低估越界后的损失</td>
+<td>Girardi–Ergün 在机构困境日检查系统 CoVaR 的超越频率与独立性</td>
+<td>风险分位点是否与条件损失分布相符</td>
 </tr>
 <tr>
-<td>解释或预测收益</td>
-<td>信息在先、收益在后；与实时基准比较；系数与经济量级稳定</td>
-<td>同期排序被写成预测；长周期重叠收益夸大有效样本量</td>
+<td>预测收益</td>
+<td>Kelly–Jiang 逐期重新估计，与实时历史均值预测比较</td>
+<td>尾部状态是否减少未来收益预测误差</td>
 </tr>
 <tr>
-<td>改善组合</td>
-<td>成本后收益、实际 ES、回撤、换手和杠杆分布</td>
-<td>只靠减少平均仓位降低亏损，或靠无法维持的杠杆提高收益</td>
+<td>改善配置</td>
+<td>Cederburg 等逐月估计原策略与缩放策略的组合权重</td>
+<td>新方法是否提高实际后续 Sharpe 或确定性等价收益</td>
 </tr>
 </tbody></table></div>
-<p>连续条件分布下，合适的 $\alpha$ 水平 VaR 应留下约 $1-\alpha$ 的超越概率；离散分布要按相应概率质量处理。还应检查超越发生的时间：如果大多挤在同一轮危机中，说明模型没有及时跟上风险。ES 则需要继续评价这些坏日子里究竟亏了多少。</p>
-<p>组合比较要统一风险预算和融资条件。允许一个策略使用六倍杠杆，却只让基准持有一倍股票，会把融资差异混进规则效果；只报告某次危机少亏了多少，也会漏掉危机前后的持有成本。压力检验至少要覆盖市场下跌、急剧反弹和波动跳升，因为同一个市场状态，对不同策略可能有相反影响。</p>
-<p>这些要求共同指向一个可交付的结果：给出当时能知道的信息、当时会做出的交易，以及随后实际发生的损益。模型的解释力、预测力和可实施性，才由此连在一起。</p>
+<p><strong>损失预测首先检查概率是否匹配。</strong> 对连续损失分布，正确的 99% VaR 应留下约 1% 的超越概率。Rocco 介绍的无条件覆盖检验比较实际超越次数与这个比例；独立性检验再检查超越是否集中发生。若一年总次数接近预期，却在某段高波动期连续失守，模型仍没有及时跟上条件风险（<a href="#ref-rocco-2010" data-stellar-navigation="">Rocco, 2010, pp. 46–47</a>）。</p>
+<p>CoVaR 的例子进一步说明分母的重要性。在 Girardi–Ergün 的 5% 设定中，先筛出机构跌破自身门槛的日期，再在这些日期中计算系统超越比例，目标是 5%；若把所有日期作为分母，对应的联合尾部概率则是 $5\%\times5\%=0.25\%$。原文正态与偏斜 $t$ 的比较，就是在这样明确的条件口径下评价模型（<a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi &amp; Ergün, 2012, pp. 10–14, 16–17</a>）。</p>
+<p><strong>收益预测检查的是另一种误差。</strong> Kelly–Jiang 的一年期样本外 $R^2=4.5\%$，意味着尾部指标相对历史均值减少了预测平方误差。它直接支持“尾部状态包含后续回报信息”（<a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly &amp; Jiang, 2013, pp. 21–22</a>）。</p>
+<p><strong>把预测转成持仓，可以完整写成一个月度实验。</strong> 以下将 Kelly–Jiang 的预测方法与前述均值—方差配置方法接起来演示。每个月末，用当时已有数据估计第 4.1 节的一个月预测回归，得到 $\hat\mu_t=\hat a+\hat b\tau_t$，并用过去收益估计下一月方差 $\hat v_t$；收益和方差都采用一个月口径。若只在市场组合与现金之间配置，禁止做空和借款，风险厌恶系数为 $\gamma$，则股票权重为</p>
+$$
+a_t=\min\left\{1,\max\left[0,\frac{\hat\mu_t}{\gamma\hat v_t}\right]\right\}.
+$$
+
+<p>内层把负权重截为 0，外层把超过一倍的权重截为 1，其余资金留在现金。用一组演算数值：预测月超额收益为 0.5%、月标准差为 5%，取 $\gamma=5$，则 $a_t=0.005/(5\times0.05^2)=0.4$。100 万元账户因此持有 40 万元市场组合；若调仓前持有 60 万元，就卖出 20 万元。按单边 0.1% 费率计算，卖出费用为 200 元。若下一月市场实际上涨 2%、现金收益为 0，则股票盈利 8,000 元，扣费后账户盈利 7,800 元，即 0.78%。这些数值演示了预测、目标持仓、买卖金额与净收益的逐步换算。</p>
+<p>每个月重复上述步骤，就得到一条可与基准比较的净收益序列。基准把尾部回归预测替换为当时已有数据的历史平均收益，其他方差输入、仓位约束和费率保持一致；再比较两者的 Sharpe、CER 和危机期损失，便能衡量尾部信号带来的配置效果。这里的组合实验是对几篇论文方法的衔接；逐期估计、持有一期再评价的顺序，采用 Cederburg 等的实时检验思路（<a href="#ref-moreira-muir-2016" data-stellar-navigation="">Moreira &amp; Muir, 2016, pp. 5–6</a>；<a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al., 2019, pp. 16–20</a>）。</p>
+<p><strong>组合评价则要把平均回报、坏日子和持仓代价放在一起。</strong> Dias 同时比较全期与危机期表现，并估计投资者愿为保护支付的费用；Moreira–Muir 则改变杠杆上限与交易成本，检查仓位规则的结果怎样变化。这样的比较才能区分，绩效变化来自承担风险的时机、资产之间的搭配，还是资金使用规模（<a href="#ref-dias-nd" data-stellar-navigation="">Dias, n.d., pp. 13–15, 23–26</a>；<a href="#ref-moreira-muir-2016" data-stellar-navigation="">Moreira &amp; Muir, 2016, pp. 11–13</a>）。</p>
+<p>此外，单期尾部损失与长期净值路径提供不同信息。<strong>最大回撤</strong>是净值从先前高点到随后低点的最大跌幅；收益发生顺序不同，即使单期 ES 相同，也可能产生不同回撤。动量的反弹崩溃说明，压力情景还应由具体持仓确定：市场下跌、急剧反弹和波动上升，分别会暴露不同损失来源。将风险定义、原文案例和实际决策连在一起，才形成一项完整的尾部风险研究。</p>
 <h2 id="九、二十篇文献各自推进了哪一步"><a href="#九、二十篇文献各自推进了哪一步" class="headerlink" title="九、二十篇文献各自推进了哪一步" data-stellar-navigation=""></a>九、二十篇文献各自推进了哪一步</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/market-tail-risk-review/literature-map.png" alt="二十篇文献按损失测量、风险定价、崩盘暴露、组合管理及系统性资本缺口组织的阅读图" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" width="2160" height="1872" data-stellar-image-dimensions="true" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[210.3896,25.4179,96.304,1]}" data-stellar-image-source="/image/market-tail-risk-review/literature-map.png"></p>
-<p><em>图 16. 二十篇文献的阅读顺序。本文按主要问题整理，年份对应实际引用版本；图中分组用于导航，具体证据与限制见下表。</em></p>
+<p><em>图 16. 二十篇文献的阅读顺序。按损失测量、风险定价、崩盘暴露、组合管理和系统性资本缺口组织；下表进一步对应每篇论文的原文案例与用途。</em></p>
 <p>下表按问题排列。年份对应正文实际引用版本；工作稿与后续期刊版的关系见参考文献。</p>
 <div class="md-table-scroll"><table>
 <thead>
 <tr>
 <th>文献</th>
-<th>核心推进</th>
-<th>阅读时应保留的条件</th>
+<th>原文方法</th>
+<th>原文案例与用途</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><a href="#ref-rocco-2010" data-stellar-navigation="">Rocco (2010)</a></td>
-<td>将尾部估计、阈值选择和时间依赖放进同一方法框架</td>
-<td>极值近似需要足够极端的阈值与足够多的数据</td>
+<td>综述 GPD、Hill、波动过滤和尾部回测</td>
+<td>汇总股票、股指等风险估计，说明怎样从有限观测外推极端损失</td>
 </tr>
 <tr>
 <td><a href="#ref-poon-2004" data-stellar-navigation="">Poon et al. (2004)</a></td>
-<td>先辨认联合尾部的依赖类别，再估计组合损失</td>
-<td>渐近独立仍可有明显的有限阈值共同损失</td>
+<td>先诊断依赖类别，再拟合联合尾部</td>
+<td>美国—日本、德国—法国股指组合的 VaR 与 ES 比较</td>
 </tr>
 <tr>
 <td><a href="#ref-kelly-jiang-2013" data-stellar-navigation="">Kelly &amp; Jiang (2013)</a></td>
-<td>汇集个股极端收益，估计共同尾部状态并研究收益补偿</td>
-<td>依赖共同动态假设；尾厚与绝对损失尺度有别</td>
+<td>汇集个股日收益估计共同尾厚，再做预测与排序</td>
+<td>美国市场收益预测与五组个股的后续回报比较</td>
 </tr>
 <tr>
 <td><a href="#ref-bollerslev-todorov-2009" data-stellar-navigation="">Bollerslev &amp; Todorov (2009)</a></td>
-<td>连接高频收益与期权，分别估计实际尾部和定价尾部</td>
-<td>尾部风险价格包含投资者对坏状态的估值</td>
+<td>高频跳跃尾部外推与期权隐含尾部对照</td>
+<td>标普 500 崩盘保险、股权及方差风险补偿</td>
 </tr>
 <tr>
 <td><a href="#ref-bollerslev-et-al-2015" data-stellar-navigation="">Bollerslev et al. (2015)</a></td>
-<td>分解方差风险补偿，识别左跳尾部的收益预测信息</td>
-<td>左跳变差作为溢价代理需要相应近似条件</td>
+<td>用虚值期权估计尾部形状、强度与 LJV</td>
+<td>比较 2008 年危机后 VIX 与 LJV 路径，预测半年市场收益</td>
 </tr>
 <tr>
 <td><a href="#ref-andersen-et-al-2018" data-stellar-navigation="">Andersen et al. (2018)</a></td>
-<td>从期权尾部中分离波动相关部分，研究余下的定价信息</td>
-<td>对收益的预测力与对实际风险的预测力不同</td>
+<td>分离期权曲面的波动与额外尾部因子</td>
+<td>七个欧美股指的实际变差预测与收益预测</td>
 </tr>
 <tr>
 <td><a href="#ref-barro-2006" data-stellar-navigation="">Barro (2006)</a></td>
-<td>用跨国罕见经济灾难说明股票需要高额补偿</td>
-<td>宏观累计收缩与股票单日极端损失不是同一事件</td>
+<td>用跨国灾难频率和损失规模校准消费定价</td>
+<td>大萧条与战争期间的产出收缩，解释平均股权溢价</td>
 </tr>
 <tr>
 <td><a href="#ref-wachter-2012" data-stellar-navigation="">Wachter (2012)</a></td>
-<td>让灾难概率变化，并结合递归偏好解释股价波动</td>
-<td>结果来自模型机制与校准，不能当作直接观察到的灾难概率</td>
+<td>时变灾难强度与递归偏好模型</td>
+<td>跨国消费灾难校准，模拟美国战后回报与波动特征</td>
 </tr>
 <tr>
 <td><a href="#ref-ang-et-al-2004" data-stellar-navigation="">Ang et al. (2004)</a></td>
-<td>发现普通 beta 之外的下行暴露也与平均收益有关</td>
-<td>同期关系强于直接的滞后排序预测</td>
+<td>下行 beta、相对下行 beta 与截面检验</td>
+<td>普通 beta 相近股票的同期补偿及滞后选股结果</td>
 </tr>
 <tr>
 <td><a href="#ref-bali-et-al-2013" data-stellar-navigation="">Bali et al. (2013)</a></td>
-<td>在个股自身极端亏损时观察市场状态</td>
-<td>条件事件与市场下行 beta 不同</td>
+<td>以个股坏日子为条件计算 H-TCR</td>
+<td>集中持股与市场基金的配合，以及下月收益排序</td>
 </tr>
 <tr>
 <td><a href="#ref-chabi-yo-et-al-2016" data-stellar-navigation="">Chabi-Yo et al. (2016)</a></td>
-<td>将股票与市场共同崩盘的依赖联系到平均收益</td>
-<td>承担共同崩盘风险的补偿，同时意味着危机中表现较差</td>
+<td>每月选择混合 copula，提取 LTD</td>
+<td>十个最差市场日的保护效果与平时收益补偿</td>
 </tr>
 <tr>
 <td><a href="#ref-daniel-et-al-2017" data-stellar-navigation="">Daniel et al. (2017)</a></td>
-<td>从输家股的反弹暴露解释动量崩溃，并估计危险状态</td>
-<td>事后识别与递归预测的证据要分别看</td>
+<td>分段市场回归与隐马尔可夫状态识别</td>
+<td>2009 年输家股反弹造成的动量空头损失</td>
 </tr>
 <tr>
 <td><a href="#ref-palmquist-1999" data-stellar-navigation="">Palmquist et al. (1999)</a></td>
-<td>把 CVaR 预算转成可求解的组合约束</td>
-<td>输入情景决定模型能防范哪些损失</td>
+<td>将 CVaR 预算转为线性规划约束</td>
+<td>标普 100 股票的两周配置、现金与持仓上限</td>
 </tr>
 <tr>
 <td><a href="#ref-dias-nd" data-stellar-navigation="">Dias (n.d.)</a></td>
-<td>先构造分散化候选组合，再选择尾部损失较小者</td>
-<td>危机改善伴随正常时期机会成本和更高换手</td>
+<td>先生成最小方差候选，再用 CVaR 筛选</td>
+<td>十行业周度配置中，危机保护与全期收益的交换</td>
 </tr>
 <tr>
 <td><a href="#ref-moreira-muir-2016" data-stellar-navigation="">Moreira &amp; Muir (2016)</a></td>
-<td>利用方差与预期收益变化不相称的现象调整仓位</td>
-<td>逆方差规则涉及杠杆、成本与规模设定</td>
+<td>按滞后实现方差倒数配置仓位</td>
+<td>市场及因子的月度风险暴露、成本和杠杆约束比较</td>
 </tr>
 <tr>
 <td><a href="#ref-barroso-santa-clara-2014" data-stellar-navigation="">Barroso &amp; Santa-Clara (2014)</a></td>
-<td>利用动量风险的持续性，通过逆波动缩放缓解崩溃</td>
-<td>控制总风险不同于仅对冲市场 beta</td>
+<td>用半年日收益预测波动并缩放动量</td>
+<td>年化 12% 目标波动下的动量收益与崩溃缓解</td>
 </tr>
 <tr>
 <td><a href="#ref-cederburg-2019" data-stellar-navigation="">Cederburg et al. (2019)</a></td>
-<td>区分直接缩放、事后搭配和实时配置三类结果</td>
-<td>结构变化会使历史上有效的搭配比例失效</td>
+<td>直接表现、事后搭配和实时配置分别检验</td>
+<td>103 个策略的波动管理，以及市场策略历史关系的变化</td>
 </tr>
 <tr>
 <td><a href="#ref-acharya-2010" data-stellar-navigation="">Acharya et al. (2010)</a></td>
-<td>将共同坏状态、杠杆与资本不足的外部成本联系起来</td>
-<td>危机前风险输入不等于事前已校准的损失预测模型</td>
+<td>MES、杠杆与系统危机中的资本不足</td>
+<td>AIG、伯克希尔、房地美等机构及 2009 年压力测试</td>
 </tr>
 <tr>
 <td><a href="#ref-girardi-ergun-2012" data-stellar-navigation="">Girardi &amp; Ergün (2012)</a></td>
-<td>将机构跌破分位点纳入 CoVaR 条件，改进估计与检验</td>
-<td>条件关联本身不识别传染方向</td>
+<td>GARCH–DCC 联合建模并计算困境 CoVaR</td>
+<td>74 家金融机构，比较正态与偏斜 t 的条件损失估计</td>
 </tr>
 <tr>
 <td><a href="#ref-brownlees-engle-2016" data-stellar-navigation="">Brownlees &amp; Engle (2016)</a></td>
-<td>把共同危机中的股权损失换算成条件补资金额</td>
-<td>结果依赖债务、资本要求和压力情景</td>
+<td>模拟压力路径，用 LRMES 和资产负债表计算 SRISK</td>
+<td>美国金融危机中资本缺口总量、行业迁移及机构支持规模</td>
 </tr>
 </tbody></table></div>
-<p>读完这些研究，投资决策仍要回到三个具体问题：组合会在哪种状态下亏损，承担这种损失能获得多少补偿，以及账户能否撑过补偿兑现之前的坏日子。尾部风险研究的价值，就在于让这三个问题都能被清楚定义、量化并检验。</p>
+<p>这些研究把风险识别、收益补偿和资金安排接到了具体计算上。Poon 等由联合收益情景得到组合 VaR 与 ES，再按持仓金额换算损失预算；Daniel 等用赢家与输家的收益差解释反弹中的动量巨亏；Chabi-Yo 等同时报告平时回报和危机保护，展示承担共崩盘风险的补偿。落实到配置，CVaR 约束给出预算内的权重，波动管理规则给出随风险变化的仓位，实时净收益检验则显示这些调整实际获得了多少回报、减少了多少损失。对金融机构，SRISK 再把压力下的股权损失与债务、资本比例连接，输出资本不足金额。</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献" data-stellar-navigation=""></a>参考文献</h2><p>以下按作者姓氏排序。正文引用所据版本，页码均为该版本的原文页码；工作稿另列后续期刊版。<code>n.d.</code> 表示所据稿件未注明日期。</p>
 <p><a id="ref-acharya-2010"></a></p>
 <p>Acharya, V. V., Pedersen, L. H., Philippon, T., &amp; Richardson, M. (2010). <em>Measuring systemic risk</em> (Working Paper No. 10-02). Federal Reserve Bank of Cleveland. <a target="_blank" rel="noopener" href="https://doi.org/10.26509/frbc-wp-201002" data-md-link=""><span class="md-link-icon ui-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="currentColor"><g opacity=".5"><path d="M19.7388 4.26118C17.0572 1.57961 12.7095 1.57961 10.0279 4.26118L9.30707 4.98203C9.01418 5.27492 9.01418 5.7498 9.30707 6.04269C9.59997 6.33558 10.0748 6.33558 10.3677 6.04269L11.0886 5.32184C13.1844 3.22605 16.5823 3.22605 18.6781 5.32184C20.7739 7.41763 20.7739 10.8156 18.6781 12.9114L17.9573 13.6322C17.6644 13.9251 17.6644 14.4 17.9573 14.6929C18.2502 14.9858 18.725 14.9858 19.0179 14.6929L19.7388 13.972C22.4203 11.2905 22.4203 6.94276 19.7388 4.26118Z"></path><path d="M6.04269 9.30707C6.33558 9.59997 6.33558 10.0748 6.04269 10.3677L5.32184 11.0886C3.22605 13.1844 3.22605 16.5823 5.32184 18.6781C7.41763 20.7739 10.8156 20.7739 12.9114 18.6781L13.6322 17.9573C13.9251 17.6644 14.4 17.6644 14.6929 17.9573C14.9858 18.2501 14.9858 18.725 14.6929 19.0179L13.972 19.7388C11.2905 22.4203 6.94276 22.4203 4.26118 19.7388C1.57961 17.0572 1.57961 12.7095 4.26118 10.0279L4.98203 9.30707C5.27492 9.01418 5.7498 9.01418 6.04269 9.30707Z"></path></g><path d="M14.6933 9.30707C14.9862 9.59997 14.9862 10.0748 14.6933 10.3677L10.3682 14.6928C10.0753 14.9857 9.60045 14.9857 9.30756 14.6928C9.01467 14.3999 9.01467 13.9251 9.30756 13.6322L13.6327 9.30707C13.9255 9.01418 14.4004 9.01418 14.6933 9.30707Z"></path></g></svg></span>https://doi.org/10.26509/frbc-wp-201002</a></p>
@@ -962,13 +1103,13 @@ $$
 <p><a id="ref-wachter-2012"></a></p>
 <p>Wachter, J. A. (2012). <em>Can time-varying risk of rare disasters explain aggregate stock market volatility?</em> (NBER Working Paper No. 14386, March 2012 revision). National Bureau of Economic Research. <a target="_blank" rel="noopener" href="https://doi.org/10.3386/w14386" data-md-link=""><span class="md-link-icon ui-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="currentColor"><g opacity=".5"><path d="M19.7388 4.26118C17.0572 1.57961 12.7095 1.57961 10.0279 4.26118L9.30707 4.98203C9.01418 5.27492 9.01418 5.7498 9.30707 6.04269C9.59997 6.33558 10.0748 6.33558 10.3677 6.04269L11.0886 5.32184C13.1844 3.22605 16.5823 3.22605 18.6781 5.32184C20.7739 7.41763 20.7739 10.8156 18.6781 12.9114L17.9573 13.6322C17.6644 13.9251 17.6644 14.4 17.9573 14.6929C18.2502 14.9858 18.725 14.9858 19.0179 14.6929L19.7388 13.972C22.4203 11.2905 22.4203 6.94276 19.7388 4.26118Z"></path><path d="M6.04269 9.30707C6.33558 9.59997 6.33558 10.0748 6.04269 10.3677L5.32184 11.0886C3.22605 13.1844 3.22605 16.5823 5.32184 18.6781C7.41763 20.7739 10.8156 20.7739 12.9114 18.6781L13.6322 17.9573C13.9251 17.6644 14.4 17.6644 14.6929 17.9573C14.9858 18.2501 14.9858 18.725 14.6929 19.0179L13.972 19.7388C11.2905 22.4203 6.94276 22.4203 4.26118 19.7388C1.57961 17.0572 1.57961 12.7095 4.26118 10.0279L4.98203 9.30707C5.27492 9.01418 5.7498 9.01418 6.04269 9.30707Z"></path></g><path d="M14.6933 9.30707C14.9862 9.59997 14.9862 10.0748 14.6933 10.3677L10.3682 14.6928C10.0753 14.9857 9.60045 14.9857 9.30756 14.6928C9.01467 14.3999 9.01467 13.9251 9.30756 13.6322L13.6327 9.30707C13.9255 9.01418 14.4004 9.01418 14.6933 9.30707Z"></path></g></svg></span>https://doi.org/10.3386/w14386</a></p>
 <p>该工作论文于 2008 年首发。后续发表：Wachter, J. A. (2013). Can time-varying risk of rare disasters explain aggregate stock market volatility? <em>The Journal of Finance, 68</em>(3), 987–1035. <a target="_blank" rel="noopener" href="https://doi.org/10.1111/jofi.12018" data-md-link=""><span class="md-link-icon ui-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="currentColor"><g opacity=".5"><path d="M19.7388 4.26118C17.0572 1.57961 12.7095 1.57961 10.0279 4.26118L9.30707 4.98203C9.01418 5.27492 9.01418 5.7498 9.30707 6.04269C9.59997 6.33558 10.0748 6.33558 10.3677 6.04269L11.0886 5.32184C13.1844 3.22605 16.5823 3.22605 18.6781 5.32184C20.7739 7.41763 20.7739 10.8156 18.6781 12.9114L17.9573 13.6322C17.6644 13.9251 17.6644 14.4 17.9573 14.6929C18.2502 14.9858 18.725 14.9858 19.0179 14.6929L19.7388 13.972C22.4203 11.2905 22.4203 6.94276 19.7388 4.26118Z"></path><path d="M6.04269 9.30707C6.33558 9.59997 6.33558 10.0748 6.04269 10.3677L5.32184 11.0886C3.22605 13.1844 3.22605 16.5823 5.32184 18.6781C7.41763 20.7739 10.8156 20.7739 12.9114 18.6781L13.6322 17.9573C13.9251 17.6644 14.4 17.6644 14.6929 17.9573C14.9858 18.2501 14.9858 18.725 14.6929 19.0179L13.972 19.7388C11.2905 22.4203 6.94276 22.4203 4.26118 19.7388C1.57961 17.0572 1.57961 12.7095 4.26118 10.0279L4.98203 9.30707C5.27492 9.01418 5.7498 9.01418 6.04269 9.30707Z"></path></g><path d="M14.6933 9.30707C14.9862 9.59997 14.9862 10.0748 14.6933 10.3677L10.3682 14.6928C10.0753 14.9857 9.60045 14.9857 9.30756 14.6928C9.01467 14.3999 9.01467 13.9251 9.30756 13.6322L13.6327 9.30707C13.9255 9.01418 14.4004 9.01418 14.6933 9.30707Z"></path></g></svg></span>https://doi.org/10.1111/jofi.12018</a></p>
-</article>
+</u_t}\log\left(\frac{r_{j,t}}{u_t}\right),></article>
 <div class="article-tags slide-up"><a class="tag" href="/tags/%E5%B0%BE%E9%83%A8%E9%A3%8E%E9%99%A9/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>尾部风险</a><a class="tag" href="/tags/%E6%9E%81%E5%80%BC%E7%90%86%E8%AE%BA/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>极值理论</a><a class="tag" href="/tags/%E9%A2%84%E6%9C%9F%E6%8D%9F%E5%A4%B1/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>预期损失</a><a class="tag" href="/tags/%E8%B5%84%E4%BA%A7%E5%AE%9A%E4%BB%B7/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>资产定价</a><a class="tag" href="/tags/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>投资组合</a><a class="tag" href="/tags/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>风险管理</a></div>
 
 
   <div class="article-share slide-up" id="share">
     <div class="body">
-      <div class="social-wrap dis-select"><a class="social share-item qrcode ui-interactive is-icon-only" onclick="util.toggle(&quot;share-qrcode&quot;)" aria-label="分享文章: QR Code" title="分享文章: QR Code"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" d="M10.553 13.447c-.424-.424-.95-.596-1.535-.675c-.553-.074-1.25-.074-2.086-.074H5.827c-.58 0-1.065 0-1.459.037c-.411.04-.795.124-1.146.34c-.345.21-.634.5-.845.844c-.216.352-.3.735-.34 1.147C2 15.459 2 15.944 2 16.525v.068c0 .884 0 1.597.055 2.17c.056.592.175 1.108.459 1.571c.288.47.682.864 1.152 1.152c.463.284.979.403 1.57.46C5.81 22 6.524 22 7.407 22h.07c.58 0 1.064 0 1.458-.037c.412-.04.795-.124 1.147-.34c.344-.21.633-.5.844-.844c.216-.352.3-.736.34-1.147c.037-.394.037-.879.037-1.46v-1.104c0-.836 0-1.533-.074-2.086c-.079-.584-.251-1.111-.675-1.535m-1.62-11.41c.412.04.795.124 1.147.34c.344.21.633.5.844.845c.216.351.3.735.34 1.146c.037.394.037.879.037 1.46v1.104c0 .836 0 1.533-.074 2.086c-.079.584-.251 1.111-.675 1.535s-.95.596-1.535.675c-.553.074-1.25.074-2.086.074H5.827c-.58 0-1.065 0-1.459-.037c-.411-.04-.795-.124-1.146-.34a2.56 2.56 0 0 1-.845-.844c-.216-.352-.3-.735-.34-1.147C2 8.54 2 8.056 2 7.475v-.068c0-.884 0-1.597.055-2.17c.056-.592.175-1.108.459-1.571c.288-.47.682-.864 1.152-1.152c.463-.284.979-.403 1.57-.46C5.81 2 6.524 2 7.407 2h.07c.58 0 1.064 0 1.458.037M16.593 2h-.068c-.58 0-1.065 0-1.46.037c-.41.04-.794.124-1.146.34c-.344.21-.633.5-.844.845c-.216.351-.3.735-.34 1.146c-.037.394-.037.879-.037 1.46v1.104c0 .836 0 1.533.074 2.086c.079.584.251 1.111.675 1.535s.95.596 1.535.675c.553.074 1.25.074 2.086.074h1.105c.58 0 1.065 0 1.459-.037c.411-.04.795-.124 1.146-.34c.345-.21.634-.5.845-.844c.216-.352.3-.735.34-1.147C22 8.54 22 8.056 22 7.475v-.068c0-.884 0-1.597-.055-2.17c-.056-.592-.175-1.108-.459-1.571a3.5 3.5 0 0 0-1.152-1.152c-.463-.284-.979-.403-1.57-.46C18.19 2 17.477 2 16.594 2" opacity=".5"></path><path fill="currentColor" d="M14.093 21.302a.698.698 0 1 1-1.396 0v-2.79h1.396z" opacity=".4"></path><path fill="currentColor" d="M21.302 12.698a.7.7 0 0 0-.697.697v3.256H22v-3.256a.7.7 0 0 0-.698-.697" opacity=".5"></path><path fill="currentColor" d="M16.076 16.617c-.076.184-.076.417-.076.883s0 .699.076.883a1 1 0 0 0 .541.54c.184.077.417.077.883.077s.699 0 .883-.076a1 1 0 0 0 .54-.541c.077-.184.077-.417.077-.883s0-.699-.076-.883a1 1 0 0 0-.541-.54C18.199 16 17.966 16 17.5 16s-.699 0-.883.076a1 1 0 0 0-.54.541"></path><path fill="currentColor" d="M22 18.535v-.023h-1.396c0 .443 0 .74-.016.97c-.015.224-.043.333-.073.405a1.16 1.16 0 0 1-.629.63c-.072.029-.18.056-.405.072c-.23.015-.527.016-.97.016h-1.86V22h1.883c.414 0 .759 0 1.042-.02a2.6 2.6 0 0 0 .844-.175a2.56 2.56 0 0 0 1.384-1.384c.112-.27.156-.549.176-.844c.02-.283.02-.628.02-1.042" opacity=".7"></path><path fill="currentColor" d="M12.697 16.616v.035h1.396c0-.668 0-1.116.035-1.458c.034-.33.093-.482.16-.583a1.2 1.2 0 0 1 .321-.32c.101-.068.254-.128.584-.161c.342-.035.79-.036 1.458-.036h1.86v-1.395h-1.896c-.623 0-1.142 0-1.563.043c-.44.044-.85.142-1.218.388c-.28.187-.519.426-.706.706c-.246.368-.343.777-.388 1.217c-.043.421-.043.94-.043 1.564" opacity=".6"></path><path fill="currentColor" d="M5.508 18.69c.219.155.528.155 1.146.155c.619 0 .928 0 1.146-.155a.8.8 0 0 0 .2-.199c.154-.218.154-.527.154-1.146s0-.927-.155-1.146A.8.8 0 0 0 7.8 16c-.218-.155-.527-.155-1.146-.155s-.927 0-1.146.155a.8.8 0 0 0-.199.2c-.155.218-.155.527-.155 1.145c0 .619 0 .928.155 1.146a.8.8 0 0 0 .2.2M6.654 8.155c-.618 0-.927 0-1.146-.155a.8.8 0 0 1-.199-.2c-.155-.217-.155-.527-.155-1.145c0-.619 0-.928.155-1.146a.8.8 0 0 1 .2-.2c.218-.154.527-.154 1.145-.154c.619 0 .928 0 1.146.155a.8.8 0 0 1 .2.199c.154.218.154.527.154 1.146s0 .928-.155 1.146A.8.8 0 0 1 7.8 8c-.218.155-.527.155-1.146.155M16.2 8c.218.155.527.155 1.146.155s.927 0 1.146-.155a.8.8 0 0 0 .199-.199c.155-.218.155-.528.155-1.146c0-.619 0-.928-.155-1.146a.8.8 0 0 0-.2-.2c-.218-.154-.527-.154-1.145-.154c-.619 0-.928 0-1.146.155a.8.8 0 0 0-.2.199c-.154.218-.154.527-.154 1.146s0 .928.155 1.146A.8.8 0 0 0 16.2 8"></path></svg></span></a><a class="social share-item weibo ui-interactive is-icon-only" href="https://service.weibo.com/share/share.php?url=http%3A%2F%2Fjaniszzz.github.io%2F2026%2F10%2F26%2Fmarket-tail-risk-review%2F&amp;title=%E5%B8%82%E5%9C%BA%E5%B0%BE%E9%83%A8%E9%A3%8E%E9%99%A9%E7%BB%BC%E8%BF%B0%EF%BC%9A%E4%BB%8E%E6%9E%81%E7%AB%AF%E6%8D%9F%E5%A4%B1%E7%9A%84%E5%BA%A6%E9%87%8F%E5%88%B0%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E4%B8%8E%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86%20-%20Janiszzz's%20Blog&amp;summary=%E4%BB%8E%20VaR%E3%80%81ES%20%E4%B8%8E%E6%9E%81%E5%80%BC%E7%90%86%E8%AE%BA%E5%87%BA%E5%8F%91%EF%BC%8C%E6%A2%B3%E7%90%86%E5%B0%BE%E9%83%A8%E4%BE%9D%E8%B5%96%E3%80%81%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E3%80%81%E5%9B%A0%E5%AD%90%E5%B4%A9%E6%BA%83%E4%B8%8E%E7%BB%84%E5%90%88%E9%A3%8E%E6%8E%A7%E7%9A%84%E5%BA%A6%E9%87%8F%E6%96%B9%E6%B3%95%E3%80%81%E7%BB%8F%E9%AA%8C%E8%AF%81%E6%8D%AE%E5%92%8C%E9%80%82%E7%94%A8%E8%BE%B9%E7%95%8C%E3%80%82" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: Weibo" title="分享文章: Weibo"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.737 5.439l-.002.004zM9.05 17.219c-.384.616-1.208.884-1.829.602-.612-.279-.793-.991-.406-1.593.379-.595 1.176-.861 1.793-.601.622.263.82.972.442 1.592zm1.27-1.627c-.141.237-.449.353-.689.253-.236-.09-.313-.361-.177-.586.138-.227.436-.346.672-.24.239.09.315.36.18.601l.014-.028zm.176-2.719c-1.893-.493-4.033.45-4.857 2.118-.836 1.704-.026 3.591 1.886 4.21 1.983.64 4.318-.341 5.132-2.179.8-1.793-.201-3.642-2.161-4.149zm7.563-1.224c-.346-.105-.57-.18-.405-.615.375-.977.42-1.804 0-2.404-.781-1.112-2.915-1.053-5.364-.03 0 0-.766.331-.571-.271.376-1.217.315-2.224-.27-2.809-1.338-1.337-4.869.045-7.888 3.08C1.309 10.87 0 13.273 0 15.348c0 3.981 5.099 6.395 10.086 6.395 6.536 0 10.888-3.801 10.888-6.82 0-1.822-1.547-2.854-2.915-3.284v.01zm1.908-5.092c-.766-.856-1.908-1.187-2.96-.962-.436.09-.706.511-.616.932.09.42.511.691.932.602.511-.105 1.067.044 1.442.465.376.421.466.977.316 1.473-.136.406.089.856.51.992.405.119.857-.105.992-.512.33-1.021.12-2.178-.646-3.035l.03.045zm2.418-2.195c-1.576-1.757-3.905-2.419-6.054-1.968-.496.104-.812.587-.706 1.081.104.496.586.813 1.082.707 1.532-.331 3.185.15 4.296 1.383 1.112 1.246 1.429 2.943.947 4.416-.165.48.106 1.007.586 1.157.479.165.991-.104 1.157-.586.675-2.088.241-4.478-1.338-6.235l.03.045z"></path></svg></span></a><a class="social share-item x ui-interactive is-icon-only" href="https://x.com/intent/tweet?text=%E5%B8%82%E5%9C%BA%E5%B0%BE%E9%83%A8%E9%A3%8E%E9%99%A9%E7%BB%BC%E8%BF%B0%EF%BC%9A%E4%BB%8E%E6%9E%81%E7%AB%AF%E6%8D%9F%E5%A4%B1%E7%9A%84%E5%BA%A6%E9%87%8F%E5%88%B0%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E4%B8%8E%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86%20-%20Janiszzz's%20Blog&amp;url=http%3A%2F%2Fjaniszzz.github.io%2F2026%2F10%2F26%2Fmarket-tail-risk-review%2F" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: X" title="分享文章: X"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M14.234 10.162L22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299l-.929-1.329L3.076 1.56h3.182l5.965 8.532l.929 1.329l7.754 11.09h-3.182z"></path></svg></span></a><a class="social share-item telegram ui-interactive is-icon-only" href="https://t.me/share/url?url=http%3A%2F%2Fjaniszzz.github.io%2F2026%2F10%2F26%2Fmarket-tail-risk-review%2F&amp;text=%E5%B8%82%E5%9C%BA%E5%B0%BE%E9%83%A8%E9%A3%8E%E9%99%A9%E7%BB%BC%E8%BF%B0%EF%BC%9A%E4%BB%8E%E6%9E%81%E7%AB%AF%E6%8D%9F%E5%A4%B1%E7%9A%84%E5%BA%A6%E9%87%8F%E5%88%B0%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E4%B8%8E%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86%20-%20Janiszzz's%20Blog" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: Telegram" title="分享文章: Telegram"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12a12 12 0 0 0 12-12A12 12 0 0 0 12 0zm4.962 7.224c.1-.002.321.023.465.14a.5.5 0 0 1 .171.325c.016.093.036.306.02.472c-.18 1.898-.962 6.502-1.36 8.627c-.168.9-.499 1.201-.82 1.23c-.696.065-1.225-.46-1.9-.902c-1.056-.693-1.653-1.124-2.678-1.8c-1.185-.78-.417-1.21.258-1.91c.177-.184 3.247-2.977 3.307-3.23c.007-.032.014-.15-.056-.212s-.174-.041-.249-.024q-.159.037-5.061 3.345q-.72.495-1.302.48c-.428-.008-1.252-.241-1.865-.44c-.752-.245-1.349-.374-1.297-.789q.04-.324.893-.663q5.247-2.286 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635"></path></svg></span></a><a class="social share-item whatsapp ui-interactive is-icon-only" href="https://wa.me/?text=%E5%B8%82%E5%9C%BA%E5%B0%BE%E9%83%A8%E9%A3%8E%E9%99%A9%E7%BB%BC%E8%BF%B0%EF%BC%9A%E4%BB%8E%E6%9E%81%E7%AB%AF%E6%8D%9F%E5%A4%B1%E7%9A%84%E5%BA%A6%E9%87%8F%E5%88%B0%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E4%B8%8E%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86%20-%20Janiszzz's%20Blog%0Ahttp%3A%2F%2Fjaniszzz.github.io%2F2026%2F10%2F26%2Fmarket-tail-risk-review%2F" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: WhatsApp" title="分享文章: WhatsApp"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967c-.273-.099-.471-.148-.67.15c-.197.297-.767.966-.94 1.164c-.173.199-.347.223-.644.075c-.297-.15-1.255-.463-2.39-1.475c-.883-.788-1.48-1.761-1.653-2.059c-.173-.297-.018-.458.13-.606c.134-.133.298-.347.446-.52s.198-.298.298-.497c.099-.198.05-.371-.025-.52s-.669-1.612-.916-2.207c-.242-.579-.487-.5-.669-.51a13 13 0 0 0-.57-.01c-.198 0-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074s2.096 3.2 5.077 4.487c.709.306 1.262.489 1.694.625c.712.227 1.36.195 1.871.118c.571-.085 1.758-.719 2.006-1.413s.248-1.289.173-1.413c-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413"></path></svg></span></a><a class="social share-item email ui-interactive is-icon-only" href="mailto:?subject=%E5%B8%82%E5%9C%BA%E5%B0%BE%E9%83%A8%E9%A3%8E%E9%99%A9%E7%BB%BC%E8%BF%B0%EF%BC%9A%E4%BB%8E%E6%9E%81%E7%AB%AF%E6%8D%9F%E5%A4%B1%E7%9A%84%E5%BA%A6%E9%87%8F%E5%88%B0%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E4%B8%8E%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86%20-%20Janiszzz's%20Blog&amp;body=http%3A%2F%2Fjaniszzz.github.io%2F2026%2F10%2F26%2Fmarket-tail-risk-review%2F" aria-label="分享文章: Email" title="分享文章: Email"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" fill-rule="evenodd" d="M3.172 5.172C2 6.343 2 8.229 2 12s0 5.657 1.172 6.828C4.343 20 6.229 20 10 20h4c3.771 0 5.657 0 6.828-1.172C22 17.657 22 15.771 22 12s0-5.657-1.172-6.828C19.657 4 17.771 4 14 4h-4C6.229 4 4.343 4 3.172 5.172m15.404 2.348a.75.75 0 0 1-.096 1.056l-2.196 1.83c-.887.739-1.605 1.338-2.24 1.746-.66.424-1.303.693-2.044.693s-1.384-.269-2.045-.693c-.634-.408-1.352-1.007-2.239-1.745L5.52 8.576a.75.75 0 1 1 .96-1.152l2.159 1.799c.933.777 1.58 1.315 2.128 1.667.529.34.888.455 1.233.455s.704-.115 1.233-.455c.547-.352 1.195-.89 2.128-1.667l2.159-1.8a.75.75 0 0 1 1.056.097" clip-rule="evenodd"></path></svg></span></a></div>
+      <div class="social-wrap dis-select"><a class="social share-item qrcode ui-interactive is-icon-only" onclick="util.toggle(&quot;share-qrcode&quot;)" aria-label="分享文章: QR Code" title="分享文章: QR Code"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" d="M10.553 13.447c-.424-.424-.95-.596-1.535-.675c-.553-.074-1.25-.074-2.086-.074H5.827c-.58 0-1.065 0-1.459.037c-.411.04-.795.124-1.146.34c-.345.21-.634.5-.845.844c-.216.352-.3.735-.34 1.147C2 15.459 2 15.944 2 16.525v.068c0 .884 0 1.597.055 2.17c.056.592.175 1.108.459 1.571c.288.47.682.864 1.152 1.152c.463.284.979.403 1.57.46C5.81 22 6.524 22 7.407 22h.07c.58 0 1.064 0 1.458-.037c.412-.04.795-.124 1.147-.34c.344-.21.633-.5.844-.844c.216-.352.3-.736.34-1.147c.037-.394.037-.879.037-1.46v-1.104c0-.836 0-1.533-.074-2.086c-.079-.584-.251-1.111-.675-1.535m-1.62-11.41c.412.04.795.124 1.147.34c.344.21.633.5.844.845c.216.351.3.735.34 1.146c.037.394.037.879.037 1.46v1.104c0 .836 0 1.533-.074 2.086c-.079.584-.251 1.111-.675 1.535s-.95.596-1.535.675c-.553.074-1.25.074-2.086.074H5.827c-.58 0-1.065 0-1.459-.037c-.411-.04-.795-.124-1.146-.34a2.56 2.56 0 0 1-.845-.844c-.216-.352-.3-.735-.34-1.147C2 8.54 2 8.056 2 7.475v-.068c0-.884 0-1.597.055-2.17c.056-.592.175-1.108.459-1.571c.288-.47.682-.864 1.152-1.152c.463-.284.979-.403 1.57-.46C5.81 2 6.524 2 7.407 2h.07c.58 0 1.064 0 1.458.037M16.593 2h-.068c-.58 0-1.065 0-1.46.037c-.41.04-.794.124-1.146.34c-.344.21-.633.5-.844.845c-.216.351-.3.735-.34 1.146c-.037.394-.037.879-.037 1.46v1.104c0 .836 0 1.533.074 2.086c.079.584.251 1.111.675 1.535s.95.596 1.535.675c.553.074 1.25.074 2.086.074h1.105c.58 0 1.065 0 1.459-.037c.411-.04.795-.124 1.146-.34c.345-.21.634-.5.845-.844c.216-.352.3-.735.34-1.147C22 8.54 22 8.056 22 7.475v-.068c0-.884 0-1.597-.055-2.17c-.056-.592-.175-1.108-.459-1.571a3.5 3.5 0 0 0-1.152-1.152c-.463-.284-.979-.403-1.57-.46C18.19 2 17.477 2 16.594 2" opacity=".5"></path><path fill="currentColor" d="M14.093 21.302a.698.698 0 1 1-1.396 0v-2.79h1.396z" opacity=".4"></path><path fill="currentColor" d="M21.302 12.698a.7.7 0 0 0-.697.697v3.256H22v-3.256a.7.7 0 0 0-.698-.697" opacity=".5"></path><path fill="currentColor" d="M16.076 16.617c-.076.184-.076.417-.076.883s0 .699.076.883a1 1 0 0 0 .541.54c.184.077.417.077.883.077s.699 0 .883-.076a1 1 0 0 0 .54-.541c.077-.184.077-.417.077-.883s0-.699-.076-.883a1 1 0 0 0-.541-.54C18.199 16 17.966 16 17.5 16s-.699 0-.883.076a1 1 0 0 0-.54.541"></path><path fill="currentColor" d="M22 18.535v-.023h-1.396c0 .443 0 .74-.016.97c-.015.224-.043.333-.073.405a1.16 1.16 0 0 1-.629.63c-.072.029-.18.056-.405.072c-.23.015-.527.016-.97.016h-1.86V22h1.883c.414 0 .759 0 1.042-.02a2.6 2.6 0 0 0 .844-.175a2.56 2.56 0 0 0 1.384-1.384c.112-.27.156-.549.176-.844c.02-.283.02-.628.02-1.042" opacity=".7"></path><path fill="currentColor" d="M12.697 16.616v.035h1.396c0-.668 0-1.116.035-1.458c.034-.33.093-.482.16-.583a1.2 1.2 0 0 1 .321-.32c.101-.068.254-.128.584-.161c.342-.035.79-.036 1.458-.036h1.86v-1.395h-1.896c-.623 0-1.142 0-1.563.043c-.44.044-.85.142-1.218.388c-.28.187-.519.426-.706.706c-.246.368-.343.777-.388 1.217c-.043.421-.043.94-.043 1.564" opacity=".6"></path><path fill="currentColor" d="M5.508 18.69c.219.155.528.155 1.146.155c.619 0 .928 0 1.146-.155a.8.8 0 0 0 .2-.199c.154-.218.154-.527.154-1.146s0-.927-.155-1.146A.8.8 0 0 0 7.8 16c-.218-.155-.527-.155-1.146-.155s-.927 0-1.146.155a.8.8 0 0 0-.199.2c-.155.218-.155.527-.155 1.145c0 .619 0 .928.155 1.146a.8.8 0 0 0 .2.2M6.654 8.155c-.618 0-.927 0-1.146-.155a.8.8 0 0 1-.199-.2c-.155-.217-.155-.527-.155-1.145c0-.619 0-.928.155-1.146a.8.8 0 0 1 .2-.2c.218-.154.527-.154 1.145-.154c.619 0 .928 0 1.146.155a.8.8 0 0 1 .2.199c.154.218.154.527.154 1.146s0 .928-.155 1.146A.8.8 0 0 1 7.8 8c-.218.155-.527.155-1.146.155M16.2 8c.218.155.527.155 1.146.155s.927 0 1.146-.155a.8.8 0 0 0 .199-.199c.155-.218.155-.528.155-1.146c0-.619 0-.928-.155-1.146a.8.8 0 0 0-.2-.2c-.218-.154-.527-.154-1.145-.154c-.619 0-.928 0-1.146.155a.8.8 0 0 0-.2.199c-.154.218-.154.527-.154 1.146s0 .928.155 1.146A.8.8 0 0 0 16.2 8"></path></svg></span></a><a class="social share-item weibo ui-interactive is-icon-only" href="https://service.weibo.com/share/share.php?url=http%3A%2F%2Fjaniszzz.github.io%2F2026%2F10%2F26%2Fmarket-tail-risk-review%2F&amp;title=%E5%B8%82%E5%9C%BA%E5%B0%BE%E9%83%A8%E9%A3%8E%E9%99%A9%E7%BB%BC%E8%BF%B0%EF%BC%9A%E4%BB%8E%E6%9E%81%E7%AB%AF%E6%8D%9F%E5%A4%B1%E7%9A%84%E5%BA%A6%E9%87%8F%E5%88%B0%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E4%B8%8E%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86%20-%20Janiszzz's%20Blog&amp;summary=%E9%9D%A2%E5%90%91%E5%85%B7%E6%9C%89%E6%95%B0%E7%90%86%E4%B8%8E%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9A%84%E9%87%91%E8%9E%8D%E5%AD%A6%E6%9C%AC%E7%A7%91%E7%94%9F%EF%BC%8C%E7%BB%93%E5%90%88%E4%BA%8C%E5%8D%81%E7%AF%87%E8%AE%BA%E6%96%87%E7%9A%84%E5%8E%9F%E6%96%87%E6%96%B9%E6%B3%95%E3%80%81%E5%AE%9E%E8%AF%81%E6%A1%88%E4%BE%8B%E5%92%8C%E7%BB%93%E6%9E%9C%EF%BC%8C%E8%AE%B2%E8%A7%A3%E5%B0%BE%E9%83%A8%E6%8D%9F%E5%A4%B1%E3%80%81%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E3%80%81%E5%8A%A8%E9%87%8F%E5%B4%A9%E6%BA%83%E4%B8%8E%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86%E3%80%82" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: Weibo" title="分享文章: Weibo"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.737 5.439l-.002.004zM9.05 17.219c-.384.616-1.208.884-1.829.602-.612-.279-.793-.991-.406-1.593.379-.595 1.176-.861 1.793-.601.622.263.82.972.442 1.592zm1.27-1.627c-.141.237-.449.353-.689.253-.236-.09-.313-.361-.177-.586.138-.227.436-.346.672-.24.239.09.315.36.18.601l.014-.028zm.176-2.719c-1.893-.493-4.033.45-4.857 2.118-.836 1.704-.026 3.591 1.886 4.21 1.983.64 4.318-.341 5.132-2.179.8-1.793-.201-3.642-2.161-4.149zm7.563-1.224c-.346-.105-.57-.18-.405-.615.375-.977.42-1.804 0-2.404-.781-1.112-2.915-1.053-5.364-.03 0 0-.766.331-.571-.271.376-1.217.315-2.224-.27-2.809-1.338-1.337-4.869.045-7.888 3.08C1.309 10.87 0 13.273 0 15.348c0 3.981 5.099 6.395 10.086 6.395 6.536 0 10.888-3.801 10.888-6.82 0-1.822-1.547-2.854-2.915-3.284v.01zm1.908-5.092c-.766-.856-1.908-1.187-2.96-.962-.436.09-.706.511-.616.932.09.42.511.691.932.602.511-.105 1.067.044 1.442.465.376.421.466.977.316 1.473-.136.406.089.856.51.992.405.119.857-.105.992-.512.33-1.021.12-2.178-.646-3.035l.03.045zm2.418-2.195c-1.576-1.757-3.905-2.419-6.054-1.968-.496.104-.812.587-.706 1.081.104.496.586.813 1.082.707 1.532-.331 3.185.15 4.296 1.383 1.112 1.246 1.429 2.943.947 4.416-.165.48.106 1.007.586 1.157.479.165.991-.104 1.157-.586.675-2.088.241-4.478-1.338-6.235l.03.045z"></path></svg></span></a><a class="social share-item x ui-interactive is-icon-only" href="https://x.com/intent/tweet?text=%E5%B8%82%E5%9C%BA%E5%B0%BE%E9%83%A8%E9%A3%8E%E9%99%A9%E7%BB%BC%E8%BF%B0%EF%BC%9A%E4%BB%8E%E6%9E%81%E7%AB%AF%E6%8D%9F%E5%A4%B1%E7%9A%84%E5%BA%A6%E9%87%8F%E5%88%B0%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E4%B8%8E%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86%20-%20Janiszzz's%20Blog&amp;url=http%3A%2F%2Fjaniszzz.github.io%2F2026%2F10%2F26%2Fmarket-tail-risk-review%2F" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: X" title="分享文章: X"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M14.234 10.162L22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299l-.929-1.329L3.076 1.56h3.182l5.965 8.532l.929 1.329l7.754 11.09h-3.182z"></path></svg></span></a><a class="social share-item telegram ui-interactive is-icon-only" href="https://t.me/share/url?url=http%3A%2F%2Fjaniszzz.github.io%2F2026%2F10%2F26%2Fmarket-tail-risk-review%2F&amp;text=%E5%B8%82%E5%9C%BA%E5%B0%BE%E9%83%A8%E9%A3%8E%E9%99%A9%E7%BB%BC%E8%BF%B0%EF%BC%9A%E4%BB%8E%E6%9E%81%E7%AB%AF%E6%8D%9F%E5%A4%B1%E7%9A%84%E5%BA%A6%E9%87%8F%E5%88%B0%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E4%B8%8E%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86%20-%20Janiszzz's%20Blog" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: Telegram" title="分享文章: Telegram"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12a12 12 0 0 0 12-12A12 12 0 0 0 12 0zm4.962 7.224c.1-.002.321.023.465.14a.5.5 0 0 1 .171.325c.016.093.036.306.02.472c-.18 1.898-.962 6.502-1.36 8.627c-.168.9-.499 1.201-.82 1.23c-.696.065-1.225-.46-1.9-.902c-1.056-.693-1.653-1.124-2.678-1.8c-1.185-.78-.417-1.21.258-1.91c.177-.184 3.247-2.977 3.307-3.23c.007-.032.014-.15-.056-.212s-.174-.041-.249-.024q-.159.037-5.061 3.345q-.72.495-1.302.48c-.428-.008-1.252-.241-1.865-.44c-.752-.245-1.349-.374-1.297-.789q.04-.324.893-.663q5.247-2.286 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635"></path></svg></span></a><a class="social share-item whatsapp ui-interactive is-icon-only" href="https://wa.me/?text=%E5%B8%82%E5%9C%BA%E5%B0%BE%E9%83%A8%E9%A3%8E%E9%99%A9%E7%BB%BC%E8%BF%B0%EF%BC%9A%E4%BB%8E%E6%9E%81%E7%AB%AF%E6%8D%9F%E5%A4%B1%E7%9A%84%E5%BA%A6%E9%87%8F%E5%88%B0%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E4%B8%8E%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86%20-%20Janiszzz's%20Blog%0Ahttp%3A%2F%2Fjaniszzz.github.io%2F2026%2F10%2F26%2Fmarket-tail-risk-review%2F" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: WhatsApp" title="分享文章: WhatsApp"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967c-.273-.099-.471-.148-.67.15c-.197.297-.767.966-.94 1.164c-.173.199-.347.223-.644.075c-.297-.15-1.255-.463-2.39-1.475c-.883-.788-1.48-1.761-1.653-2.059c-.173-.297-.018-.458.13-.606c.134-.133.298-.347.446-.52s.198-.298.298-.497c.099-.198.05-.371-.025-.52s-.669-1.612-.916-2.207c-.242-.579-.487-.5-.669-.51a13 13 0 0 0-.57-.01c-.198 0-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074s2.096 3.2 5.077 4.487c.709.306 1.262.489 1.694.625c.712.227 1.36.195 1.871.118c.571-.085 1.758-.719 2.006-1.413s.248-1.289.173-1.413c-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413"></path></svg></span></a><a class="social share-item email ui-interactive is-icon-only" href="mailto:?subject=%E5%B8%82%E5%9C%BA%E5%B0%BE%E9%83%A8%E9%A3%8E%E9%99%A9%E7%BB%BC%E8%BF%B0%EF%BC%9A%E4%BB%8E%E6%9E%81%E7%AB%AF%E6%8D%9F%E5%A4%B1%E7%9A%84%E5%BA%A6%E9%87%8F%E5%88%B0%E9%A3%8E%E9%99%A9%E6%BA%A2%E4%BB%B7%E4%B8%8E%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86%20-%20Janiszzz's%20Blog&amp;body=http%3A%2F%2Fjaniszzz.github.io%2F2026%2F10%2F26%2Fmarket-tail-risk-review%2F" aria-label="分享文章: Email" title="分享文章: Email"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" fill-rule="evenodd" d="M3.172 5.172C2 6.343 2 8.229 2 12s0 5.657 1.172 6.828C4.343 20 6.229 20 10 20h4c3.771 0 5.657 0 6.828-1.172C22 17.657 22 15.771 22 12s0-5.657-1.172-6.828C19.657 4 17.771 4 14 4h-4C6.229 4 4.343 4 3.172 5.172m15.404 2.348a.75.75 0 0 1-.096 1.056l-2.196 1.83c-.887.739-1.605 1.338-2.24 1.746-.66.424-1.303.693-2.044.693s-1.384-.269-2.045-.693c-.634-.408-1.352-1.007-2.239-1.745L5.52 8.576a.75.75 0 1 1 .96-1.152l2.159 1.799c.933.777 1.58 1.315 2.128 1.667.529.34.888.455 1.233.455s.704-.115 1.233-.455c.547-.352 1.195-.89 2.128-1.667l2.159-1.8a.75.75 0 0 1 1.056.097" clip-rule="evenodd"></path></svg></span></a></div>
       <div class="share-qrcode" id="share-qrcode" style="opacity:0;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data=http%3A%2F%2Fjaniszzz.github.io%2F2026%2F10%2F26%2Fmarket-tail-risk-review%2F" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;"></div>
     </div>
   </div>
